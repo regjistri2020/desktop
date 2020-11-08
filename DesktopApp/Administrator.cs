@@ -21,5 +21,18 @@ namespace DesktopApp
         {
 
         }
+
+        private void closepictureBox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BackpictureBox_Click(object sender, EventArgs e)
+        {
+            var a = new Form1();
+            a.Show();
+            this.Hide();
+
+        }
     }
 }

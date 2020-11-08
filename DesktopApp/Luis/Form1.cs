@@ -16,5 +16,17 @@ namespace DesktopApp
 		{
 			InitializeComponent();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var a = new Administrator();
+			a.Show();
+			this.Hide();
+		}
+
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
