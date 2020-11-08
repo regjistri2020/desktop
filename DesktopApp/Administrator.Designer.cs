@@ -136,7 +136,7 @@
             // UserpictureBox
             // 
             this.UserpictureBox.Image = global::DesktopApp.Properties.Resources.admin;
-            this.UserpictureBox.Location = new System.Drawing.Point(35, 74);
+            this.UserpictureBox.Location = new System.Drawing.Point(35, 73);
             this.UserpictureBox.Name = "UserpictureBox";
             this.UserpictureBox.Size = new System.Drawing.Size(48, 48);
             this.UserpictureBox.TabIndex = 13;
