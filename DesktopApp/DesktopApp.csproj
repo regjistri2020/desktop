@@ -69,6 +69,9 @@
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Luis\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Luis\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +125,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
