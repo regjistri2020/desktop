@@ -32,24 +32,24 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
 			this.MesuesitSub = new System.Windows.Forms.Panel();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
 			this.NxenesitSub = new System.Windows.Forms.Panel();
 			this.button6 = new System.Windows.Forms.Button();
 			this.button7 = new System.Windows.Forms.Button();
-			this.button8 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
+			this.button8 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.Close = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.MesuesitSub.SuspendLayout();
@@ -118,41 +118,6 @@
 			this.panel2.Size = new System.Drawing.Size(270, 641);
 			this.panel2.TabIndex = 1;
 			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-			this.button1.Location = new System.Drawing.Point(0, 0);
-			this.button1.Name = "button1";
-			this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.button1.Size = new System.Drawing.Size(270, 55);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Faqja Kryesore";
-			this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// button2
-			// 
-			this.button2.BackColor = System.Drawing.Color.White;
-			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-			this.button2.Location = new System.Drawing.Point(0, 55);
-			this.button2.Name = "button2";
-			this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.button2.Size = new System.Drawing.Size(270, 55);
-			this.button2.TabIndex = 1;
-			this.button2.Text = "Mësuesit";
-			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.UseVisualStyleBackColor = false;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
 			// MesuesitSub
 			// 
 			this.MesuesitSub.BackColor = System.Drawing.Color.Gold;
@@ -193,24 +158,6 @@
 			this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
-			// 
-			// button5
-			// 
-			this.button5.BackColor = System.Drawing.Color.White;
-			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button5.FlatAppearance.BorderSize = 0;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-			this.button5.Location = new System.Drawing.Point(0, 220);
-			this.button5.Name = "button5";
-			this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.button5.Size = new System.Drawing.Size(270, 55);
-			this.button5.TabIndex = 3;
-			this.button5.Text = "Nxënësit";
-			this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button5.UseVisualStyleBackColor = false;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// NxenesitSub
 			// 
@@ -254,23 +201,6 @@
 			this.button7.UseVisualStyleBackColor = false;
 			this.button7.Click += new System.EventHandler(this.button7_Click);
 			// 
-			// button8
-			// 
-			this.button8.BackColor = System.Drawing.Color.White;
-			this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button8.FlatAppearance.BorderSize = 0;
-			this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-			this.button8.Location = new System.Drawing.Point(0, 385);
-			this.button8.Name = "button8";
-			this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.button8.Size = new System.Drawing.Size(270, 55);
-			this.button8.TabIndex = 4;
-			this.button8.Text = "Klasat";
-			this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button8.UseVisualStyleBackColor = false;
-			// 
 			// button9
 			// 
 			this.button9.BackColor = System.Drawing.Color.White;
@@ -298,9 +228,86 @@
 			this.panel3.Size = new System.Drawing.Size(931, 641);
 			this.panel3.TabIndex = 2;
 			// 
+			// mesuesitRegjistroUC1
+			// 
+			this.mesuesitRegjistroUC1.Location = new System.Drawing.Point(0, 0);
+			this.mesuesitRegjistroUC1.Name = "mesuesitRegjistroUC1";
+			this.mesuesitRegjistroUC1.Size = new System.Drawing.Size(931, 641);
+			this.mesuesitRegjistroUC1.TabIndex = 0;
+			// 
+			// button8
+			// 
+			this.button8.BackColor = System.Drawing.Color.White;
+			this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button8.FlatAppearance.BorderSize = 0;
+			this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+			this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button8.Location = new System.Drawing.Point(0, 385);
+			this.button8.Name = "button8";
+			this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.button8.Size = new System.Drawing.Size(270, 55);
+			this.button8.TabIndex = 4;
+			this.button8.Text = "Klasat";
+			this.button8.UseVisualStyleBackColor = false;
+			// 
+			// button5
+			// 
+			this.button5.BackColor = System.Drawing.Color.White;
+			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button5.Location = new System.Drawing.Point(0, 220);
+			this.button5.Name = "button5";
+			this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.button5.Size = new System.Drawing.Size(270, 55);
+			this.button5.TabIndex = 3;
+			this.button5.Text = "Nxënësit";
+			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
+			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.White;
+			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button2.Location = new System.Drawing.Point(0, 55);
+			this.button2.Name = "button2";
+			this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.button2.Size = new System.Drawing.Size(270, 55);
+			this.button2.TabIndex = 1;
+			this.button2.Text = "Mësuesit";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+			this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button1.Location = new System.Drawing.Point(0, 0);
+			this.button1.Name = "button1";
+			this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.button1.Size = new System.Drawing.Size(270, 55);
+			this.button1.TabIndex = 0;
+			this.button1.Text = "Faqja Kryesore";
+			this.button1.UseVisualStyleBackColor = false;
+			// 
 			// pictureBox5
 			// 
-			this.pictureBox5.Image = global::DesktopApp.Properties.Resources.icons8_settings_32;
 			this.pictureBox5.Location = new System.Drawing.Point(1050, 21);
 			this.pictureBox5.Name = "pictureBox5";
 			this.pictureBox5.Size = new System.Drawing.Size(39, 39);
@@ -310,7 +317,6 @@
 			// 
 			// pictureBox4
 			// 
-			this.pictureBox4.Image = global::DesktopApp.Properties.Resources.icons8_minus_32;
 			this.pictureBox4.Location = new System.Drawing.Point(1095, 21);
 			this.pictureBox4.Name = "pictureBox4";
 			this.pictureBox4.Size = new System.Drawing.Size(39, 39);
@@ -321,7 +327,6 @@
 			// 
 			// Close
 			// 
-			this.Close.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
 			this.Close.Location = new System.Drawing.Point(1140, 21);
 			this.Close.Name = "Close";
 			this.Close.Size = new System.Drawing.Size(39, 39);
@@ -332,7 +337,6 @@
 			// 
 			// pictureBox2
 			// 
-			this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_user_64;
 			this.pictureBox2.Location = new System.Drawing.Point(722, 17);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(52, 51);
@@ -343,20 +347,12 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox1.Image = global::DesktopApp.Properties.Resources.school_management_software_500x500;
 			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(270, 86);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
-			// 
-			// mesuesitRegjistroUC1
-			// 
-			this.mesuesitRegjistroUC1.Location = new System.Drawing.Point(0, 0);
-			this.mesuesitRegjistroUC1.Name = "mesuesitRegjistroUC1";
-			this.mesuesitRegjistroUC1.Size = new System.Drawing.Size(931, 641);
-			this.mesuesitRegjistroUC1.TabIndex = 0;
 			// 
 			// AdminMain
 			// 
