@@ -193,6 +193,7 @@
 			this.Hyni_button.TabIndex = 8;
 			this.Hyni_button.Text = "Hyni";
 			this.Hyni_button.UseVisualStyleBackColor = false;
+			this.Hyni_button.Click += new System.EventHandler(this.Hyni_button_Click);
 			// 
 			// PasstextBox
 			// 

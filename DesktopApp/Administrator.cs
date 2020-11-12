@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopApp.Luis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,13 @@ namespace DesktopApp
             a.Show();
             this.Hide();
 
+        }
+
+        private void Hyni_button_Click(object sender, EventArgs e)
+        {
+            var a = new AdminMain();
+            a.Show();
+            this.Hide();
         }
     }
 }
