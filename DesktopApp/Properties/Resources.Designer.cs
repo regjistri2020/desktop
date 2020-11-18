@@ -213,9 +213,39 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdf_30px {
+            get {
+                object obj = ResourceManager.GetObject("pdf_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restart_48px {
+            get {
+                object obj = ResourceManager.GetObject("restart_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap school_management_software_500x500 {
             get {
                 object obj = ResourceManager.GetObject("school-management-software-500x500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_96px {
+            get {
+                object obj = ResourceManager.GetObject("search_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

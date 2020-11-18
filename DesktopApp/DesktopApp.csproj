@@ -64,6 +64,12 @@
     <Compile Include="Luis\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luis\MesuesitEditoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\MesuesitEditoUC.Designer.cs">
+      <DependentUpon>MesuesitEditoUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Luis\MesuesitRegjistroUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\MesuesitEditoUC.resx">
+      <DependentUpon>MesuesitEditoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\MesuesitRegjistroUC.resx">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
@@ -158,6 +167,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_training_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

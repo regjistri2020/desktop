@@ -70,6 +70,7 @@ namespace DesktopApp.Luis
 		{
 			button4.BackColor = Color.FromArgb(255, 200, 0);
 			button3.BackColor = Color.FromArgb(255, 220, 0);
+			MesuesitEditoUC1.BringToFront();
 		}
 
 		private void button6_Click(object sender, EventArgs e)
