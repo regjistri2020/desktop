@@ -30,6 +30,7 @@
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
@@ -57,10 +58,9 @@
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.textBox5 = new System.Windows.Forms.TextBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -84,6 +84,16 @@
 			this.label1.Size = new System.Drawing.Size(167, 21);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Mësuesit > Rregjistro";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
+			this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// button1
 			// 
@@ -282,7 +292,7 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Verdana", 14.25F);
 			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-			this.label2.Location = new System.Drawing.Point(27, 62);
+			this.label2.Location = new System.Drawing.Point(215, 52);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(214, 23);
 			this.label2.TabIndex = 39;
@@ -360,16 +370,6 @@
 			this.pictureBox2.TabIndex = 2;
 			this.pictureBox2.TabStop = false;
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
-			this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
 			// MesuesitRegjistroUC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,8 +407,8 @@
 			this.Load += new System.EventHandler(this.MesuesitRegjistroUC_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
