@@ -20,6 +20,8 @@ namespace DesktopApp.Luis
 		private void AdminMain_Load(object sender, EventArgs e)
 		{
 			hideSubMenu();
+			mesuesitEditoUC1.Hide();
+			mesuesitRegjistroUC1.Hide();
 		}
 		private void hideSubMenu()
 		{
@@ -64,13 +66,17 @@ namespace DesktopApp.Luis
 		{
 			button3.BackColor = Color.FromArgb(255, 200, 0);
 			button4.BackColor = Color.FromArgb(255, 220, 0);
+			mesuesitRegjistroUC1.BringToFront();
+			mesuesitRegjistroUC1.Show();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
 			button4.BackColor = Color.FromArgb(255, 200, 0);
 			button3.BackColor = Color.FromArgb(255, 220, 0);
-			MesuesitEditoUC1.BringToFront();
+			mesuesitEditoUC1.Show();
+			mesuesitEditoUC1.BringToFront();
+
 		}
 
 		private void button6_Click(object sender, EventArgs e)
@@ -83,6 +89,11 @@ namespace DesktopApp.Luis
 		{
 			button7.BackColor = Color.FromArgb(255, 200, 0);
 			button6.BackColor = Color.FromArgb(255, 220, 0);
+		}
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }
