@@ -76,6 +76,12 @@
     <Compile Include="Luis\MesuesitRegjistroUC.Designer.cs">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luis\VleresoNxenesitUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\VleresoNxenesitUC.Designer.cs">
+      <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrator.resx">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\MesuesitRegjistroUC.resx">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\VleresoNxenesitUC.resx">
+      <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pdf_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
