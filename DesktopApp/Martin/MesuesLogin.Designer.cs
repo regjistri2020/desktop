@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MesuesLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.BackpictureBox = new System.Windows.Forms.PictureBox();
             this.minimizepictureBox = new System.Windows.Forms.PictureBox();
             this.closepictureBox = new System.Windows.Forms.PictureBox();
-            this.BackpictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PasspictureBox = new System.Windows.Forms.PictureBox();
             this.UserpictureBox = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,10 +44,10 @@
             this.PasstextBox = new System.Windows.Forms.TextBox();
             this.UsertextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closepictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasspictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserpictureBox)).BeginInit();
             this.SuspendLayout();
@@ -66,35 +65,15 @@
             this.panel1.Size = new System.Drawing.Size(351, 123);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // BackpictureBox
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.PasspictureBox);
-            this.panel2.Controls.Add(this.UserpictureBox);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.Hyni_button);
-            this.panel2.Controls.Add(this.PasstextBox);
-            this.panel2.Controls.Add(this.UsertextBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 123);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(351, 365);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 70);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Identifikohuni \r\n   si mesues";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.BackpictureBox.Image = global::DesktopApp.Properties.Resources.back1;
+            this.BackpictureBox.Location = new System.Drawing.Point(4, 2);
+            this.BackpictureBox.Name = "BackpictureBox";
+            this.BackpictureBox.Size = new System.Drawing.Size(33, 33);
+            this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BackpictureBox.TabIndex = 6;
+            this.BackpictureBox.TabStop = false;
             // 
             // minimizepictureBox
             // 
@@ -116,19 +95,39 @@
             this.closepictureBox.TabIndex = 4;
             this.closepictureBox.TabStop = false;
             // 
-            // BackpictureBox
+            // label1
             // 
-            this.BackpictureBox.Image = global::DesktopApp.Properties.Resources.back1;
-            this.BackpictureBox.Location = new System.Drawing.Point(4, 2);
-            this.BackpictureBox.Name = "BackpictureBox";
-            this.BackpictureBox.Size = new System.Drawing.Size(33, 33);
-            this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BackpictureBox.TabIndex = 6;
-            this.BackpictureBox.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(55, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(220, 70);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Identifikohuni \r\n   si mesues";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.PasspictureBox);
+            this.panel2.Controls.Add(this.UserpictureBox);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.Hyni_button);
+            this.panel2.Controls.Add(this.PasstextBox);
+            this.panel2.Controls.Add(this.UsertextBox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 123);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(351, 365);
+            this.panel2.TabIndex = 1;
             // 
             // PasspictureBox
             // 
-            this.PasspictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PasspictureBox.Image")));
+            this.PasspictureBox.Image = global::DesktopApp.Properties.Resources.secure;
             this.PasspictureBox.Location = new System.Drawing.Point(35, 183);
             this.PasspictureBox.Name = "PasspictureBox";
             this.PasspictureBox.Size = new System.Drawing.Size(48, 48);
@@ -230,11 +229,11 @@
             this.Text = "MesuesLogin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closepictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasspictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserpictureBox)).EndInit();
             this.ResumeLayout(false);
