@@ -82,6 +82,12 @@
     <Compile Include="Luis\VleresoNxenesitUC.Designer.cs">
       <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Martin\MesuesLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Martin\MesuesLogin.Designer.cs">
+      <DependentUpon>MesuesLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrator.resx">
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\VleresoNxenesitUC.resx">
       <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Martin\MesuesLogin.resx">
+      <DependentUpon>MesuesLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Klea\" />
-    <Folder Include="Martini\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_info_32.png" />
