@@ -72,5 +72,10 @@ namespace DesktopApp.Luis
             adap.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Lista e mësuesve u gjenerua me sukses.");
+        }
     }
 }
