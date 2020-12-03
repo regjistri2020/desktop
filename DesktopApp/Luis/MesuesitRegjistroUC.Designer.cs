@@ -35,28 +35,28 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.studimetTxB2 = new System.Windows.Forms.TextBox();
-            this.studimetTxB1 = new System.Windows.Forms.TextBox();
+            this.studimetTxb2 = new System.Windows.Forms.TextBox();
+            this.studimetTxb1 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.datelindjaTxB = new System.Windows.Forms.DateTimePicker();
+            this.datelindjaTxb = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.emriTxB = new System.Windows.Forms.TextBox();
+            this.emriTxb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.mbiemriTxb = new System.Windows.Forms.TextBox();
+            this.nrpersonalTxb = new System.Windows.Forms.TextBox();
+            this.nrtelefoniTxb = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lendaTxb2 = new System.Windows.Forms.TextBox();
+            this.lendaTxb1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,6 +107,7 @@
             this.button1.TabIndex = 64;
             this.button1.Text = "Rregjistro";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label14
             // 
@@ -141,21 +142,21 @@
             this.label11.TabIndex = 57;
             this.label11.Text = "1.";
             // 
-            // studimetTxB2
+            // studimetTxb2
             // 
-            this.studimetTxB2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studimetTxB2.Location = new System.Drawing.Point(110, 414);
-            this.studimetTxB2.Name = "studimetTxB2";
-            this.studimetTxB2.Size = new System.Drawing.Size(196, 29);
-            this.studimetTxB2.TabIndex = 56;
+            this.studimetTxb2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studimetTxb2.Location = new System.Drawing.Point(110, 414);
+            this.studimetTxb2.Name = "studimetTxb2";
+            this.studimetTxb2.Size = new System.Drawing.Size(196, 29);
+            this.studimetTxb2.TabIndex = 56;
             // 
-            // studimetTxB1
+            // studimetTxb1
             // 
-            this.studimetTxB1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studimetTxB1.Location = new System.Drawing.Point(110, 379);
-            this.studimetTxB1.Name = "studimetTxB1";
-            this.studimetTxB1.Size = new System.Drawing.Size(196, 29);
-            this.studimetTxB1.TabIndex = 55;
+            this.studimetTxb1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studimetTxb1.Location = new System.Drawing.Point(110, 379);
+            this.studimetTxb1.Name = "studimetTxb1";
+            this.studimetTxb1.Size = new System.Drawing.Size(196, 29);
+            this.studimetTxb1.TabIndex = 55;
             // 
             // radioButton2
             // 
@@ -169,6 +170,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Femër";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -182,6 +184,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Mashkull";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label10
             // 
@@ -227,13 +230,13 @@
             this.label7.TabIndex = 47;
             this.label7.Text = "- Nr. personal";
             // 
-            // datelindjaTxB
+            // datelindjaTxb
             // 
-            this.datelindjaTxB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datelindjaTxB.Location = new System.Drawing.Point(215, 134);
-            this.datelindjaTxB.Name = "datelindjaTxB";
-            this.datelindjaTxB.Size = new System.Drawing.Size(262, 29);
-            this.datelindjaTxB.TabIndex = 46;
+            this.datelindjaTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datelindjaTxb.Location = new System.Drawing.Point(215, 134);
+            this.datelindjaTxb.Name = "datelindjaTxb";
+            this.datelindjaTxb.Size = new System.Drawing.Size(262, 29);
+            this.datelindjaTxb.TabIndex = 46;
             // 
             // label6
             // 
@@ -257,13 +260,13 @@
             this.label5.TabIndex = 43;
             this.label5.Text = "- Mbiemri";
             // 
-            // emriTxB
+            // emriTxb
             // 
-            this.emriTxB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emriTxB.Location = new System.Drawing.Point(215, 92);
-            this.emriTxB.Name = "emriTxB";
-            this.emriTxB.Size = new System.Drawing.Size(154, 29);
-            this.emriTxB.TabIndex = 42;
+            this.emriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emriTxb.Location = new System.Drawing.Point(215, 92);
+            this.emriTxb.Name = "emriTxb";
+            this.emriTxb.Size = new System.Drawing.Size(154, 29);
+            this.emriTxb.TabIndex = 42;
             // 
             // label4
             // 
@@ -298,29 +301,29 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "+Të dhëna personale";
             // 
-            // textBox1
+            // mbiemriTxb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(573, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 29);
-            this.textBox1.TabIndex = 65;
+            this.mbiemriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mbiemriTxb.Location = new System.Drawing.Point(573, 92);
+            this.mbiemriTxb.Name = "mbiemriTxb";
+            this.mbiemriTxb.Size = new System.Drawing.Size(154, 29);
+            this.mbiemriTxb.TabIndex = 65;
             // 
-            // textBox2
+            // nrpersonalTxb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(215, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 29);
-            this.textBox2.TabIndex = 66;
+            this.nrpersonalTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nrpersonalTxb.Location = new System.Drawing.Point(215, 181);
+            this.nrpersonalTxb.Name = "nrpersonalTxb";
+            this.nrpersonalTxb.Size = new System.Drawing.Size(154, 29);
+            this.nrpersonalTxb.TabIndex = 66;
             // 
-            // textBox3
+            // nrtelefoniTxb
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(215, 226);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 29);
-            this.textBox3.TabIndex = 67;
+            this.nrtelefoniTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nrtelefoniTxb.Location = new System.Drawing.Point(215, 226);
+            this.nrtelefoniTxb.Name = "nrtelefoniTxb";
+            this.nrtelefoniTxb.Size = new System.Drawing.Size(154, 29);
+            this.nrtelefoniTxb.TabIndex = 67;
             // 
             // label13
             // 
@@ -344,21 +347,21 @@
             this.label15.TabIndex = 70;
             this.label15.Text = "1.";
             // 
-            // textBox4
+            // lendaTxb2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(430, 414);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 29);
-            this.textBox4.TabIndex = 69;
+            this.lendaTxb2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lendaTxb2.Location = new System.Drawing.Point(430, 414);
+            this.lendaTxb2.Name = "lendaTxb2";
+            this.lendaTxb2.Size = new System.Drawing.Size(196, 29);
+            this.lendaTxb2.TabIndex = 69;
             // 
-            // textBox5
+            // lendaTxb1
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(430, 379);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(196, 29);
-            this.textBox5.TabIndex = 68;
+            this.lendaTxb1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lendaTxb1.Location = new System.Drawing.Point(430, 379);
+            this.lendaTxb1.Name = "lendaTxb1";
+            this.lendaTxb1.Size = new System.Drawing.Size(196, 29);
+            this.lendaTxb1.TabIndex = 68;
             // 
             // pictureBox2
             // 
@@ -377,27 +380,27 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lendaTxb2);
+            this.Controls.Add(this.lendaTxb1);
+            this.Controls.Add(this.nrtelefoniTxb);
+            this.Controls.Add(this.nrpersonalTxb);
+            this.Controls.Add(this.mbiemriTxb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.studimetTxB2);
-            this.Controls.Add(this.studimetTxB1);
+            this.Controls.Add(this.studimetTxb2);
+            this.Controls.Add(this.studimetTxb1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.datelindjaTxB);
+            this.Controls.Add(this.datelindjaTxb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.emriTxB);
+            this.Controls.Add(this.emriTxb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -423,28 +426,28 @@
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.TextBox studimetTxB2;
-		private System.Windows.Forms.TextBox studimetTxB1;
+		private System.Windows.Forms.TextBox studimetTxb2;
+		private System.Windows.Forms.TextBox studimetTxb1;
 		private System.Windows.Forms.RadioButton radioButton2;
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.DateTimePicker datelindjaTxB;
+		private System.Windows.Forms.DateTimePicker datelindjaTxb;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox emriTxB;
+		private System.Windows.Forms.TextBox emriTxb;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox mbiemriTxb;
+		private System.Windows.Forms.TextBox nrpersonalTxb;
+		private System.Windows.Forms.TextBox nrtelefoniTxb;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox lendaTxb2;
+		private System.Windows.Forms.TextBox lendaTxb1;
 		private System.Windows.Forms.PictureBox pictureBox2;
 	}
 }
