@@ -207,7 +207,7 @@
             this.PasstextBox.Size = new System.Drawing.Size(192, 15);
             this.PasstextBox.TabIndex = 16;
             this.PasstextBox.Text = "Vendosni fjalëkalimin tuaj";
-            this.PasstextBox.TextChanged += new System.EventHandler(this.PasstextBox_TextChanged);
+            this.PasstextBox.Click += new System.EventHandler(this.PasstextBox_Click);
             // 
             // UsernametextBox
             // 
@@ -219,7 +219,7 @@
             this.UsernametextBox.Size = new System.Drawing.Size(192, 15);
             this.UsernametextBox.TabIndex = 15;
             this.UsernametextBox.Text = "Vendosni kodin tuaj";
-            this.UsernametextBox.TextChanged += new System.EventHandler(this.UsernametextBox_TextChanged);
+            this.UsernametextBox.Click += new System.EventHandler(this.UsernameTextbox_Click);
             // 
             // MesuesLogin
             // 
