@@ -69,6 +69,12 @@
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klea\KlasatAdminUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Klea\KlasatAdminUC.Designer.cs">
+      <DependentUpon>KlasatAdminUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Luis\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klea\KlasatAdminUC.resx">
+      <DependentUpon>KlasatAdminUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
@@ -151,9 +160,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Klea\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_info_32.png" />
   </ItemGroup>
