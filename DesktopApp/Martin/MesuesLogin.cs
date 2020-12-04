@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,12 @@ namespace DesktopApp.Martin
 {
     public partial class MesuesLogin : Form
     {
+        //SqlDataAdapter sda;
+        //DataTable dt;
+        //SqlCommandBuilder scb;
+
+        //String connectionsString = "@";
+
         public MesuesLogin()
         {
             InitializeComponent();
@@ -48,6 +55,33 @@ namespace DesktopApp.Martin
             PassPanel.BackColor = Color.FromArgb(100, 149, 237);
 
             UsernamePanel.BackColor = Color.Black;
+        }
+
+        private void Hyni_button_Click(object sender, EventArgs e)
+        {
+            //string query = "Select * from MESUES where Username = '"+ UsernametextBox.Text + "' and Password = '"+ PasstextBox + "' ";
+            //SqlConnection con = new SqlConnection(connectionsString);
+            //con.Open();
+            //sda = new SqlDataAdapter(query, con);
+            //sda.SelectCommand.ExecuteNonQuery();
+
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //if (dt.Rows[0][0].ToString == "1")
+            //{
+            //    MessageBox.Show("Logini u krye me sukses! ");
+            //    this.Hide();
+            //    MesueseMain m = new MesueseMain();
+            //    m.Show();
+            //}
+
+            //else
+            //{
+            //    MessageBox.Show("Ju nuk uu futet me sukses ne platforme! ");
+            //}
+            
+
+            //con.Close();
         }
     }
 }
