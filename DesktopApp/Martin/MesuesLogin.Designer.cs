@@ -36,13 +36,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.PasspictureBox = new System.Windows.Forms.PictureBox();
             this.UserpictureBox = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.UsernamePanel = new System.Windows.Forms.Panel();
+            this.PassPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Hyni_button = new System.Windows.Forms.Button();
             this.PasstextBox = new System.Windows.Forms.TextBox();
-            this.UsertextBox = new System.Windows.Forms.TextBox();
+            this.UsernametextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).BeginInit();
@@ -94,6 +94,7 @@
             this.closepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closepictureBox.TabIndex = 4;
             this.closepictureBox.TabStop = false;
+            this.closepictureBox.Click += new System.EventHandler(this.closepictureBox_Click);
             // 
             // label1
             // 
@@ -112,13 +113,13 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.PasspictureBox);
             this.panel2.Controls.Add(this.UserpictureBox);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.UsernamePanel);
+            this.panel2.Controls.Add(this.PassPanel);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.Hyni_button);
             this.panel2.Controls.Add(this.PasstextBox);
-            this.panel2.Controls.Add(this.UsertextBox);
+            this.panel2.Controls.Add(this.UsernametextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 123);
             this.panel2.Name = "panel2";
@@ -145,21 +146,22 @@
             this.UserpictureBox.TabIndex = 22;
             this.UserpictureBox.TabStop = false;
             // 
-            // panel3
+            // UsernamePanel
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel3.Location = new System.Drawing.Point(94, 118);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 2);
-            this.panel3.TabIndex = 21;
+            this.UsernamePanel.BackColor = System.Drawing.SystemColors.Desktop;
+            this.UsernamePanel.Location = new System.Drawing.Point(94, 118);
+            this.UsernamePanel.Name = "UsernamePanel";
+            this.UsernamePanel.Size = new System.Drawing.Size(192, 2);
+            this.UsernamePanel.TabIndex = 21;
+            this.UsernamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.UsernamePanel_Paint);
             // 
-            // panel4
+            // PassPanel
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel4.Location = new System.Drawing.Point(94, 229);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(192, 2);
-            this.panel4.TabIndex = 20;
+            this.PassPanel.BackColor = System.Drawing.SystemColors.Desktop;
+            this.PassPanel.Location = new System.Drawing.Point(94, 229);
+            this.PassPanel.Name = "PassPanel";
+            this.PassPanel.Size = new System.Drawing.Size(192, 2);
+            this.PassPanel.TabIndex = 20;
             // 
             // label3
             // 
@@ -205,17 +207,19 @@
             this.PasstextBox.Size = new System.Drawing.Size(192, 15);
             this.PasstextBox.TabIndex = 16;
             this.PasstextBox.Text = "Vendosni fjalëkalimin tuaj";
+            this.PasstextBox.TextChanged += new System.EventHandler(this.PasstextBox_TextChanged);
             // 
-            // UsertextBox
+            // UsernametextBox
             // 
-            this.UsertextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.UsertextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsertextBox.Location = new System.Drawing.Point(95, 102);
-            this.UsertextBox.Name = "UsertextBox";
-            this.UsertextBox.Size = new System.Drawing.Size(192, 15);
-            this.UsertextBox.TabIndex = 15;
-            this.UsertextBox.Text = "Vendosni kodin tuaj";
+            this.UsernametextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UsernametextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernametextBox.Location = new System.Drawing.Point(95, 102);
+            this.UsernametextBox.Name = "UsernametextBox";
+            this.UsernametextBox.Size = new System.Drawing.Size(192, 15);
+            this.UsernametextBox.TabIndex = 15;
+            this.UsernametextBox.Text = "Vendosni kodin tuaj";
+            this.UsernametextBox.TextChanged += new System.EventHandler(this.UsernametextBox_TextChanged);
             // 
             // MesuesLogin
             // 
@@ -250,12 +254,12 @@
         private System.Windows.Forms.PictureBox BackpictureBox;
         private System.Windows.Forms.PictureBox PasspictureBox;
         private System.Windows.Forms.PictureBox UserpictureBox;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel UsernamePanel;
+        private System.Windows.Forms.Panel PassPanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Hyni_button;
         private System.Windows.Forms.TextBox PasstextBox;
-        private System.Windows.Forms.TextBox UsertextBox;
+        private System.Windows.Forms.TextBox UsernametextBox;
     }
 }

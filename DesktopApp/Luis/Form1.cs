@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopApp.Martin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,13 @@ namespace DesktopApp
 
 		private void pictureBox2_Click(object sender, EventArgs e)
 		{
+			this.Hide();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			MesuesLogin m = new MesuesLogin();
+			m.Show();
 			this.Hide();
 		}
 	}
