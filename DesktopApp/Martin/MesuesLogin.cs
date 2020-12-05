@@ -69,7 +69,7 @@ namespace DesktopApp.Martin
             //sda.Fill(dt);
             //if (dt.Rows[0][0].ToString == "1")
             //{
-            //    MessageBox.Show("Logini u krye me sukses! ");
+               MessageBox.Show("Logini u krye me sukses! ");
             //    this.Hide();
             //    MesueseMain m = new MesueseMain();
             //    m.Show();
