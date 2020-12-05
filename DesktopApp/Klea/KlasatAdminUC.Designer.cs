@@ -34,7 +34,7 @@ namespace DesktopApp.Klea
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.emriTxb = new System.Windows.Forms.TextBox();
+            this.klasaTxb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -43,6 +43,7 @@ namespace DesktopApp.Klea
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -109,14 +110,14 @@ namespace DesktopApp.Klea
             this.label3.TabIndex = 41;
             this.label3.Text = "+Edito klasat ekzistuese";
             // 
-            // emriTxb
+            // klasaTxb
             // 
-            this.emriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emriTxb.Location = new System.Drawing.Point(404, 146);
-            this.emriTxb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.emriTxb.Name = "emriTxb";
-            this.emriTxb.Size = new System.Drawing.Size(229, 39);
-            this.emriTxb.TabIndex = 43;
+            this.klasaTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klasaTxb.Location = new System.Drawing.Point(404, 146);
+            this.klasaTxb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.klasaTxb.Name = "klasaTxb";
+            this.klasaTxb.Size = new System.Drawing.Size(229, 39);
+            this.klasaTxb.TabIndex = 43;
             // 
             // label4
             // 
@@ -210,11 +211,28 @@ namespace DesktopApp.Klea
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 69;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(613, 807);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(256, 63);
+            this.button2.TabIndex = 70;
+            this.button2.Text = "Përditso tabelën";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // KlasatAdminUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dataGridView1);
@@ -223,7 +241,7 @@ namespace DesktopApp.Klea
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.emriTxb);
+            this.Controls.Add(this.klasaTxb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -246,7 +264,7 @@ namespace DesktopApp.Klea
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox emriTxb;
+        private System.Windows.Forms.TextBox klasaTxb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -255,5 +273,6 @@ namespace DesktopApp.Klea
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button2;
     }
 }
