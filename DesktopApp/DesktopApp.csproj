@@ -119,6 +119,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_e_nxenesitDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_e_nxenesitDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_e_nxenesitDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +175,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_e_nxenesitDataSet.xsc">
+      <DependentUpon>_e_nxenesitDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_e_nxenesitDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_e_nxenesitDataSet.xss">
+      <DependentUpon>_e_nxenesitDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet1.xsc">
+      <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_e_nxenesitDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_e_nxenesitDataSet1.xss">
+      <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
