@@ -105,6 +105,12 @@
     <Compile Include="Luis\VleresoNxenesitUC.Designer.cs">
       <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Martin\AdminDashboardUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Martin\AdminDashboardUC.Designer.cs">
+      <DependentUpon>AdminDashboardUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Martin\MesuesLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\VleresoNxenesitUC.resx">
       <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Martin\AdminDashboardUC.resx">
+      <DependentUpon>AdminDashboardUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\MesuesLogin.resx">
       <DependentUpon>MesuesLogin.cs</DependentUpon>
