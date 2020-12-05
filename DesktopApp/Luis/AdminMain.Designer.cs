@@ -49,9 +49,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.klasatAdminUC1 = new DesktopApp.Klea.KlasatAdminUC();
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
-            this.klasatAdminUC1 = new DesktopApp.Klea.KlasatAdminUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -120,7 +120,7 @@
             this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(780, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 40);
+            this.label2.Size = new System.Drawing.Size(121, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "#nendrejtor1";
             // 
@@ -141,7 +141,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(292, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 40);
+            this.label1.Size = new System.Drawing.Size(206, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Paneli i administratorit";
             // 
@@ -343,6 +343,14 @@
             this.panel3.Size = new System.Drawing.Size(931, 647);
             this.panel3.TabIndex = 2;
             // 
+            // klasatAdminUC1
+            // 
+            this.klasatAdminUC1.Location = new System.Drawing.Point(0, 3);
+            this.klasatAdminUC1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.klasatAdminUC1.Name = "klasatAdminUC1";
+            this.klasatAdminUC1.Size = new System.Drawing.Size(1396, 986);
+            this.klasatAdminUC1.TabIndex = 2;
+            // 
             // mesuesitEditoUC1
             // 
             this.mesuesitEditoUC1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -361,16 +369,9 @@
             this.mesuesitRegjistroUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesitRegjistroUC1.TabIndex = 0;
             // 
-            // klasatAdminUC1
-            // 
-            this.klasatAdminUC1.Location = new System.Drawing.Point(0, 3);
-            this.klasatAdminUC1.Name = "klasatAdminUC1";
-            this.klasatAdminUC1.Size = new System.Drawing.Size(1396, 986);
-            this.klasatAdminUC1.TabIndex = 2;
-            // 
             // AdminMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 727);
             this.Controls.Add(this.panel3);
