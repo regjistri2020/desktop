@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +68,12 @@
     </Compile>
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klea\KlasatAdminUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Klea\KlasatAdminUC.Designer.cs">
+      <DependentUpon>KlasatAdminUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Luis\AdminMain.cs">
       <SubType>Form</SubType>
@@ -107,8 +113,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_e_nxenesitDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_e_nxenesitDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_e_nxenesitDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klea\KlasatAdminUC.resx">
+      <DependentUpon>KlasatAdminUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
@@ -147,13 +166,33 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_e_nxenesitDataSet.xsc">
+      <DependentUpon>_e_nxenesitDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_e_nxenesitDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_e_nxenesitDataSet.xss">
+      <DependentUpon>_e_nxenesitDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet1.xsc">
+      <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_e_nxenesitDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_e_nxenesitDataSet1.xss">
+      <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Klea\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_info_32.png" />
   </ItemGroup>
