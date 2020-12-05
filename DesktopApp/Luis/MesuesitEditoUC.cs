@@ -77,5 +77,10 @@ namespace DesktopApp.Luis
         {
             MessageBox.Show("Lista e mësuesve u gjenerua me sukses.");
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

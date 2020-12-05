@@ -13,6 +13,10 @@ namespace DesktopApp.Klea
 {
     public partial class KlasatAdminUC : UserControl
     {
+        SqlDataAdapter adap;
+        SqlConnection con;
+        DataSet ds;
+        SqlCommandBuilder cmd;
         public KlasatAdminUC()
         {
             InitializeComponent();
@@ -47,8 +51,8 @@ namespace DesktopApp.Klea
                 ds = new System.Data.DataSet();
                 adap.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
-            }
+        }
 
         }
     }
-}
+
