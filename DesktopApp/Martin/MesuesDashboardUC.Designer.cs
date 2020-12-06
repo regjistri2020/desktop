@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MesuesDashboardUC));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tittlelabel = new System.Windows.Forms.Label();
             this.Datapanel = new System.Windows.Forms.Panel();
@@ -47,6 +46,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -56,6 +58,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.Datapanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -89,6 +92,9 @@
             // 
             // Datapanel
             // 
+            this.Datapanel.Controls.Add(this.textBox1);
+            this.Datapanel.Controls.Add(this.label6);
+            this.Datapanel.Controls.Add(this.pictureBox8);
             this.Datapanel.Controls.Add(this.KalueshmeriaMtextBox);
             this.Datapanel.Controls.Add(this.label);
             this.Datapanel.Controls.Add(this.pictureBox7);
@@ -122,7 +128,7 @@
             this.KalueshmeriaMtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KalueshmeriaMtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KalueshmeriaMtextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.KalueshmeriaMtextBox.Location = new System.Drawing.Point(675, 444);
+            this.KalueshmeriaMtextBox.Location = new System.Drawing.Point(675, 382);
             this.KalueshmeriaMtextBox.Name = "KalueshmeriaMtextBox";
             this.KalueshmeriaMtextBox.Size = new System.Drawing.Size(100, 31);
             this.KalueshmeriaMtextBox.TabIndex = 26;
@@ -133,7 +139,7 @@
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(666, 405);
+            this.label.Location = new System.Drawing.Point(666, 343);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(173, 29);
             this.label.TabIndex = 25;
@@ -280,10 +286,43 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Rifresko të dhënat";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBox1.Location = new System.Drawing.Point(675, 506);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 31);
+            this.textBox1.TabIndex = 29;
+            this.textBox1.Text = "5";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(666, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 29);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Mungesat";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::DesktopApp.Properties.Resources.id_not_verified_40px;
+            this.pictureBox8.Location = new System.Drawing.Point(558, 468);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(74, 75);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 27;
+            this.pictureBox8.TabStop = false;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
-            this.pictureBox7.Location = new System.Drawing.Point(544, 401);
+            this.pictureBox7.Location = new System.Drawing.Point(544, 339);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(92, 91);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,7 +361,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.teacher_icon;
             this.pictureBox2.Location = new System.Drawing.Point(74, 120);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 105);
@@ -362,6 +401,7 @@
             this.panel1.PerformLayout();
             this.Datapanel.ResumeLayout(false);
             this.Datapanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -400,5 +440,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

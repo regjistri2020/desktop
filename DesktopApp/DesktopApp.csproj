@@ -331,6 +331,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\student_male_64px.png" />
+    <None Include="Resources\teacher_icon.png" />
+    <None Include="Resources\id_not_verified_40px.png" />
     <None Include="Resources\class_40px.png" />
     <None Include="Resources\report_card_80px.png" />
     <None Include="Resources\businessman_40px.png" />
