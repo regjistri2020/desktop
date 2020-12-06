@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopApp.Martin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -100,6 +101,14 @@ namespace DesktopApp.Luis
 		{
 			var a = new AdminKonfigurime();
 			a.Show();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+
+			AdminDashboardUC ad = new AdminDashboardUC();
+			ad.Dock = DockStyle.Fill;
+			this.Controls.Add(ad);
 		}
 	}
 }

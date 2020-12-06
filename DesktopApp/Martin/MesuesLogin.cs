@@ -69,22 +69,27 @@ namespace DesktopApp.Martin
             //sda.Fill(dt);
             //if (dt.Rows[0][0].ToString == "1")
             //{
-               MessageBox.Show("Logini u krye me sukses! ");
-            //    this.Hide();
-            //    MesueseMain m = new MesueseMain();
-            //    m.Show();
-            //}
 
-            //else
-            //{
-            //    MessageBox.Show("Ju nuk u futet me sukses ne platforme! ");
-            //}
+            if (PasstextBox.Text == "1234")
+            {
+                MessageBox.Show("Logini u krye me sukses! ");
+                //    this.Hide();
+                //    MesueseMain m = new MesueseMain();
+                //    m.Show();
+                //}
 
-            MesuesMain mm = new MesuesMain();
-            mm.Show();
-            this.Hide();
+                //else
+                //{
+                //    MessageBox.Show("Ju nuk u futet me sukses ne platforme! ");
+                //}
 
+                MesuesMain mm = new MesuesMain();
+                mm.Show();
+                this.Hide();
+            }
             //con.Close();
+
+            else MessageBox.Show("Vendosni te dhenat sakte");
         }
     }
 }

@@ -63,7 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(931, 38);
             this.panel1.TabIndex = 0;
-
             // 
             // pictureBox1
             // 
@@ -74,7 +73,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-  
             // 
             // tittlelabel
             // 
@@ -86,7 +84,6 @@
             this.tittlelabel.Size = new System.Drawing.Size(118, 21);
             this.tittlelabel.TabIndex = 2;
             this.tittlelabel.Text = "Faqja Kryesore";
-
             // 
             // Datapanel
             // 
@@ -157,7 +154,7 @@
             this.MesuestextBox.TabIndex = 14;
             this.MesuestextBox.Text = "21";
             this.MesuestextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
+            this.MesuestextBox.TextChanged += new System.EventHandler(this.MesuestextBox_TextChanged);
             // 
             // label3
             // 
@@ -168,7 +165,6 @@
             this.label3.Size = new System.Drawing.Size(101, 29);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nxënës";
-
             // 
             // label1
             // 
@@ -179,7 +175,6 @@
             this.label1.Size = new System.Drawing.Size(104, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Mësues";
-
             // 
             // pictureBox4
             // 
@@ -190,7 +185,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
-
             // 
             // pictureBox2
             // 
@@ -201,7 +195,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
-
             // 
             // panel3
             // 
@@ -210,7 +203,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 5);
             this.panel3.TabIndex = 9;
-
             // 
             // panel2
             // 
@@ -219,7 +211,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(644, 5);
             this.panel2.TabIndex = 8;
-
             // 
             // label2
             // 
@@ -231,7 +222,6 @@
             this.label2.Size = new System.Drawing.Size(144, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "Rifresko të dhënat";
-
             // 
             // pictureBox3
             // 
@@ -242,7 +232,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-
             // 
             // AdminDashboardUC
             // 
