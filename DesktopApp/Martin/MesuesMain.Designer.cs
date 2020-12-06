@@ -44,6 +44,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -150,6 +151,7 @@
             // Menupanel
             // 
             this.Menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.Menupanel.Controls.Add(this.button6);
             this.Menupanel.Controls.Add(this.button5);
             this.Menupanel.Controls.Add(this.button4);
             this.Menupanel.Controls.Add(this.button3);
@@ -269,6 +271,21 @@
             this.button5.Text = "Dëftesat";
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button6.Location = new System.Drawing.Point(0, 440);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(270, 55);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Chat";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,5 +325,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
     }
 }
