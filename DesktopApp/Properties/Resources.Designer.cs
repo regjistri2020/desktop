@@ -113,6 +113,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_browse_folder_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-browse-folder-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cancel_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_cancel_32", resourceCulture);
@@ -126,6 +136,16 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap icons8_class_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_class_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_bin_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-bin-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +223,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_trash {
+            get {
+                object obj = ResourceManager.GetObject("icons8-trash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_user_64", resourceCulture);
@@ -266,6 +296,16 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap secure {
             get {
                 object obj = ResourceManager.GetObject("secure", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
