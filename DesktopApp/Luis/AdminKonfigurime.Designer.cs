@@ -173,11 +173,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(58, 184);
+            this.label5.Location = new System.Drawing.Point(58, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.Size = new System.Drawing.Size(30, 17);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Fjalëkalimi";
+            this.label5.Text = "Roli";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboBox1
             // 
@@ -187,7 +188,7 @@
             "Drejtor/e",
             "Nëndrejtor/e",
             "IT"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 204);
+            this.comboBox1.Location = new System.Drawing.Point(60, 199);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 25);
             this.comboBox1.TabIndex = 13;
@@ -205,6 +206,7 @@
             this.button1.Text = "Shto";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
