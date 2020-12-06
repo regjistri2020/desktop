@@ -322,6 +322,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\report_card_80px.png" />
+    <None Include="Resources\businessman_40px.png" />
+    <None Include="Resources\person_female_40px.png" />
     <None Include="Resources\unnamed.png" />
     <None Include="Resources\icons8-browse-folder-48.png" />
     <None Include="Resources\icons8-delete-bin-48.png" />
