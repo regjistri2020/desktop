@@ -17,9 +17,9 @@ namespace DesktopApp.Martin
             InitializeComponent();
         }
 
+        private void MesuestextBox_TextChanged(object sender, EventArgs e)
+        {
 
-
-     
-
+        }
     }
 }
