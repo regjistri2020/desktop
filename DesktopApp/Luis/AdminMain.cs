@@ -95,5 +95,11 @@ namespace DesktopApp.Luis
 		{
 
 		}
+
+		private void pictureBox5_Click(object sender, EventArgs e)
+		{
+			var a = new AdminKonfigurime();
+			a.Show();
+		}
 	}
 }

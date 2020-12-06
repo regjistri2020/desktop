@@ -90,6 +90,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -346,7 +347,7 @@
             // klasatAdminUC1
             // 
             this.klasatAdminUC1.Location = new System.Drawing.Point(0, 3);
-            this.klasatAdminUC1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.klasatAdminUC1.Margin = new System.Windows.Forms.Padding(2);
             this.klasatAdminUC1.Name = "klasatAdminUC1";
             this.klasatAdminUC1.Size = new System.Drawing.Size(1396, 986);
             this.klasatAdminUC1.TabIndex = 2;

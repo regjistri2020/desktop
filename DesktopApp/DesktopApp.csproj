@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JDragControl">
+      <HintPath>..\..\..\..\..\Desktop\JDragControl.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -74,6 +77,12 @@
     </Compile>
     <Compile Include="Klea\KlasatAdminUC.Designer.cs">
       <DependentUpon>KlasatAdminUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Luis\AdminKonfigurime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Luis\AdminKonfigurime.Designer.cs">
+      <DependentUpon>AdminKonfigurime.cs</DependentUpon>
     </Compile>
     <Compile Include="Luis\AdminMain.cs">
       <SubType>Form</SubType>
@@ -145,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Klea\KlasatAdminUC.resx">
       <DependentUpon>KlasatAdminUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\AdminKonfigurime.resx">
+      <DependentUpon>AdminKonfigurime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
@@ -310,6 +322,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\icons8-browse-folder-48.png" />
+    <None Include="Resources\icons8-delete-bin-48.png" />
+    <None Include="Resources\icons8-trash.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
