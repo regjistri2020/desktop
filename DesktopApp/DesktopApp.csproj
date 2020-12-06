@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JDragControl">
-      <HintPath>..\..\..\..\..\Desktop\JDragControl.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\JDragControl.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -120,6 +120,12 @@
     <Compile Include="Martin\AdminDashboardUC.Designer.cs">
       <DependentUpon>AdminDashboardUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Martin\MesuesDashboardUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Martin\MesuesDashboardUC.Designer.cs">
+      <DependentUpon>MesuesDashboardUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Martin\MesuesLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\AdminDashboardUC.resx">
       <DependentUpon>AdminDashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Martin\MesuesDashboardUC.resx">
+      <DependentUpon>MesuesDashboardUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\MesuesLogin.resx">
       <DependentUpon>MesuesLogin.cs</DependentUpon>
@@ -322,6 +331,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\class_40px.png" />
     <None Include="Resources\report_card_80px.png" />
     <None Include="Resources\businessman_40px.png" />
     <None Include="Resources\person_female_40px.png" />

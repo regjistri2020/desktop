@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,8 +40,12 @@
             this.Mesimdhenia_button = new System.Windows.Forms.Button();
             this.Kujdestaria_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,7 +56,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(92)))));
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.CloseBtn);
             this.panel1.Controls.Add(this.label2);
@@ -65,16 +67,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1201, 80);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DesktopApp.Properties.Resources.icons8_settings_32;
-            this.pictureBox5.Location = new System.Drawing.Point(1050, 21);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -159,6 +151,11 @@
             // Menupanel
             // 
             this.Menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.Menupanel.Controls.Add(this.button6);
+            this.Menupanel.Controls.Add(this.button5);
+            this.Menupanel.Controls.Add(this.button4);
+            this.Menupanel.Controls.Add(this.button3);
+            this.Menupanel.Controls.Add(this.button2);
             this.Menupanel.Controls.Add(this.Mesimdhenia_button);
             this.Menupanel.Controls.Add(this.Kujdestaria_button);
             this.Menupanel.Controls.Add(this.button1);
@@ -171,7 +168,7 @@
             // 
             // Mesimdhenia_button
             // 
-            this.Mesimdhenia_button.BackColor = System.Drawing.Color.LightBlue;
+            this.Mesimdhenia_button.BackColor = System.Drawing.Color.SkyBlue;
             this.Mesimdhenia_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.Mesimdhenia_button.FlatAppearance.BorderSize = 0;
             this.Mesimdhenia_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,12 +178,12 @@
             this.Mesimdhenia_button.Name = "Mesimdhenia_button";
             this.Mesimdhenia_button.Size = new System.Drawing.Size(270, 55);
             this.Mesimdhenia_button.TabIndex = 13;
-            this.Mesimdhenia_button.Text = "Mësimdhënia";
+            this.Mesimdhenia_button.Text = "Mungesat";
             this.Mesimdhenia_button.UseVisualStyleBackColor = false;
             // 
             // Kujdestaria_button
             // 
-            this.Kujdestaria_button.BackColor = System.Drawing.Color.LightBlue;
+            this.Kujdestaria_button.BackColor = System.Drawing.Color.SkyBlue;
             this.Kujdestaria_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.Kujdestaria_button.FlatAppearance.BorderSize = 0;
             this.Kujdestaria_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -196,12 +193,12 @@
             this.Kujdestaria_button.Name = "Kujdestaria_button";
             this.Kujdestaria_button.Size = new System.Drawing.Size(270, 55);
             this.Kujdestaria_button.TabIndex = 12;
-            this.Kujdestaria_button.Text = "Kujdestaria";
+            this.Kujdestaria_button.Text = "Vlerëso nxënësit";
             this.Kujdestaria_button.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -211,8 +208,83 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(270, 55);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Klasat";
+            this.button1.Text = "Mësimdhënie";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SkyBlue;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button2.Location = new System.Drawing.Point(0, 220);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(270, 55);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Nota përfundimtare ";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button3.Location = new System.Drawing.Point(0, 275);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(270, 55);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Kujdestaria";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SkyBlue;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button4.Location = new System.Drawing.Point(0, 330);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(270, 55);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Justifiko mungesat";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.SkyBlue;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button5.Location = new System.Drawing.Point(0, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(270, 55);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Dëftesat";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button6.Location = new System.Drawing.Point(0, 440);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(270, 55);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Chat";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // MesuesMain
             // 
@@ -226,7 +298,6 @@
             this.Text = "MesuesMain";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -243,7 +314,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox CloseBtn;
         private System.Windows.Forms.Button fqbutton;
@@ -251,5 +321,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Mesimdhenia_button;
         private System.Windows.Forms.Button Kujdestaria_button;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
     }
 }
