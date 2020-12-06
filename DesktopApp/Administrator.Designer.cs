@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.TittelPanel = new System.Windows.Forms.Panel();
+            this.BackpictureBox = new System.Windows.Forms.PictureBox();
+            this.minimizepictureBox = new System.Windows.Forms.PictureBox();
+            this.closepictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PasspictureBox = new System.Windows.Forms.PictureBox();
+            this.UserpictureBox = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,18 +43,13 @@
             this.Hyni_button = new System.Windows.Forms.Button();
             this.PasstextBox = new System.Windows.Forms.TextBox();
             this.UsertextBox = new System.Windows.Forms.TextBox();
-            this.PasspictureBox = new System.Windows.Forms.PictureBox();
-            this.UserpictureBox = new System.Windows.Forms.PictureBox();
-            this.BackpictureBox = new System.Windows.Forms.PictureBox();
-            this.minimizepictureBox = new System.Windows.Forms.PictureBox();
-            this.closepictureBox = new System.Windows.Forms.PictureBox();
             this.TittelPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PasspictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closepictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PasspictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // TittelPanel
@@ -64,6 +64,39 @@
             this.TittelPanel.Name = "TittelPanel";
             this.TittelPanel.Size = new System.Drawing.Size(351, 123);
             this.TittelPanel.TabIndex = 0;
+            // 
+            // BackpictureBox
+            // 
+            this.BackpictureBox.Image = global::DesktopApp.Properties.Resources.back1;
+            this.BackpictureBox.Location = new System.Drawing.Point(4, 2);
+            this.BackpictureBox.Name = "BackpictureBox";
+            this.BackpictureBox.Size = new System.Drawing.Size(33, 33);
+            this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BackpictureBox.TabIndex = 4;
+            this.BackpictureBox.TabStop = false;
+            this.BackpictureBox.Click += new System.EventHandler(this.BackpictureBox_Click);
+            // 
+            // minimizepictureBox
+            // 
+            this.minimizepictureBox.Image = global::DesktopApp.Properties.Resources.minus;
+            this.minimizepictureBox.Location = new System.Drawing.Point(278, 0);
+            this.minimizepictureBox.Name = "minimizepictureBox";
+            this.minimizepictureBox.Size = new System.Drawing.Size(33, 33);
+            this.minimizepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minimizepictureBox.TabIndex = 3;
+            this.minimizepictureBox.TabStop = false;
+            this.minimizepictureBox.Click += new System.EventHandler(this.minimizepictureBox_Click);
+            // 
+            // closepictureBox
+            // 
+            this.closepictureBox.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
+            this.closepictureBox.Location = new System.Drawing.Point(318, 0);
+            this.closepictureBox.Name = "closepictureBox";
+            this.closepictureBox.Size = new System.Drawing.Size(33, 33);
+            this.closepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closepictureBox.TabIndex = 2;
+            this.closepictureBox.TabStop = false;
+            this.closepictureBox.Click += new System.EventHandler(this.closepictureBox_Click);
             // 
             // label1
             // 
@@ -93,6 +126,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 365);
             this.panel1.TabIndex = 1;
+            // 
+            // PasspictureBox
+            // 
+            this.PasspictureBox.Image = global::DesktopApp.Properties.Resources._lock;
+            this.PasspictureBox.Location = new System.Drawing.Point(35, 183);
+            this.PasspictureBox.Name = "PasspictureBox";
+            this.PasspictureBox.Size = new System.Drawing.Size(48, 48);
+            this.PasspictureBox.TabIndex = 14;
+            this.PasspictureBox.TabStop = false;
+            // 
+            // UserpictureBox
+            // 
+            this.UserpictureBox.Image = global::DesktopApp.Properties.Resources.admin;
+            this.UserpictureBox.Location = new System.Drawing.Point(35, 73);
+            this.UserpictureBox.Name = "UserpictureBox";
+            this.UserpictureBox.Size = new System.Drawing.Size(48, 48);
+            this.UserpictureBox.TabIndex = 13;
+            this.UserpictureBox.TabStop = false;
             // 
             // panel3
             // 
@@ -167,56 +218,6 @@
             this.UsertextBox.TabIndex = 6;
             this.UsertextBox.Text = "Vendosni kodin tuaj";
             // 
-            // PasspictureBox
-            // 
-            this.PasspictureBox.Image = global::DesktopApp.Properties.Resources._lock;
-            this.PasspictureBox.Location = new System.Drawing.Point(35, 183);
-            this.PasspictureBox.Name = "PasspictureBox";
-            this.PasspictureBox.Size = new System.Drawing.Size(48, 48);
-            this.PasspictureBox.TabIndex = 14;
-            this.PasspictureBox.TabStop = false;
-            // 
-            // UserpictureBox
-            // 
-            this.UserpictureBox.Image = global::DesktopApp.Properties.Resources.admin;
-            this.UserpictureBox.Location = new System.Drawing.Point(35, 73);
-            this.UserpictureBox.Name = "UserpictureBox";
-            this.UserpictureBox.Size = new System.Drawing.Size(48, 48);
-            this.UserpictureBox.TabIndex = 13;
-            this.UserpictureBox.TabStop = false;
-            // 
-            // BackpictureBox
-            // 
-            this.BackpictureBox.Image = global::DesktopApp.Properties.Resources.back1;
-            this.BackpictureBox.Location = new System.Drawing.Point(4, 2);
-            this.BackpictureBox.Name = "BackpictureBox";
-            this.BackpictureBox.Size = new System.Drawing.Size(33, 33);
-            this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BackpictureBox.TabIndex = 4;
-            this.BackpictureBox.TabStop = false;
-            this.BackpictureBox.Click += new System.EventHandler(this.BackpictureBox_Click);
-            // 
-            // minimizepictureBox
-            // 
-            this.minimizepictureBox.Image = global::DesktopApp.Properties.Resources.minus;
-            this.minimizepictureBox.Location = new System.Drawing.Point(278, 0);
-            this.minimizepictureBox.Name = "minimizepictureBox";
-            this.minimizepictureBox.Size = new System.Drawing.Size(33, 33);
-            this.minimizepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minimizepictureBox.TabIndex = 3;
-            this.minimizepictureBox.TabStop = false;
-            // 
-            // closepictureBox
-            // 
-            this.closepictureBox.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
-            this.closepictureBox.Location = new System.Drawing.Point(318, 0);
-            this.closepictureBox.Name = "closepictureBox";
-            this.closepictureBox.Size = new System.Drawing.Size(33, 33);
-            this.closepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closepictureBox.TabIndex = 2;
-            this.closepictureBox.TabStop = false;
-            this.closepictureBox.Click += new System.EventHandler(this.closepictureBox_Click);
-            // 
             // Administrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,13 +230,13 @@
             this.Text = "Administrator";
             this.TittelPanel.ResumeLayout(false);
             this.TittelPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closepictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasspictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closepictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

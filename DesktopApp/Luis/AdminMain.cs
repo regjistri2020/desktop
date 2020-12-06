@@ -55,7 +55,7 @@ namespace DesktopApp.Luis
 
 		private void pictureBox4_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			this.WindowState = FormWindowState.Minimized;
 		}
 
 		private void Close_Click(object sender, EventArgs e)

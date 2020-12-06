@@ -91,5 +91,10 @@ namespace DesktopApp.Martin
 
             else MessageBox.Show("Vendosni te dhenat sakte");
         }
+
+        private void minimizepictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

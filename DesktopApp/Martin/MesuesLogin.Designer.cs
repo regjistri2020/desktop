@@ -84,6 +84,7 @@
             this.minimizepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizepictureBox.TabIndex = 5;
             this.minimizepictureBox.TabStop = false;
+            this.minimizepictureBox.Click += new System.EventHandler(this.minimizepictureBox_Click);
             // 
             // closepictureBox
             // 
