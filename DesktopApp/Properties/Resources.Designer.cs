@@ -93,6 +93,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap businessman_40px {
+            get {
+                object obj = ResourceManager.GetObject("businessman_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checked_30px {
             get {
                 object obj = ResourceManager.GetObject("checked_30px", resourceCulture);
@@ -256,6 +266,26 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap pdf_30px {
             get {
                 object obj = ResourceManager.GetObject("pdf_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap person_female_40px {
+            get {
+                object obj = ResourceManager.GetObject("person_female_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report_card_80px {
+            get {
+                object obj = ResourceManager.GetObject("report_card_80px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
