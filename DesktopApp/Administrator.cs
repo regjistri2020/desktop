@@ -42,5 +42,10 @@ namespace DesktopApp
             a.Show();
             this.Hide();
         }
+
+        private void minimizepictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

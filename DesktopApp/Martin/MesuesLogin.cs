@@ -86,5 +86,10 @@ namespace DesktopApp.Martin
 
             //con.Close();
         }
+
+        private void minimizepictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -32,6 +32,8 @@
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.CloseBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -55,19 +57,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CloseBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // jDragControl1
@@ -77,7 +77,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.CloseBtn);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -97,6 +97,27 @@
             this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Konfigurime";
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
+            this.CloseBtn.Location = new System.Drawing.Point(585, 5);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(28, 28);
+            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CloseBtn.TabIndex = 5;
+            this.CloseBtn.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.icons8_minus_32;
+            this.pictureBox4.Location = new System.Drawing.Point(551, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -329,32 +350,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_delete_bin_48;
-            this.pictureBox1.Location = new System.Drawing.Point(305, 238);
+            this.pictureBox1.Location = new System.Drawing.Point(430, 238);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
-            this.CloseBtn.Location = new System.Drawing.Point(585, 5);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 28);
-            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseBtn.TabIndex = 5;
-            this.CloseBtn.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.icons8_minus_32;
-            this.pictureBox4.Location = new System.Drawing.Point(551, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
             // 
             // label12
             // 
@@ -445,12 +446,12 @@
             this.Load += new System.EventHandler(this.AdminKonfigurime_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
