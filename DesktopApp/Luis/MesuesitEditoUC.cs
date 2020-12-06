@@ -31,7 +31,7 @@ namespace DesktopApp.Luis
         private void MesuesitEditoUC_Load(object sender, EventArgs e)
         {
             con = new SqlConnection();
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\desktop\DesktopApp\e-nxenesit.mdf;Integrated Security=True;Connect Timeout=30";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\developer\source\repos\desktop\DesktopApp\DesktopApp\e-nxenesit.mdf;Integrated Security=True;Connect Timeout=30";
             con.Open();
             
             adap = new SqlDataAdapter("select * from Mesues ", con);

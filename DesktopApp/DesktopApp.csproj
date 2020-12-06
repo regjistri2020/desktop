@@ -135,6 +135,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_e_nxenesitDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_e_nxenesitDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +210,17 @@
     </None>
     <None Include="_e_nxenesitDataSet1.xss">
       <DependentUpon>_e_nxenesitDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet2.xsc">
+      <DependentUpon>_e_nxenesitDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_e_nxenesitDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_e_nxenesitDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_e_nxenesitDataSet2.xss">
+      <DependentUpon>_e_nxenesitDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
