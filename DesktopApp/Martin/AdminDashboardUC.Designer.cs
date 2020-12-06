@@ -132,7 +132,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox3.Location = new System.Drawing.Point(717, 434);
+            this.textBox3.Location = new System.Drawing.Point(675, 444);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 31);
             this.textBox3.TabIndex = 26;
@@ -143,7 +143,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(708, 395);
+            this.label6.Location = new System.Drawing.Point(666, 405);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(173, 29);
             this.label6.TabIndex = 25;
@@ -152,7 +152,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
-            this.pictureBox7.Location = new System.Drawing.Point(586, 391);
+            this.pictureBox7.Location = new System.Drawing.Point(544, 401);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(92, 91);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
