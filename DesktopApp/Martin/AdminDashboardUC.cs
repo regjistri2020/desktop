@@ -22,5 +22,9 @@ namespace DesktopApp.Martin
 
         }
 
+        private void DatatextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

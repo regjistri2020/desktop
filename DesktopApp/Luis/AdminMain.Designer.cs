@@ -52,6 +52,7 @@
             this.klasatAdminUC1 = new DesktopApp.Klea.KlasatAdminUC();
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
+            this.adminDashboardUC1 = new DesktopApp.Martin.AdminDashboardUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -205,6 +206,7 @@
             this.button8.TabIndex = 4;
             this.button8.Text = "Klasat";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // NxenesitSub
             // 
@@ -335,6 +337,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.adminDashboardUC1);
             this.panel3.Controls.Add(this.klasatAdminUC1);
             this.panel3.Controls.Add(this.mesuesitEditoUC1);
             this.panel3.Controls.Add(this.mesuesitRegjistroUC1);
@@ -370,6 +373,13 @@
             this.mesuesitRegjistroUC1.Name = "mesuesitRegjistroUC1";
             this.mesuesitRegjistroUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesitRegjistroUC1.TabIndex = 0;
+            // 
+            // adminDashboardUC1
+            // 
+            this.adminDashboardUC1.Location = new System.Drawing.Point(0, 0);
+            this.adminDashboardUC1.Name = "adminDashboardUC1";
+            this.adminDashboardUC1.Size = new System.Drawing.Size(931, 641);
+            this.adminDashboardUC1.TabIndex = 3;
             // 
             // AdminMain
             // 
@@ -426,5 +436,6 @@
 		private MesuesitRegjistroUC mesuesitRegjistroUC1;
 		private MesuesitEditoUC mesuesitEditoUC1;
         private Klea.KlasatAdminUC klasatAdminUC1;
+        private Martin.AdminDashboardUC adminDashboardUC1;
     }
 }

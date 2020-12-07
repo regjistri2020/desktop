@@ -29,7 +29,6 @@ namespace DesktopApp.Klea
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,30 +41,18 @@ namespace DesktopApp.Klea
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.klasaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesuesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.niveliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klasaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._e_nxenesitDataSet2 = new DesktopApp._e_nxenesitDataSet2();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.klasaTableAdapter = new DesktopApp._e_nxenesitDataSet2TableAdapters.KlasaTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._e_nxenesitDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -180,19 +167,13 @@ namespace DesktopApp.Klea
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.Location = new System.Drawing.Point(47, 176);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 3);
+            this.panel2.Size = new System.Drawing.Size(814, 2);
             this.panel2.TabIndex = 66;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.klasaIDDataGridViewTextBoxColumn,
-            this.emriDataGridViewTextBoxColumn,
-            this.mesuesIDDataGridViewTextBoxColumn,
-            this.niveliDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.klasaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(59, 240);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -201,40 +182,6 @@ namespace DesktopApp.Klea
             this.dataGridView1.Size = new System.Drawing.Size(521, 261);
             this.dataGridView1.TabIndex = 67;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // klasaIDDataGridViewTextBoxColumn
-            // 
-            this.klasaIDDataGridViewTextBoxColumn.DataPropertyName = "KlasaID";
-            this.klasaIDDataGridViewTextBoxColumn.HeaderText = "KlasaID";
-            this.klasaIDDataGridViewTextBoxColumn.Name = "klasaIDDataGridViewTextBoxColumn";
-            // 
-            // emriDataGridViewTextBoxColumn
-            // 
-            this.emriDataGridViewTextBoxColumn.DataPropertyName = "Emri";
-            this.emriDataGridViewTextBoxColumn.HeaderText = "Emri";
-            this.emriDataGridViewTextBoxColumn.Name = "emriDataGridViewTextBoxColumn";
-            // 
-            // mesuesIDDataGridViewTextBoxColumn
-            // 
-            this.mesuesIDDataGridViewTextBoxColumn.DataPropertyName = "MesuesID";
-            this.mesuesIDDataGridViewTextBoxColumn.HeaderText = "MesuesID";
-            this.mesuesIDDataGridViewTextBoxColumn.Name = "mesuesIDDataGridViewTextBoxColumn";
-            // 
-            // niveliDataGridViewTextBoxColumn
-            // 
-            this.niveliDataGridViewTextBoxColumn.DataPropertyName = "Niveli";
-            this.niveliDataGridViewTextBoxColumn.HeaderText = "Niveli";
-            this.niveliDataGridViewTextBoxColumn.Name = "niveliDataGridViewTextBoxColumn";
-            // 
-            // klasaBindingSource
-            // 
-            this.klasaBindingSource.DataMember = "Klasa";
-            this.klasaBindingSource.DataSource = this._e_nxenesitDataSet2;
-            // 
-            // _e_nxenesitDataSet2
-            // 
-            this._e_nxenesitDataSet2.DataSetName = "_e_nxenesitDataSet2";
-            this._e_nxenesitDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -272,33 +219,10 @@ namespace DesktopApp.Klea
             this.button2.Text = "Përditso tabelën";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 38);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(931, 25);
-            this.fillByToolStrip.TabIndex = 71;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
-            // klasaTableAdapter
-            // 
-            this.klasaTableAdapter.ClearBeforeFill = true;
-            // 
             // KlasatAdminUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
@@ -319,11 +243,7 @@ namespace DesktopApp.Klea
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._e_nxenesitDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,14 +266,5 @@ namespace DesktopApp.Klea
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn klasaIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emriDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mesuesIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn niveliDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource klasaBindingSource;
-        private _e_nxenesitDataSet2 _e_nxenesitDataSet2;
-        private _e_nxenesitDataSet2TableAdapters.KlasaTableAdapter klasaTableAdapter;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }

@@ -58,18 +58,7 @@ namespace DesktopApp.Klea
 
         }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.klasaTableAdapter.FillBy(this._e_nxenesitDataSet2.Klasa);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
+        
     }
     }
 
