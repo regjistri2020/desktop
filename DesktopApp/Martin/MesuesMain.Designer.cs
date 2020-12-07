@@ -45,8 +45,9 @@
             this.Mungesa_button = new System.Windows.Forms.Button();
             this.Vleresonx_button = new System.Windows.Forms.Button();
             this.MesimdhenieButton = new System.Windows.Forms.Button();
-            this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
+            this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
+            this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -227,6 +228,7 @@
             this.KujdestariaButton.TabIndex = 15;
             this.KujdestariaButton.Text = "Kujdestaria";
             this.KujdestariaButton.UseVisualStyleBackColor = false;
+            this.KujdestariaButton.Click += new System.EventHandler(this.KujdestariaButton_Click);
             // 
             // NotaperfundimtareButton
             // 
@@ -257,6 +259,7 @@
             this.Mungesa_button.TabIndex = 13;
             this.Mungesa_button.Text = "Mungesat";
             this.Mungesa_button.UseVisualStyleBackColor = false;
+            this.Mungesa_button.Click += new System.EventHandler(this.Mungesa_button_Click);
             // 
             // Vleresonx_button
             // 
@@ -272,6 +275,7 @@
             this.Vleresonx_button.TabIndex = 12;
             this.Vleresonx_button.Text = "Vlerëso nxënësit";
             this.Vleresonx_button.UseVisualStyleBackColor = false;
+            this.Vleresonx_button.Click += new System.EventHandler(this.Vleresonx_button_Click);
             // 
             // MesimdhenieButton
             // 
@@ -287,13 +291,14 @@
             this.MesimdhenieButton.TabIndex = 11;
             this.MesimdhenieButton.Text = "Mësimdhënie";
             this.MesimdhenieButton.UseVisualStyleBackColor = false;
+            this.MesimdhenieButton.Click += new System.EventHandler(this.MesimdhenieButton_Click);
             // 
-            // mesuesDashboardUC1
+            // MungesaUC
             // 
-            this.mesuesDashboardUC1.Location = new System.Drawing.Point(270, 80);
-            this.mesuesDashboardUC1.Name = "mesuesDashboardUC1";
-            this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
-            this.mesuesDashboardUC1.TabIndex = 12;
+            this.MungesaUC.Location = new System.Drawing.Point(270, 80);
+            this.MungesaUC.Name = "MungesaUC";
+            this.MungesaUC.Size = new System.Drawing.Size(931, 647);
+            this.MungesaUC.TabIndex = 13;
             // 
             // vleresoNxenesitUC1
             // 
@@ -302,11 +307,19 @@
             this.vleresoNxenesitUC1.Size = new System.Drawing.Size(931, 647);
             this.vleresoNxenesitUC1.TabIndex = 9;
             // 
+            // mesuesDashboardUC1
+            // 
+            this.mesuesDashboardUC1.Location = new System.Drawing.Point(270, 80);
+            this.mesuesDashboardUC1.Name = "mesuesDashboardUC1";
+            this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
+            this.mesuesDashboardUC1.TabIndex = 12;
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 727);
+            this.Controls.Add(this.MungesaUC);
             this.Controls.Add(this.vleresoNxenesitUC1);
             this.Controls.Add(this.mesuesDashboardUC1);
             this.Controls.Add(this.Menupanel);
@@ -347,5 +360,6 @@
         private System.Windows.Forms.Button ChatButton;
         private MesuesDashboardUC mesuesDashboardUC1;
         private Luis.VleresoNxenesitUC vleresoNxenesitUC1;
+        private MungesaUC MungesaUC;
     }
 }

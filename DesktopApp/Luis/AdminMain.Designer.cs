@@ -347,8 +347,8 @@
             // 
             // klasatAdminUC1
             // 
-            this.klasatAdminUC1.Location = new System.Drawing.Point(0, 3);
-            this.klasatAdminUC1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.klasatAdminUC1.Location = new System.Drawing.Point(0, 0);
+            this.klasatAdminUC1.Margin = new System.Windows.Forms.Padding(2);
             this.klasatAdminUC1.Name = "klasatAdminUC1";
             this.klasatAdminUC1.Size = new System.Drawing.Size(1396, 986);
             this.klasatAdminUC1.TabIndex = 2;

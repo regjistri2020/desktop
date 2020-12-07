@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,8 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +103,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(475, 92);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(192, 32);
+            this.textBox2.TabIndex = 80;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label3.Location = new System.Drawing.Point(392, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 23);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "Nxënësi";
             // 
             // panel3
             // 
@@ -217,33 +237,13 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Zgjidhni klasën";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(392, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 23);
-            this.label3.TabIndex = 79;
-            this.label3.Text = "Nxënësi";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(475, 92);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 32);
-            this.textBox2.TabIndex = 80;
-            // 
-            // MungesatUC
+            // MungesaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "MungesatUC";
+            this.Name = "MungesaUC";
             this.Size = new System.Drawing.Size(931, 647);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

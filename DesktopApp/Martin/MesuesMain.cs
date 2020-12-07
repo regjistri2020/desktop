@@ -29,10 +29,50 @@ namespace DesktopApp.Martin
 
         private void MesuesMain_Load(object sender, EventArgs e)
         {
-           
-
+            hideSubMenu();
+            MungesaUC.Hide();
+            vleresoNxenesitUC1.Hide();
         }
 
+        private void hideSubMenu()
+        {
+            if (MesimdhenieSub.Visible == true)
+                MesimdhenieSub.Visible = false;
+            if (KujdestariaSub.Visible == true)
+                KujdestariaSub.Visible = false;
+        }
 
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+
+        private void MesimdhenieButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(MesimdhenieSub);
+        }
+
+        private void KujdestariaButton_Click(object sender, EventArgs e)
+        {
+            showSubMenu(KujdestariaSub);
+        }
+
+        private void Vleresonx_button_Click(object sender, EventArgs e)
+        {
+            vleresoNxenesitUC1.BringToFront();
+            vleresoNxenesitUC1.Show();
+        }
+
+        private void Mungesa_button_Click(object sender, EventArgs e)
+        {
+            MungesaUC.BringToFront();
+            MungesaUC.Show();
+        }
     }
 }

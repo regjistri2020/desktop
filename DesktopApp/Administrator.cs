@@ -38,7 +38,7 @@ namespace DesktopApp
 
         private void Hyni_button_Click(object sender, EventArgs e)
         {
-            var a = new AdminMain();
+            AdminMain a = new AdminMain();
             a.Show();
             this.Hide();
         }
