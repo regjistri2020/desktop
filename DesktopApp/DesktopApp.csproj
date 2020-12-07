@@ -138,6 +138,12 @@
     <Compile Include="Martin\MesuesMain.Designer.cs">
       <DependentUpon>MesuesMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Martin\MungesatUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Martin\MungesatUC.Designer.cs">
+      <DependentUpon>MungesatUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_e_nxenesitDataSet.Designer.cs">
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\MesuesMain.resx">
       <DependentUpon>MesuesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Martin\MungesatUC.resx">
+      <DependentUpon>MungesatUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

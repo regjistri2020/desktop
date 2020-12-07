@@ -299,7 +299,7 @@
             // 
             this.vleresoNxenesitUC1.Location = new System.Drawing.Point(270, 80);
             this.vleresoNxenesitUC1.Name = "vleresoNxenesitUC1";
-            this.vleresoNxenesitUC1.Size = new System.Drawing.Size(931, 644);
+            this.vleresoNxenesitUC1.Size = new System.Drawing.Size(931, 647);
             this.vleresoNxenesitUC1.TabIndex = 9;
             // 
             // MesuesMain
