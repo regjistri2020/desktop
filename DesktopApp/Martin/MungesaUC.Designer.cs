@@ -1,6 +1,6 @@
 ﻿namespace DesktopApp.Martin
 {
-    partial class MungesatUC
+    partial class MungesaUC
     {
         /// <summary> 
         /// Required designer variable.

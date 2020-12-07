@@ -138,11 +138,11 @@
     <Compile Include="Martin\MesuesMain.Designer.cs">
       <DependentUpon>MesuesMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Martin\MungesatUC.cs">
+    <Compile Include="Martin\MungesaUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Martin\MungesatUC.Designer.cs">
-      <DependentUpon>MungesatUC.cs</DependentUpon>
+    <Compile Include="Martin\MungesaUC.Designer.cs">
+      <DependentUpon>MungesaUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,8 +197,8 @@
     <EmbeddedResource Include="Martin\MesuesMain.resx">
       <DependentUpon>MesuesMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Martin\MungesatUC.resx">
-      <DependentUpon>MungesatUC.cs</DependentUpon>
+    <EmbeddedResource Include="Martin\MungesaUC.resx">
+      <DependentUpon>MungesaUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

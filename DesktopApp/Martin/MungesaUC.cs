@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DesktopApp.Martin
 {
-    public partial class MungesatUC : UserControl
+    public partial class MungesaUC : UserControl
     {
-        public MungesatUC()
+        public MungesaUC()
         {
             InitializeComponent();
         }
