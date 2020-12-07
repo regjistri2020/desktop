@@ -58,21 +58,22 @@ namespace DesktopApp.Martin
             showSubMenu(MesimdhenieSub);
         }
 
-        private void KujdestariaButton_Click(object sender, EventArgs e)
-        {
-            showSubMenu(KujdestariaSub);
-        }
-
         private void Vleresonx_button_Click(object sender, EventArgs e)
         {
             vleresoNxenesitUC1.BringToFront();
             vleresoNxenesitUC1.Show();
         }
 
-        private void Mungesa_button_Click(object sender, EventArgs e)
+           
+        private void MungesatButton_Click(object sender, EventArgs e)
         {
             MungesaUC.BringToFront();
             MungesaUC.Show();
+        }
+
+        private void Kujdestariabutton_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(KujdestariaSub);
         }
     }
 }
