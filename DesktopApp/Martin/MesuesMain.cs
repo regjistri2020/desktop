@@ -26,5 +26,13 @@ namespace DesktopApp.Martin
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void MesuesMain_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+
     }
 }
