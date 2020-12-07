@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DesktopApp.Luis
 {
@@ -30,10 +31,9 @@ namespace DesktopApp.Luis
 
         private void MesuesitEditoUC_Load(object sender, EventArgs e)
         {
-            //con = new SqlConnection();
-            //con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\developer\source\repos\desktop\DesktopApp\DesktopApp\e-nxenesit.mdf;Integrated Security=True;Connect Timeout=30";
-            //con.Open();
-            
+            con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
+            con.Open();
             //adap = new SqlDataAdapter("select * from Mesues ", con);
             //ds = new System.Data.DataSet();
             //adap.Fill(ds);
@@ -42,7 +42,6 @@ namespace DesktopApp.Luis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             //cmd = new SqlCommandBuilder(adap);
             //adap.Update(ds);
         }
