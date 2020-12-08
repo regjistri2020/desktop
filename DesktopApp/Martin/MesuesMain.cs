@@ -79,7 +79,6 @@ namespace DesktopApp.Martin
         private void fqbutton_Click(object sender, EventArgs e)
         {
             MesuesDashboardUC mesuesd = new MesuesDashboardUC();
-            this.Hide();
             mesuesd.Show();
 
         }
