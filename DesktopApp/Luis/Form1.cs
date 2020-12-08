@@ -42,5 +42,12 @@ namespace DesktopApp
 			this.WindowState = FormWindowState.Minimized;
 
 		}
+
+		private void PrivacylinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			this.Hide();
+			PrivacyPolicy privacy = new PrivacyPolicy();
+			privacy.Show();
+		}
 	}
 }

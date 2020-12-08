@@ -58,22 +58,40 @@ namespace DesktopApp.Martin
             showSubMenu(MesimdhenieSub);
         }
 
-        private void Vleresonx_button_Click(object sender, EventArgs e)
+        private void VleresonxenesButton_Click(object sender, EventArgs e)
         {
             vleresoNxenesitUC1.BringToFront();
             vleresoNxenesitUC1.Show();
         }
-
            
         private void MungesatButton_Click(object sender, EventArgs e)
         {
             MungesaUC.BringToFront();
             MungesaUC.Show();
+            vleresoNxenesitUC1.Hide();
         }
 
         private void Kujdestariabutton_Click_1(object sender, EventArgs e)
         {
             showSubMenu(KujdestariaSub);
+        }
+
+        private void fqbutton_Click(object sender, EventArgs e)
+        {
+            MesuesDashboardUC mesuesd = new MesuesDashboardUC();
+            mesuesd.Show();
+            mesuesd.BringToFront();
+            vleresoNxenesitUC1.Hide();
+        }
+
+        private void NotaperfundimtareButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeftesaButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
