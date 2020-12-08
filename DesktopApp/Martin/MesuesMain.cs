@@ -69,6 +69,7 @@ namespace DesktopApp.Martin
         {
             MungesaUC.BringToFront();
             MungesaUC.Show();
+            vleresoNxenesitUC1.Hide();
         }
 
         private void Kujdestariabutton_Click_1(object sender, EventArgs e)
