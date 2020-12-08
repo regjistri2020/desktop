@@ -109,14 +109,19 @@ namespace DesktopApp.Luis
 			AdminDashboardUC ad = new AdminDashboardUC();
 			ad.Dock = DockStyle.Fill;
 			this.Controls.Add(ad);
-			AdminDashboardUC1
-			klasatAdminUC1.BringToFront();
+			adminDashboardUC1.Show();
+			adminDashboardUC1.BringToFront();
 		}
 
 		private void button8_Click(object sender, EventArgs e)
 		{
 			klasatAdminUC1.Show();
 			klasatAdminUC1.BringToFront();
+		}
+
+		private void button9_Click(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

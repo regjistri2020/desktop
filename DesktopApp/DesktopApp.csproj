@@ -55,6 +55,7 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="Luis\AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Luis\EventetAdminUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\EventetAdminUC.Designer.cs">
+      <DependentUpon>EventetAdminUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Luis\Form1.cs">
       <SubType>Form</SubType>
@@ -172,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\EventetAdminUC.resx">
+      <DependentUpon>EventetAdminUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
