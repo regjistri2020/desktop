@@ -80,7 +80,8 @@ namespace DesktopApp.Martin
         {
             MesuesDashboardUC mesuesd = new MesuesDashboardUC();
             mesuesd.Show();
-
+            mesuesd.BringToFront();
+            vleresoNxenesitUC1.Hide();
         }
 
         private void NotaperfundimtareButton_Click(object sender, EventArgs e)
