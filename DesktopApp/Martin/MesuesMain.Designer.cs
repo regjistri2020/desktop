@@ -154,6 +154,7 @@
             this.fqbutton.TabIndex = 10;
             this.fqbutton.Text = "Faqja kryesore";
             this.fqbutton.UseVisualStyleBackColor = false;
+            this.fqbutton.Click += new System.EventHandler(this.fqbutton_Click);
             // 
             // Menupanel
             // 
@@ -209,6 +210,7 @@
             this.DeftesaButton.TabIndex = 16;
             this.DeftesaButton.Text = "Dëftesat";
             this.DeftesaButton.UseVisualStyleBackColor = false;
+            this.DeftesaButton.Click += new System.EventHandler(this.DeftesaButton_Click);
             // 
             // JustifikomungesatButton
             // 
@@ -266,6 +268,7 @@
             this.NotaperfundimtareButton.TabIndex = 14;
             this.NotaperfundimtareButton.Text = "Nota përfundimtare";
             this.NotaperfundimtareButton.UseVisualStyleBackColor = false;
+            this.NotaperfundimtareButton.Click += new System.EventHandler(this.NotaperfundimtareButton_Click);
             // 
             // MungesatButton
             // 
@@ -297,6 +300,7 @@
             this.VleresonxenesButton.TabIndex = 12;
             this.VleresonxenesButton.Text = "Vlereso nxënësit";
             this.VleresonxenesButton.UseVisualStyleBackColor = false;
+            this.VleresonxenesButton.Click += new System.EventHandler(this.VleresonxenesButton_Click);
             // 
             // MesimdhenieButton
             // 
