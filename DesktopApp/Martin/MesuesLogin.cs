@@ -45,15 +45,19 @@ namespace DesktopApp.Martin
         {
             UsernametextBox.Clear();
             UsernamePanel.BackColor = Color.FromArgb(100, 149, 237);
+            UsernametextBox.ForeColor = Color.FromArgb(100, 149, 237);
 
             PassPanel.BackColor = Color.Black;
+            PasstextBox.ForeColor = Color.Black;
         }
 
         private void PasstextBox_Click(object sender, EventArgs e)
         {
             PasstextBox.Clear();
             PassPanel.BackColor = Color.FromArgb(100, 149, 237);
+            PasstextBox.ForeColor = Color.FromArgb(100, 149, 237);
 
+            UsernametextBox.ForeColor = Color.Black;
             UsernamePanel.BackColor = Color.Black;
         }
 
@@ -70,9 +74,14 @@ namespace DesktopApp.Martin
             //if (dt.Rows[0][0].ToString == "1")
             //{
 
-            if (PasstextBox.Text == "1234")
+            PassPanel.BackColor = Color.FromArgb(100, 149, 237);
+            PasstextBox.ForeColor = Color.Black;
+            UsernamePanel.BackColor = Color.FromArgb(100, 149, 237);
+            UsernamePanel.ForeColor = Color.Black;
+
+            if (UsernametextBox.Text == "2030" && PasstextBox.Text == "1234")
             {
-                MessageBox.Show("Logini u krye me sukses! ");
+                MessageBox.Show("Vendosja e kredencialeve u krye me sukses! ");
                 //    this.Hide();
                 //    MesueseMain m = new MesueseMain();
                 //    m.Show();
@@ -89,12 +98,20 @@ namespace DesktopApp.Martin
             }
             //con.Close();
 
-            else MessageBox.Show("Vendosni te dhenat sakte");
+            else MessageBox.Show("Vendosni sakte kredencialet! ");
         }
 
         private void minimizepictureBox_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void BackpictureBox_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.Show();
+        }
+
     }
 }

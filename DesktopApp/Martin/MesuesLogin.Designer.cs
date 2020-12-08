@@ -74,6 +74,7 @@
             this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackpictureBox.TabIndex = 6;
             this.BackpictureBox.TabStop = false;
+            this.BackpictureBox.Click += new System.EventHandler(this.BackpictureBox_Click);
             // 
             // minimizepictureBox
             // 

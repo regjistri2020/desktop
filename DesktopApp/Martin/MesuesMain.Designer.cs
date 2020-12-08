@@ -50,6 +50,7 @@
             this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
+            this.Logoutbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -63,6 +64,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(92)))));
+            this.panel1.Controls.Add(this.Logoutbutton);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.CloseBtn);
             this.panel1.Controls.Add(this.label2);
@@ -226,6 +228,7 @@
             this.JustifikomungesatButton.TabIndex = 15;
             this.JustifikomungesatButton.Text = "Justifiko mungesat";
             this.JustifikomungesatButton.UseVisualStyleBackColor = false;
+            this.JustifikomungesatButton.Click += new System.EventHandler(this.JustifikomungesatButton_Click);
             // 
             // Kujdestariabutton
             // 
@@ -339,6 +342,19 @@
             this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesDashboardUC1.TabIndex = 12;
             // 
+            // Logoutbutton
+            // 
+            this.Logoutbutton.BackColor = System.Drawing.Color.DarkOrange;
+            this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logoutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbutton.Location = new System.Drawing.Point(917, 34);
+            this.Logoutbutton.Name = "Logoutbutton";
+            this.Logoutbutton.Size = new System.Drawing.Size(75, 23);
+            this.Logoutbutton.TabIndex = 9;
+            this.Logoutbutton.Text = "Dilni";
+            this.Logoutbutton.UseVisualStyleBackColor = false;
+            this.Logoutbutton.Click += new System.EventHandler(this.Logoutbutton_Click);
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,5 +406,6 @@
         private System.Windows.Forms.Button NotaperfundimtareButton;
         private System.Windows.Forms.Button MungesatButton;
         private System.Windows.Forms.Button VleresonxenesButton;
+        private System.Windows.Forms.Button Logoutbutton;
     }
 }
