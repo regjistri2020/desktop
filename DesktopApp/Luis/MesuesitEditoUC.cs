@@ -34,47 +34,47 @@ namespace DesktopApp.Luis
             con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
             con.Open();
-            //adap = new SqlDataAdapter("select * from Mesues ", con);
-            //ds = new System.Data.DataSet();
-            //adap.Fill(ds);
-            //dataGridView1.DataSource = ds.Tables[0];
+            adap = new SqlDataAdapter("select * from Mesues ", con);
+            ds = new System.Data.DataSet();
+            adap.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //cmd = new SqlCommandBuilder(adap);
-            //adap.Update(ds);
+            cmd = new SqlCommandBuilder(adap);
+            adap.Update(ds);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //if (textBox1.Text == null)
-            //{
-            //    adap = new SqlDataAdapter("select * from Mesues ", con);
-            //    ds = new System.Data.DataSet();
-            //    adap.Fill(ds);
-            //    dataGridView1.DataSource = ds.Tables[0];
-            //}
-            //else
-            //{
-            //    adap = new SqlDataAdapter("select * from Mesues WHERE emri like '%" + textBox1.Text + "%' ", con);
-            //    ds = new System.Data.DataSet();
-            //    adap.Fill(ds);
-            //    dataGridView1.DataSource = ds.Tables[0];
-            //}
+            if (textBox1.Text == null)
+            {
+                adap = new SqlDataAdapter("select * from Mesues ", con);
+                ds = new System.Data.DataSet();
+                adap.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            else
+            {
+                adap = new SqlDataAdapter("select * from Mesues WHERE emri like '%" + textBox1.Text + "%' ", con);
+                ds = new System.Data.DataSet();
+                adap.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            //adap = new SqlDataAdapter("select * from Mesues ", con);
-            //ds = new System.Data.DataSet();
-            //adap.Fill(ds);
-            //dataGridView1.DataSource = ds.Tables[0];
+            adap = new SqlDataAdapter("select * from Mesues ", con);
+            ds = new System.Data.DataSet();
+            adap.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Lista e mësuesve u gjenerua me sukses.");
+            MessageBox.Show("Lista e mësuesve u gjenerua me sukses.");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
