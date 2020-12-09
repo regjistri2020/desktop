@@ -117,6 +117,18 @@
     <Compile Include="Luis\MesuesitRegjistroUC.Designer.cs">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luis\NxenesitEditoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\NxenesitEditoUC.Designer.cs">
+      <DependentUpon>NxenesitEditoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Luis\NxenesitRregjistro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\NxenesitRregjistro.Designer.cs">
+      <DependentUpon>NxenesitRregjistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Luis\VleresoNxenesitUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\MesuesitRegjistroUC.resx">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\NxenesitEditoUC.resx">
+      <DependentUpon>NxenesitEditoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\NxenesitRregjistro.resx">
+      <DependentUpon>NxenesitRregjistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\VleresoNxenesitUC.resx">
       <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>

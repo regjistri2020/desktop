@@ -19,6 +19,7 @@ namespace DesktopApp.Luis
         DataSet ds;
         SqlCommandBuilder cmd;
 
+        DataTable table = new DataTable();
         public MesuesitEditoUC()
         {
             InitializeComponent();
@@ -31,7 +32,9 @@ namespace DesktopApp.Luis
 
         private void MesuesitEditoUC_Load(object sender, EventArgs e)
         {
-            /*
+
+
+            
             con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
             con.Open();
@@ -39,11 +42,8 @@ namespace DesktopApp.Luis
             ds = new System.Data.DataSet();
             adap.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-            */
+            
 
-           // con = new SqlConnection();
-            //con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
-           // con.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)

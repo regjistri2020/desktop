@@ -25,6 +25,8 @@ namespace DesktopApp.Luis
 			mesuesitRegjistroUC1.Hide();
 			eventetAdminUC1.Hide();
 			klasatAdminUC1.Hide();
+			nxenesitEditoUC1.Hide();
+			nxenesitRregjistro1.Hide();
 		}
 		private void hideSubMenu()
 		{
@@ -86,12 +88,16 @@ namespace DesktopApp.Luis
 		{
 			button6.BackColor = Color.FromArgb(255, 200, 0);
 			button7.BackColor = Color.FromArgb(255, 220, 0);
+			nxenesitRregjistro1.BringToFront();
+			nxenesitRregjistro1.Show();
 		}
 
 		private void button7_Click(object sender, EventArgs e)
 		{
 			button7.BackColor = Color.FromArgb(255, 200, 0);
 			button6.BackColor = Color.FromArgb(255, 220, 0);
+			nxenesitEditoUC1.Show();
+			nxenesitEditoUC1.BringToFront();
 		}
 
 		private void panel1_Paint(object sender, PaintEventArgs e)
@@ -113,18 +119,24 @@ namespace DesktopApp.Luis
 			//this.Controls.Add(ad);
 			adminDashboardUC1.Show();
 			adminDashboardUC1.BringToFront();
+			MesuesitSub.Visible = false;
+			NxenesitSub.Visible = false;
 		}
 
 		private void button8_Click(object sender, EventArgs e)
 		{
 			klasatAdminUC1.Show();
 			klasatAdminUC1.BringToFront();
+			MesuesitSub.Visible = false;
+			NxenesitSub.Visible = false;
 		}
 
 		private void button9_Click(object sender, EventArgs e)
 		{
 			eventetAdminUC1.Show();
 			eventetAdminUC1.BringToFront();
+			MesuesitSub.Visible = false;
+			NxenesitSub.Visible = false;
 		}
 
 		private void Logoutbutton_Click(object sender, EventArgs e)

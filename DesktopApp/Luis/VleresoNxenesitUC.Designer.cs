@@ -58,6 +58,11 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Emer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shenime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -204,9 +209,15 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(466, 299);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Emer,
+            this.Nota,
+            this.Tema,
+            this.Kategoria,
+            this.Shenime});
+            this.dataGridView1.Location = new System.Drawing.Point(436, 299);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(423, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(453, 303);
             this.dataGridView1.TabIndex = 49;
             // 
             // button1
@@ -225,7 +236,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(466, 266);
+            this.textBox2.Location = new System.Drawing.Point(436, 266);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 27);
             this.textBox2.TabIndex = 66;
@@ -235,7 +246,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(462, 229);
+            this.label6.Location = new System.Drawing.Point(431, 229);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(304, 25);
             this.label6.TabIndex = 68;
@@ -257,11 +268,24 @@
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "Programim dhe Inxhinieri Software",
-            "Planifikim Projektesh dhe Menaxhim Sistemesh"});
-            this.comboBox3.Location = new System.Drawing.Point(207, 284);
+            "Andja Bardha",
+            "Aldi Duka",
+            "Almirado Lekgegaj",
+            "Brian Kuca",
+            "Enes Vojka",
+            "Enis Lika",
+            "Ejona Caushi",
+            "Klea Manushi",
+            "Lea Allkoja",
+            "Luis Kateshi",
+            "Martin Koci",
+            "Klaus Tanku",
+            "Rogers Bardhi",
+            "Rineda Dallashi",
+            "Thoma Nika"});
+            this.comboBox3.Location = new System.Drawing.Point(200, 284);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(192, 29);
+            this.comboBox3.Size = new System.Drawing.Size(182, 29);
             this.comboBox3.TabIndex = 70;
             // 
             // label8
@@ -289,7 +313,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(207, 330);
+            this.textBox3.Location = new System.Drawing.Point(200, 330);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(66, 31);
@@ -314,9 +338,9 @@
             "Note me Goje (NG)",
             "Note Portofoli (NP)",
             "Note Test (NT)"});
-            this.comboBox4.Location = new System.Drawing.Point(207, 376);
+            this.comboBox4.Location = new System.Drawing.Point(200, 376);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(192, 29);
+            this.comboBox4.Size = new System.Drawing.Size(182, 29);
             this.comboBox4.TabIndex = 75;
             // 
             // label11
@@ -333,10 +357,10 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(207, 423);
+            this.textBox4.Location = new System.Drawing.Point(200, 423);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 31);
+            this.textBox4.Size = new System.Drawing.Size(182, 31);
             this.textBox4.TabIndex = 77;
             // 
             // button2
@@ -345,19 +369,20 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(284, 557);
+            this.button2.Location = new System.Drawing.Point(267, 557);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 45);
             this.button2.TabIndex = 78;
             this.button2.Text = "Vlerëso";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label12.Location = new System.Drawing.Point(80, 514);
+            this.label12.Location = new System.Drawing.Point(63, 514);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(319, 40);
             this.label12.TabIndex = 79;
@@ -366,7 +391,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.warn;
-            this.pictureBox4.Location = new System.Drawing.Point(46, 518);
+            this.pictureBox4.Location = new System.Drawing.Point(29, 518);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -376,7 +401,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DesktopApp.Properties.Resources.search_96px;
-            this.pictureBox3.Location = new System.Drawing.Point(637, 265);
+            this.pictureBox3.Location = new System.Drawing.Point(607, 266);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -393,6 +418,31 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // Emer
+            // 
+            this.Emer.HeaderText = "Emer Mbiemer";
+            this.Emer.Name = "Emer";
+            // 
+            // Nota
+            // 
+            this.Nota.HeaderText = "Vleresimi";
+            this.Nota.Name = "Nota";
+            // 
+            // Tema
+            // 
+            this.Tema.HeaderText = "Tema";
+            this.Tema.Name = "Tema";
+            // 
+            // Kategoria
+            // 
+            this.Kategoria.HeaderText = "Kategoria";
+            this.Kategoria.Name = "Kategoria";
+            // 
+            // Shenime
+            // 
+            this.Shenime.HeaderText = "Shenime";
+            this.Shenime.Name = "Shenime";
             // 
             // VleresoNxenesitUC
             // 
@@ -472,5 +522,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shenime;
     }
 }

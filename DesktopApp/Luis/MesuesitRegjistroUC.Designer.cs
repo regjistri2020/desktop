@@ -30,7 +30,6 @@
 		{
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,9 +57,10 @@
             this.lendaTxb2 = new System.Windows.Forms.TextBox();
             this.lendaTxb1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,23 +85,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mësuesit > Rregjistro";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(731, 410);
+            this.button1.Location = new System.Drawing.Point(731, 433);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 44);
             this.button1.TabIndex = 64;
@@ -114,7 +104,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label14.Location = new System.Drawing.Point(374, 337);
+            this.label14.Location = new System.Drawing.Point(374, 360);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(252, 23);
             this.label14.TabIndex = 59;
@@ -125,7 +115,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 14F);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(80, 420);
+            this.label12.Location = new System.Drawing.Point(80, 443);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 23);
             this.label12.TabIndex = 58;
@@ -136,7 +126,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Verdana", 14F);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(80, 385);
+            this.label11.Location = new System.Drawing.Point(80, 408);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 23);
             this.label11.TabIndex = 57;
@@ -145,7 +135,7 @@
             // studimetTxb2
             // 
             this.studimetTxb2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studimetTxb2.Location = new System.Drawing.Point(110, 414);
+            this.studimetTxb2.Location = new System.Drawing.Point(110, 437);
             this.studimetTxb2.Name = "studimetTxb2";
             this.studimetTxb2.Size = new System.Drawing.Size(196, 29);
             this.studimetTxb2.TabIndex = 56;
@@ -153,7 +143,7 @@
             // studimetTxb1
             // 
             this.studimetTxb1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studimetTxb1.Location = new System.Drawing.Point(110, 379);
+            this.studimetTxb1.Location = new System.Drawing.Point(110, 402);
             this.studimetTxb1.Name = "studimetTxb1";
             this.studimetTxb1.Size = new System.Drawing.Size(196, 29);
             this.studimetTxb1.TabIndex = 55;
@@ -163,7 +153,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Verdana", 10F);
             this.radioButton2.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton2.Location = new System.Drawing.Point(573, 213);
+            this.radioButton2.Location = new System.Drawing.Point(573, 236);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(69, 21);
             this.radioButton2.TabIndex = 54;
@@ -177,7 +167,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Verdana", 10F);
             this.radioButton1.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton1.Location = new System.Drawing.Point(573, 186);
+            this.radioButton1.Location = new System.Drawing.Point(573, 209);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(85, 21);
             this.radioButton1.TabIndex = 53;
@@ -191,7 +181,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label10.Location = new System.Drawing.Point(421, 189);
+            this.label10.Location = new System.Drawing.Point(421, 212);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 23);
             this.label10.TabIndex = 52;
@@ -202,7 +192,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label9.Location = new System.Drawing.Point(62, 337);
+            this.label9.Location = new System.Drawing.Point(62, 360);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(180, 23);
             this.label9.TabIndex = 51;
@@ -213,7 +203,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label8.Location = new System.Drawing.Point(62, 227);
+            this.label8.Location = new System.Drawing.Point(62, 250);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 23);
             this.label8.TabIndex = 49;
@@ -224,7 +214,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label7.Location = new System.Drawing.Point(62, 182);
+            this.label7.Location = new System.Drawing.Point(62, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 23);
             this.label7.TabIndex = 47;
@@ -233,7 +223,7 @@
             // datelindjaTxb
             // 
             this.datelindjaTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datelindjaTxb.Location = new System.Drawing.Point(215, 134);
+            this.datelindjaTxb.Location = new System.Drawing.Point(215, 157);
             this.datelindjaTxb.Name = "datelindjaTxb";
             this.datelindjaTxb.Size = new System.Drawing.Size(262, 29);
             this.datelindjaTxb.TabIndex = 46;
@@ -243,7 +233,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label6.Location = new System.Drawing.Point(62, 138);
+            this.label6.Location = new System.Drawing.Point(62, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 23);
             this.label6.TabIndex = 45;
@@ -254,7 +244,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label5.Location = new System.Drawing.Point(421, 93);
+            this.label5.Location = new System.Drawing.Point(421, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 23);
             this.label5.TabIndex = 43;
@@ -263,7 +253,7 @@
             // emriTxb
             // 
             this.emriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emriTxb.Location = new System.Drawing.Point(215, 92);
+            this.emriTxb.Location = new System.Drawing.Point(215, 115);
             this.emriTxb.Name = "emriTxb";
             this.emriTxb.Size = new System.Drawing.Size(154, 29);
             this.emriTxb.TabIndex = 42;
@@ -273,7 +263,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label4.Location = new System.Drawing.Point(62, 93);
+            this.label4.Location = new System.Drawing.Point(62, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 23);
             this.label4.TabIndex = 41;
@@ -284,7 +274,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(33, 296);
+            this.label3.Location = new System.Drawing.Point(33, 319);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(336, 23);
             this.label3.TabIndex = 40;
@@ -295,7 +285,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label2.Location = new System.Drawing.Point(33, 55);
+            this.label2.Location = new System.Drawing.Point(33, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 23);
             this.label2.TabIndex = 39;
@@ -304,7 +294,7 @@
             // mbiemriTxb
             // 
             this.mbiemriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbiemriTxb.Location = new System.Drawing.Point(573, 92);
+            this.mbiemriTxb.Location = new System.Drawing.Point(573, 115);
             this.mbiemriTxb.Name = "mbiemriTxb";
             this.mbiemriTxb.Size = new System.Drawing.Size(154, 29);
             this.mbiemriTxb.TabIndex = 65;
@@ -312,7 +302,7 @@
             // nrpersonalTxb
             // 
             this.nrpersonalTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nrpersonalTxb.Location = new System.Drawing.Point(215, 181);
+            this.nrpersonalTxb.Location = new System.Drawing.Point(215, 204);
             this.nrpersonalTxb.Name = "nrpersonalTxb";
             this.nrpersonalTxb.Size = new System.Drawing.Size(154, 29);
             this.nrpersonalTxb.TabIndex = 66;
@@ -320,7 +310,7 @@
             // nrtelefoniTxb
             // 
             this.nrtelefoniTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nrtelefoniTxb.Location = new System.Drawing.Point(215, 226);
+            this.nrtelefoniTxb.Location = new System.Drawing.Point(215, 249);
             this.nrtelefoniTxb.Name = "nrtelefoniTxb";
             this.nrtelefoniTxb.Size = new System.Drawing.Size(154, 29);
             this.nrtelefoniTxb.TabIndex = 67;
@@ -330,7 +320,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Verdana", 14F);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(400, 420);
+            this.label13.Location = new System.Drawing.Point(400, 443);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 23);
             this.label13.TabIndex = 71;
@@ -341,7 +331,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 14F);
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(400, 385);
+            this.label15.Location = new System.Drawing.Point(400, 408);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 23);
             this.label15.TabIndex = 70;
@@ -350,7 +340,7 @@
             // lendaTxb2
             // 
             this.lendaTxb2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lendaTxb2.Location = new System.Drawing.Point(430, 414);
+            this.lendaTxb2.Location = new System.Drawing.Point(430, 437);
             this.lendaTxb2.Name = "lendaTxb2";
             this.lendaTxb2.Size = new System.Drawing.Size(196, 29);
             this.lendaTxb2.TabIndex = 69;
@@ -358,7 +348,7 @@
             // lendaTxb1
             // 
             this.lendaTxb1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lendaTxb1.Location = new System.Drawing.Point(430, 379);
+            this.lendaTxb1.Location = new System.Drawing.Point(430, 402);
             this.lendaTxb1.Name = "lendaTxb1";
             this.lendaTxb1.Size = new System.Drawing.Size(196, 29);
             this.lendaTxb1.TabIndex = 68;
@@ -366,12 +356,22 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_transfer_32;
-            this.pictureBox2.Location = new System.Drawing.Point(693, 414);
+            this.pictureBox2.Location = new System.Drawing.Point(693, 437);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // MesuesitRegjistroUC
             // 
@@ -410,8 +410,8 @@
             this.Load += new System.EventHandler(this.MesuesitRegjistroUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
