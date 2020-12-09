@@ -65,9 +65,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.label1.Location = new System.Drawing.Point(46, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 21);
+            this.label1.Size = new System.Drawing.Size(464, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Klasat ku jep mësim > Printimi i fletë-informimeve të tremujorit";
+            this.label1.Text = "Klasa ku jep mësim > Printimi i fletë-informimeve të tremujorit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pictureBox1
@@ -184,7 +184,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(673, 23);
+            this.label4.Location = new System.Drawing.Point(665, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 32);
             this.label4.TabIndex = 84;
