@@ -44,10 +44,21 @@ namespace DesktopApp.Klea
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.Klasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mesuesi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Lenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ms = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Frekuentimi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,7 +110,7 @@ namespace DesktopApp.Klea
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(37, 201);
+            this.label3.Location = new System.Drawing.Point(55, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(244, 23);
             this.label3.TabIndex = 41;
@@ -155,11 +166,11 @@ namespace DesktopApp.Klea
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(475, 95);
+            this.button1.Location = new System.Drawing.Point(444, 99);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 57);
+            this.button1.Size = new System.Drawing.Size(115, 57);
             this.button1.TabIndex = 65;
-            this.button1.Text = "Ruaj";
+            this.button1.Text = "Shto klasën";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // panel2
@@ -174,12 +185,15 @@ namespace DesktopApp.Klea
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Klasa,
+            this.Mesuesi});
             this.dataGridView1.Location = new System.Drawing.Point(59, 240);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(382, 261);
             this.dataGridView1.TabIndex = 67;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -188,7 +202,7 @@ namespace DesktopApp.Klea
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
-            this.label6.Location = new System.Drawing.Point(429, 211);
+            this.label6.Location = new System.Drawing.Point(291, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 20);
             this.label6.TabIndex = 68;
@@ -197,7 +211,7 @@ namespace DesktopApp.Klea
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DesktopApp.Properties.Resources.restart_48px;
-            this.pictureBox3.Location = new System.Drawing.Point(552, 211);
+            this.pictureBox3.Location = new System.Drawing.Point(414, 211);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,17 +226,107 @@ namespace DesktopApp.Klea
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(409, 525);
+            this.button2.Location = new System.Drawing.Point(270, 506);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 41);
             this.button2.TabIndex = 70;
-            this.button2.Text = "Përditso tabelën";
+            this.button2.Text = "Përditëso klasat";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // Klasa
+            // 
+            this.Klasa.HeaderText = "Emri i klases";
+            this.Klasa.Name = "Klasa";
+            // 
+            // Mesuesi
+            // 
+            this.Mesuesi.HeaderText = "Mesuesi Kujdestar";
+            this.Mesuesi.Name = "Mesuesi";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label7.Location = new System.Drawing.Point(471, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(247, 23);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "+Edito lëndët për klasën";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.label8.ForeColor = System.Drawing.Color.Green;
+            this.label8.Location = new System.Drawing.Point(716, 192);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 23);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "13a";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Lenda,
+            this.Ms,
+            this.Frekuentimi});
+            this.dataGridView2.Location = new System.Drawing.Point(475, 240);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(410, 261);
+            this.dataGridView2.TabIndex = 73;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel3.Location = new System.Drawing.Point(457, 192);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 370);
+            this.panel3.TabIndex = 67;
+            // 
+            // Lenda
+            // 
+            this.Lenda.HeaderText = "Emri i lendes";
+            this.Lenda.Name = "Lenda";
+            // 
+            // Ms
+            // 
+            this.Ms.HeaderText = "Mesuesi";
+            this.Ms.Name = "Ms";
+            // 
+            // Frekuentimi
+            // 
+            this.Frekuentimi.HeaderText = "Frekuentimi";
+            this.Frekuentimi.Name = "Frekuentimi";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(714, 506);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(171, 41);
+            this.button3.TabIndex = 74;
+            this.button3.Text = "Përditëso lëndët";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // KlasatAdminUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
@@ -239,11 +343,13 @@ namespace DesktopApp.Klea
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KlasatAdminUC";
             this.Size = new System.Drawing.Size(931, 641);
+            this.Load += new System.EventHandler(this.KlasatAdminUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +372,15 @@ namespace DesktopApp.Klea
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Klasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mesuesi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ms;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Frekuentimi;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button3;
     }
 }

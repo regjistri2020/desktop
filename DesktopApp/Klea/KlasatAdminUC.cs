@@ -58,7 +58,10 @@ namespace DesktopApp.Klea
 
         }
 
-        
+        private void KlasatAdminUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
