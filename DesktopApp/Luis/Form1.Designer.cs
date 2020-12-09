@@ -69,7 +69,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 43);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Mesues";
+            this.button2.Text = "Mësues";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -100,11 +100,11 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.school_management_software_500x500;
-            this.pictureBox4.Location = new System.Drawing.Point(217, 69);
+            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.e_nxenesit__1_23;
+            this.pictureBox4.Location = new System.Drawing.Point(197, 103);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(215, 111);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.Size = new System.Drawing.Size(251, 92);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -139,6 +139,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // jDragControl1
             // 

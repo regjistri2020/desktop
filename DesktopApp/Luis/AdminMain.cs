@@ -25,8 +25,8 @@ namespace DesktopApp.Luis
 			mesuesitRegjistroUC1.Hide();
 			eventetAdminUC1.Hide();
 			klasatAdminUC1.Hide();
-			nxenesitEditoUC1.Hide();
-			nxenesitRregjistro1.Hide();
+			//nxenesitEditoUC1.Hide();
+			//nxenesitRregjistro1.Hide();
 		}
 		private void hideSubMenu()
 		{

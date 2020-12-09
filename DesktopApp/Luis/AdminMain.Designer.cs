@@ -57,8 +57,6 @@
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
-            this.nxenesitEditoUC1 = new DesktopApp.Luis.NxenesitEditoUC();
-            this.nxenesitRregjistro1 = new DesktopApp.Luis.NxenesitRregjistro();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -170,7 +168,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.school_management_software_500x500;
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.e_nxenesit__1_23;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(270, 80);
@@ -358,8 +356,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.nxenesitRregjistro1);
-            this.panel3.Controls.Add(this.nxenesitEditoUC1);
             this.panel3.Controls.Add(this.eventetAdminUC1);
             this.panel3.Controls.Add(this.adminDashboardUC1);
             this.panel3.Controls.Add(this.klasatAdminUC1);
@@ -416,20 +412,6 @@
             // 
             this.jDragControl1.GetForm = this;
             this.jDragControl1.TargetControl = this.panel1;
-            // 
-            // nxenesitEditoUC1
-            // 
-            this.nxenesitEditoUC1.Location = new System.Drawing.Point(0, 0);
-            this.nxenesitEditoUC1.Name = "nxenesitEditoUC1";
-            this.nxenesitEditoUC1.Size = new System.Drawing.Size(931, 641);
-            this.nxenesitEditoUC1.TabIndex = 5;
-            // 
-            // nxenesitRregjistro1
-            // 
-            this.nxenesitRregjistro1.Location = new System.Drawing.Point(0, 0);
-            this.nxenesitRregjistro1.Name = "nxenesitRregjistro1";
-            this.nxenesitRregjistro1.Size = new System.Drawing.Size(931, 641);
-            this.nxenesitRregjistro1.TabIndex = 6;
             // 
             // AdminMain
             // 
