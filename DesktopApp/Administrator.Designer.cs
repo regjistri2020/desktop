@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TittelPanel = new System.Windows.Forms.Panel();
             this.BackpictureBox = new System.Windows.Forms.PictureBox();
             this.minimizepictureBox = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,7 @@
             this.Hyni_button = new System.Windows.Forms.Button();
             this.PasstextBox = new System.Windows.Forms.TextBox();
             this.UsertextBox = new System.Windows.Forms.TextBox();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.TittelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).BeginInit();
@@ -218,6 +220,11 @@
             this.UsertextBox.TabIndex = 6;
             this.UsertextBox.Text = "Vendosni kodin tuaj";
             // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this.TittelPanel;
+            // 
             // Administrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,5 +265,6 @@
         private System.Windows.Forms.PictureBox closepictureBox;
         private System.Windows.Forms.PictureBox BackpictureBox;
         private System.Windows.Forms.PictureBox minimizepictureBox;
+        private JDragControl.JDragControl jDragControl1;
     }
 }

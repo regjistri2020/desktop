@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logoutbutton = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,7 @@
             this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -355,6 +357,11 @@
             this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesDashboardUC1.TabIndex = 12;
             // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this.panel1;
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,5 +414,6 @@
         private System.Windows.Forms.Button MungesatButton;
         private System.Windows.Forms.Button VleresonxenesButton;
         private System.Windows.Forms.Button Logoutbutton;
+        private JDragControl.JDragControl jDragControl1;
     }
 }
