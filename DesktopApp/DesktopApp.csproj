@@ -75,6 +75,12 @@
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klea\JustifikoMungesatUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Klea\JustifikoMungesatUC.Designer.cs">
+      <DependentUpon>JustifikoMungesatUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klea\KlasatAdminUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klea\JustifikoMungesatUC.resx">
+      <DependentUpon>JustifikoMungesatUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klea\KlasatAdminUC.resx">
       <DependentUpon>KlasatAdminUC.cs</DependentUpon>
