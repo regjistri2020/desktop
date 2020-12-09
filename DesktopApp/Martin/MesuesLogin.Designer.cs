@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BackpictureBox = new System.Windows.Forms.PictureBox();
             this.minimizepictureBox = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,7 @@
             this.Hyni_button = new System.Windows.Forms.Button();
             this.PasstextBox = new System.Windows.Forms.TextBox();
             this.UsernametextBox = new System.Windows.Forms.TextBox();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizepictureBox)).BeginInit();
@@ -74,6 +76,7 @@
             this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackpictureBox.TabIndex = 6;
             this.BackpictureBox.TabStop = false;
+            this.BackpictureBox.Click += new System.EventHandler(this.BackpictureBox_Click);
             // 
             // minimizepictureBox
             // 
@@ -203,10 +206,10 @@
             // 
             this.PasstextBox.BackColor = System.Drawing.SystemColors.Control;
             this.PasstextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasstextBox.Location = new System.Drawing.Point(95, 213);
+            this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasstextBox.Location = new System.Drawing.Point(95, 212);
             this.PasstextBox.Name = "PasstextBox";
-            this.PasstextBox.Size = new System.Drawing.Size(192, 15);
+            this.PasstextBox.Size = new System.Drawing.Size(192, 17);
             this.PasstextBox.TabIndex = 16;
             this.PasstextBox.Text = "Vendosni fjalëkalimin tuaj";
             this.PasstextBox.Click += new System.EventHandler(this.PasstextBox_Click);
@@ -215,13 +218,18 @@
             // 
             this.UsernametextBox.BackColor = System.Drawing.SystemColors.Control;
             this.UsernametextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernametextBox.Location = new System.Drawing.Point(95, 102);
+            this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernametextBox.Location = new System.Drawing.Point(95, 101);
             this.UsernametextBox.Name = "UsernametextBox";
-            this.UsernametextBox.Size = new System.Drawing.Size(192, 15);
+            this.UsernametextBox.Size = new System.Drawing.Size(192, 17);
             this.UsernametextBox.TabIndex = 15;
             this.UsernametextBox.Text = "Vendosni kodin tuaj";
             this.UsernametextBox.Click += new System.EventHandler(this.UsernameTextbox_Click);
+            // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this.panel1;
             // 
             // MesuesLogin
             // 
@@ -263,5 +271,6 @@
         private System.Windows.Forms.Button Hyni_button;
         private System.Windows.Forms.TextBox PasstextBox;
         private System.Windows.Forms.TextBox UsernametextBox;
+        private JDragControl.JDragControl jDragControl1;
     }
 }

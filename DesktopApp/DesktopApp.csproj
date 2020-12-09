@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JDragControl">
+    <Reference Include="JDragControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\JDragControl.dll</HintPath>
     </Reference>
     <Reference Include="System">
@@ -128,6 +129,12 @@
     <Compile Include="Martin\AdminDashboardUC.Designer.cs">
       <DependentUpon>AdminDashboardUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Martin\FletTremujori.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Martin\FletTremujori.Designer.cs">
+      <DependentUpon>FletTremujori.cs</DependentUpon>
+    </Compile>
     <Compile Include="Martin\MesuesDashboardUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\AdminDashboardUC.resx">
       <DependentUpon>AdminDashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Martin\FletTremujori.resx">
+      <DependentUpon>FletTremujori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\MesuesDashboardUC.resx">
       <DependentUpon>MesuesDashboardUC.cs</DependentUpon>
