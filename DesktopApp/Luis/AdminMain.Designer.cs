@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -55,7 +54,7 @@
             this.klasatAdminUC1 = new DesktopApp.Klea.KlasatAdminUC();
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.Logoutbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -71,6 +70,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(92)))));
+            this.panel1.Controls.Add(this.Logoutbutton);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.CloseBtn);
@@ -393,10 +393,17 @@
             this.mesuesitRegjistroUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesitRegjistroUC1.TabIndex = 0;
             // 
-            // jDragControl1
+            // Logoutbutton
             // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this.panel1;
+            this.Logoutbutton.BackColor = System.Drawing.Color.DarkOrange;
+            this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logoutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbutton.Location = new System.Drawing.Point(935, 32);
+            this.Logoutbutton.Name = "Logoutbutton";
+            this.Logoutbutton.Size = new System.Drawing.Size(75, 23);
+            this.Logoutbutton.TabIndex = 10;
+            this.Logoutbutton.Text = "Dilni";
+            this.Logoutbutton.UseVisualStyleBackColor = false;
             // 
             // AdminMain
             // 
@@ -454,7 +461,7 @@
 		private MesuesitEditoUC mesuesitEditoUC1;
         private Klea.KlasatAdminUC klasatAdminUC1;
         private Martin.AdminDashboardUC adminDashboardUC1;
-        private JDragControl.JDragControl jDragControl1;
         private EventetAdminUC eventetAdminUC1;
+        private System.Windows.Forms.Button Logoutbutton;
     }
 }

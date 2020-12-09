@@ -23,6 +23,8 @@ namespace DesktopApp.Luis
 			hideSubMenu();
 			mesuesitEditoUC1.Hide();
 			mesuesitRegjistroUC1.Hide();
+			eventetAdminUC1.Hide();
+			klasatAdminUC1.Hide();
 		}
 		private void hideSubMenu()
 		{
@@ -106,9 +108,9 @@ namespace DesktopApp.Luis
 		private void button1_Click(object sender, EventArgs e)
 		{
 
-			AdminDashboardUC ad = new AdminDashboardUC();
-			ad.Dock = DockStyle.Fill;
-			this.Controls.Add(ad);
+			//AdminDashboardUC ad = new AdminDashboardUC();
+			//ad.Dock = DockStyle.Fill;
+			//this.Controls.Add(ad);
 			adminDashboardUC1.Show();
 			adminDashboardUC1.BringToFront();
 		}
@@ -121,7 +123,8 @@ namespace DesktopApp.Luis
 
 		private void button9_Click(object sender, EventArgs e)
 		{
-			
+			eventetAdminUC1.Show();
+			eventetAdminUC1.BringToFront();
 		}
 	}
 }

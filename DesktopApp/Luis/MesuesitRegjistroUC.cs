@@ -92,7 +92,7 @@ namespace DesktopApp.Luis
             studimetTxb1.Text = "";
             studimetTxb2.Text = "";
             lendaTxb1.Text = "";
-           lendaTxb2.Text = "";
+            lendaTxb2.Text = "";
 
             MessageBox.Show("Rregjistrimi i mësuesit u krye me sukses.");
 
