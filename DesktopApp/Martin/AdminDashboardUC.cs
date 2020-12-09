@@ -26,5 +26,10 @@ namespace DesktopApp.Martin
         {
 
         }
+
+        private void ShkollatextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

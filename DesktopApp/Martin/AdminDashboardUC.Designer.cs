@@ -361,12 +361,13 @@
             this.ShkollatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ShkollatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShkollatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ShkollatextBox.Location = new System.Drawing.Point(521, 18);
+            this.ShkollatextBox.Location = new System.Drawing.Point(519, 18);
             this.ShkollatextBox.Name = "ShkollatextBox";
-            this.ShkollatextBox.Size = new System.Drawing.Size(367, 24);
+            this.ShkollatextBox.Size = new System.Drawing.Size(385, 24);
             this.ShkollatextBox.TabIndex = 27;
             this.ShkollatextBox.Text = "Shkolla për TIK \"Hermann Gmeiner\"";
             this.ShkollatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ShkollatextBox.TextChanged += new System.EventHandler(this.ShkollatextBox_TextChanged);
             // 
             // AdminDashboardUC
             // 
