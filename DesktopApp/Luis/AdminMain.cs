@@ -126,5 +126,12 @@ namespace DesktopApp.Luis
 			eventetAdminUC1.Show();
 			eventetAdminUC1.BringToFront();
 		}
+
+		private void Logoutbutton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			var a = new Form1();
+			a.Show();
+		}
 	}
 }
