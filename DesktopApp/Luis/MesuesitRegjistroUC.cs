@@ -107,5 +107,7 @@ namespace DesktopApp.Luis
         {
             gjinia = "femer";
         }
+
+
     }
 }

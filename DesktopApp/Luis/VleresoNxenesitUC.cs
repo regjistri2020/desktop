@@ -30,6 +30,6 @@ namespace DesktopApp.Luis
 			
 		}
 
-	
+
 	}
 }
