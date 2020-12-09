@@ -133,9 +133,6 @@
   <data name="icons8_transfer_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_transfer_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="privacyphoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\privacyphoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="person_female_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person_female_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +141,12 @@
   </data>
   <data name="pdf_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pdf_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="privacyphoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\privacyphoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="privacy_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\privacy_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="id_not_verified_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\id_not_verified_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +220,7 @@
   <data name="icons8_settings_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_settings_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="privacy_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\privacy_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
