@@ -204,10 +204,10 @@
             // 
             this.PasstextBox.BackColor = System.Drawing.SystemColors.Control;
             this.PasstextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasstextBox.Location = new System.Drawing.Point(95, 213);
+            this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasstextBox.Location = new System.Drawing.Point(95, 212);
             this.PasstextBox.Name = "PasstextBox";
-            this.PasstextBox.Size = new System.Drawing.Size(192, 15);
+            this.PasstextBox.Size = new System.Drawing.Size(192, 17);
             this.PasstextBox.TabIndex = 16;
             this.PasstextBox.Text = "Vendosni fjalëkalimin tuaj";
             this.PasstextBox.Click += new System.EventHandler(this.PasstextBox_Click);
@@ -216,10 +216,10 @@
             // 
             this.UsernametextBox.BackColor = System.Drawing.SystemColors.Control;
             this.UsernametextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernametextBox.Location = new System.Drawing.Point(95, 102);
+            this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernametextBox.Location = new System.Drawing.Point(95, 101);
             this.UsernametextBox.Name = "UsernametextBox";
-            this.UsernametextBox.Size = new System.Drawing.Size(192, 15);
+            this.UsernametextBox.Size = new System.Drawing.Size(192, 17);
             this.UsernametextBox.TabIndex = 15;
             this.UsernametextBox.Text = "Vendosni kodin tuaj";
             this.UsernametextBox.Click += new System.EventHandler(this.UsernameTextbox_Click);

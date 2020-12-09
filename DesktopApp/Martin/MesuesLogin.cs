@@ -81,12 +81,12 @@ namespace DesktopApp.Martin
 
             if (UsernametextBox.Text == "2030" && PasstextBox.Text == "1234")
             {
-                MessageBox.Show("Vendosja e kredencialeve u krye me sukses! ");
+                MessageBox.Show("Vendosja e kredencialeve u krye me sukses!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //    this.Hide();
                 //    MesueseMain m = new MesueseMain();
                 //    m.Show();
                 //}
-
+                
                 //else
                 //{
                 //    MessageBox.Show("Ju nuk u futet me sukses ne platforme! ");
@@ -98,7 +98,8 @@ namespace DesktopApp.Martin
             }
             //con.Close();
 
-            else MessageBox.Show("Vendosni sakte kredencialet! ");
+            else 
+                MessageBox.Show( "Vendosni sakte kredencialet!","         ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void minimizepictureBox_Click(object sender, EventArgs e)

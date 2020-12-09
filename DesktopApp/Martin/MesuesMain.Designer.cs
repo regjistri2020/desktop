@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Logoutbutton = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
-            this.Logoutbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -76,6 +76,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1201, 80);
             this.panel1.TabIndex = 0;
+            // 
+            // Logoutbutton
+            // 
+            this.Logoutbutton.BackColor = System.Drawing.Color.DarkOrange;
+            this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logoutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbutton.Location = new System.Drawing.Point(917, 34);
+            this.Logoutbutton.Name = "Logoutbutton";
+            this.Logoutbutton.Size = new System.Drawing.Size(75, 23);
+            this.Logoutbutton.TabIndex = 9;
+            this.Logoutbutton.Text = "Dilni";
+            this.Logoutbutton.UseVisualStyleBackColor = false;
+            this.Logoutbutton.Click += new System.EventHandler(this.Logoutbutton_Click);
             // 
             // pictureBox4
             // 
@@ -341,19 +354,6 @@
             this.mesuesDashboardUC1.Name = "mesuesDashboardUC1";
             this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesDashboardUC1.TabIndex = 12;
-            // 
-            // Logoutbutton
-            // 
-            this.Logoutbutton.BackColor = System.Drawing.Color.DarkOrange;
-            this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logoutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logoutbutton.Location = new System.Drawing.Point(917, 34);
-            this.Logoutbutton.Name = "Logoutbutton";
-            this.Logoutbutton.Size = new System.Drawing.Size(75, 23);
-            this.Logoutbutton.TabIndex = 9;
-            this.Logoutbutton.Text = "Dilni";
-            this.Logoutbutton.UseVisualStyleBackColor = false;
-            this.Logoutbutton.Click += new System.EventHandler(this.Logoutbutton_Click);
             // 
             // MesuesMain
             // 

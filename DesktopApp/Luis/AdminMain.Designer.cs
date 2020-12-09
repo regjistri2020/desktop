@@ -30,8 +30,13 @@
 		{
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -45,27 +50,22 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.CloseBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.eventetAdminUC1 = new DesktopApp.Luis.EventetAdminUC();
             this.adminDashboardUC1 = new DesktopApp.Martin.AdminDashboardUC();
             this.klasatAdminUC1 = new DesktopApp.Klea.KlasatAdminUC();
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
-            this.eventetAdminUC1 = new DesktopApp.Luis.EventetAdminUC();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.NxenesitSub.SuspendLayout();
-            this.MesuesitSub.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.NxenesitSub.SuspendLayout();
+            this.MesuesitSub.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,6 +85,39 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DesktopApp.Properties.Resources.icons8_settings_32;
+            this.pictureBox5.Location = new System.Drawing.Point(1050, 21);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.icons8_minus_32;
+            this.pictureBox4.Location = new System.Drawing.Point(1095, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
+            this.CloseBtn.Location = new System.Drawing.Point(1140, 21);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(39, 39);
+            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CloseBtn.TabIndex = 4;
+            this.CloseBtn.TabStop = false;
+            this.CloseBtn.Click += new System.EventHandler(this.Close_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -96,6 +129,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "#nendrejtor1";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_user_64;
+            this.pictureBox2.Location = new System.Drawing.Point(720, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -106,6 +149,17 @@
             this.label1.Size = new System.Drawing.Size(206, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Paneli i administratorit";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.school_management_software_500x500;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(270, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -299,64 +353,12 @@
             this.panel3.Size = new System.Drawing.Size(931, 647);
             this.panel3.TabIndex = 2;
             // 
-            // jDragControl1
+            // eventetAdminUC1
             // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this.panel1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DesktopApp.Properties.Resources.icons8_settings_32;
-            this.pictureBox5.Location = new System.Drawing.Point(1050, 21);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.icons8_minus_32;
-            this.pictureBox4.Location = new System.Drawing.Point(1095, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
-            this.CloseBtn.Location = new System.Drawing.Point(1140, 21);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(39, 39);
-            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseBtn.TabIndex = 4;
-            this.CloseBtn.TabStop = false;
-            this.CloseBtn.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_user_64;
-            this.pictureBox2.Location = new System.Drawing.Point(720, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.school_management_software_500x500;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.eventetAdminUC1.Location = new System.Drawing.Point(0, 0);
+            this.eventetAdminUC1.Name = "eventetAdminUC1";
+            this.eventetAdminUC1.Size = new System.Drawing.Size(931, 641);
+            this.eventetAdminUC1.TabIndex = 4;
             // 
             // adminDashboardUC1
             // 
@@ -391,12 +393,10 @@
             this.mesuesitRegjistroUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesitRegjistroUC1.TabIndex = 0;
             // 
-            // eventetAdminUC1
+            // jDragControl1
             // 
-            this.eventetAdminUC1.Location = new System.Drawing.Point(0, 0);
-            this.eventetAdminUC1.Name = "eventetAdminUC1";
-            this.eventetAdminUC1.Size = new System.Drawing.Size(931, 641);
-            this.eventetAdminUC1.TabIndex = 4;
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this.panel1;
             // 
             // AdminMain
             // 
@@ -414,15 +414,15 @@
             this.Load += new System.EventHandler(this.AdminMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.NxenesitSub.ResumeLayout(false);
-            this.MesuesitSub.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.NxenesitSub.ResumeLayout(false);
+            this.MesuesitSub.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
