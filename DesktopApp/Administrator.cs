@@ -47,5 +47,15 @@ namespace DesktopApp
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void txt(object sender, EventArgs e)
+        {
+            UsertextBox.Clear();
+        }
+
+        private void pass(object sender, EventArgs e)
+        {
+            PasstextBox.Clear();
+        }
     }
 }
