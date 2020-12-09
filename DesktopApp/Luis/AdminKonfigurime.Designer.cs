@@ -62,6 +62,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -139,6 +140,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 25);
             this.textBox1.TabIndex = 8;
+            this.textBox1.Click += new System.EventHandler(this.T);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -227,10 +230,11 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.SandyBrown;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(294, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(265, 82);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(285, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(333, 150);
             this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
@@ -238,7 +242,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(505, 238);
+            this.button2.Location = new System.Drawing.Point(524, 238);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 31);
             this.button2.TabIndex = 18;
@@ -358,12 +362,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_delete_bin_48;
-            this.pictureBox1.Location = new System.Drawing.Point(464, 238);
+            this.pictureBox1.Location = new System.Drawing.Point(483, 238);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label12
             // 
@@ -418,12 +423,25 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label14.Location = new System.Drawing.Point(262, 241);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(215, 30);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Pasi të zgjidhni nje nga administratorët,\r\nklikoni ikonën e koshit për ta fshirë " +
+    " atë.";
+            // 
             // AdminKonfigurime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(618, 591);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label13);
@@ -504,5 +522,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label14;
     }
 }

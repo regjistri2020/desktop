@@ -62,5 +62,28 @@ namespace DesktopApp.Luis
                 //textBox1.Text = open.FileName;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {  
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
+                dataGridView1.Rows.RemoveAt(item.Index);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void T(object sender, EventArgs e)
+        {
+
+        }
     }
 }
