@@ -99,7 +99,7 @@ namespace DesktopApp.Martin
             //con.Close();
 
             else
-                MessageBox.Show("Vendosni sakte kredencialet!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vendosni sakte kredencialet!", " Mësuesi nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void minimizepictureBox_Click(object sender, EventArgs e)

@@ -49,5 +49,10 @@ namespace DesktopApp
 			PrivacyPolicy privacy = new PrivacyPolicy();
 			privacy.Show();
 		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("https://enxenesit.000webhostapp.com/home/");
+		}
 	}
 }

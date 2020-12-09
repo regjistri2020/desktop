@@ -45,7 +45,6 @@
             this.JustifikomungesatButton = new System.Windows.Forms.Button();
             this.Kujdestariabutton = new System.Windows.Forms.Button();
             this.MesimdhenieSub = new System.Windows.Forms.Panel();
-            this.NotaperfundimtareButton = new System.Windows.Forms.Button();
             this.MungesatButton = new System.Windows.Forms.Button();
             this.VleresonxenesButton = new System.Windows.Forms.Button();
             this.MesimdhenieButton = new System.Windows.Forms.Button();
@@ -150,7 +149,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.school_management_software_500x500;
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.e_nxenesit__1_23;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(270, 80);
@@ -197,7 +196,7 @@
             this.ChatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChatButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.ChatButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-            this.ChatButton.Location = new System.Drawing.Point(0, 440);
+            this.ChatButton.Location = new System.Drawing.Point(0, 385);
             this.ChatButton.Name = "ChatButton";
             this.ChatButton.Size = new System.Drawing.Size(270, 55);
             this.ChatButton.TabIndex = 15;
@@ -209,7 +208,7 @@
             this.KujdestariaSub.Controls.Add(this.DeftesaButton);
             this.KujdestariaSub.Controls.Add(this.JustifikomungesatButton);
             this.KujdestariaSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.KujdestariaSub.Location = new System.Drawing.Point(0, 330);
+            this.KujdestariaSub.Location = new System.Drawing.Point(0, 275);
             this.KujdestariaSub.Name = "KujdestariaSub";
             this.KujdestariaSub.Size = new System.Drawing.Size(270, 110);
             this.KujdestariaSub.TabIndex = 14;
@@ -254,7 +253,7 @@
             this.Kujdestariabutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Kujdestariabutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Kujdestariabutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-            this.Kujdestariabutton.Location = new System.Drawing.Point(0, 275);
+            this.Kujdestariabutton.Location = new System.Drawing.Point(0, 220);
             this.Kujdestariabutton.Name = "Kujdestariabutton";
             this.Kujdestariabutton.Size = new System.Drawing.Size(270, 55);
             this.Kujdestariabutton.TabIndex = 13;
@@ -264,30 +263,13 @@
             // 
             // MesimdhenieSub
             // 
-            this.MesimdhenieSub.Controls.Add(this.NotaperfundimtareButton);
             this.MesimdhenieSub.Controls.Add(this.MungesatButton);
             this.MesimdhenieSub.Controls.Add(this.VleresonxenesButton);
             this.MesimdhenieSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.MesimdhenieSub.Location = new System.Drawing.Point(0, 110);
             this.MesimdhenieSub.Name = "MesimdhenieSub";
-            this.MesimdhenieSub.Size = new System.Drawing.Size(270, 165);
+            this.MesimdhenieSub.Size = new System.Drawing.Size(270, 110);
             this.MesimdhenieSub.TabIndex = 12;
-            // 
-            // NotaperfundimtareButton
-            // 
-            this.NotaperfundimtareButton.BackColor = System.Drawing.Color.SkyBlue;
-            this.NotaperfundimtareButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NotaperfundimtareButton.FlatAppearance.BorderSize = 0;
-            this.NotaperfundimtareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotaperfundimtareButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.NotaperfundimtareButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-            this.NotaperfundimtareButton.Location = new System.Drawing.Point(0, 110);
-            this.NotaperfundimtareButton.Name = "NotaperfundimtareButton";
-            this.NotaperfundimtareButton.Size = new System.Drawing.Size(270, 55);
-            this.NotaperfundimtareButton.TabIndex = 14;
-            this.NotaperfundimtareButton.Text = "Nota përfundimtare";
-            this.NotaperfundimtareButton.UseVisualStyleBackColor = false;
-            this.NotaperfundimtareButton.Click += new System.EventHandler(this.NotaperfundimtareButton_Click);
             // 
             // MungesatButton
             // 
@@ -317,7 +299,7 @@
             this.VleresonxenesButton.Name = "VleresonxenesButton";
             this.VleresonxenesButton.Size = new System.Drawing.Size(270, 55);
             this.VleresonxenesButton.TabIndex = 12;
-            this.VleresonxenesButton.Text = "Vlereso nxënësit";
+            this.VleresonxenesButton.Text = "Vlerëso nxënësit";
             this.VleresonxenesButton.UseVisualStyleBackColor = false;
             this.VleresonxenesButton.Click += new System.EventHandler(this.VleresonxenesButton_Click);
             // 
@@ -419,7 +401,6 @@
         private System.Windows.Forms.Button JustifikomungesatButton;
         private System.Windows.Forms.Button Kujdestariabutton;
         private System.Windows.Forms.Panel MesimdhenieSub;
-        private System.Windows.Forms.Button NotaperfundimtareButton;
         private System.Windows.Forms.Button MungesatButton;
         private System.Windows.Forms.Button VleresonxenesButton;
         private System.Windows.Forms.Button Logoutbutton;

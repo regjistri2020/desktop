@@ -397,6 +397,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\e nxenesit %281%2923.png" />
     <None Include="Resources\warn.png" />
     <None Include="Resources\privacy_64px.png" />
     <None Include="Resources\privacyphoto.jpg" />

@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FletTremujori));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,10 +41,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Np = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KerkoButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +91,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.KerkoButton);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label12);
@@ -93,7 +100,6 @@
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -101,6 +107,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(729, 103);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 61);
+            this.button3.TabIndex = 87;
+            this.button3.Text = "Printo të gjithë nxënësit";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -176,23 +195,16 @@
             this.panel3.Size = new System.Drawing.Size(855, 5);
             this.panel3.TabIndex = 78;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(725, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 61);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "Kontrolloni rezultatin";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.NG,
+            this.Np,
+            this.NT});
             this.dataGridView1.Location = new System.Drawing.Point(56, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(813, 383);
@@ -209,18 +221,42 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Klasa :";
             // 
-            // button3
+            // Column1
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(536, 103);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 61);
-            this.button3.TabIndex = 87;
-            this.button3.Text = "Printo të gjithë nxënësit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Column1.HeaderText = "Nr.";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Emërtimet";
+            this.Column2.Name = "Column2";
+            // 
+            // NG
+            // 
+            this.NG.HeaderText = "Notë me gojë";
+            this.NG.Name = "NG";
+            // 
+            // Np
+            // 
+            this.Np.HeaderText = "Notë Portofoli";
+            this.Np.Name = "Np";
+            // 
+            // NT
+            // 
+            this.NT.HeaderText = "Notë Testi";
+            this.NT.Name = "NT";
+            // 
+            // KerkoButton
+            // 
+            this.KerkoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KerkoButton.BackgroundImage")));
+            this.KerkoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.KerkoButton.FlatAppearance.BorderSize = 0;
+            this.KerkoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KerkoButton.Location = new System.Drawing.Point(349, 120);
+            this.KerkoButton.Name = "KerkoButton";
+            this.KerkoButton.Size = new System.Drawing.Size(30, 30);
+            this.KerkoButton.TabIndex = 88;
+            this.KerkoButton.UseVisualStyleBackColor = true;
             // 
             // FletTremujori
             // 
@@ -251,12 +287,17 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Np;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NT;
+        private System.Windows.Forms.Button KerkoButton;
     }
 }
