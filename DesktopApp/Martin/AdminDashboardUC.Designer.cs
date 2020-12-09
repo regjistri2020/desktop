@@ -53,6 +53,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ShkollatextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Datapanel.SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             // Datapanel
             // 
+            this.Datapanel.Controls.Add(this.ShkollatextBox);
             this.Datapanel.Controls.Add(this.textBox3);
             this.Datapanel.Controls.Add(this.label6);
             this.Datapanel.Controls.Add(this.pictureBox7);
@@ -131,7 +133,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox3.Location = new System.Drawing.Point(675, 444);
+            this.textBox3.Location = new System.Drawing.Point(675, 455);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 31);
             this.textBox3.TabIndex = 26;
@@ -142,7 +144,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(666, 405);
+            this.label6.Location = new System.Drawing.Point(666, 416);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 32);
             this.label6.TabIndex = 25;
@@ -151,7 +153,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
-            this.pictureBox7.Location = new System.Drawing.Point(544, 401);
+            this.pictureBox7.Location = new System.Drawing.Point(544, 412);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(92, 91);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,7 +166,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox2.Location = new System.Drawing.Point(235, 521);
+            this.textBox2.Location = new System.Drawing.Point(235, 530);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 31);
             this.textBox2.TabIndex = 23;
@@ -175,7 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(234, 479);
+            this.label5.Location = new System.Drawing.Point(234, 490);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 32);
             this.label5.TabIndex = 22;
@@ -184,7 +186,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DesktopApp.Properties.Resources.businessman_40px;
-            this.pictureBox6.Location = new System.Drawing.Point(121, 479);
+            this.pictureBox6.Location = new System.Drawing.Point(121, 488);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(86, 77);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +199,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(235, 391);
+            this.textBox1.Location = new System.Drawing.Point(235, 402);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 31);
             this.textBox1.TabIndex = 20;
@@ -208,7 +210,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(234, 349);
+            this.label4.Location = new System.Drawing.Point(234, 360);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 32);
             this.label4.TabIndex = 19;
@@ -217,7 +219,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::DesktopApp.Properties.Resources.person_female_40px;
-            this.pictureBox5.Location = new System.Drawing.Point(121, 349);
+            this.pictureBox5.Location = new System.Drawing.Point(121, 358);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(86, 77);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,7 +232,7 @@
             this.DatatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DatatextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatatextBox.ForeColor = System.Drawing.Color.Green;
-            this.DatatextBox.Location = new System.Drawing.Point(155, 16);
+            this.DatatextBox.Location = new System.Drawing.Point(176, 15);
             this.DatatextBox.Name = "DatatextBox";
             this.DatatextBox.Size = new System.Drawing.Size(123, 28);
             this.DatatextBox.TabIndex = 17;
@@ -243,7 +245,7 @@
             this.Datalabel.AutoSize = true;
             this.Datalabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Datalabel.ForeColor = System.Drawing.Color.Red;
-            this.Datalabel.Location = new System.Drawing.Point(46, 14);
+            this.Datalabel.Location = new System.Drawing.Point(41, 13);
             this.Datalabel.Name = "Datalabel";
             this.Datalabel.Size = new System.Drawing.Size(124, 32);
             this.Datalabel.TabIndex = 16;
@@ -255,7 +257,7 @@
             this.NxenestextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NxenestextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NxenestextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.NxenestextBox.Location = new System.Drawing.Point(688, 182);
+            this.NxenestextBox.Location = new System.Drawing.Point(688, 193);
             this.NxenestextBox.Name = "NxenestextBox";
             this.NxenestextBox.Size = new System.Drawing.Size(100, 31);
             this.NxenestextBox.TabIndex = 15;
@@ -268,7 +270,7 @@
             this.MesuestextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MesuestextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MesuestextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MesuestextBox.Location = new System.Drawing.Point(268, 182);
+            this.MesuestextBox.Location = new System.Drawing.Point(268, 193);
             this.MesuestextBox.Name = "MesuestextBox";
             this.MesuestextBox.Size = new System.Drawing.Size(100, 31);
             this.MesuestextBox.TabIndex = 14;
@@ -280,7 +282,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(687, 143);
+            this.label3.Location = new System.Drawing.Point(687, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 32);
             this.label3.TabIndex = 13;
@@ -290,7 +292,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(267, 143);
+            this.label1.Location = new System.Drawing.Point(267, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 32);
             this.label1.TabIndex = 12;
@@ -299,7 +301,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.student_male_64px;
-            this.pictureBox4.Location = new System.Drawing.Point(557, 139);
+            this.pictureBox4.Location = new System.Drawing.Point(557, 150);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(92, 91);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -309,7 +311,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.teacher_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(133, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(133, 142);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 105);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -319,7 +321,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
-            this.panel3.Location = new System.Drawing.Point(34, 303);
+            this.panel3.Location = new System.Drawing.Point(34, 314);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 5);
             this.panel3.TabIndex = 9;
@@ -327,7 +329,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
-            this.panel2.Location = new System.Drawing.Point(34, 53);
+            this.panel2.Location = new System.Drawing.Point(34, 64);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(644, 5);
             this.panel2.TabIndex = 8;
@@ -337,7 +339,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(684, 44);
+            this.label2.Location = new System.Drawing.Point(684, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 21);
             this.label2.TabIndex = 6;
@@ -346,12 +348,25 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DesktopApp.Properties.Resources.restart_48px;
-            this.pictureBox3.Location = new System.Drawing.Point(833, 37);
+            this.pictureBox3.Location = new System.Drawing.Point(833, 48);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            // 
+            // ShkollatextBox
+            // 
+            this.ShkollatextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ShkollatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ShkollatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShkollatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ShkollatextBox.Location = new System.Drawing.Point(521, 18);
+            this.ShkollatextBox.Name = "ShkollatextBox";
+            this.ShkollatextBox.Size = new System.Drawing.Size(367, 24);
+            this.ShkollatextBox.TabIndex = 27;
+            this.ShkollatextBox.Text = "Shkolla për TIK \"Hermann Gmeiner\"";
+            this.ShkollatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AdminDashboardUC
             // 
@@ -403,5 +418,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox ShkollatextBox;
     }
 }
