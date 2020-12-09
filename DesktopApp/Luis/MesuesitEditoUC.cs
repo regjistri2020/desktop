@@ -40,6 +40,10 @@ namespace DesktopApp.Luis
             adap.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             */
+
+            con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
+            con.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)

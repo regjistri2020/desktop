@@ -96,6 +96,8 @@ namespace DesktopApp.Luis
 
             MessageBox.Show("Rregjistrimi i mësuesit u krye me sukses.");
 
+            con.Close();
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
