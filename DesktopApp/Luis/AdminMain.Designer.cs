@@ -57,6 +57,8 @@
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.nxenesitEditoUC2 = new DesktopApp.Luis.NxenesitEditoUC();
+            this.nxenesitRregjistro2 = new DesktopApp.Luis.NxenesitRregjistro();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -356,6 +358,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.nxenesitRregjistro2);
+            this.panel3.Controls.Add(this.nxenesitEditoUC2);
             this.panel3.Controls.Add(this.eventetAdminUC1);
             this.panel3.Controls.Add(this.adminDashboardUC1);
             this.panel3.Controls.Add(this.klasatAdminUC1);
@@ -412,6 +416,20 @@
             // 
             this.jDragControl1.GetForm = this;
             this.jDragControl1.TargetControl = this.panel1;
+            // 
+            // nxenesitEditoUC2
+            // 
+            this.nxenesitEditoUC2.Location = new System.Drawing.Point(0, 0);
+            this.nxenesitEditoUC2.Name = "nxenesitEditoUC2";
+            this.nxenesitEditoUC2.Size = new System.Drawing.Size(931, 641);
+            this.nxenesitEditoUC2.TabIndex = 5;
+            // 
+            // nxenesitRregjistro2
+            // 
+            this.nxenesitRregjistro2.Location = new System.Drawing.Point(0, 0);
+            this.nxenesitRregjistro2.Name = "nxenesitRregjistro2";
+            this.nxenesitRregjistro2.Size = new System.Drawing.Size(931, 641);
+            this.nxenesitRregjistro2.TabIndex = 6;
             // 
             // AdminMain
             // 
@@ -474,5 +492,7 @@
         private JDragControl.JDragControl jDragControl1;
         private NxenesitEditoUC nxenesitEditoUC1;
         private NxenesitRregjistro nxenesitRregjistro1;
+        private NxenesitRregjistro nxenesitRregjistro2;
+        private NxenesitEditoUC nxenesitEditoUC2;
     }
 }
