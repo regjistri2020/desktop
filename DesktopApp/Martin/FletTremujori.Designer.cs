@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.button2);
@@ -207,6 +209,19 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Klasa :";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(536, 103);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 61);
+            this.button3.TabIndex = 87;
+            this.button3.Text = "Printo të gjithë nxënësit";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // FletTremujori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,5 +257,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button3;
     }
 }

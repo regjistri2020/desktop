@@ -38,14 +38,31 @@ namespace DesktopApp
 
         private void Hyni_button_Click(object sender, EventArgs e)
         {
-            AdminMain a = new AdminMain();
-            a.Show();
-            this.Hide();
+            if (UsertextBox.Text == "admin01" && PasstextBox.Text == "1234")
+            {
+                MessageBox.Show("Vendosja e kredencialeve u krye me sukses!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AdminMain am = new AdminMain();
+                am.Show();
+                this.Hide();
+            }
+
+            else
+                MessageBox.Show("Vendosni sakte kredencialet!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void minimizepictureBox_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txt(object sender, EventArgs e)
+        {
+            UsertextBox.Clear();
+        }
+
+        private void pass(object sender, EventArgs e)
+        {
+            PasstextBox.Clear();
         }
     }
 }

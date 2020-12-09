@@ -226,7 +226,7 @@
             this.DeftesaButton.Name = "DeftesaButton";
             this.DeftesaButton.Size = new System.Drawing.Size(270, 55);
             this.DeftesaButton.TabIndex = 16;
-            this.DeftesaButton.Text = "Dëftesat";
+            this.DeftesaButton.Text = "Fletë Informuese ";
             this.DeftesaButton.UseVisualStyleBackColor = false;
             this.DeftesaButton.Click += new System.EventHandler(this.DeftesaButton_Click);
             // 

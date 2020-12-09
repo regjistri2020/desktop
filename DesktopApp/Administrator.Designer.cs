@@ -208,6 +208,7 @@
             this.PasstextBox.Size = new System.Drawing.Size(192, 15);
             this.PasstextBox.TabIndex = 7;
             this.PasstextBox.Text = "Vendosni fjalëkalimin tuaj";
+            this.PasstextBox.Click += new System.EventHandler(this.pass);
             // 
             // UsertextBox
             // 
@@ -219,6 +220,7 @@
             this.UsertextBox.Size = new System.Drawing.Size(192, 15);
             this.UsertextBox.TabIndex = 6;
             this.UsertextBox.Text = "Vendosni kodin tuaj";
+            this.UsertextBox.Click += new System.EventHandler(this.txt);
             // 
             // jDragControl1
             // 

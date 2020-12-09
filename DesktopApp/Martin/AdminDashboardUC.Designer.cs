@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tittlelabel = new System.Windows.Forms.Label();
             this.Datapanel = new System.Windows.Forms.Panel();
+            this.ShkollatextBox = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -53,7 +54,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.ShkollatextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Datapanel.SuspendLayout();
@@ -126,6 +126,20 @@
             this.Datapanel.Name = "Datapanel";
             this.Datapanel.Size = new System.Drawing.Size(931, 603);
             this.Datapanel.TabIndex = 1;
+            // 
+            // ShkollatextBox
+            // 
+            this.ShkollatextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ShkollatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ShkollatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShkollatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ShkollatextBox.Location = new System.Drawing.Point(494, 15);
+            this.ShkollatextBox.Name = "ShkollatextBox";
+            this.ShkollatextBox.Size = new System.Drawing.Size(385, 24);
+            this.ShkollatextBox.TabIndex = 27;
+            this.ShkollatextBox.Text = "Shkolla për TIK \"Hermann Gmeiner\"";
+            this.ShkollatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ShkollatextBox.TextChanged += new System.EventHandler(this.ShkollatextBox_TextChanged);
             // 
             // textBox3
             // 
@@ -354,20 +368,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            // 
-            // ShkollatextBox
-            // 
-            this.ShkollatextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ShkollatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ShkollatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShkollatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ShkollatextBox.Location = new System.Drawing.Point(519, 18);
-            this.ShkollatextBox.Name = "ShkollatextBox";
-            this.ShkollatextBox.Size = new System.Drawing.Size(385, 24);
-            this.ShkollatextBox.TabIndex = 27;
-            this.ShkollatextBox.Text = "Shkolla për TIK \"Hermann Gmeiner\"";
-            this.ShkollatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ShkollatextBox.TextChanged += new System.EventHandler(this.ShkollatextBox_TextChanged);
             // 
             // AdminDashboardUC
             // 
