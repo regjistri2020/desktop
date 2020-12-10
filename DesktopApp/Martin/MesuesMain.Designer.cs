@@ -53,6 +53,7 @@
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.fletTremujori1 = new DesktopApp.Martin.FletTremujori();
+            this.justifikoMungesatUC1 = new DesktopApp.Klea.JustifikoMungesatUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -352,11 +353,19 @@
             this.fletTremujori1.Size = new System.Drawing.Size(931, 647);
             this.fletTremujori1.TabIndex = 14;
             // 
+            // justifikoMungesatUC1
+            // 
+            this.justifikoMungesatUC1.Location = new System.Drawing.Point(270, 80);
+            this.justifikoMungesatUC1.Name = "justifikoMungesatUC1";
+            this.justifikoMungesatUC1.Size = new System.Drawing.Size(931, 641);
+            this.justifikoMungesatUC1.TabIndex = 15;
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 727);
+            this.Controls.Add(this.justifikoMungesatUC1);
             this.Controls.Add(this.fletTremujori1);
             this.Controls.Add(this.MungesaUC);
             this.Controls.Add(this.vleresoNxenesitUC1);
@@ -406,5 +415,6 @@
         private System.Windows.Forms.Button Logoutbutton;
         private JDragControl.JDragControl jDragControl1;
         private FletTremujori fletTremujori1;
+        private Klea.JustifikoMungesatUC justifikoMungesatUC1;
     }
 }
