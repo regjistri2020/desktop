@@ -32,22 +32,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.KerkoButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NxenestextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Np = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KerkoButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,9 +68,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.label1.Location = new System.Drawing.Point(46, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 21);
+            this.label1.Size = new System.Drawing.Size(444, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Klasa ku jep mësim > Printimi i fletë-informimeve të tremujorit";
+            this.label1.Text = "Klasa kujdestare > Printimi i fletë-informimeve të tremujorit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pictureBox1
@@ -96,7 +91,7 @@
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.NxenestextBox);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -106,6 +101,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 4;
+            // 
+            // KerkoButton
+            // 
+            this.KerkoButton.BackgroundImage = global::DesktopApp.Properties.Resources.search_48px;
+            this.KerkoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.KerkoButton.FlatAppearance.BorderSize = 0;
+            this.KerkoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KerkoButton.Location = new System.Drawing.Point(349, 120);
+            this.KerkoButton.Name = "KerkoButton";
+            this.KerkoButton.Size = new System.Drawing.Size(30, 30);
+            this.KerkoButton.TabIndex = 88;
+            this.KerkoButton.UseVisualStyleBackColor = true;
+            this.KerkoButton.Click += new System.EventHandler(this.KerkoButton_Click);
             // 
             // button3
             // 
@@ -165,15 +173,15 @@
             this.textBox4.Size = new System.Drawing.Size(82, 26);
             this.textBox4.TabIndex = 82;
             // 
-            // textBox2
+            // NxenestextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(145, 120);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 32);
-            this.textBox2.TabIndex = 80;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.NxenestextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NxenestextBox.Location = new System.Drawing.Point(145, 120);
+            this.NxenestextBox.Multiline = true;
+            this.NxenestextBox.Name = "NxenestextBox";
+            this.NxenestextBox.Size = new System.Drawing.Size(192, 32);
+            this.NxenestextBox.TabIndex = 80;
+            this.NxenestextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -197,13 +205,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.NG,
-            this.Np,
-            this.NT});
             this.dataGridView1.Location = new System.Drawing.Point(56, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(813, 383);
@@ -220,43 +223,6 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Klasa :";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nr.";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Emërtimet";
-            this.Column2.Name = "Column2";
-            // 
-            // NG
-            // 
-            this.NG.HeaderText = "Notë me gojë";
-            this.NG.Name = "NG";
-            // 
-            // Np
-            // 
-            this.Np.HeaderText = "Notë Portofoli";
-            this.Np.Name = "Np";
-            // 
-            // NT
-            // 
-            this.NT.HeaderText = "Notë Testi";
-            this.NT.Name = "NT";
-            // 
-            // KerkoButton
-            // 
-            this.KerkoButton.BackgroundImage = global::DesktopApp.Properties.Resources.search_48px;
-            this.KerkoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.KerkoButton.FlatAppearance.BorderSize = 0;
-            this.KerkoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KerkoButton.Location = new System.Drawing.Point(349, 120);
-            this.KerkoButton.Name = "KerkoButton";
-            this.KerkoButton.Size = new System.Drawing.Size(30, 30);
-            this.KerkoButton.TabIndex = 88;
-            this.KerkoButton.UseVisualStyleBackColor = true;
-            // 
             // FletTremujori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +231,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FletTremujori";
             this.Size = new System.Drawing.Size(931, 647);
+            this.Load += new System.EventHandler(this.FletTremujori_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -283,7 +250,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NxenestextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -292,11 +259,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Np;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NT;
         private System.Windows.Forms.Button KerkoButton;
     }
 }

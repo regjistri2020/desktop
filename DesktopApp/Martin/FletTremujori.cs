@@ -14,22 +14,65 @@ namespace DesktopApp.Martin
     public partial class FletTremujori : UserControl
     {
 
-        //DataTable dt;
-
+        DataTable table = new DataTable();
         public FletTremujori()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //dt.Rows.Add( textBox2.Text );
-            //dataGridView1.DataSource = dt;
-        }
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void KerkoButton_Click(object sender, EventArgs e)
+        {
+            if (NxenestextBox.Text == "Martin")
+            {
+                table.Rows.Add(" 1", "Gjuhë Shqipe", 10, 10, 10);
+                table.Rows.Add(" 2", "Letërsi", 10, 10, 10);
+                table.Rows.Add(" 3", "Gjuhë e huaj - Anglisht", 10, 10, 10);
+                table.Rows.Add(" 4", "Gjuhë e huaj - Gjermanisht ", 10, 10, 10);
+                table.Rows.Add(" 5", "Gjeografi", 10, 10, 10);
+                table.Rows.Add(" 6", "Matematikë", 10, 10, 10);
+                table.Rows.Add(" 7", "Biologji", 10, 10, 10);
+                table.Rows.Add(" 8", "Fiskulturë ", 10, 10, 10);
+                table.Rows.Add(" 9", "Programim dhe inxhinieri Softwaresh", 10, 10, 10);
+                table.Rows.Add("10", "Baza të dhënash dhe sistemet e informacionit", 10, 10, 10);
+                table.Rows.Add("11", "Sisteme rrjetash dhe sisteme të shpërndara", 10, 10, 10);
+                table.Rows.Add("12", "Ekonomi ndërmarrjeje dhe menaxhim ", 10, 10, 10);
+                table.Rows.Add("13", "Planifikim sistemi dhe zhvillim projektesh", 10, 10, 10);
+            }
+            else
+            {
+                table.Rows.Add(" 1", "Gjuhë Shqipe", 9, 9, 10);
+                table.Rows.Add(" 2", "Letërsi", 8, 9, 10);
+                table.Rows.Add(" 3", "Gjuhë e huaj - Anglisht", 9, 10, 10);
+                table.Rows.Add(" 4", "Gjuhë e huaj - Gjermanisht ", 8, 8, 9);
+                table.Rows.Add(" 5", "Gjeografi", 10, 10, 10);
+                table.Rows.Add(" 6", "Matematikë", 9, 9, 9);
+                table.Rows.Add(" 7", "Biologji", 10, 10, 10);
+                table.Rows.Add(" 8", "Fiskulturë ", 10, 10, 10);
+                table.Rows.Add(" 9", "Programim dhe inxhinieri Softwaresh", 10, 9, 10);
+                table.Rows.Add("10", "Baza të dhënash dhe sistemet e informacionit", 10, 10, 9);
+                table.Rows.Add("11", "Sisteme rrjetash dhe sisteme të shpërndara", 9, 10, 10);
+                table.Rows.Add("12", "Ekonomi ndërmarrjeje dhe menaxhim ", 10, 10, 10);
+                table.Rows.Add("13", "Planifikim sistemi dhe zhvillim projektesh", 10, 10, 10);
+            }
+
+            dataGridView1.DataSource = table;
+        }
+
+        private void FletTremujori_Load(object sender, EventArgs e)
+        {
+            table.Columns.Add("Nr.", typeof(string));// data type str
+            table.Columns.Add("Emërtimet", typeof(string));// datatype string
+            table.Columns.Add("Notë me gojë", typeof(string));// datatype string
+            table.Columns.Add("Notë Portofoli", typeof(string));// datatype string
+            table.Columns.Add("Notë Testi", typeof(string));// datatype string
+            dataGridView1.DataSource = table;
         }
     }
 }

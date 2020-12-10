@@ -30,28 +30,28 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Kerkobutton = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Infolabel1 = new System.Windows.Forms.Label();
+            this.KerkonxTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Infolabel1 = new System.Windows.Forms.Label();
             this.EmriColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LendaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MungesColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Kerkobutton = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,12 +77,22 @@
             this.label1.Text = "Klasat ku jep mësim > Vendos Mungesat ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.Kerkobutton);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.Infolabel1);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.KerkonxTextBox);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button1);
@@ -96,14 +106,49 @@
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 3;
             // 
-            // textBox2
+            // Kerkobutton
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(188, 147);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 32);
-            this.textBox2.TabIndex = 80;
+            this.Kerkobutton.BackgroundImage = global::DesktopApp.Properties.Resources.search_48px;
+            this.Kerkobutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kerkobutton.FlatAppearance.BorderSize = 0;
+            this.Kerkobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kerkobutton.Location = new System.Drawing.Point(390, 148);
+            this.Kerkobutton.Name = "Kerkobutton";
+            this.Kerkobutton.Size = new System.Drawing.Size(30, 30);
+            this.Kerkobutton.TabIndex = 84;
+            this.Kerkobutton.UseVisualStyleBackColor = true;
+            this.Kerkobutton.Click += new System.EventHandler(this.Kerkobutton_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.warn;
+            this.pictureBox4.Location = new System.Drawing.Point(74, 327);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 82;
+            this.pictureBox4.TabStop = false;
+            // 
+            // Infolabel1
+            // 
+            this.Infolabel1.AutoSize = true;
+            this.Infolabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Infolabel1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.Infolabel1.Location = new System.Drawing.Point(114, 327);
+            this.Infolabel1.Name = "Infolabel1";
+            this.Infolabel1.Size = new System.Drawing.Size(229, 60);
+            this.Infolabel1.TabIndex = 81;
+            this.Infolabel1.Text = "  Në klikim të butonit \" ruaj të \r\n  dhënat \" nxënësi merr  mungesë\r\n  në lëndën " +
+    "me temë përkatëse !";
+            // 
+            // KerkonxTextBox
+            // 
+            this.KerkonxTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KerkonxTextBox.Location = new System.Drawing.Point(188, 147);
+            this.KerkonxTextBox.Multiline = true;
+            this.KerkonxTextBox.Name = "KerkonxTextBox";
+            this.KerkonxTextBox.Size = new System.Drawing.Size(192, 32);
+            this.KerkonxTextBox.TabIndex = 80;
             // 
             // label3
             // 
@@ -130,7 +175,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(199, 200);
+            this.button1.Location = new System.Drawing.Point(209, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 54);
             this.button1.TabIndex = 77;
@@ -140,6 +185,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EmriColumn,
@@ -149,6 +195,31 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 417);
             this.dataGridView1.TabIndex = 76;
+            // 
+            // EmriColumn
+            // 
+            this.EmriColumn.HeaderText = "Emri ";
+            this.EmriColumn.Name = "EmriColumn";
+            // 
+            // LendaColumn
+            // 
+            this.LendaColumn.HeaderText = "Mbiemri";
+            this.LendaColumn.Name = "LendaColumn";
+            // 
+            // MungesColumn
+            // 
+            this.MungesColumn.HeaderText = "Mungesë";
+            this.MungesColumn.Name = "MungesColumn";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.checked_30px;
+            this.pictureBox2.Location = new System.Drawing.Point(400, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 66;
+            this.pictureBox2.TabStop = false;
             // 
             // comboBox1
             // 
@@ -181,75 +252,6 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Zgjidhni klasën";
             // 
-            // Infolabel1
-            // 
-            this.Infolabel1.AutoSize = true;
-            this.Infolabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Infolabel1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.Infolabel1.Location = new System.Drawing.Point(114, 281);
-            this.Infolabel1.Name = "Infolabel1";
-            this.Infolabel1.Size = new System.Drawing.Size(229, 60);
-            this.Infolabel1.TabIndex = 81;
-            this.Infolabel1.Text = "  Në klikim të butonit \" ruaj të \r\n  dhënat \" nxënësi merr  mungesë\r\n  në lëndën " +
-    "me temë përkatëse !";
-            // 
-            // EmriColumn
-            // 
-            this.EmriColumn.HeaderText = "Emri ";
-            this.EmriColumn.Name = "EmriColumn";
-            // 
-            // LendaColumn
-            // 
-            this.LendaColumn.HeaderText = "Mbiemri";
-            this.LendaColumn.Name = "LendaColumn";
-            // 
-            // MungesColumn
-            // 
-            this.MungesColumn.HeaderText = "Mungesë";
-            this.MungesColumn.Name = "MungesColumn";
-            // 
-            // Kerkobutton
-            // 
-            this.Kerkobutton.BackgroundImage = global::DesktopApp.Properties.Resources.search_48px;
-            this.Kerkobutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Kerkobutton.FlatAppearance.BorderSize = 0;
-            this.Kerkobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Kerkobutton.Location = new System.Drawing.Point(390, 148);
-            this.Kerkobutton.Name = "Kerkobutton";
-            this.Kerkobutton.Size = new System.Drawing.Size(30, 30);
-            this.Kerkobutton.TabIndex = 84;
-            this.Kerkobutton.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.warn;
-            this.pictureBox4.Location = new System.Drawing.Point(74, 281);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 82;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.checked_30px;
-            this.pictureBox2.Location = new System.Drawing.Point(400, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 66;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // MungesaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,14 +260,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "MungesaUC";
             this.Size = new System.Drawing.Size(931, 647);
+            this.Load += new System.EventHandler(this.MungesaUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,7 +285,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox KerkonxTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label Infolabel1;

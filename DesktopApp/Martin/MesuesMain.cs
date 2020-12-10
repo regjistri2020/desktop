@@ -33,7 +33,9 @@ namespace DesktopApp.Martin
             MungesaUC.Hide();
             vleresoNxenesitUC1.Hide();
             fletTremujori1.Hide();
+            justifikoMungesatUC1.Hide();
             mesuesDashboardUC1.Show();
+            
         }
 
         private void hideSubMenu()
@@ -88,12 +90,6 @@ namespace DesktopApp.Martin
             MungesaUC.Hide();
         }
 
-        private void NotaperfundimtareButton_Click(object sender, EventArgs e)
-        {
-            //mesuesDashboardUC1.Hide();
-            //MungesaUC.Hide();
-            //vleresoNxenesitUC1.Hide();
-        }
 
         private void DeftesaButton_Click(object sender, EventArgs e)
         {
@@ -106,9 +102,12 @@ namespace DesktopApp.Martin
 
         private void JustifikomungesatButton_Click(object sender, EventArgs e)
         {
-            //mesuesDashboardUC1.Hide();
-            //MungesaUC.Hide();
-            //vleresoNxenesitUC1.Hide();
+            justifikoMungesatUC1.Show();
+            justifikoMungesatUC1.BringToFront();
+            mesuesDashboardUC1.Hide();
+            MungesaUC.Hide();
+            fletTremujori1.Hide();
+            vleresoNxenesitUC1.Hide();
         }
 
         private void Logoutbutton_Click(object sender, EventArgs e)
