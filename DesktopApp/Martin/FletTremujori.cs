@@ -31,6 +31,7 @@ namespace DesktopApp.Martin
         {
             if (NxenestextBox.Text == "Martin")
             {
+                table.Rows.Clear();
                 table.Rows.Add(" 1", "Gjuhë Shqipe", 10, 10, 10);
                 table.Rows.Add(" 2", "Letërsi", 10, 10, 10);
                 table.Rows.Add(" 3", "Gjuhë e huaj - Anglisht", 10, 10, 10);
@@ -47,6 +48,7 @@ namespace DesktopApp.Martin
             }
             else
             {
+                table.Rows.Clear();
                 table.Rows.Add(" 1", "Gjuhë Shqipe", 9, 9, 10);
                 table.Rows.Add(" 2", "Letërsi", 8, 9, 10);
                 table.Rows.Add(" 3", "Gjuhë e huaj - Anglisht", 9, 10, 10);
@@ -67,11 +69,14 @@ namespace DesktopApp.Martin
 
         private void FletTremujori_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("Nr.", typeof(string));// data type str
-            table.Columns.Add("Emërtimet", typeof(string));// datatype string
-            table.Columns.Add("Notë me gojë", typeof(string));// datatype string
-            table.Columns.Add("Notë Portofoli", typeof(string));// datatype string
-            table.Columns.Add("Notë Testi", typeof(string));// datatype string
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
+
+            table.Columns.Add("Nr.", typeof(string));
+            table.Columns.Add("Emërtimet", typeof(string));
+            table.Columns.Add("Notë me gojë", typeof(string));
+            table.Columns.Add("Notë Portofoli", typeof(string));
+            table.Columns.Add("Notë Testi", typeof(string));
             dataGridView1.DataSource = table;
         }
     }

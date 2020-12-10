@@ -198,7 +198,7 @@
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.BackColor = System.Drawing.Color.DodgerBlue;
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -214,7 +214,7 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.BackColor = System.Drawing.Color.DodgerBlue;
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -241,7 +241,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Gold;
+            this.button7.BackColor = System.Drawing.Color.SkyBlue;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -255,7 +255,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Gold;
+            this.button6.BackColor = System.Drawing.Color.SkyBlue;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -269,7 +269,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,6 +297,7 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.SkyBlue;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -305,11 +306,12 @@
             this.button4.Size = new System.Drawing.Size(270, 55);
             this.button4.TabIndex = 3;
             this.button4.Text = "Edito";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.SkyBlue;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -318,12 +320,12 @@
             this.button3.Size = new System.Drawing.Size(270, 55);
             this.button3.TabIndex = 2;
             this.button3.Text = "Rregjistro";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -340,7 +342,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;

@@ -43,6 +43,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,9 +73,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.label1.Location = new System.Drawing.Point(46, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 21);
+            this.label1.Size = new System.Drawing.Size(441, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Klasa kujdestare > Printimi i fletë-informimeve të tremujorit";
+            this.label1.Text = "Klasa Kujdestari > Printimi i fletë-informimeve të tremujorit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pictureBox1
@@ -207,6 +212,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(56, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(813, 383);
@@ -222,6 +233,31 @@
             this.label2.Size = new System.Drawing.Size(77, 23);
             this.label2.TabIndex = 67;
             this.label2.Text = "Klasa :";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nr.";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Emërtimet";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Notë me gojë";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Notë Portofoli";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Notë Testi";
+            this.Column5.Name = "Column5";
             // 
             // FletTremujori
             // 
@@ -260,5 +296,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button KerkoButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

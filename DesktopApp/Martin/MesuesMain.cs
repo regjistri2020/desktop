@@ -64,6 +64,9 @@ namespace DesktopApp.Martin
 
         private void VleresonxenesButton_Click(object sender, EventArgs e)
         {
+            VleresonxenesButton.BackColor = Color.FromArgb(135, 190, 235);
+            MungesatButton.BackColor = Color.FromArgb(135, 206, 235);
+
             vleresoNxenesitUC1.BringToFront();
             vleresoNxenesitUC1.Show();
             fletTremujori1.Hide();
@@ -71,6 +74,9 @@ namespace DesktopApp.Martin
            
         private void MungesatButton_Click(object sender, EventArgs e)
         {
+            MungesatButton.BackColor = Color.FromArgb(135, 190, 235);
+            VleresonxenesButton.BackColor = Color.FromArgb(135, 206, 235);            
+
             MungesaUC.BringToFront();
             MungesaUC.Show();
             vleresoNxenesitUC1.Hide();
@@ -93,6 +99,9 @@ namespace DesktopApp.Martin
 
         private void DeftesaButton_Click(object sender, EventArgs e)
         {
+            DeftesaButton.BackColor = Color.FromArgb(135, 190, 235);
+            JustifikomungesatButton.BackColor = Color.FromArgb(135, 206, 235);
+
             fletTremujori1.Show();
             fletTremujori1.BringToFront();
             mesuesDashboardUC1.Hide();
@@ -102,6 +111,9 @@ namespace DesktopApp.Martin
 
         private void JustifikomungesatButton_Click(object sender, EventArgs e)
         {
+            JustifikomungesatButton.BackColor = Color.FromArgb(135, 190, 235);
+            DeftesaButton.BackColor = Color.FromArgb(135, 206, 235);
+
             justifikoMungesatUC1.Show();
             justifikoMungesatUC1.BringToFront();
             mesuesDashboardUC1.Hide();

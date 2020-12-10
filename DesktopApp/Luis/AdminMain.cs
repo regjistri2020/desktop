@@ -69,16 +69,16 @@ namespace DesktopApp.Luis
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			button3.BackColor = Color.FromArgb(255, 200, 0);
-			button4.BackColor = Color.FromArgb(255, 220, 0);
+			button3.BackColor = Color.FromArgb(135, 190, 235);
+			button4.BackColor = Color.FromArgb(135, 206, 235);
 			mesuesitRegjistroUC1.BringToFront();
 			mesuesitRegjistroUC1.Show();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			button4.BackColor = Color.FromArgb(255, 200, 0);
-			button3.BackColor = Color.FromArgb(255, 220, 0);
+			button4.BackColor = Color.FromArgb(135, 190, 235);
+			button3.BackColor = Color.FromArgb(135, 206, 235);
 			mesuesitEditoUC1.Show();
 			mesuesitEditoUC1.BringToFront();
 
@@ -86,16 +86,16 @@ namespace DesktopApp.Luis
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			button6.BackColor = Color.FromArgb(255, 200, 0);
-			button7.BackColor = Color.FromArgb(255, 220, 0);
+			button6.BackColor = Color.FromArgb(135, 190, 235);
+			button7.BackColor = Color.FromArgb(135, 206, 235);
 			nxenesitRregjistro2.BringToFront();
 			nxenesitRregjistro2.Show();
 		}
 
 		private void button7_Click(object sender, EventArgs e)
 		{
-			button7.BackColor = Color.FromArgb(255, 200, 0);
-			button6.BackColor = Color.FromArgb(255, 220, 0);
+			button7.BackColor = Color.FromArgb(135, 190, 235);
+			button6.BackColor = Color.FromArgb(135, 206, 235);
 			nxenesitEditoUC2.Show();
 			nxenesitEditoUC2.BringToFront();
 		}
