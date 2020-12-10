@@ -24,6 +24,8 @@ namespace DesktopApp.Luis
             table.Columns.Add("Fjalekalimi", typeof(string));// datatype string
             table.Columns.Add("Roli", typeof(string));// datatype string
 
+            table.Rows.Add("admin01", "1234" , "IT");
+
             dataGridView1.DataSource = table;
 
         }
