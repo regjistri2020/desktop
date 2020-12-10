@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FletTremujori));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -248,7 +247,7 @@
             // 
             // KerkoButton
             // 
-            this.KerkoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KerkoButton.BackgroundImage")));
+            this.KerkoButton.BackgroundImage = global::DesktopApp.Properties.Resources.search_48px;
             this.KerkoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.KerkoButton.FlatAppearance.BorderSize = 0;
             this.KerkoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

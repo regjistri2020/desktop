@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MungesaUC));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,13 +39,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Infolabel1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.EmriColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LendaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MungesColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Kerkobutton = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -194,6 +193,33 @@
             this.Infolabel1.Text = "  Në klikim të butonit \" ruaj të \r\n  dhënat \" nxënësi merr  mungesë\r\n  në lëndën " +
     "me temë përkatëse !";
             // 
+            // EmriColumn
+            // 
+            this.EmriColumn.HeaderText = "Emri ";
+            this.EmriColumn.Name = "EmriColumn";
+            // 
+            // LendaColumn
+            // 
+            this.LendaColumn.HeaderText = "Mbiemri";
+            this.LendaColumn.Name = "LendaColumn";
+            // 
+            // MungesColumn
+            // 
+            this.MungesColumn.HeaderText = "Mungesë";
+            this.MungesColumn.Name = "MungesColumn";
+            // 
+            // Kerkobutton
+            // 
+            this.Kerkobutton.BackgroundImage = global::DesktopApp.Properties.Resources.search_48px;
+            this.Kerkobutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kerkobutton.FlatAppearance.BorderSize = 0;
+            this.Kerkobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kerkobutton.Location = new System.Drawing.Point(390, 148);
+            this.Kerkobutton.Name = "Kerkobutton";
+            this.Kerkobutton.Size = new System.Drawing.Size(30, 30);
+            this.Kerkobutton.TabIndex = 84;
+            this.Kerkobutton.UseVisualStyleBackColor = true;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.warn;
@@ -223,33 +249,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // EmriColumn
-            // 
-            this.EmriColumn.HeaderText = "Emri ";
-            this.EmriColumn.Name = "EmriColumn";
-            // 
-            // LendaColumn
-            // 
-            this.LendaColumn.HeaderText = "Mbiemri";
-            this.LendaColumn.Name = "LendaColumn";
-            // 
-            // MungesColumn
-            // 
-            this.MungesColumn.HeaderText = "Mungesë";
-            this.MungesColumn.Name = "MungesColumn";
-            // 
-            // Kerkobutton
-            // 
-            this.Kerkobutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Kerkobutton.BackgroundImage")));
-            this.Kerkobutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Kerkobutton.FlatAppearance.BorderSize = 0;
-            this.Kerkobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Kerkobutton.Location = new System.Drawing.Point(390, 148);
-            this.Kerkobutton.Name = "Kerkobutton";
-            this.Kerkobutton.Size = new System.Drawing.Size(30, 30);
-            this.Kerkobutton.TabIndex = 84;
-            this.Kerkobutton.UseVisualStyleBackColor = true;
             // 
             // MungesaUC
             // 
