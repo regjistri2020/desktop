@@ -51,14 +51,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nxenesitRregjistro2 = new DesktopApp.Luis.NxenesitRregjistro();
+            this.nxenesitEditoUC2 = new DesktopApp.Luis.NxenesitEditoUC();
             this.eventetAdminUC1 = new DesktopApp.Luis.EventetAdminUC();
             this.adminDashboardUC1 = new DesktopApp.Martin.AdminDashboardUC();
             this.klasatAdminUC1 = new DesktopApp.Klea.KlasatAdminUC();
             this.mesuesitEditoUC1 = new DesktopApp.Luis.MesuesitEditoUC();
             this.mesuesitRegjistroUC1 = new DesktopApp.Luis.MesuesitRegjistroUC();
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
-            this.nxenesitEditoUC2 = new DesktopApp.Luis.NxenesitEditoUC();
-            this.nxenesitRregjistro2 = new DesktopApp.Luis.NxenesitRregjistro();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -142,9 +142,9 @@
             this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(780, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 25);
+            this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "#nendrejtor1";
+            this.label2.Text = "#admin01";
             // 
             // pictureBox2
             // 
@@ -372,6 +372,20 @@
             this.panel3.Size = new System.Drawing.Size(931, 647);
             this.panel3.TabIndex = 2;
             // 
+            // nxenesitRregjistro2
+            // 
+            this.nxenesitRregjistro2.Location = new System.Drawing.Point(0, 0);
+            this.nxenesitRregjistro2.Name = "nxenesitRregjistro2";
+            this.nxenesitRregjistro2.Size = new System.Drawing.Size(931, 641);
+            this.nxenesitRregjistro2.TabIndex = 6;
+            // 
+            // nxenesitEditoUC2
+            // 
+            this.nxenesitEditoUC2.Location = new System.Drawing.Point(0, 0);
+            this.nxenesitEditoUC2.Name = "nxenesitEditoUC2";
+            this.nxenesitEditoUC2.Size = new System.Drawing.Size(931, 641);
+            this.nxenesitEditoUC2.TabIndex = 5;
+            // 
             // eventetAdminUC1
             // 
             this.eventetAdminUC1.Location = new System.Drawing.Point(0, 0);
@@ -416,20 +430,6 @@
             // 
             this.jDragControl1.GetForm = this;
             this.jDragControl1.TargetControl = this.panel1;
-            // 
-            // nxenesitEditoUC2
-            // 
-            this.nxenesitEditoUC2.Location = new System.Drawing.Point(0, 0);
-            this.nxenesitEditoUC2.Name = "nxenesitEditoUC2";
-            this.nxenesitEditoUC2.Size = new System.Drawing.Size(931, 641);
-            this.nxenesitEditoUC2.TabIndex = 5;
-            // 
-            // nxenesitRregjistro2
-            // 
-            this.nxenesitRregjistro2.Location = new System.Drawing.Point(0, 0);
-            this.nxenesitRregjistro2.Name = "nxenesitRregjistro2";
-            this.nxenesitRregjistro2.Size = new System.Drawing.Size(931, 641);
-            this.nxenesitRregjistro2.TabIndex = 6;
             // 
             // AdminMain
             // 

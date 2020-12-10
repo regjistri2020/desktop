@@ -46,8 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -192,9 +192,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(48, 498);
+            this.button1.Location = new System.Drawing.Point(377, 498);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 44);
+            this.button1.Size = new System.Drawing.Size(127, 36);
             this.button1.TabIndex = 51;
             this.button1.Text = "Krijo njoftimin";
             this.button1.UseVisualStyleBackColor = false;
@@ -202,17 +202,17 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel2.Location = new System.Drawing.Point(549, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 500);
+            this.panel2.Size = new System.Drawing.Size(2, 500);
             this.panel2.TabIndex = 52;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label7.Location = new System.Drawing.Point(44, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(261, 32);
@@ -223,7 +223,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label8.Location = new System.Drawing.Point(584, 74);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(316, 32);
@@ -232,6 +232,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.checkedListBox1);
@@ -239,15 +240,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(310, 416);
             this.panel3.TabIndex = 55;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(13, 12);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(284, 312);
-            this.checkedListBox1.TabIndex = 0;
             // 
             // button2
             // 
@@ -263,15 +255,24 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(13, 12);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(284, 312);
+            this.checkedListBox1.TabIndex = 0;
+            // 
             // EventetAdminUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label6);
