@@ -50,7 +50,7 @@
   <ItemGroup>
     <Reference Include="JDragControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\JDragControl.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\JDragControl.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>

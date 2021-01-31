@@ -54,6 +54,7 @@
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.fletTremujori1 = new DesktopApp.Martin.FletTremujori();
             this.justifikoMungesatUC1 = new DesktopApp.Klea.JustifikoMungesatUC();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -197,7 +198,7 @@
             this.ChatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChatButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.ChatButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-            this.ChatButton.Location = new System.Drawing.Point(0, 385);
+            this.ChatButton.Location = new System.Drawing.Point(0, 440);
             this.ChatButton.Name = "ChatButton";
             this.ChatButton.Size = new System.Drawing.Size(270, 55);
             this.ChatButton.TabIndex = 15;
@@ -209,7 +210,7 @@
             this.KujdestariaSub.Controls.Add(this.DeftesaButton);
             this.KujdestariaSub.Controls.Add(this.JustifikomungesatButton);
             this.KujdestariaSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.KujdestariaSub.Location = new System.Drawing.Point(0, 275);
+            this.KujdestariaSub.Location = new System.Drawing.Point(0, 330);
             this.KujdestariaSub.Name = "KujdestariaSub";
             this.KujdestariaSub.Size = new System.Drawing.Size(270, 110);
             this.KujdestariaSub.TabIndex = 14;
@@ -254,7 +255,7 @@
             this.Kujdestariabutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Kujdestariabutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Kujdestariabutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
-            this.Kujdestariabutton.Location = new System.Drawing.Point(0, 220);
+            this.Kujdestariabutton.Location = new System.Drawing.Point(0, 275);
             this.Kujdestariabutton.Name = "Kujdestariabutton";
             this.Kujdestariabutton.Size = new System.Drawing.Size(270, 55);
             this.Kujdestariabutton.TabIndex = 13;
@@ -264,12 +265,13 @@
             // 
             // MesimdhenieSub
             // 
+            this.MesimdhenieSub.Controls.Add(this.button1);
             this.MesimdhenieSub.Controls.Add(this.MungesatButton);
             this.MesimdhenieSub.Controls.Add(this.VleresonxenesButton);
             this.MesimdhenieSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.MesimdhenieSub.Location = new System.Drawing.Point(0, 110);
             this.MesimdhenieSub.Name = "MesimdhenieSub";
-            this.MesimdhenieSub.Size = new System.Drawing.Size(270, 110);
+            this.MesimdhenieSub.Size = new System.Drawing.Size(270, 165);
             this.MesimdhenieSub.TabIndex = 12;
             // 
             // MungesatButton
@@ -360,6 +362,21 @@
             this.justifikoMungesatUC1.Size = new System.Drawing.Size(931, 641);
             this.justifikoMungesatUC1.TabIndex = 15;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(59)))));
+            this.button1.Location = new System.Drawing.Point(0, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(270, 55);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Notat e tremujorit ";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,5 +433,6 @@
         private JDragControl.JDragControl jDragControl1;
         private FletTremujori fletTremujori1;
         private Klea.JustifikoMungesatUC justifikoMungesatUC1;
+        private System.Windows.Forms.Button button1;
     }
 }
