@@ -41,6 +41,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Emer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shenime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,11 +63,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Emer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shenime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -219,6 +219,32 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(453, 303);
             this.dataGridView1.TabIndex = 49;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Emer
+            // 
+            this.Emer.HeaderText = "Emer Mbiemer";
+            this.Emer.Name = "Emer";
+            // 
+            // Nota
+            // 
+            this.Nota.HeaderText = "Vleresimi";
+            this.Nota.Name = "Nota";
+            // 
+            // Tema
+            // 
+            this.Tema.HeaderText = "Tema";
+            this.Tema.Name = "Tema";
+            // 
+            // Kategoria
+            // 
+            this.Kategoria.HeaderText = "Kategoria";
+            this.Kategoria.Name = "Kategoria";
+            // 
+            // Shenime
+            // 
+            this.Shenime.HeaderText = "Shenime";
+            this.Shenime.Name = "Shenime";
             // 
             // button1
             // 
@@ -232,6 +258,7 @@
             this.button1.TabIndex = 65;
             this.button1.Text = "Ruaj";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -418,31 +445,6 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // Emer
-            // 
-            this.Emer.HeaderText = "Emer Mbiemer";
-            this.Emer.Name = "Emer";
-            // 
-            // Nota
-            // 
-            this.Nota.HeaderText = "Vleresimi";
-            this.Nota.Name = "Nota";
-            // 
-            // Tema
-            // 
-            this.Tema.HeaderText = "Tema";
-            this.Tema.Name = "Tema";
-            // 
-            // Kategoria
-            // 
-            this.Kategoria.HeaderText = "Kategoria";
-            this.Kategoria.Name = "Kategoria";
-            // 
-            // Shenime
-            // 
-            this.Shenime.HeaderText = "Shenime";
-            this.Shenime.Name = "Shenime";
             // 
             // VleresoNxenesitUC
             // 

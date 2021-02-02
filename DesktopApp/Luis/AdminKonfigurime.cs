@@ -72,10 +72,10 @@ namespace DesktopApp.Luis
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-            {
-                dataGridView1.Rows.RemoveAt(item.Index);
-            }
+            
+            int index = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(index);
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -84,6 +84,11 @@ namespace DesktopApp.Luis
         }
 
         private void T(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
