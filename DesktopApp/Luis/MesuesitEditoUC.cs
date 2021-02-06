@@ -34,7 +34,7 @@ namespace DesktopApp.Luis
         {
 
 
-            
+            /*
             con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
             con.Open();
@@ -42,18 +42,21 @@ namespace DesktopApp.Luis
             ds = new System.Data.DataSet();
             adap.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-            
+            */
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             cmd = new SqlCommandBuilder(adap);
             adap.Update(ds);
+            */
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            /*
             if (textBox1.Text == null)
             {
                 adap = new SqlDataAdapter("select * from Mesues ", con);
@@ -68,14 +71,17 @@ namespace DesktopApp.Luis
                 adap.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }
+            */
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            /*
             adap = new SqlDataAdapter("select * from Mesues ", con);
             ds = new System.Data.DataSet();
             adap.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
+            */
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

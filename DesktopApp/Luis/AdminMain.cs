@@ -114,9 +114,7 @@ namespace DesktopApp.Luis
 		private void button1_Click(object sender, EventArgs e)
 		{
 
-			//AdminDashboardUC ad = new AdminDashboardUC();
-			//ad.Dock = DockStyle.Fill;
-			//this.Controls.Add(ad);
+			
 			adminDashboardUC1.Show();
 			adminDashboardUC1.BringToFront();
 			MesuesitSub.Visible = false;

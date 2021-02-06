@@ -10,15 +10,18 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace DesktopApp.Luis
 {
 	public partial class MesuesitRegjistroUC : UserControl
 	{
-        SqlDataAdapter adap;
-        SqlConnection con;
+
+        MySqlCommandBuilder cmb;
+        MySqlDataAdapter da;
         DataSet ds;
-        SqlCommandBuilder cmd;
+        MySqlConnection conn;
+        string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
         string gjinia;
         public MesuesitRegjistroUC()
 		{
@@ -75,15 +78,7 @@ namespace DesktopApp.Luis
 
         private void button1_Click(object sender, EventArgs e)
 		{
-            con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
-            con.Open();
-
-            SqlCommand scmd = con.CreateCommand();
-            scmd.CommandType = CommandType.Text;
-            scmd.CommandText = " Insert into Mesues(MesuesID, Emri, Mbiemri, Lenda1, Lenda2, MesuesPass, Gjinia) values ('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + lendaTxb1.Text + "','" + lendaTxb2.Text + "','"+ RandomPassword() + "','" + gjinia + "')";
-            scmd.ExecuteNonQuery();
-
+          
             emriTxb.Text = "";
             mbiemriTxb.Text = "";
             nrtelefoniTxb.Text = "";
@@ -95,8 +90,6 @@ namespace DesktopApp.Luis
             lendaTxb2.Text = "";
 
             MessageBox.Show("Rregjistrimi i mësuesit u krye me sukses.");
-
-            con.Close();
 
         }
 
