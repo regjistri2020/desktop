@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace DesktopApp.Luis
 {
     public partial class MesuesitEditoUC : UserControl
     {
-        SqlDataAdapter adap;
-        SqlConnection con;
+        MySqlCommandBuilder cmb;
+        MySqlDataAdapter da;
         DataSet ds;
-        SqlCommandBuilder cmd;
+        MySqlConnection conn;
+        string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+        int index;
 
         DataTable table = new DataTable();
         public MesuesitEditoUC()
@@ -34,54 +36,49 @@ namespace DesktopApp.Luis
         {
 
 
-            /*
-            con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["DesktopApp.Properties.Settings.e_nxenesitConnectionString"].ConnectionString;
-            con.Open();
-            adap = new SqlDataAdapter("select * from Mesues ", con);
-            ds = new System.Data.DataSet();
-            adap.Fill(ds);
+            conn = new MySqlConnection(connstring);
+            conn.Open();
+            string query = "select * from Mesues ORDER BY emri";
+            da = new MySqlDataAdapter(query, conn);
+            ds = new DataSet();
+            da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-            */
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            cmd = new SqlCommandBuilder(adap);
-            adap.Update(ds);
-            */
+            
+            cmb = new MySqlCommandBuilder(da);
+            da.Update(ds);
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (textBox1.Text == null)
             {
-                adap = new SqlDataAdapter("select * from Mesues ", con);
+                da = new MySqlDataAdapter("select * from Mesues ", conn);
                 ds = new System.Data.DataSet();
-                adap.Fill(ds);
+                da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }
             else
             {
-                adap = new SqlDataAdapter("select * from Mesues WHERE emri like '%" + textBox1.Text + "%' ", con);
+                da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
                 ds = new System.Data.DataSet();
-                adap.Fill(ds);
+                da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }
-            */
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            /*
-            adap = new SqlDataAdapter("select * from Mesues ", con);
+            da = new MySqlDataAdapter("select * from Mesues ", conn);
             ds = new System.Data.DataSet();
-            adap.Fill(ds);
+            da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-            */
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

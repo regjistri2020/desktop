@@ -17,11 +17,7 @@ namespace DesktopApp.Luis
 	public partial class MesuesitRegjistroUC : UserControl
 	{
 
-        MySqlCommandBuilder cmb;
-        MySqlDataAdapter da;
-        DataSet ds;
-        MySqlConnection conn;
-        string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+        
         string gjinia;
         public MesuesitRegjistroUC()
 		{
@@ -30,55 +26,61 @@ namespace DesktopApp.Luis
 
 		private void MesuesitRegjistroUC_Load(object sender, EventArgs e)
 		{
+            
 
 		}
 
-
-        // Instantiate random number generator.  
-        private readonly Random _random = new Random();
-
-        // Generates a random number within a range.      
-        public int RandomNumber(int min, int max)
-        {
-            return _random.Next(min, max);
-        }
-
-        // Generates a random string with a given size.    
-        public string RandomString(int size, bool lowerCase = false)
-        {
-            var builder = new StringBuilder(size);
-
-            // Unicode/ASCII Letters are divided into two blocks
-            // (Letters 65–90 / 97–122):
-            // The first group containing the uppercase letters and
-            // the second group containing the lowercase.  
-
-            // char is a single Unicode character  
-            char offset = lowerCase ? 'a' : 'A';
-            const int lettersOffset = 26; // A...Z or a..z: length=26  
-
-            for (var i = 0; i < size; i++)
-            {
-                var @char = (char)_random.Next(offset, offset + lettersOffset);
-                builder.Append(@char);
-            }
-
-            return lowerCase ? builder.ToString().ToLower() : builder.ToString();
-        }
-
-        public string RandomPassword(int size = 0)
-            {
-                StringBuilder builder = new StringBuilder();
-                builder.Append(RandomString(4, true));
-                builder.Append(RandomNumber(1000, 9999));
-                builder.Append(RandomString(2, false));
-                return builder.ToString();
-            }
         
-
         private void button1_Click(object sender, EventArgs e)
 		{
-          
+            var a = new Generator();
+            
+            try
+            {   
+                string connstr= "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+
+                MySqlConnection conn = new MySqlConnection(connstr);
+                conn.Open();
+                string query = "SELECT LoginID FROM Login ORDER BY LoginID DESC LIMIT 1";
+                MySqlCommand cmnd = new MySqlCommand(query, conn);
+                MySqlDataReader MyReader;
+                MyReader = cmnd.ExecuteReader();
+                int lastid = 0;
+                while (MyReader.Read())
+                {
+                    lastid = Convert.ToInt32(MyReader["LoginID"]) + 1;
+                }
+                
+                conn.Close();
+
+                conn.Open();
+                string Query1 = "insert into Login(User_Name, Pasword, RoleID) VALUES('" + nrpersonalTxb.Text + "','" + a.RandomPassword(10) + "','1' )";
+                string Query2 = "insert into Mesues(MesuesID, Emri, Mbiemri, Gjinia, LoginID) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','"+ lastid +"');";
+                
+                MySqlCommand cmd = new MySqlCommand(Query1, conn);
+                MySqlCommand cmd1 = new MySqlCommand(Query2, conn);
+                
+                MyReader = cmd.ExecuteReader();
+                while (MyReader.Read())
+                {
+                }
+                MessageBox.Show("U krijua nje login i ri per mesuesin");
+                conn.Close();
+
+                conn.Open();
+
+                MyReader = cmd1.ExecuteReader();
+                while (MyReader.Read())
+                {
+                }
+                MessageBox.Show("Rregjistrimi i mësuesit u krye me sukses.");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             emriTxb.Text = "";
             mbiemriTxb.Text = "";
             nrtelefoniTxb.Text = "";
@@ -89,7 +91,7 @@ namespace DesktopApp.Luis
             lendaTxb1.Text = "";
             lendaTxb2.Text = "";
 
-            MessageBox.Show("Rregjistrimi i mësuesit u krye me sukses.");
+            
 
         }
 
