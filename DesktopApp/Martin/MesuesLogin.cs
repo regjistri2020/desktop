@@ -63,7 +63,7 @@ namespace DesktopApp.Martin
 
         private void Hyni_button_Click(object sender, EventArgs e)
         {
-            //string query = "Select * from MESUES where Username = '"+ UsernametextBox.Text + "' and Password = '"+ PasstextBox + "' ";
+             //string query = "Select * from MESUES where Username = '"+ UsernametextBox.Text + "' and Password = '"+ PasstextBox + "' ";
             //SqlConnection con = new SqlConnection(connectionsString);
             //con.Open();
             //sda = new SqlDataAdapter(query, con);

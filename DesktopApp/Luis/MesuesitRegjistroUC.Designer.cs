@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.studimetTxb2 = new System.Windows.Forms.TextBox();
@@ -52,13 +51,12 @@
             this.mbiemriTxb = new System.Windows.Forms.TextBox();
             this.nrpersonalTxb = new System.Windows.Forms.TextBox();
             this.nrtelefoniTxb = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lendaTxb2 = new System.Windows.Forms.TextBox();
-            this.lendaTxb1 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +89,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(731, 433);
+            this.button1.Location = new System.Drawing.Point(645, 490);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 44);
             this.button1.TabIndex = 64;
@@ -99,23 +97,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label14.Location = new System.Drawing.Point(374, 360);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(252, 23);
-            this.label14.TabIndex = 59;
-            this.label14.Text = "- Lëndët e mësimdhënies";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 14F);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(80, 443);
+            this.label12.Location = new System.Drawing.Point(377, 408);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 23);
             this.label12.TabIndex = 58;
@@ -135,7 +122,7 @@
             // studimetTxb2
             // 
             this.studimetTxb2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studimetTxb2.Location = new System.Drawing.Point(110, 437);
+            this.studimetTxb2.Location = new System.Drawing.Point(407, 402);
             this.studimetTxb2.Name = "studimetTxb2";
             this.studimetTxb2.Size = new System.Drawing.Size(196, 29);
             this.studimetTxb2.TabIndex = 56;
@@ -227,6 +214,7 @@
             this.datelindjaTxb.Name = "datelindjaTxb";
             this.datelindjaTxb.Size = new System.Drawing.Size(262, 29);
             this.datelindjaTxb.TabIndex = 46;
+            this.datelindjaTxb.Value = new System.DateTime(2021, 2, 7, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -315,48 +303,20 @@
             this.nrtelefoniTxb.Size = new System.Drawing.Size(154, 29);
             this.nrtelefoniTxb.TabIndex = 67;
             // 
-            // label13
+            // pictureBox3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 14F);
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(400, 443);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 23);
-            this.label13.TabIndex = 71;
-            this.label13.Text = "2.";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Verdana", 14F);
-            this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(400, 408);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 23);
-            this.label15.TabIndex = 70;
-            this.label15.Text = "1.";
-            // 
-            // lendaTxb2
-            // 
-            this.lendaTxb2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lendaTxb2.Location = new System.Drawing.Point(430, 437);
-            this.lendaTxb2.Name = "lendaTxb2";
-            this.lendaTxb2.Size = new System.Drawing.Size(196, 29);
-            this.lendaTxb2.TabIndex = 69;
-            // 
-            // lendaTxb1
-            // 
-            this.lendaTxb1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lendaTxb1.Location = new System.Drawing.Point(430, 402);
-            this.lendaTxb1.Name = "lendaTxb1";
-            this.lendaTxb1.Size = new System.Drawing.Size(196, 29);
-            this.lendaTxb1.TabIndex = 68;
+            this.pictureBox3.Image = global::DesktopApp.Properties.Resources.warn1;
+            this.pictureBox3.Location = new System.Drawing.Point(66, 496);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_transfer_32;
-            this.pictureBox2.Location = new System.Drawing.Point(693, 437);
+            this.pictureBox2.Location = new System.Drawing.Point(607, 494);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -373,20 +333,30 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label13.Location = new System.Drawing.Point(109, 492);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(415, 42);
+            this.label13.TabIndex = 68;
+            this.label13.Text = "   Në klikim të butonit \'Rregjistro\', mësuesi do të ruhet në sistem.\r\n   Për të s" +
+    "hikuar ose ndryshuar të dhënat e mësuesit përdorni \r\n   ndërfaqen Mësuesit > Edi" +
+    "to";
+            // 
             // MesuesitRegjistroUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.lendaTxb2);
-            this.Controls.Add(this.lendaTxb1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.nrtelefoniTxb);
             this.Controls.Add(this.nrpersonalTxb);
             this.Controls.Add(this.mbiemriTxb);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.studimetTxb2);
@@ -410,6 +380,7 @@
             this.Load += new System.EventHandler(this.MesuesitRegjistroUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -423,7 +394,6 @@
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.TextBox studimetTxb2;
@@ -444,10 +414,8 @@
 		private System.Windows.Forms.TextBox mbiemriTxb;
 		private System.Windows.Forms.TextBox nrpersonalTxb;
 		private System.Windows.Forms.TextBox nrtelefoniTxb;
-		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.TextBox lendaTxb2;
-		private System.Windows.Forms.TextBox lendaTxb1;
 		private System.Windows.Forms.PictureBox pictureBox2;
-	}
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label13;
+    }
 }

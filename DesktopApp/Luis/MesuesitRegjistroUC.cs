@@ -54,12 +54,15 @@ namespace DesktopApp.Luis
                 conn.Close();
 
                 conn.Open();
+                string theDate = datelindjaTxb.Value.ToShortDateString();
+                MessageBox.Show(theDate);
                 string Query1 = "insert into Login(User_Name, Pasword, RoleID) VALUES('" + nrpersonalTxb.Text + "','" + a.RandomPassword(10) + "','1' )";
-                string Query2 = "insert into Mesues(MesuesID, Emri, Mbiemri, Gjinia, LoginID) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','"+ lastid +"');";
+                string Query2 = "insert into Mesues(MesuesID, Emri, Mbiemri, Gjinia, LoginID, nr_tel, datelindja, studimet1, studimet2) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','"+ lastid +"','"+nrtelefoniTxb.Text+"','"+theDate+"' ,'"+studimetTxb1.Text+ "','" + studimetTxb2.Text + "' );";
                 
                 MySqlCommand cmd = new MySqlCommand(Query1, conn);
                 MySqlCommand cmd1 = new MySqlCommand(Query2, conn);
-                
+
+
                 MyReader = cmd.ExecuteReader();
                 while (MyReader.Read())
                 {
@@ -88,8 +91,6 @@ namespace DesktopApp.Luis
             nrpersonalTxb.Text = "";
             studimetTxb1.Text = "";
             studimetTxb2.Text = "";
-            lendaTxb1.Text = "";
-            lendaTxb2.Text = "";
 
             
 
