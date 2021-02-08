@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DesktopApp.Luis
 {
+   
     public partial class AdminKonfigurime : Form
     {
+        MySqlConnection conn;
+        MySqlDataAdapter da;
+        MySqlCommandBuilder cmb;
+        DataSet ds;
+        string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
         DataTable table = new DataTable();
         public AdminKonfigurime()
         {
@@ -20,13 +27,21 @@ namespace DesktopApp.Luis
 
         private void AdminKonfigurime_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("User", typeof(string));// data type str
-            table.Columns.Add("Fjalekalimi", typeof(string));// datatype string
-            table.Columns.Add("Roli", typeof(string));// datatype string
-
-            table.Rows.Add("admin01", "1234" , "IT");
-
-            dataGridView1.DataSource = table;
+            try
+            {
+                conn = new MySqlConnection(connstr);
+                conn.Open();
+                string query = "select * from Login where RoleID=2";
+                da = new MySqlDataAdapter(query, conn);
+                ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -37,8 +52,36 @@ namespace DesktopApp.Luis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            table.Rows.Add(textBox1.Text, textBox2.Text, comboBox1.Text);
-            dataGridView1.DataSource = table;
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connstr);
+                conn.Open();
+                string Query1 = "insert into Login(User_Name, Pasword, RoleID) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','2' )";
+                MySqlCommand cmd = new MySqlCommand(Query1, conn);
+                cmd.ExecuteReader();
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                conn = new MySqlConnection(connstr);
+                conn.Open();
+                string query = "select * from Login where RoleID=2";
+                da = new MySqlDataAdapter(query, conn);
+                ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -75,6 +118,8 @@ namespace DesktopApp.Luis
             
             int index = dataGridView1.CurrentCell.RowIndex;
             dataGridView1.Rows.RemoveAt(index);
+            cmb = new MySqlCommandBuilder(da);
+            da.Update(ds);
 
         }
 
@@ -91,6 +136,12 @@ namespace DesktopApp.Luis
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cmb = new MySqlCommandBuilder(da);
+            da.Update(ds);
         }
     }
 }
