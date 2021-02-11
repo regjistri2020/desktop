@@ -92,8 +92,8 @@ namespace DesktopApp.Martin
                 //    MessageBox.Show("Ju nuk u futet me sukses ne platforme! ");
                 //}
 
-                MesuesMain mm = new MesuesMain();
-                mm.Show();
+                MesuesMain m = new MesuesMain();
+                m.Show();
                 this.Hide();
             }
             //con.Close();

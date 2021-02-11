@@ -101,6 +101,7 @@
     <Compile Include="Luis\AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luis\CookieClass.cs" />
     <Compile Include="Luis\EventetAdminUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +126,12 @@
     <Compile Include="Luis\MesuesitRegjistroUC.Designer.cs">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luis\NotaTremujori.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\NotaTremujori.Designer.cs">
+      <DependentUpon>NotaTremujori.cs</DependentUpon>
+    </Compile>
     <Compile Include="Luis\NxenesitEditoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +143,12 @@
     </Compile>
     <Compile Include="Luis\NxenesitRregjistro.Designer.cs">
       <DependentUpon>NxenesitRregjistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Luis\TematMesimore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Luis\TematMesimore.Designer.cs">
+      <DependentUpon>TematMesimore.cs</DependentUpon>
     </Compile>
     <Compile Include="Luis\VleresoNxenesitUC.cs">
       <SubType>UserControl</SubType>
@@ -214,11 +227,17 @@
     <EmbeddedResource Include="Luis\MesuesitRegjistroUC.resx">
       <DependentUpon>MesuesitRegjistroUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Luis\NotaTremujori.resx">
+      <DependentUpon>NotaTremujori.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Luis\NxenesitEditoUC.resx">
       <DependentUpon>NxenesitEditoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\NxenesitRregjistro.resx">
       <DependentUpon>NxenesitRregjistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\TematMesimore.resx">
+      <DependentUpon>TematMesimore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\VleresoNxenesitUC.resx">
       <DependentUpon>VleresoNxenesitUC.cs</DependentUpon>
@@ -351,6 +370,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\temat_32.png" />
     <None Include="Resources\warn1.png" />
     <None Include="Resources\search_48px.png" />
     <None Include="Resources\e nxenesit %281%2923.png" />

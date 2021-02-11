@@ -30,7 +30,6 @@
 		{
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,15 +59,20 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,16 +98,6 @@
             this.label1.Text = "Klasat ku jep mësim > Vlerëso Nxënësit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -119,21 +113,11 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Klasa 10a",
-            "Klasa 10b",
-            "Klasa 10c",
-            "Klasa 11a",
-            "Klasa 11b",
-            "Klasa 11c",
-            "Klasa 12a",
-            "Klasa 12 b",
-            "Klasa 13a",
-            "Klasa 13b"});
             this.comboBox1.Location = new System.Drawing.Point(207, 63);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(159, 29);
             this.comboBox1.TabIndex = 41;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -150,6 +134,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(248, 29);
             this.dateTimePicker1.TabIndex = 43;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
@@ -184,6 +169,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(192, 29);
             this.comboBox2.TabIndex = 46;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -252,9 +238,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(674, 121);
+            this.button1.Location = new System.Drawing.Point(674, 158);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 69);
+            this.button1.Size = new System.Drawing.Size(186, 32);
             this.button1.TabIndex = 65;
             this.button1.Text = "Ruaj";
             this.button1.UseVisualStyleBackColor = false;
@@ -415,6 +401,39 @@
             this.label12.TabIndex = 79;
             this.label12.Text = "  Në klikim të butonit \"vlerëso\" nota e nxënësit \r\n  do te vendoset në sistem !";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label13.Location = new System.Drawing.Point(735, 268);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(154, 25);
+            this.label13.TabIndex = 81;
+            this.label13.Text = "Tabela sugjestive";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label14.Location = new System.Drawing.Point(670, 125);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(157, 20);
+            this.label14.TabIndex = 83;
+            this.label14.Text = "Shiko temat e kaluara";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DesktopApp.Properties.Resources.temat_32;
+            this.pictureBox5.Location = new System.Drawing.Point(830, 122);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 82;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.warn;
@@ -446,10 +465,23 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // VleresoNxenesitUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button2);
@@ -480,13 +512,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "VleresoNxenesitUC";
             this.Size = new System.Drawing.Size(931, 641);
+            this.Load += new System.EventHandler(this.VleresoNxenesitUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,5 +563,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shenime;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label14;
     }
 }

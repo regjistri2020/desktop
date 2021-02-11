@@ -41,8 +41,8 @@ namespace DesktopApp
             if (UsertextBox.Text == "admin01" && PasstextBox.Text == "1234")
             {
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!","         " , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AdminMain am = new AdminMain();
-                am.Show();
+                AdminMain m = new AdminMain();
+                m.Show();
                 this.Hide();
             }
 

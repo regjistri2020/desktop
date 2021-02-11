@@ -128,5 +128,10 @@ namespace DesktopApp.Martin
             MesuesLogin ml = new MesuesLogin();
             ml.Show();
         }
+
+        private void ChatButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.webpage.com");
+        }
     }
 }

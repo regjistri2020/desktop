@@ -47,22 +47,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emerBabai = new System.Windows.Forms.TextBox();
+            this.emriNenes = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nrtel = new System.Windows.Forms.TextBox();
+            this.vendlindja = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.klasaCombo = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_transfer_32;
-            this.pictureBox2.Location = new System.Drawing.Point(697, 443);
+            this.pictureBox2.Location = new System.Drawing.Point(626, 518);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,7 +76,7 @@
             // nrpersonalTxb
             // 
             this.nrpersonalTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nrpersonalTxb.Location = new System.Drawing.Point(219, 210);
+            this.nrpersonalTxb.Location = new System.Drawing.Point(261, 219);
             this.nrpersonalTxb.Name = "nrpersonalTxb";
             this.nrpersonalTxb.Size = new System.Drawing.Size(154, 29);
             this.nrpersonalTxb.TabIndex = 94;
@@ -80,7 +84,7 @@
             // mbiemriTxb
             // 
             this.mbiemriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbiemriTxb.Location = new System.Drawing.Point(577, 121);
+            this.mbiemriTxb.Location = new System.Drawing.Point(619, 130);
             this.mbiemriTxb.Name = "mbiemriTxb";
             this.mbiemriTxb.Size = new System.Drawing.Size(154, 29);
             this.mbiemriTxb.TabIndex = 93;
@@ -91,19 +95,20 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(735, 439);
+            this.button1.Location = new System.Drawing.Point(664, 514);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 44);
             this.button1.TabIndex = 92;
             this.button1.Text = "Rregjistro";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label14.Location = new System.Drawing.Point(425, 365);
+            this.label14.Location = new System.Drawing.Point(473, 425);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(146, 23);
             this.label14.TabIndex = 91;
@@ -114,33 +119,35 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Verdana", 10F);
             this.radioButton2.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton2.Location = new System.Drawing.Point(577, 242);
+            this.radioButton2.Location = new System.Drawing.Point(619, 251);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(69, 21);
             this.radioButton2.TabIndex = 86;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Femër";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Verdana", 10F);
             this.radioButton1.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton1.Location = new System.Drawing.Point(577, 215);
+            this.radioButton1.Location = new System.Drawing.Point(619, 224);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(85, 21);
             this.radioButton1.TabIndex = 85;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Mashkull";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label10.Location = new System.Drawing.Point(425, 218);
+            this.label10.Location = new System.Drawing.Point(467, 227);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 23);
             this.label10.TabIndex = 84;
@@ -151,7 +158,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label7.Location = new System.Drawing.Point(66, 211);
+            this.label7.Location = new System.Drawing.Point(108, 220);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 23);
             this.label7.TabIndex = 81;
@@ -160,7 +167,7 @@
             // datelindjaTxb
             // 
             this.datelindjaTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datelindjaTxb.Location = new System.Drawing.Point(219, 163);
+            this.datelindjaTxb.Location = new System.Drawing.Point(261, 172);
             this.datelindjaTxb.Name = "datelindjaTxb";
             this.datelindjaTxb.Size = new System.Drawing.Size(262, 29);
             this.datelindjaTxb.TabIndex = 80;
@@ -170,7 +177,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label6.Location = new System.Drawing.Point(66, 167);
+            this.label6.Location = new System.Drawing.Point(108, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 23);
             this.label6.TabIndex = 79;
@@ -181,7 +188,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label5.Location = new System.Drawing.Point(425, 122);
+            this.label5.Location = new System.Drawing.Point(467, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 23);
             this.label5.TabIndex = 78;
@@ -190,7 +197,7 @@
             // emriTxb
             // 
             this.emriTxb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emriTxb.Location = new System.Drawing.Point(219, 121);
+            this.emriTxb.Location = new System.Drawing.Point(261, 130);
             this.emriTxb.Name = "emriTxb";
             this.emriTxb.Size = new System.Drawing.Size(154, 29);
             this.emriTxb.TabIndex = 77;
@@ -200,7 +207,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label4.Location = new System.Drawing.Point(66, 122);
+            this.label4.Location = new System.Drawing.Point(108, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 23);
             this.label4.TabIndex = 76;
@@ -211,7 +218,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(37, 309);
+            this.label3.Location = new System.Drawing.Point(85, 369);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(227, 23);
             this.label3.TabIndex = 75;
@@ -222,7 +229,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label2.Location = new System.Drawing.Point(37, 84);
+            this.label2.Location = new System.Drawing.Point(79, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 23);
             this.label2.TabIndex = 74;
@@ -260,94 +267,114 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label8.Location = new System.Drawing.Point(66, 259);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 23);
-            this.label8.TabIndex = 100;
-            this.label8.Text = "- Klasa";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Klasa 10a",
-            "Klasa 10b",
-            "Klasa 10c",
-            "Klasa 11a",
-            "Klasa 11b",
-            "Klasa 11c",
-            "Klasa 12a",
-            "Klasa 12 b",
-            "Klasa 13a",
-            "Klasa 13b"});
-            this.comboBox2.Location = new System.Drawing.Point(219, 255);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 29);
-            this.comboBox2.TabIndex = 102;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label16.Location = new System.Drawing.Point(43, 366);
+            this.label16.Location = new System.Drawing.Point(91, 426);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(149, 23);
             this.label16.TabIndex = 103;
             this.label16.Text = "- Emri i babait";
             // 
-            // textBox1
+            // emerBabai
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(207, 365);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 29);
-            this.textBox1.TabIndex = 104;
+            this.emerBabai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emerBabai.Location = new System.Drawing.Point(255, 425);
+            this.emerBabai.Name = "emerBabai";
+            this.emerBabai.Size = new System.Drawing.Size(154, 29);
+            this.emerBabai.TabIndex = 104;
             // 
-            // textBox2
+            // emriNenes
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(577, 360);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 29);
-            this.textBox2.TabIndex = 105;
+            this.emriNenes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emriNenes.Location = new System.Drawing.Point(625, 420);
+            this.emriNenes.Name = "emriNenes";
+            this.emriNenes.Size = new System.Drawing.Size(154, 29);
+            this.emriNenes.TabIndex = 105;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
-            this.label9.Location = new System.Drawing.Point(43, 408);
+            this.label9.Location = new System.Drawing.Point(91, 468);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 23);
             this.label9.TabIndex = 106;
             this.label9.Text = "- Nr. Tel";
             // 
-            // textBox3
+            // nrtel
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(207, 408);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 29);
-            this.textBox3.TabIndex = 107;
+            this.nrtel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nrtel.Location = new System.Drawing.Point(255, 468);
+            this.nrtel.Name = "nrtel";
+            this.nrtel.Size = new System.Drawing.Size(154, 29);
+            this.nrtel.TabIndex = 107;
+            // 
+            // vendlindja
+            // 
+            this.vendlindja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vendlindja.Location = new System.Drawing.Point(261, 268);
+            this.vendlindja.Name = "vendlindja";
+            this.vendlindja.Size = new System.Drawing.Size(154, 29);
+            this.vendlindja.TabIndex = 109;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
+            this.label11.Location = new System.Drawing.Point(108, 269);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(127, 23);
+            this.label11.TabIndex = 108;
+            this.label11.Text = "- Vendlindja";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(160)))), ((int)(((byte)(174)))));
+            this.label12.Location = new System.Drawing.Point(9, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 23);
+            this.label12.TabIndex = 110;
+            this.label12.Text = "- Klasa";
+            // 
+            // klasaCombo
+            // 
+            this.klasaCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klasaCombo.FormattingEnabled = true;
+            this.klasaCombo.Location = new System.Drawing.Point(161, 13);
+            this.klasaCombo.Name = "klasaCombo";
+            this.klasaCombo.Size = new System.Drawing.Size(154, 29);
+            this.klasaCombo.TabIndex = 111;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.klasaCombo);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Location = new System.Drawing.Point(461, 307);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(333, 56);
+            this.panel2.TabIndex = 112;
             // 
             // NxenesitRregjistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.vendlindja);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.nrtel);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.emriNenes);
+            this.Controls.Add(this.emerBabai);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.nrpersonalTxb);
             this.Controls.Add(this.mbiemriTxb);
@@ -367,10 +394,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "NxenesitRregjistro";
             this.Size = new System.Drawing.Size(931, 641);
+            this.Load += new System.EventHandler(this.NxenesitRregjistro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,12 +427,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emerBabai;
+        private System.Windows.Forms.TextBox emriNenes;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox nrtel;
+        private System.Windows.Forms.TextBox vendlindja;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox klasaCombo;
+        private System.Windows.Forms.Panel panel2;
     }
 }
