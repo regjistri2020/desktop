@@ -43,16 +43,18 @@ namespace DesktopApp.Martin
 
         private void UsernameTextbox_Click(object sender, EventArgs e)
         {
+            UsernametextBox.ForeColor = Color.Gray;
             UsernametextBox.Clear();
             UsernamePanel.BackColor = Color.FromArgb(100, 149, 237);
             UsernametextBox.ForeColor = Color.FromArgb(100, 149, 237);
 
             PassPanel.BackColor = Color.Black;
-            PasstextBox.ForeColor = Color.Black;
+            PasstextBox.ForeColor = Color.Gray;
         }
 
         private void PasstextBox_Click(object sender, EventArgs e)
         {
+            PasstextBox.ForeColor = Color.Gray;
             PasstextBox.Clear();
             PassPanel.BackColor = Color.FromArgb(100, 149, 237);
             PasstextBox.ForeColor = Color.FromArgb(100, 149, 237);

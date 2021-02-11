@@ -38,6 +38,12 @@ namespace DesktopApp
 
         private void Hyni_button_Click(object sender, EventArgs e)
         {
+            panel2.BackColor = Color.FromArgb(100, 149, 237);
+            PasstextBox.ForeColor = Color.Black;
+            panel3.BackColor = Color.FromArgb(100, 149, 237);
+            panel3.ForeColor = Color.Black;
+
+
             if (UsertextBox.Text == "admin01" && PasstextBox.Text == "1234")
             {
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!","         " , MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -58,11 +64,21 @@ namespace DesktopApp
         private void txt(object sender, EventArgs e)
         {
             UsertextBox.Clear();
+            panel3.BackColor = Color.FromArgb(100, 149, 237);
+            UsertextBox.ForeColor = Color.FromArgb(100, 149, 237);
+
+            panel2.BackColor = Color.Black;
+            PasstextBox.ForeColor = Color.Gray;
         }
 
         private void pass(object sender, EventArgs e)
         {
             PasstextBox.Clear();
+            panel2.BackColor = Color.FromArgb(100, 149, 237);
+            PasstextBox.ForeColor = Color.FromArgb(100, 149, 237);
+
+            UsertextBox.ForeColor = Color.Black;
+            panel3.BackColor = Color.Black;
         }
     }
 }

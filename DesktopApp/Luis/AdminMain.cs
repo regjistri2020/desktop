@@ -64,7 +64,7 @@ namespace DesktopApp.Luis
 
 		private void Close_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			Application.Exit();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
