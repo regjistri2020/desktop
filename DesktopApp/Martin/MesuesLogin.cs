@@ -114,6 +114,9 @@ namespace DesktopApp.Martin
             f1.Show();
         }
 
+        private void UsernametextBox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

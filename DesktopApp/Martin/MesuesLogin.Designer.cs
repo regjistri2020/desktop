@@ -207,6 +207,7 @@
             this.PasstextBox.BackColor = System.Drawing.SystemColors.Control;
             this.PasstextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasstextBox.ForeColor = System.Drawing.Color.Gray;
             this.PasstextBox.Location = new System.Drawing.Point(95, 212);
             this.PasstextBox.Name = "PasstextBox";
             this.PasstextBox.Size = new System.Drawing.Size(192, 17);
@@ -219,12 +220,14 @@
             this.UsernametextBox.BackColor = System.Drawing.SystemColors.Control;
             this.UsernametextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernametextBox.ForeColor = System.Drawing.Color.Gray;
             this.UsernametextBox.Location = new System.Drawing.Point(95, 101);
             this.UsernametextBox.Name = "UsernametextBox";
             this.UsernametextBox.Size = new System.Drawing.Size(192, 17);
             this.UsernametextBox.TabIndex = 15;
             this.UsernametextBox.Text = "Vendosni kodin tuaj";
             this.UsernametextBox.Click += new System.EventHandler(this.UsernameTextbox_Click);
+            this.UsernametextBox.TextChanged += new System.EventHandler(this.UsernametextBox_TextChanged);
             // 
             // jDragControl1
             // 
