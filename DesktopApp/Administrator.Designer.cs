@@ -203,6 +203,7 @@
             this.PasstextBox.BackColor = System.Drawing.SystemColors.Control;
             this.PasstextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasstextBox.ForeColor = System.Drawing.Color.Gray;
             this.PasstextBox.Location = new System.Drawing.Point(95, 213);
             this.PasstextBox.Name = "PasstextBox";
             this.PasstextBox.Size = new System.Drawing.Size(192, 15);
@@ -215,6 +216,7 @@
             this.UsertextBox.BackColor = System.Drawing.SystemColors.Control;
             this.UsertextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsertextBox.ForeColor = System.Drawing.Color.Gray;
             this.UsertextBox.Location = new System.Drawing.Point(95, 102);
             this.UsertextBox.Name = "UsertextBox";
             this.UsertextBox.Size = new System.Drawing.Size(192, 15);

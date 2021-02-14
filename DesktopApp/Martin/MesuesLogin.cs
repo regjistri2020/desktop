@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,11 +13,13 @@ namespace DesktopApp.Martin
 {
     public partial class MesuesLogin : Form
     {
-        //SqlDataAdapter sda;
-        //DataTable dt;
-        //SqlCommandBuilder scb;
+        MySqlConnection conn;
+        MySqlDataAdapter msda;
+        MySqlCommandBuilder cmb;
+        DataSet ds;
+        string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+        DataTable dt;
 
-        //String connectionsString = "@";
 
         public MesuesLogin()
         {
@@ -43,16 +45,18 @@ namespace DesktopApp.Martin
 
         private void UsernameTextbox_Click(object sender, EventArgs e)
         {
+            UsernametextBox.ForeColor = Color.Gray;
             UsernametextBox.Clear();
             UsernamePanel.BackColor = Color.FromArgb(100, 149, 237);
             UsernametextBox.ForeColor = Color.FromArgb(100, 149, 237);
 
             PassPanel.BackColor = Color.Black;
-            PasstextBox.ForeColor = Color.Black;
+            PasstextBox.ForeColor = Color.Gray;
         }
 
         private void PasstextBox_Click(object sender, EventArgs e)
         {
+            PasstextBox.ForeColor = Color.Gray;
             PasstextBox.Clear();
             PassPanel.BackColor = Color.FromArgb(100, 149, 237);
             PasstextBox.ForeColor = Color.FromArgb(100, 149, 237);
@@ -63,43 +67,34 @@ namespace DesktopApp.Martin
 
         private void Hyni_button_Click(object sender, EventArgs e)
         {
-             //string query = "Select * from MESUES where Username = '"+ UsernametextBox.Text + "' and Password = '"+ PasstextBox + "' ";
-            //SqlConnection con = new SqlConnection(connectionsString);
-            //con.Open();
-            //sda = new SqlDataAdapter(query, con);
-            //sda.SelectCommand.ExecuteNonQuery();
-
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //if (dt.Rows[0][0].ToString == "1")
-            //{
-
             PassPanel.BackColor = Color.FromArgb(100, 149, 237);
             PasstextBox.ForeColor = Color.Black;
             UsernamePanel.BackColor = Color.FromArgb(100, 149, 237);
             UsernamePanel.ForeColor = Color.Black;
 
-            if (UsernametextBox.Text == "2030" && PasstextBox.Text == "1234")
+            MySqlConnection conn = new MySqlConnection(connstr);
+            conn.Open();
+            //RoleID = '1' and
+            string MesLog_query = "Select count(*) from Login where  User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox + "' ";
+            MySqlCommand cmd = new MySqlCommand(MesLog_query, conn);
+            cmd.ExecuteReader();
+            conn.Close();
+
+            MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+       
+            if (dt.Rows.Count == 1 )
             {
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    this.Hide();
-                //    MesueseMain m = new MesueseMain();
-                //    m.Show();
-                //}
-                
-                //else
-                //{
-                //    MessageBox.Show("Ju nuk u futet me sukses ne platforme! ");
-                //}
-
                 MesuesMain m = new MesuesMain();
                 m.Show();
                 this.Hide();
             }
-            //con.Close();
-
             else
                 MessageBox.Show("Vendosni sakte kredencialet!", " Mësuesi nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
 
         private void minimizepictureBox_Click(object sender, EventArgs e)
@@ -114,6 +109,9 @@ namespace DesktopApp.Martin
             f1.Show();
         }
 
+        private void UsernametextBox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
