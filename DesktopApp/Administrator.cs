@@ -100,9 +100,6 @@ namespace DesktopApp
             panel3.BackColor = Color.Black;
         }
 
-        private void UsertextBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }
