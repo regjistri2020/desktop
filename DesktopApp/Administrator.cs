@@ -8,11 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DesktopApp
 {
     public partial class Administrator : Form
     {
+        MySqlConnection conn;
+        MySqlDataAdapter msda;
+        MySqlCommandBuilder cmb;
+        DataSet ds;
+        string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+        DataTable dt;
+
         public Administrator()
         {
             InitializeComponent();
@@ -43,8 +51,19 @@ namespace DesktopApp
             panel3.BackColor = Color.FromArgb(100, 149, 237);
             panel3.ForeColor = Color.Black;
 
+            MySqlConnection conn = new MySqlConnection(connstr);
+            conn.Open();
+            //RoleID = '1' and
+            string AdmLog_query = "Select count(*) from Login where  User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox + "' ";
+            MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
+            cmd.ExecuteReader();
+            conn.Close();
 
-            if (UsertextBox.Text == "admin01" && PasstextBox.Text == "1234")
+            MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            if (dt.Rows.Count == 1)
             {
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!","         " , MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AdminMain m = new AdminMain();
@@ -79,6 +98,11 @@ namespace DesktopApp
 
             UsertextBox.ForeColor = Color.Black;
             panel3.BackColor = Color.Black;
+        }
+
+        private void UsertextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

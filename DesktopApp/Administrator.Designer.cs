@@ -223,6 +223,7 @@
             this.UsertextBox.TabIndex = 6;
             this.UsertextBox.Text = "Vendosni kodin tuaj";
             this.UsertextBox.Click += new System.EventHandler(this.txt);
+            this.UsertextBox.TextChanged += new System.EventHandler(this.UsertextBox_TextChanged);
             // 
             // jDragControl1
             // 

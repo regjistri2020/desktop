@@ -74,15 +74,18 @@ namespace DesktopApp.Martin
 
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
-            string MesLog_query = "Select count(*) from Login where User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox + "' ";
+            //RoleID = '1' and
+            string MesLog_query = "Select count(*) from Login where  User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox + "' ";
             MySqlCommand cmd = new MySqlCommand(MesLog_query, conn);
             cmd.ExecuteReader();
             conn.Close();
 
             MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
-            sda.Fill(dt);            
-            if (dt.Rows.Count == 1)
+            sda.Fill(dt);
+
+       
+            if (dt.Rows.Count == 1 )
             {
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MesuesMain m = new MesuesMain();
