@@ -54,7 +54,7 @@ namespace DesktopApp
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
             //RoleID = '1' and
-            string AdmLog_query = "Select count(*) from Login where  User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox + "' ";
+            string AdmLog_query = "Select count(*) from Login where User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 2 ";
             MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
             cmd.ExecuteReader();
             conn.Close();
@@ -62,8 +62,7 @@ namespace DesktopApp
             MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-
-            if (dt.Rows.Count == 1)
+            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
             {
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!","         " , MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AdminMain m = new AdminMain();
