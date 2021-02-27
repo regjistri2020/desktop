@@ -253,6 +253,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "NxenesitEditoUC";
             this.Size = new System.Drawing.Size(931, 641);
+            this.Load += new System.EventHandler(this.NxenesitEditoUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

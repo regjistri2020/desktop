@@ -66,6 +66,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -290,22 +292,6 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Andja Bardha",
-            "Aldi Duka",
-            "Almirado Lekgegaj",
-            "Brian Kuca",
-            "Enes Vojka",
-            "Enis Lika",
-            "Ejona Caushi",
-            "Klea Manushi",
-            "Lea Allkoja",
-            "Luis Kateshi",
-            "Martin Koci",
-            "Klaus Tanku",
-            "Rogers Bardhi",
-            "Rineda Dallashi",
-            "Thoma Nika"});
             this.comboBox3.Location = new System.Drawing.Point(200, 284);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(182, 29);
@@ -416,7 +402,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label13.Location = new System.Drawing.Point(735, 268);
+            this.label13.Location = new System.Drawing.Point(706, 271);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(154, 25);
             this.label13.TabIndex = 81;
@@ -475,10 +461,21 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DesktopApp.Properties.Resources.restart_48px;
+            this.pictureBox6.Location = new System.Drawing.Point(858, 269);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 84;
+            this.pictureBox6.TabStop = false;
+            // 
             // VleresoNxenesitUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label13);
@@ -521,6 +518,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,5 +564,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

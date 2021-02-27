@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DesktopApp.Luis;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace DesktopApp.Martin
 {
     public partial class MesuesMain : Form
     {
+        string loginID = CookieClass.LoginID;
         public MesuesMain()
         {
             InitializeComponent();
@@ -35,7 +38,28 @@ namespace DesktopApp.Martin
             fletTremujori1.Hide();
             justifikoMungesatUC1.Hide();
             mesuesDashboardUC1.Show();
-            
+
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM Mesues Where LoginID in (SELECT LoginID From Login WHERE User_Name = '" + loginID + "')";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            label2.Text = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
+                            CookieClass.MesuesID = reader.GetString("MesuesID");
+                        }
+                    }
+                }
+                connection.Close();
+            }
+
+
         }
 
         private void hideSubMenu()
@@ -132,6 +156,16 @@ namespace DesktopApp.Martin
         private void ChatButton_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.webpage.com");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

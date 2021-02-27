@@ -49,12 +49,12 @@
             this.MungesatButton = new System.Windows.Forms.Button();
             this.VleresonxenesButton = new System.Windows.Forms.Button();
             this.MesimdhenieButton = new System.Windows.Forms.Button();
+            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.justifikoMungesatUC1 = new DesktopApp.Klea.JustifikoMungesatUC();
+            this.fletTremujori1 = new DesktopApp.Martin.FletTremujori();
             this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
-            this.fletTremujori1 = new DesktopApp.Martin.FletTremujori();
-            this.justifikoMungesatUC1 = new DesktopApp.Klea.JustifikoMungesatUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -80,6 +80,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1201, 80);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Logoutbutton
             // 
@@ -126,6 +127,7 @@
             this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "#mesuesi1";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox2
             // 
@@ -338,6 +340,25 @@
             this.MesimdhenieButton.UseVisualStyleBackColor = false;
             this.MesimdhenieButton.Click += new System.EventHandler(this.MesimdhenieButton_Click);
             // 
+            // jDragControl1
+            // 
+            this.jDragControl1.GetForm = this;
+            this.jDragControl1.TargetControl = this.panel1;
+            // 
+            // justifikoMungesatUC1
+            // 
+            this.justifikoMungesatUC1.Location = new System.Drawing.Point(270, 80);
+            this.justifikoMungesatUC1.Name = "justifikoMungesatUC1";
+            this.justifikoMungesatUC1.Size = new System.Drawing.Size(931, 641);
+            this.justifikoMungesatUC1.TabIndex = 15;
+            // 
+            // fletTremujori1
+            // 
+            this.fletTremujori1.Location = new System.Drawing.Point(270, 80);
+            this.fletTremujori1.Name = "fletTremujori1";
+            this.fletTremujori1.Size = new System.Drawing.Size(931, 647);
+            this.fletTremujori1.TabIndex = 14;
+            // 
             // MungesaUC
             // 
             this.MungesaUC.Location = new System.Drawing.Point(270, 80);
@@ -358,25 +379,6 @@
             this.mesuesDashboardUC1.Name = "mesuesDashboardUC1";
             this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesDashboardUC1.TabIndex = 12;
-            // 
-            // jDragControl1
-            // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this.panel1;
-            // 
-            // fletTremujori1
-            // 
-            this.fletTremujori1.Location = new System.Drawing.Point(270, 80);
-            this.fletTremujori1.Name = "fletTremujori1";
-            this.fletTremujori1.Size = new System.Drawing.Size(931, 647);
-            this.fletTremujori1.TabIndex = 14;
-            // 
-            // justifikoMungesatUC1
-            // 
-            this.justifikoMungesatUC1.Location = new System.Drawing.Point(270, 80);
-            this.justifikoMungesatUC1.Name = "justifikoMungesatUC1";
-            this.justifikoMungesatUC1.Size = new System.Drawing.Size(931, 641);
-            this.justifikoMungesatUC1.TabIndex = 15;
             // 
             // MesuesMain
             // 

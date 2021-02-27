@@ -9,9 +9,23 @@ namespace DesktopApp.Luis
 {
     public class CookieClass
     {
-        static private string klasa, lenda;
-        static public string Klasa
+        static private string klasa, lenda, loginID, mesuesID;
+
+        static public string MesuesID
         {
+            get
+            {
+                return mesuesID;
+            }
+
+            set
+            {
+                mesuesID = value;
+            }
+        }
+
+        static public string Klasa
+        { 
             get
             {
                 return klasa;
@@ -22,6 +36,7 @@ namespace DesktopApp.Luis
                 klasa = value;
             }
         }
+   
         static public string Lenda
         {
             get
@@ -32,6 +47,20 @@ namespace DesktopApp.Luis
             set
             {
                 lenda = value;
+            }
+        }
+
+
+        static public string LoginID
+        {
+            get
+            {
+                return loginID;
+            }
+
+            set
+            {
+                loginID = value;
             }
         }
 

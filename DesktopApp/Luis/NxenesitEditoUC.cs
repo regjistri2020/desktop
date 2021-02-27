@@ -16,5 +16,10 @@ namespace DesktopApp.Luis
         {
             InitializeComponent();
         }
+
+        private void NxenesitEditoUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

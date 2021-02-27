@@ -14,7 +14,7 @@ namespace DesktopApp.Luis
 {
 	public partial class VleresoNxenesitUC : UserControl
 	{
-
+        
 		public VleresoNxenesitUC()
 		{
 			InitializeComponent();
@@ -76,6 +76,25 @@ namespace DesktopApp.Luis
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             CookieClass.Klasa = comboBox1.Text;
+
+
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM Nxenes WHERE KlasaID IN (SELECT KlasaID FROM Klasa WHERE Emri = '"+comboBox1.Text+"')";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox3.Items.Add(reader.GetString("Emri")+" "+ reader.GetString("Mbiemri"));
+                        }
+                    }
+                }
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

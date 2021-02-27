@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DesktopApp.Luis;
 
 namespace DesktopApp.Martin
 {
@@ -78,18 +79,21 @@ namespace DesktopApp.Martin
             string MesLog_query = "Select count(*) from Login where User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 1 ";
             MySqlCommand cmd = new MySqlCommand(MesLog_query, conn);
             cmd.ExecuteReader();
+            
             conn.Close();
 
             MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            MessageBox.Show((dt.Rows[0][0]).ToString());
             if (Convert.ToInt32(dt.Rows[0][0]) == 1)
             {
+                CookieClass.LoginID = UsernametextBox.Text;
                 MessageBox.Show("Vendosja e kredencialeve u krye me sukses!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MesuesMain m = new MesuesMain();
                 m.Show();
                 this.Hide();
+
+                
             }
             else
                 MessageBox.Show("Vendosni sakte kredencialet!", " Mësuesi nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
