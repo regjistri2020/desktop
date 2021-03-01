@@ -41,11 +41,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Emer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shenime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -130,6 +125,7 @@
             this.comboBox1.Size = new System.Drawing.Size(159, 29);
             this.comboBox1.TabIndex = 41;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // panel2
             // 
@@ -146,6 +142,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(248, 29);
             this.dateTimePicker1.TabIndex = 43;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 2, 28, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
@@ -174,9 +171,6 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Gjuhë Shqipe",
-            "Letërsi"});
             this.comboBox2.Location = new System.Drawing.Point(465, 121);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(192, 29);
@@ -207,42 +201,11 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Emer,
-            this.Nota,
-            this.Tema,
-            this.Kategoria,
-            this.Shenime});
             this.dataGridView1.Location = new System.Drawing.Point(436, 299);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(453, 303);
             this.dataGridView1.TabIndex = 49;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Emer
-            // 
-            this.Emer.HeaderText = "Emer Mbiemer";
-            this.Emer.Name = "Emer";
-            // 
-            // Nota
-            // 
-            this.Nota.HeaderText = "Vleresimi";
-            this.Nota.Name = "Nota";
-            // 
-            // Tema
-            // 
-            this.Tema.HeaderText = "Tema";
-            this.Tema.Name = "Tema";
-            // 
-            // Kategoria
-            // 
-            this.Kategoria.HeaderText = "Kategoria";
-            this.Kategoria.Name = "Kategoria";
-            // 
-            // Shenime
-            // 
-            this.Shenime.HeaderText = "Shenime";
-            this.Shenime.Name = "Shenime";
             // 
             // button1
             // 
@@ -265,6 +228,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 27);
             this.textBox2.TabIndex = 66;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
             // 
@@ -296,6 +260,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(182, 29);
             this.comboBox3.TabIndex = 70;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -556,11 +521,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Emer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shenime;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label14;

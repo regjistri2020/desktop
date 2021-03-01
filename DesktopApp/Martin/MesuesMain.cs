@@ -15,6 +15,7 @@ namespace DesktopApp.Martin
     public partial class MesuesMain : Form
     {
         string loginID = CookieClass.LoginID;
+        String mID;
         public MesuesMain()
         {
             InitializeComponent();
@@ -32,13 +33,6 @@ namespace DesktopApp.Martin
 
         private void MesuesMain_Load(object sender, EventArgs e)
         {
-            hideSubMenu();
-            MungesaUC.Hide();
-            vleresoNxenesitUC1.Hide();
-            fletTremujori1.Hide();
-            justifikoMungesatUC1.Hide();
-            mesuesDashboardUC1.Show();
-
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -52,14 +46,21 @@ namespace DesktopApp.Martin
                         while (reader.Read())
                         {
                             label2.Text = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
-                            CookieClass.MesuesID = reader.GetString("MesuesID");
+                            mID = reader.GetString("MesuesID");
                         }
                     }
                 }
                 connection.Close();
             }
+           CookieClass.MesuesID = mID;
+            MessageBox.Show(mID);
 
-
+            hideSubMenu();
+            MungesaUC.Hide();
+            vleresoNxenesitUC1.Hide();
+            fletTremujori1.Hide();
+            justifikoMungesatUC1.Hide();
+            mesuesDashboardUC1.Show();
         }
 
         private void hideSubMenu()

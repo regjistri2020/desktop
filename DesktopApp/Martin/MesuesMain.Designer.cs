@@ -87,7 +87,7 @@
             this.Logoutbutton.BackColor = System.Drawing.Color.DarkOrange;
             this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logoutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logoutbutton.Location = new System.Drawing.Point(917, 34);
+            this.Logoutbutton.Location = new System.Drawing.Point(1003, 32);
             this.Logoutbutton.Name = "Logoutbutton";
             this.Logoutbutton.Size = new System.Drawing.Size(75, 23);
             this.Logoutbutton.TabIndex = 9;

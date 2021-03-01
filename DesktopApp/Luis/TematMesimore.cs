@@ -28,7 +28,7 @@ namespace DesktopApp.Luis
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT TemaMesimore AS 'Tema e mesimit', DataTemes AS 'Data' FROM TematMesimore where MesuesID = '"+CookieClass.MesuesID+"' and KlasaID='"+CookieClass.Klasa+"' and LendaID = '"+CookieClass.Lenda+"'";
+                var query = "SELECT TemaMesimore AS 'Tema e mesimit', DataTemes AS 'Data' FROM TematMesimore where MesuesID = '"+CookieClass.MesuesID+"' and KlasaID IN (SELECT KlasaID FROM Klasa WHERE Emri = '"+CookieClass.Klasa+"') and LendaID in (SELECT LendaID FROM Lendet WHERE EmerLende = '"+CookieClass.Lenda+"')";
                     using (var da = new MySqlDataAdapter(query, connection))
                     {
                     var ds = new DataSet();
