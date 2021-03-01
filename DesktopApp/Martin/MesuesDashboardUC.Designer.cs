@@ -29,34 +29,35 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tittlelabel = new System.Windows.Forms.Label();
             this.Datapanel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.KalueshmeriaMtextBox = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.NxenestextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.NxenesetextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.DatatextBox = new System.Windows.Forms.TextBox();
             this.Datalabel = new System.Windows.Forms.Label();
             this.KlasatextBox = new System.Windows.Forms.TextBox();
             this.MesuestextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Datapanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -65,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,6 +78,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(931, 38);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // tittlelabel
             // 
@@ -122,6 +132,39 @@
             this.Datapanel.Size = new System.Drawing.Size(931, 609);
             this.Datapanel.TabIndex = 2;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBox1.Location = new System.Drawing.Point(675, 506);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 31);
+            this.textBox1.TabIndex = 29;
+            this.textBox1.Text = "5";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(666, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 29);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Mungesat";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::DesktopApp.Properties.Resources.id_not_verified_40px;
+            this.pictureBox8.Location = new System.Drawing.Point(558, 468);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(74, 75);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 27;
+            this.pictureBox8.TabStop = false;
+            // 
             // KalueshmeriaMtextBox
             // 
             this.KalueshmeriaMtextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -144,6 +187,16 @@
             this.label.Size = new System.Drawing.Size(173, 29);
             this.label.TabIndex = 25;
             this.label.Text = "Kalueshmëria";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
+            this.pictureBox7.Location = new System.Drawing.Point(544, 339);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(92, 91);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 24;
+            this.pictureBox7.TabStop = false;
             // 
             // NxenestextBox
             // 
@@ -168,6 +221,16 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Nxënës";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DesktopApp.Properties.Resources.businessman_40px;
+            this.pictureBox6.Location = new System.Drawing.Point(121, 479);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(86, 77);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            // 
             // NxenesetextBox
             // 
             this.NxenesetextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -191,6 +254,16 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Nxënëse";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DesktopApp.Properties.Resources.person_female_40px;
+            this.pictureBox5.Location = new System.Drawing.Point(121, 349);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(86, 77);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
             // DatatextBox
             // 
             this.DatatextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -201,8 +274,9 @@
             this.DatatextBox.Name = "DatatextBox";
             this.DatatextBox.Size = new System.Drawing.Size(123, 22);
             this.DatatextBox.TabIndex = 17;
-            this.DatatextBox.Text = "07.12.2020";
+            this.DatatextBox.Text = "---";
             this.DatatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DatatextBox.TextChanged += new System.EventHandler(this.DatatextBox_TextChanged);
             // 
             // Datalabel
             // 
@@ -259,6 +333,26 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Mësuesi/ja:";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.class_40px;
+            this.pictureBox4.Location = new System.Drawing.Point(602, 132);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(92, 91);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.teacher_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(74, 120);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 105);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
@@ -286,89 +380,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Rifresko të dhënat";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(675, 506);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 31);
-            this.textBox1.TabIndex = 29;
-            this.textBox1.Text = "5";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(666, 467);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 29);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Mungesat";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::DesktopApp.Properties.Resources.id_not_verified_40px;
-            this.pictureBox8.Location = new System.Drawing.Point(558, 468);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(74, 75);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 27;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
-            this.pictureBox7.Location = new System.Drawing.Point(544, 339);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(92, 91);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 24;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DesktopApp.Properties.Resources.businessman_40px;
-            this.pictureBox6.Location = new System.Drawing.Point(121, 479);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(86, 77);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 21;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DesktopApp.Properties.Resources.person_female_40px;
-            this.pictureBox5.Location = new System.Drawing.Point(121, 349);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(86, 77);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DesktopApp.Properties.Resources.class_40px;
-            this.pictureBox4.Location = new System.Drawing.Point(602, 132);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 91);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.teacher_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 120);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 105);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DesktopApp.Properties.Resources.restart_48px;
@@ -379,16 +390,6 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // MesuesDashboardUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,8 +398,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "MesuesDashboardUC";
             this.Size = new System.Drawing.Size(931, 647);
+            this.Load += new System.EventHandler(this.MesuesDashboardUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Datapanel.ResumeLayout(false);
             this.Datapanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -408,7 +411,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,10 +430,8 @@
         private System.Windows.Forms.TextBox NxenesetextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox DatatextBox;
         private System.Windows.Forms.Label Datalabel;
         private System.Windows.Forms.TextBox KlasatextBox;
-        private System.Windows.Forms.TextBox MesuestextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -443,5 +443,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox8;
+        public System.Windows.Forms.TextBox MesuestextBox;
+        public System.Windows.Forms.TextBox DatatextBox;
     }
 }

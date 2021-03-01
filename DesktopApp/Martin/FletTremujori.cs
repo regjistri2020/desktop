@@ -79,5 +79,11 @@ namespace DesktopApp.Martin
             table.Columns.Add("Notë Testi", typeof(string));
             dataGridView1.DataSource = table;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // used to hide specific columns
+            //this.dataGridView1.Columns["CustomerID"].Visible = false;
+        }
     }
 }

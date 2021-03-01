@@ -14,12 +14,9 @@ namespace DesktopApp
 {
     public partial class Administrator : Form
     {
-        MySqlConnection conn;
-        MySqlDataAdapter msda;
-        MySqlCommandBuilder cmb;
+
         DataSet ds;
         string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-        DataTable dt;
 
         public Administrator()
         {
@@ -98,7 +95,5 @@ namespace DesktopApp
             UsertextBox.ForeColor = Color.Black;
             panel3.BackColor = Color.Black;
         }
-
-
     }
 }
