@@ -143,6 +143,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_to_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_back_to_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_browse_folder_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-browse-folder-48", resourceCulture);
@@ -166,6 +176,16 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap icons8_class_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_class_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_create_archive_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_create_archive_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +243,39 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_next_page_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_next_page_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_close_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_save_close_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_settings_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_settings_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_tick_box_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_tick_box_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +396,16 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap restart_48px {
             get {
                 object obj = ResourceManager.GetObject("restart_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_64 {
+            get {
+                object obj = ResourceManager.GetObject("save_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

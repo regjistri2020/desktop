@@ -153,6 +153,12 @@
     <Compile Include="Luis\NotaTremujori.Designer.cs">
       <DependentUpon>NotaTremujori.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luis\NotaTremujoriUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Luis\NotaTremujoriUC.Designer.cs">
+      <DependentUpon>NotaTremujoriUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Luis\NxenesitEditoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\NotaTremujori.resx">
       <DependentUpon>NotaTremujori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luis\NotaTremujoriUC.resx">
+      <DependentUpon>NotaTremujoriUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luis\NxenesitEditoUC.resx">
       <DependentUpon>NxenesitEditoUC.cs</DependentUpon>
@@ -392,6 +401,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icons8_tick_box_64.png" />
+    <None Include="Resources\save_64.png" />
+    <None Include="Resources\icons8_create_archive_64.png" />
+    <None Include="Resources\icons8_save_close_48.png" />
+    <None Include="Resources\icons8_next_page_48.png" />
+    <None Include="Resources\icons8_back_to_48.png" />
     <None Include="Resources\temat_32.png" />
     <None Include="Resources\warn1.png" />
     <None Include="Resources\search_48px.png" />
