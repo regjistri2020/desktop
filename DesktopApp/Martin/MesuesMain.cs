@@ -66,6 +66,7 @@ namespace DesktopApp.Martin
             fletTremujori1.Hide();
             justifikoMungesatUC1.Hide();
             mesuesDashboardUC1.Show();
+            notaTremujoriUC1.Hide();
         }
 
         private void hideSubMenu()
@@ -172,6 +173,18 @@ namespace DesktopApp.Martin
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.FromArgb(135, 190, 235);
+            VleresonxenesButton.BackColor = Color.FromArgb(135, 206, 235);
+            MungesatButton.BackColor = Color.FromArgb(135, 206, 235);
+
+            notaTremujoriUC1.BringToFront();
+            notaTremujoriUC1.Show();
+            vleresoNxenesitUC1.Hide();
+            fletTremujori1.Hide();
         }
     }
 }

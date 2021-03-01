@@ -55,6 +55,7 @@
             this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
+            this.notaTremujoriUC1 = new DesktopApp.Luis.NotaTremujoriUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -291,6 +292,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Notat e tremujorit ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MungesatButton
             // 
@@ -380,11 +382,19 @@
             this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesDashboardUC1.TabIndex = 12;
             // 
+            // notaTremujoriUC1
+            // 
+            this.notaTremujoriUC1.Location = new System.Drawing.Point(270, 80);
+            this.notaTremujoriUC1.Name = "notaTremujoriUC1";
+            this.notaTremujoriUC1.Size = new System.Drawing.Size(931, 641);
+            this.notaTremujoriUC1.TabIndex = 16;
+            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 727);
+            this.Controls.Add(this.notaTremujoriUC1);
             this.Controls.Add(this.justifikoMungesatUC1);
             this.Controls.Add(this.fletTremujori1);
             this.Controls.Add(this.MungesaUC);
@@ -437,5 +447,6 @@
         private FletTremujori fletTremujori1;
         private Klea.JustifikoMungesatUC justifikoMungesatUC1;
         private System.Windows.Forms.Button button1;
+        private Luis.NotaTremujoriUC notaTremujoriUC1;
     }
 }
