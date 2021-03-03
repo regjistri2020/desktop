@@ -250,7 +250,7 @@
             this.DatatextBox.Name = "DatatextBox";
             this.DatatextBox.Size = new System.Drawing.Size(123, 28);
             this.DatatextBox.TabIndex = 17;
-            this.DatatextBox.Text = "10.12.2020";
+            this.DatatextBox.Text = "---";
             this.DatatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DatatextBox.TextChanged += new System.EventHandler(this.DatatextBox_TextChanged);
             // 
@@ -377,6 +377,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AdminDashboardUC";
             this.Size = new System.Drawing.Size(931, 641);
+            this.Load += new System.EventHandler(this.AdminDashboardUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

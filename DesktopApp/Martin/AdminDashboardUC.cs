@@ -24,12 +24,18 @@ namespace DesktopApp.Martin
 
         private void DatatextBox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ShkollatextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AdminDashboardUC_Load(object sender, EventArgs e)
+        {
+            DatatextBox.Clear();
+            DatatextBox.Text = Convert.ToString(DateTime.UtcNow.ToString("MM-dd-yyyy"));
         }
     }
 }

@@ -14,13 +14,7 @@ namespace DesktopApp.Martin
 {
     public partial class MesuesLogin : Form
     {
-        MySqlConnection conn;
-        MySqlDataAdapter msda;
-        MySqlCommandBuilder cmb;
-        DataSet ds;
         string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-        DataTable dt;
-
 
         public MesuesLogin()
         {
@@ -75,7 +69,7 @@ namespace DesktopApp.Martin
 
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
-            //RoleID = '1' and
+            //RoleID = '1' 
             string MesLog_query = "Select count(*) from Login where User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 1 ";
             MySqlCommand cmd = new MySqlCommand(MesLog_query, conn);
             cmd.ExecuteReader();

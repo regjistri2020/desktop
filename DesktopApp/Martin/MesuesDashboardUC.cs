@@ -12,9 +12,21 @@ namespace DesktopApp.Martin
 {
     public partial class MesuesDashboardUC : UserControl
     {
+        
         public MesuesDashboardUC()
         {
             InitializeComponent();
+        }
+
+        private void DatatextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MesuesDashboardUC_Load(object sender, EventArgs e)
+        {
+            DatatextBox.Clear();
+            DatatextBox.Text = Convert.ToString(DateTime.UtcNow.ToString("MM-dd-yyyy"));
         }
     }
 }
