@@ -29,7 +29,12 @@ namespace DesktopApp.Luis
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            conn.Open();
+            da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
+            ds = new System.Data.DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            conn.Close();
         }
 
         private void MesuesitEditoUC_Load(object sender, EventArgs e)
@@ -43,15 +48,16 @@ namespace DesktopApp.Luis
             ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
+            conn.Close();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            conn.Open();
             cmb = new MySqlCommandBuilder(da);
             da.Update(ds);
-            
+            conn.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -59,26 +65,32 @@ namespace DesktopApp.Luis
             
             if (textBox1.Text == null)
             {
-                da = new MySqlDataAdapter("select * from Mesues ", conn);
+                conn.Open();
+                da = new MySqlDataAdapter("select * from Mesues order by emri ", conn);
                 ds = new System.Data.DataSet();
                 da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
+                conn.Close();
             }
             else
             {
+                conn.Open();
                 da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
                 ds = new System.Data.DataSet();
                 da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
+                conn.Close();
             }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            conn.Open();
             da = new MySqlDataAdapter("select * from Mesues ", conn);
             ds = new System.Data.DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
+            conn.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -87,6 +99,23 @@ namespace DesktopApp.Luis
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+      
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            conn.Open();
+            da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
+            ds = new System.Data.DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            conn.Close();
+        }
+
+        private void bunifuTextbox1_OnTextChange_1(object sender, EventArgs e)
         {
 
         }

@@ -19,6 +19,7 @@ namespace DesktopApp.Luis
 
         
         string gjinia;
+        long lastID;
         public MesuesitRegjistroUC()
 		{
 			InitializeComponent();
@@ -38,44 +39,21 @@ namespace DesktopApp.Luis
             try
             {   
                 string connstr= "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-
                 MySqlConnection conn = new MySqlConnection(connstr);
-                conn.Open();
-                string query = "SELECT LoginID FROM Login ORDER BY LoginID DESC LIMIT 1";
-                MySqlCommand cmnd = new MySqlCommand(query, conn);
-                MySqlDataReader MyReader;
-                MyReader = cmnd.ExecuteReader();
-                int lastid = 0;
-                while (MyReader.Read())
-                {
-                    lastid = Convert.ToInt32(MyReader["LoginID"]) + 1;
-                }
-                
-                conn.Close();
 
                 conn.Open();
                 string theDate = datelindjaTxb.Value.ToShortDateString();
-                MessageBox.Show(theDate);
                 string Query1 = "insert into Login(User_Name, Pasword, RoleID) VALUES('" + nrpersonalTxb.Text + "','" + a.RandomPassword(10) + "','1' )";
-                string Query2 = "insert into Mesues(MesuesID, Emri, Mbiemri, Gjinia, LoginID, nr_tel, datelindja, studimet1, studimet2) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','"+ lastid +"','"+nrtelefoniTxb.Text+"','"+theDate+"' ,'"+studimetTxb1.Text+ "','" + studimetTxb2.Text + "' );";
-                
                 MySqlCommand cmd = new MySqlCommand(Query1, conn);
-                MySqlCommand cmd1 = new MySqlCommand(Query2, conn);
-
-
-                MyReader = cmd.ExecuteReader();
-                while (MyReader.Read())
-                {
-                }
+                cmd.ExecuteReader();
+                lastID = cmd.LastInsertedId;
                 MessageBox.Show("U krijua nje login i ri per mesuesin");
                 conn.Close();
 
                 conn.Open();
-
-                MyReader = cmd1.ExecuteReader();
-                while (MyReader.Read())
-                {
-                }
+                string Query2 = "insert into Mesues(MesuesID, Emri, Mbiemri, Gjinia, LoginID, nr_tel, datelindja, studimet1, studimet2) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','" + lastID + "','" + nrtelefoniTxb.Text + "','" + theDate + "' ,'" + studimetTxb1.Text + "','" + studimetTxb2.Text + "' );";
+                MySqlCommand cmd1 = new MySqlCommand(Query2, conn);
+                cmd1.ExecuteReader();
                 MessageBox.Show("Rregjistrimi i mësuesit u krye me sukses.");
                 conn.Close();
             }

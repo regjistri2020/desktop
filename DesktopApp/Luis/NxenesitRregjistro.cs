@@ -14,6 +14,7 @@ namespace DesktopApp.Luis
     public partial class NxenesitRregjistro : UserControl
     {
         string gjinia;
+        long lastid;
         public NxenesitRregjistro()
         {
             InitializeComponent();
@@ -29,52 +30,31 @@ namespace DesktopApp.Luis
 
                 MySqlConnection conn = new MySqlConnection(connstr);
                 conn.Open();
-                string query = "SELECT LoginID FROM Login ORDER BY LoginID DESC LIMIT 1";
                 string query2 = "SELECT KlasaID FROM Klasa WHERE Emri = '"+klasaCombo.Text+"'";
-                MySqlCommand cmnd = new MySqlCommand(query, conn);
+                MySqlCommand cmnd = new MySqlCommand(query2, conn);
                 MySqlDataReader MyReader;
                 MyReader = cmnd.ExecuteReader();
-                int lastid = 0;
+                int klasaid=0;
                 while (MyReader.Read())
                 {
-                    lastid = Convert.ToInt32(MyReader["LoginID"]) + 1;
-                }conn.Close();
-                conn.Open();
-                cmnd.CommandText = query2;
-                MySqlDataReader MyReader1;
-                MyReader1 = cmnd.ExecuteReader();
-                int klasaid=0;
-                while (MyReader1.Read())
-                {
-                    klasaid = Convert.ToInt32(MyReader1["KlasaID"]);
+                    klasaid = Convert.ToInt32(MyReader["KlasaID"]);
                 }
                 MessageBox.Show(klasaid.ToString());
-
                 conn.Close();
 
                 conn.Open();
                 string theDate = datelindjaTxb.Value.ToShortDateString();
-                MessageBox.Show(theDate);
                 string Query1 = "insert into Login(User_Name, Pasword, RoleID) VALUES('" + nrpersonalTxb.Text + "','" + a.RandomPassword(10) + "','3' )";
-                string Query2 = "insert into Nxenes(NxenesID, Emri, Mbiemri, Gjinia, LoginID, KlasaID, NrTelPrind, Ditelindja, EmriBabait, EmriMamase) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','" + lastid + "','" + nrtel.Text + "','" + theDate + "' ,'" + emerBabai.Text + "','" + emriNenes.Text + "' );";
-
                 MySqlCommand cmd = new MySqlCommand(Query1, conn);
-                MySqlCommand cmd1 = new MySqlCommand(Query2, conn);
-
-
-                MyReader = cmd.ExecuteReader();
-                while (MyReader.Read())
-                {
-                }
+                cmd.ExecuteReader();
+                lastid = cmd.LastInsertedId;
                 MessageBox.Show("U krijua nje login i ri per Nxenesin");
                 conn.Close();
 
                 conn.Open();
-
-                MyReader = cmd1.ExecuteReader();
-                while (MyReader.Read())
-                {
-                }
+                string Query2 = "insert into Nxenes(NxenesID, Emri, Mbiemri, Gjinia, LoginID, KlasaID, NrTelPrind, Ditelindja, EmriBabait, EmriMamase) values('" + nrpersonalTxb.Text + "','" + emriTxb.Text + "','" + mbiemriTxb.Text + "','" + gjinia + "','" + lastid + "', '" + klasaid + "','" + nrtel.Text + "','" + theDate + "' ,'" + emerBabai.Text + "','" + emriNenes.Text + "' );";
+                MySqlCommand cmd1 = new MySqlCommand(Query2, conn);
+                cmd1.ExecuteNonQuery();
                 MessageBox.Show("Rregjistrimi i nxenesit u krye me sukses.");
                 conn.Close();
             }
