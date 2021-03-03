@@ -63,16 +63,18 @@
             this.TittelPanel.Controls.Add(this.label1);
             this.TittelPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TittelPanel.Location = new System.Drawing.Point(0, 0);
+            this.TittelPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TittelPanel.Name = "TittelPanel";
-            this.TittelPanel.Size = new System.Drawing.Size(351, 123);
+            this.TittelPanel.Size = new System.Drawing.Size(526, 189);
             this.TittelPanel.TabIndex = 0;
             // 
             // BackpictureBox
             // 
             this.BackpictureBox.Image = global::DesktopApp.Properties.Resources.back1;
-            this.BackpictureBox.Location = new System.Drawing.Point(4, 2);
+            this.BackpictureBox.Location = new System.Drawing.Point(6, 3);
+            this.BackpictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BackpictureBox.Name = "BackpictureBox";
-            this.BackpictureBox.Size = new System.Drawing.Size(33, 33);
+            this.BackpictureBox.Size = new System.Drawing.Size(50, 51);
             this.BackpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackpictureBox.TabIndex = 4;
             this.BackpictureBox.TabStop = false;
@@ -81,9 +83,10 @@
             // minimizepictureBox
             // 
             this.minimizepictureBox.Image = global::DesktopApp.Properties.Resources.minus;
-            this.minimizepictureBox.Location = new System.Drawing.Point(278, 0);
+            this.minimizepictureBox.Location = new System.Drawing.Point(417, 0);
+            this.minimizepictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minimizepictureBox.Name = "minimizepictureBox";
-            this.minimizepictureBox.Size = new System.Drawing.Size(33, 33);
+            this.minimizepictureBox.Size = new System.Drawing.Size(50, 51);
             this.minimizepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizepictureBox.TabIndex = 3;
             this.minimizepictureBox.TabStop = false;
@@ -92,9 +95,10 @@
             // closepictureBox
             // 
             this.closepictureBox.Image = global::DesktopApp.Properties.Resources.icons8_cancel_32;
-            this.closepictureBox.Location = new System.Drawing.Point(318, 0);
+            this.closepictureBox.Location = new System.Drawing.Point(477, 0);
+            this.closepictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.closepictureBox.Name = "closepictureBox";
-            this.closepictureBox.Size = new System.Drawing.Size(33, 33);
+            this.closepictureBox.Size = new System.Drawing.Size(50, 51);
             this.closepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closepictureBox.TabIndex = 2;
             this.closepictureBox.TabStop = false;
@@ -105,9 +109,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 39);
+            this.label1.Location = new System.Drawing.Point(72, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 70);
+            this.label1.Size = new System.Drawing.Size(374, 108);
             this.label1.TabIndex = 1;
             this.label1.Text = "Identifikohuni si \r\n  administrator";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -124,52 +129,60 @@
             this.panel1.Controls.Add(this.PasstextBox);
             this.panel1.Controls.Add(this.UsertextBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 123);
+            this.panel1.Location = new System.Drawing.Point(0, 189);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 365);
+            this.panel1.Size = new System.Drawing.Size(526, 562);
             this.panel1.TabIndex = 1;
             // 
             // PasspictureBox
             // 
             this.PasspictureBox.Image = global::DesktopApp.Properties.Resources._lock;
-            this.PasspictureBox.Location = new System.Drawing.Point(35, 183);
+            this.PasspictureBox.Location = new System.Drawing.Point(52, 282);
+            this.PasspictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PasspictureBox.Name = "PasspictureBox";
-            this.PasspictureBox.Size = new System.Drawing.Size(48, 48);
+            this.PasspictureBox.Size = new System.Drawing.Size(72, 74);
+            this.PasspictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PasspictureBox.TabIndex = 14;
             this.PasspictureBox.TabStop = false;
             // 
             // UserpictureBox
             // 
             this.UserpictureBox.Image = global::DesktopApp.Properties.Resources.admin;
-            this.UserpictureBox.Location = new System.Drawing.Point(35, 73);
+            this.UserpictureBox.Location = new System.Drawing.Point(52, 112);
+            this.UserpictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UserpictureBox.Name = "UserpictureBox";
-            this.UserpictureBox.Size = new System.Drawing.Size(48, 48);
+            this.UserpictureBox.Size = new System.Drawing.Size(72, 74);
+            this.UserpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.UserpictureBox.TabIndex = 13;
             this.UserpictureBox.TabStop = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel3.Location = new System.Drawing.Point(94, 118);
+            this.panel3.Location = new System.Drawing.Point(141, 182);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 2);
+            this.panel3.Size = new System.Drawing.Size(288, 3);
             this.panel3.TabIndex = 12;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel2.Location = new System.Drawing.Point(94, 229);
+            this.panel2.Location = new System.Drawing.Point(141, 352);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 2);
+            this.panel2.Size = new System.Drawing.Size(288, 3);
             this.panel2.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(95, 174);
+            this.label3.Location = new System.Drawing.Point(142, 268);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.Size = new System.Drawing.Size(165, 36);
             this.label3.TabIndex = 10;
             this.label3.Text = "Fjalëkalimi";
             // 
@@ -177,9 +190,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 59);
+            this.label2.Location = new System.Drawing.Point(134, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 25);
+            this.label2.Size = new System.Drawing.Size(252, 36);
             this.label2.TabIndex = 9;
             this.label2.Text = "Kodi Identifikues";
             // 
@@ -190,9 +204,10 @@
             this.Hyni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Hyni_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hyni_button.ForeColor = System.Drawing.Color.White;
-            this.Hyni_button.Location = new System.Drawing.Point(225, 280);
+            this.Hyni_button.Location = new System.Drawing.Point(338, 431);
+            this.Hyni_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Hyni_button.Name = "Hyni_button";
-            this.Hyni_button.Size = new System.Drawing.Size(80, 41);
+            this.Hyni_button.Size = new System.Drawing.Size(120, 63);
             this.Hyni_button.TabIndex = 8;
             this.Hyni_button.Text = "Hyni";
             this.Hyni_button.UseVisualStyleBackColor = false;
@@ -204,9 +219,10 @@
             this.PasstextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasstextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasstextBox.ForeColor = System.Drawing.Color.Gray;
-            this.PasstextBox.Location = new System.Drawing.Point(95, 213);
+            this.PasstextBox.Location = new System.Drawing.Point(142, 328);
+            this.PasstextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PasstextBox.Name = "PasstextBox";
-            this.PasstextBox.Size = new System.Drawing.Size(192, 15);
+            this.PasstextBox.Size = new System.Drawing.Size(288, 23);
             this.PasstextBox.TabIndex = 7;
             this.PasstextBox.Text = "Vendosni fjalëkalimin tuaj";
             this.PasstextBox.Click += new System.EventHandler(this.pass);
@@ -217,9 +233,10 @@
             this.UsertextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsertextBox.ForeColor = System.Drawing.Color.Gray;
-            this.UsertextBox.Location = new System.Drawing.Point(95, 102);
+            this.UsertextBox.Location = new System.Drawing.Point(142, 157);
+            this.UsertextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UsertextBox.Name = "UsertextBox";
-            this.UsertextBox.Size = new System.Drawing.Size(192, 15);
+            this.UsertextBox.Size = new System.Drawing.Size(288, 23);
             this.UsertextBox.TabIndex = 6;
             this.UsertextBox.Text = "Vendosni kodin tuaj";
             this.UsertextBox.Click += new System.EventHandler(this.txt);
@@ -231,12 +248,13 @@
             // 
             // Administrator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 488);
+            this.ClientSize = new System.Drawing.Size(526, 751);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TittelPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Administrator";
             this.Text = "Administrator";
             this.TittelPanel.ResumeLayout(false);
