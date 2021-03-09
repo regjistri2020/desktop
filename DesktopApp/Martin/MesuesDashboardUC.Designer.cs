@@ -270,7 +270,7 @@
             this.DatatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DatatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DatatextBox.Location = new System.Drawing.Point(121, 19);
+            this.DatatextBox.Location = new System.Drawing.Point(161, 19);
             this.DatatextBox.Name = "DatatextBox";
             this.DatatextBox.Size = new System.Drawing.Size(123, 22);
             this.DatatextBox.TabIndex = 17;
@@ -281,13 +281,13 @@
             // Datalabel
             // 
             this.Datalabel.AutoSize = true;
-            this.Datalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Datalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Datalabel.ForeColor = System.Drawing.Color.Red;
             this.Datalabel.Location = new System.Drawing.Point(46, 14);
             this.Datalabel.Name = "Datalabel";
-            this.Datalabel.Size = new System.Drawing.Size(80, 29);
+            this.Datalabel.Size = new System.Drawing.Size(122, 29);
             this.Datalabel.TabIndex = 16;
-            this.Datalabel.Text = "Data: ";
+            this.Datalabel.Text = "Data sot: ";
             // 
             // KlasatextBox
             // 

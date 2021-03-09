@@ -25,8 +25,9 @@ namespace DesktopApp.Martin
 
         private void MesuesDashboardUC_Load(object sender, EventArgs e)
         {
+            string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             DatatextBox.Clear();
-            DatatextBox.Text = Convert.ToString(DateTime.UtcNow.ToString("MM-dd-yyyy"));
+            DatatextBox.Text = Convert.ToString(date);
         }
     }
 }
