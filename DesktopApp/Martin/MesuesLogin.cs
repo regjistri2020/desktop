@@ -14,6 +14,7 @@ namespace DesktopApp.Martin
 {
     public partial class MesuesLogin : Form
     {
+        
         string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
         public MesuesLogin()
@@ -107,6 +108,11 @@ namespace DesktopApp.Martin
         }
 
         private void UsernametextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
