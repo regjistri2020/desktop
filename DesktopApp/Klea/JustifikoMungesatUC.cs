@@ -16,5 +16,10 @@ namespace DesktopApp.Klea
         {
             InitializeComponent();
         }
+
+        private void JustifikoMungesatUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

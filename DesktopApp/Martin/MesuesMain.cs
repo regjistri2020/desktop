@@ -72,7 +72,6 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
            CookieClass.MesuesID = mID;
-            MessageBox.Show(mID);
 
             hideSubMenu();
             MungesaUC.Hide();
