@@ -21,12 +21,6 @@ namespace DesktopApp.Martin
         }
 
 
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void KerkoButton_Click(object sender, EventArgs e)
         {
             if (NxenestextBox.Text == "Martin")
@@ -84,6 +78,11 @@ namespace DesktopApp.Martin
         {
             // used to hide specific columns
             //this.dataGridView1.Columns["CustomerID"].Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
