@@ -50,7 +50,7 @@ namespace DesktopApp
 
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
-            //RoleID = '1' and
+            //RoleID = '1' 
             string AdmLog_query = "Select count(*) from Login where User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 2 ";
             MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
             cmd.ExecuteReader();

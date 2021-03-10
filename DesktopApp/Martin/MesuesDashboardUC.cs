@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using DesktopApp.Luis;
 
 namespace DesktopApp.Martin
 {
@@ -28,6 +30,30 @@ namespace DesktopApp.Martin
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             DatatextBox.Clear();
             DatatextBox.Text = Convert.ToString(date);
+        }
+
+        private void KlasatextBox_TextChanged(object sender, EventArgs e)
+        {
+            CookieClass.Klasa = KlasatextBox.Text;
+
+            KlasatextBox.Clear();
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT KlasaID FROM Klasa where Emri = '" + KlasatextBox.Text + "'";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            CookieClass.KlasaID = reader.GetString("KlasaID");
+                        }
+                    }
+                }
+            }
         }
     }
 }

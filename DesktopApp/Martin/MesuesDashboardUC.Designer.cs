@@ -300,6 +300,7 @@
             this.KlasatextBox.Size = new System.Drawing.Size(83, 24);
             this.KlasatextBox.TabIndex = 15;
             this.KlasatextBox.Text = "13-A";
+            this.KlasatextBox.TextChanged += new System.EventHandler(this.KlasatextBox_TextChanged);
             // 
             // MesuestextBox
             // 
