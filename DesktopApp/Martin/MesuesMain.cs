@@ -47,7 +47,7 @@ namespace DesktopApp.Martin
 
         private void MesuesMain_Load(object sender, EventArgs e)
         {
-            
+
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -62,9 +62,10 @@ namespace DesktopApp.Martin
                         {
                             label2.Text = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
                             mID = reader.GetString("MesuesID");
+
                             mesuesDashboardUC1.MesuestextBox.Text= reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
                             mID = reader.GetString("MesuesID");
-                            
+
                         }
                     }
                 }

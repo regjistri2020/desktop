@@ -44,7 +44,6 @@
             this.LendaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MungesColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +88,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.Kerkobutton);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.Infolabel1);
@@ -97,9 +98,6 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 38);
             this.panel2.Name = "panel2";
@@ -122,7 +120,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.warn;
-            this.pictureBox4.Location = new System.Drawing.Point(74, 327);
+            this.pictureBox4.Location = new System.Drawing.Point(157, 317);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +132,7 @@
             this.Infolabel1.AutoSize = true;
             this.Infolabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Infolabel1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.Infolabel1.Location = new System.Drawing.Point(114, 327);
+            this.Infolabel1.Location = new System.Drawing.Point(184, 317);
             this.Infolabel1.Name = "Infolabel1";
             this.Infolabel1.Size = new System.Drawing.Size(229, 60);
             this.Infolabel1.TabIndex = 81;
@@ -214,44 +212,26 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.checked_30px;
-            this.pictureBox2.Location = new System.Drawing.Point(400, 28);
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.warn;
+            this.pictureBox2.Location = new System.Drawing.Point(74, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 66;
+            this.pictureBox2.TabIndex = 86;
             this.pictureBox2.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Klasa 10a",
-            "Klasa 10b",
-            "Klasa 10c",
-            "Klasa 11a",
-            "Klasa 11b",
-            "Klasa 11c",
-            "Klasa 12a",
-            "Klasa 12 b",
-            "Klasa 13a",
-            "Klasa 13b"});
-            this.comboBox1.Location = new System.Drawing.Point(210, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 29);
-            this.comboBox1.TabIndex = 68;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label2.Location = new System.Drawing.Point(46, 32);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(114, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 23);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "Zgjidhni klasën";
+            this.label2.Size = new System.Drawing.Size(679, 40);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "Për të vazhduar më tej, në procesin e vendosjes se mungesave zgjidhni më parë kla" +
+    "sën, datën, lëndën \r\nsi edhe temën mësimore në tabin \" Vlerëso nxënësit\" të menu" +
+    "së.";
             // 
             // MungesaUC
             // 
@@ -282,9 +262,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox KerkonxTextBox;
         private System.Windows.Forms.Label label3;
@@ -294,5 +271,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LendaColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn MungesColumn;
         private System.Windows.Forms.Button Kerkobutton;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
