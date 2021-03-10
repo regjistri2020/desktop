@@ -42,7 +42,7 @@ namespace DesktopApp.Klea
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT Notat.Nota, TematMesimore.TemaMesimore, Notat.Shenime, Notat.Kategoria FROM Notat JOIN Nxenes ON Nxenes.NxenesID=Notat.NxenesID JOIN TematMesimore ON TematMesimore.TemaMesimoreID=Notat.TemaMesimoreID WHERE Nxenes.NxenesID in (SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "') AND TematMesimore.LendaID = '" + CookieClass.LendaID + "'";
+                var query = "";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     var ds = new DataSet();
