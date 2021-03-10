@@ -419,7 +419,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.checked_30px;
-            this.pictureBox2.Location = new System.Drawing.Point(397, 62);
+            this.pictureBox2.Location = new System.Drawing.Point(382, 62);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

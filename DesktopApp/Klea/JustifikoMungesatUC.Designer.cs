@@ -283,6 +283,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "JustifikoMungesatUC";
             this.Size = new System.Drawing.Size(931, 641);
+            this.Load += new System.EventHandler(this.JustifikoMungesatUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
