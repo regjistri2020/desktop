@@ -34,7 +34,8 @@ namespace DesktopApp.Martin
 
         private void KlasatextBox_TextChanged(object sender, EventArgs e)
         {
-            CookieClass.Klasa = KlasatextBox.Text;
+
+            KlasatextBox.Text = CookieClass.Klasa;
 
             KlasatextBox.Clear();
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
@@ -50,10 +51,12 @@ namespace DesktopApp.Martin
                         while (reader.Read())
                         {
                             CookieClass.KlasaID = reader.GetString("KlasaID");
+                            
                         }
                     }
                 }
             }
+
         }
     }
 }
