@@ -15,6 +15,12 @@ namespace DesktopApp.Klea
     public partial class KlasatAdminUC : UserControl
     {
         string mesuesID;
+        MySqlCommandBuilder cmb;
+        MySqlDataAdapter da;
+        DataSet ds;
+        MySqlConnection conn;
+        string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+        int index;
         public KlasatAdminUC()
         {
             InitializeComponent();
@@ -34,23 +40,19 @@ namespace DesktopApp.Klea
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-   
+            dataGridRefresher();
         }
         void dataGridRefresher()
         {
-            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "";
-                using (var da = new MySqlDataAdapter(query, connection))
-                {
-                    var ds = new DataSet();
-                    da.Fill(ds);
-                    dataGridView1.DataSource = ds.Tables[0];
-                }
-                connection.Close();
-            }
+            conn = new MySqlConnection(connstring);
+            conn.Open();
+            string query = "select Klasa.KlasaID, Klasa.Emri, Mesues.Emri from Klasa, Mesues Where Klasa.MesuesID = Mesues.MesuesID ";
+            da = new MySqlDataAdapter(query, conn);
+            ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            conn.Close();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,6 +79,8 @@ namespace DesktopApp.Klea
                     }
                 }
             }
+
+            dataGridRefresher();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -127,6 +131,15 @@ namespace DesktopApp.Klea
                 }
             }
             }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            cmb = new MySqlCommandBuilder(da);
+            da.Update(ds);
+            conn.Close();
+
+        }
     }
 
 
