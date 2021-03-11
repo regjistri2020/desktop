@@ -14,18 +14,12 @@ namespace DesktopApp
 {
     public partial class Administrator : Form
     {
-
         DataSet ds;
         string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
         public Administrator()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void closepictureBox_Click(object sender, EventArgs e)
@@ -38,7 +32,6 @@ namespace DesktopApp
             var a = new Form1();
             a.Show();
             this.Hide();
-
         }
 
         private void Hyni_button_Click(object sender, EventArgs e)
@@ -66,7 +59,6 @@ namespace DesktopApp
                 m.Show();
                 this.Hide();
             }
-
             else
                 MessageBox.Show("Vendosni sakte kredencialet!", " Administratori nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }

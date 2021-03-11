@@ -18,24 +18,8 @@ namespace DesktopApp.Martin
             InitializeComponent();
         }
 
-        private void MesuestextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DatatextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ShkollatextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminDashboardUC_Load(object sender, EventArgs e)
         {
-
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             DatatextBox.Clear();
             DatatextBox.Text = Convert.ToString(date);
@@ -50,7 +34,6 @@ namespace DesktopApp.Martin
                 {
                     object count = command.ExecuteScalar();
                     if (count != null) NxenestextBox.Text = count.ToString();
-                
                 }
             }
 

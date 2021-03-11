@@ -139,7 +139,6 @@
             this.ShkollatextBox.TabIndex = 27;
             this.ShkollatextBox.Text = "Shkolla për TIK \"Hermann Gmeiner\"";
             this.ShkollatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ShkollatextBox.TextChanged += new System.EventHandler(this.ShkollatextBox_TextChanged);
             // 
             // textBox3
             // 
@@ -252,7 +251,6 @@
             this.DatatextBox.TabIndex = 17;
             this.DatatextBox.Text = "---";
             this.DatatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DatatextBox.TextChanged += new System.EventHandler(this.DatatextBox_TextChanged);
             // 
             // Datalabel
             // 
@@ -290,7 +288,6 @@
             this.MesuestextBox.TabIndex = 14;
             this.MesuestextBox.Text = "21";
             this.MesuestextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MesuestextBox.TextChanged += new System.EventHandler(this.MesuestextBox_TextChanged);
             // 
             // label3
             // 
