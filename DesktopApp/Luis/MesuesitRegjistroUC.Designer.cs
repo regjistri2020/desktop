@@ -322,6 +322,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -345,6 +346,7 @@
             this.label13.Text = "   Në klikim të butonit \'Rregjistro\', mësuesi do të ruhet në sistem.\r\n   Për të s" +
     "hikuar ose ndryshuar të dhënat e mësuesit përdorni \r\n   ndërfaqen Mësuesit > Edi" +
     "to";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // MesuesitRegjistroUC
             // 

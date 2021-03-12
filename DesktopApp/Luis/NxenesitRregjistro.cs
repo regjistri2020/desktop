@@ -103,5 +103,10 @@ namespace DesktopApp.Luis
         {
             gjinia = "femer";
         }
+
+        private void klasaCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

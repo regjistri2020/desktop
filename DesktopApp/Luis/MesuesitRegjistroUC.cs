@@ -84,6 +84,14 @@ namespace DesktopApp.Luis
             gjinia = "femer";
         }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
