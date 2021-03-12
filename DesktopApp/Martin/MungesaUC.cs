@@ -122,8 +122,8 @@ namespace DesktopApp.Martin
             messageOptions.MessagingServiceSid = "MGc2b6f0ceb144dbb8149397ffe352017c";
             messageOptions.Body = "Ky eshte nje mesazh i automatizuar nga platforma e nxenesit.al";
 
-            var message = MessageResource.Create(messageOptions);
-            Console.WriteLine(message.Body);
+            //var message = MessageResource.Create(messageOptions);
+            //Console.WriteLine(message.Body);
         }
     }
 }
