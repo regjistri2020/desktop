@@ -21,6 +21,7 @@ namespace DesktopApp.Klea
         MySqlConnection conn;
         string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
         int index,klasaid;
+        long lastidLenda;
         public KlasatAdminUC()
         {
             InitializeComponent();
@@ -40,18 +41,37 @@ namespace DesktopApp.Klea
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            dataGridRefresher();
+            dataGridRefresher1();
         }
-        void dataGridRefresher()
+        void dataGridRefresher1()
         {
-            conn = new MySqlConnection(connstring);
-            conn.Open();
-            string query = "select Klasa.KlasaID, Klasa.Emri, Mesues.Emri from Klasa, Mesues Where Klasa.MesuesID = Mesues.MesuesID ";
-            da = new MySqlDataAdapter(query, conn);
-            ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            conn.Close();
+            try
+            {
+                conn = new MySqlConnection(connstring);
+                conn.Open();
+                string query = "select Klasa.KlasaID, Klasa.Emri, Mesues.Emri from Klasa, Mesues Where Klasa.MesuesID = Mesues.MesuesID ";
+                da = new MySqlDataAdapter(query, conn);
+                ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+        void dataGridRefresher2()
+        {
+            try
+            {
+                conn = new MySqlConnection(connstring);
+                conn.Open();
+                string query = "SELECT Jep_Mesim.LendaID, Mesues.Emri, Mesues.Mbiemri, Lendet.EmerLende FROM Jep_Mesim JOIN Mesues ON Jep_Mesim.MesuesID = Mesues.MesuesID  JOIN Lendet ON Jep_Mesim.LendaID = Lendet.LendaID WHERE Jep_Mesim.KlasaID = '"+klasaid+"'";
+                da = new MySqlDataAdapter(query, conn);
+                ds = new DataSet();
+                da.Fill(ds);
+                dataGridView2.DataSource = ds.Tables[0];
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
 
         }
 
@@ -62,57 +82,7 @@ namespace DesktopApp.Klea
 
         private void KlasatAdminUC_Load(object sender, EventArgs e)
         {
-            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "SELECT Emri, Mbiemri FROM Mesues";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        //Iterate through the rows and add it to the combobox's items
-                        while (reader.Read())
-                        {
-                            comboBox1.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
-                        }
-                    }
-                }
-            }
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "SELECT Emri, Mbiemri FROM Mesues";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        //Iterate through the rows and add it to the combobox's items
-                        while (reader.Read())
-                        {
-                            comboBox2.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
-                        }
-                    }
-                }
-            }
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "SELECT Emri FROM Klasa";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        //Iterate through the rows and add it to the combobox's items
-                        while (reader.Read())
-                        {
-                            comboBox3.Items.Add(reader.GetString("Emri"));
-                        }
-                    }
-                }
-            }
-
-            dataGridRefresher();
+            dataGridRefresher1();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -199,11 +169,79 @@ namespace DesktopApp.Klea
                 while (MyReader.Read())
                 {
                     klasaid = Convert.ToInt32(MyReader["KlasaID"]);
-                    MessageBox.Show(klasaid.ToString());
                 }
                 conn.Close();
             }
             catch (Exception ex) { 
+            }
+
+            dataGridRefresher2();
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Emri, Mbiemri FROM Mesues";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox2.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
+                        }
+                    }
+                }
+            }
+        }
+
+        private void comboBox3_Click(object sender, EventArgs e)
+        {
+            comboBox3.Items.Clear();
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Emri FROM Klasa";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox3.Items.Add(reader.GetString("Emri"));
+                        }
+                    }
+                }
+            }
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Emri, Mbiemri FROM Mesues";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox1.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
+                        }
+                    }
+                }
             }
         }
 
@@ -219,11 +257,11 @@ namespace DesktopApp.Klea
 
                 MySqlCommand cmd = new MySqlCommand(Query1, conn);
                 cmd.ExecuteReader();
-
-                MessageBox.Show("Lenda u shtua me sukses!");
+                lastidLenda = cmd.LastInsertedId;
                 conn.Close();
+
                 conn.Open();
-                string Query2 = "INSERT INTO Jep_Mesim(MesuesID, LendaID, KlasaID) Values('"+mesuesIDLenda+"', '"+Lenda+"', '"+klasaid+"')";
+                string Query2 = "INSERT INTO Jep_Mesim(MesuesID, LendaID, KlasaID) Values('"+ Convert.ToInt32(mesuesIDLenda) +"', '" + Convert.ToInt32(lastidLenda) + "', '"+ Convert.ToInt32(klasaid) +"')";
 
                 MySqlCommand cmd2 = new MySqlCommand(Query2, conn);
                 cmd2.ExecuteReader();
@@ -238,7 +276,6 @@ namespace DesktopApp.Klea
             }
             textBox1.Text = null;
             comboBox2.Text = null;
-            comboBox3.Text = null;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -263,7 +300,6 @@ namespace DesktopApp.Klea
                             while (reader.Read())
                             {
                                 mesuesIDLenda = reader.GetString("MesuesID");
-                                MessageBox.Show(mesuesIDLenda);
                             }
                         }
                     }

@@ -47,9 +47,6 @@ namespace DesktopApp.Klea
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Lenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ms = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Frekuentimi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -171,6 +168,7 @@ namespace DesktopApp.Klea
             this.comboBox1.Size = new System.Drawing.Size(154, 29);
             this.comboBox1.TabIndex = 46;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // button1
             // 
@@ -270,10 +268,6 @@ namespace DesktopApp.Klea
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Lenda,
-            this.Ms,
-            this.Frekuentimi});
             this.dataGridView2.Location = new System.Drawing.Point(478, 287);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
@@ -281,24 +275,6 @@ namespace DesktopApp.Klea
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(410, 261);
             this.dataGridView2.TabIndex = 73;
-            // 
-            // Lenda
-            // 
-            this.Lenda.HeaderText = "Emri i lendes";
-            this.Lenda.MinimumWidth = 8;
-            this.Lenda.Name = "Lenda";
-            // 
-            // Ms
-            // 
-            this.Ms.HeaderText = "Mesuesi";
-            this.Ms.MinimumWidth = 8;
-            this.Ms.Name = "Ms";
-            // 
-            // Frekuentimi
-            // 
-            this.Frekuentimi.HeaderText = "Frekuentimi";
-            this.Frekuentimi.MinimumWidth = 8;
-            this.Frekuentimi.Name = "Frekuentimi";
             // 
             // panel3
             // 
@@ -346,6 +322,7 @@ namespace DesktopApp.Klea
             this.comboBox2.Size = new System.Drawing.Size(154, 29);
             this.comboBox2.TabIndex = 79;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // label9
             // 
@@ -403,12 +380,13 @@ namespace DesktopApp.Klea
             // 
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(578, 164);
+            this.comboBox3.Location = new System.Drawing.Point(578, 163);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(154, 29);
             this.comboBox3.TabIndex = 82;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.Click += new System.EventHandler(this.comboBox3_Click);
             // 
             // panel4
             // 
@@ -532,9 +510,6 @@ namespace DesktopApp.Klea
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ms;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Frekuentimi;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
