@@ -410,6 +410,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icons8_print_64.png" />
     <None Include="Resources\icons8_tick_box_64.png" />
     <None Include="Resources\save_64.png" />
     <None Include="Resources\icons8_create_archive_64.png" />

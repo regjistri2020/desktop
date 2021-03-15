@@ -148,6 +148,9 @@
   <data name="pdf_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pdf_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_tick_box_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_tick_box_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="privacyphoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\privacyphoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,17 +184,17 @@
   <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_cancel_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_cancel_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restart_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restart_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_create_archive_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_create_archive_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restart_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restart_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_class_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_class_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_cancel_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_cancel_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="checked_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +217,8 @@
   <data name="icons8-browse-folder-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-browse-folder-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_create_archive_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_create_archive_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_class_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_class_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_back_arrow_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_back_arrow_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +253,7 @@
   <data name="icons8_settings_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_settings_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_tick_box_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_tick_box_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_print_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_print_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
