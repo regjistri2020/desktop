@@ -139,7 +139,7 @@ namespace DesktopApp.Luis
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            exportgridtopdf(dataGridView2, "PDF test");
+            exportgridtopdf(dataGridView2, "Kredincialet login për mësuesit");
         }
         public void exportgridtopdf(DataGridView dgw, string filename)
         {
