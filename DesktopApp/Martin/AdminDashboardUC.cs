@@ -47,11 +47,11 @@ namespace DesktopApp.Martin
                 {
                     object count = command.ExecuteScalar();
                     if (count != null) MesuestextBox.Text = count.ToString();
+                    else MesuestextBox.Text = "  ---  ";
 
                 }
             }
         }
-
 
     }
 }

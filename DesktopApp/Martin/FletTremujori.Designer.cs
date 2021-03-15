@@ -126,6 +126,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -136,6 +138,7 @@
             this.dataGridViewTextBoxColumn5});
             this.dataGridView2.Location = new System.Drawing.Point(537, 168);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(352, 419);
             this.dataGridView2.TabIndex = 95;
             // 
@@ -272,6 +275,7 @@
             this.button2.Size = new System.Drawing.Size(36, 33);
             this.button2.TabIndex = 83;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox4
             // 
