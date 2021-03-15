@@ -352,6 +352,7 @@
             this.klasaCombo.Size = new System.Drawing.Size(154, 29);
             this.klasaCombo.TabIndex = 111;
             this.klasaCombo.SelectedIndexChanged += new System.EventHandler(this.klasaCombo_SelectedIndexChanged);
+            this.klasaCombo.Click += new System.EventHandler(this.klasaCombo_Click);
             // 
             // panel2
             // 

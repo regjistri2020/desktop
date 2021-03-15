@@ -32,7 +32,7 @@ namespace DesktopApp.Luis
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             conn.Open();
-            da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
+            da = new MySqlDataAdapter("select MesuesID AS ID, Emri, Mbiemri, Gjinia, nr_tel as 'Nr. Tel', datelindja as Datelindja, studimet1 as 'Studime 1', studimet2 as 'Studime 2' from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
             ds = new System.Data.DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -47,7 +47,7 @@ namespace DesktopApp.Luis
             {
     conn = new MySqlConnection(connstring);
                 conn.Open();
-                string query = "select * from Mesues ORDER BY emri";
+                string query = "SELECT MesuesID AS ID, Emri, Mbiemri, Gjinia, nr_tel as 'Nr. Tel', datelindja as Datelindja, studimet1 as 'Studime 1', studimet2 as 'Studime 2' from Mesues ORDER BY emri";
                 da = new MySqlDataAdapter(query, conn);
                 ds = new DataSet();
                 da.Fill(ds);
@@ -83,7 +83,7 @@ namespace DesktopApp.Luis
             if (textBox1.Text == null)
             {
                 conn.Open();
-                da = new MySqlDataAdapter("select * from Mesues order by emri ", conn);
+                da = new MySqlDataAdapter("select MesuesID AS ID, Emri, Mbiemri, Gjinia, nr_tel as 'Nr. Tel', datelindja as Datelindja, studimet1 as 'Studime 1', studimet2 as 'Studime 2' from Mesues order by Emri ", conn);
                 ds = new System.Data.DataSet();
                 da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
@@ -92,7 +92,7 @@ namespace DesktopApp.Luis
             else
             {
                 conn.Open();
-                da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
+                da = new MySqlDataAdapter("select MesuesID AS ID, Emri, Mbiemri, Gjinia, nr_tel as 'Nr. Tel', datelindja as Datelindja, studimet1 as 'Studime 1', studimet2 as 'Studime 2' from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
                 ds = new System.Data.DataSet();
                 da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
@@ -103,7 +103,7 @@ namespace DesktopApp.Luis
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             conn.Open();
-            da = new MySqlDataAdapter("select * from Mesues ", conn);
+            da = new MySqlDataAdapter("select MesuesID AS ID, Emri, Mbiemri, Gjinia, nr_tel as 'Nr. Tel', datelindja as Datelindja, studimet1 as 'Studime 1', studimet2 as 'Studime 2' from Mesues ", conn);
             ds = new System.Data.DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -125,7 +125,7 @@ namespace DesktopApp.Luis
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
             conn.Open();
-            da = new MySqlDataAdapter("select * from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
+            da = new MySqlDataAdapter("select MesuesID AS ID, Emri, Mbiemri, Gjinia, nr_tel as 'Nr. Tel', datelindja as Datelindja, studimet1 as 'Studime 1', studimet2 as 'Studime 2' from Mesues WHERE Emri like '%" + textBox1.Text + "%' ", conn);
             ds = new System.Data.DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -139,7 +139,7 @@ namespace DesktopApp.Luis
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            exportgridtopdf(dataGridView2, "PDF test");
+            exportgridtopdf(dataGridView2, "Kredincialet login për mësuesit");
         }
         public void exportgridtopdf(DataGridView dgw, string filename)
         {

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NxenesitEditoUC));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,11 +41,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.klasaCombo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,14 +93,15 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
             this.label3.Location = new System.Drawing.Point(43, 531);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 21);
+            this.label3.Size = new System.Drawing.Size(321, 21);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Gjenero listën e nxënësve si dokument";
+            this.label3.Text = "Gjenero kredincialet e logimit të prindërve";
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.pdf_30px;
-            this.pictureBox4.Location = new System.Drawing.Point(343, 527);
+            this.pictureBox4.Location = new System.Drawing.Point(362, 527);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +129,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(698, 82);
+            this.label2.Location = new System.Drawing.Point(657, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 10;
@@ -131,7 +138,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DesktopApp.Properties.Resources.restart_48px;
-            this.pictureBox3.Location = new System.Drawing.Point(833, 75);
+            this.pictureBox3.Location = new System.Drawing.Point(792, 77);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -148,14 +155,14 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(47, 112);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(826, 398);
             this.dataGridView1.TabIndex = 11;
             // 
@@ -168,10 +175,10 @@
             this.bunifuTextbox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextbox1.ForeColor = System.Drawing.Color.Indigo;
             this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(47, 63);
+            this.bunifuTextbox1.Location = new System.Drawing.Point(47, 72);
             this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(243, 40);
+            this.bunifuTextbox1.Size = new System.Drawing.Size(170, 35);
             this.bunifuTextbox1.TabIndex = 18;
             this.bunifuTextbox1.text = "Bunifu TextBox";
             this.bunifuTextbox1.OnTextChange += new System.EventHandler(this.bunifuTextbox1_OnTextChange);
@@ -181,16 +188,61 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.textBox1.ForeColor = System.Drawing.Color.Indigo;
-            this.textBox1.Location = new System.Drawing.Point(85, 71);
+            this.textBox1.Location = new System.Drawing.Point(80, 78);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 24);
+            this.textBox1.Size = new System.Drawing.Size(131, 24);
             this.textBox1.TabIndex = 19;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // klasaCombo
+            // 
+            this.klasaCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.klasaCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klasaCombo.FormattingEnabled = true;
+            this.klasaCombo.Location = new System.Drawing.Point(2, 2);
+            this.klasaCombo.Name = "klasaCombo";
+            this.klasaCombo.Size = new System.Drawing.Size(154, 29);
+            this.klasaCombo.TabIndex = 112;
+            this.klasaCombo.SelectedIndexChanged += new System.EventHandler(this.klasaCombo_SelectedIndexChanged);
+            this.klasaCombo.Click += new System.EventHandler(this.klasaCombo_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
+            this.label4.Location = new System.Drawing.Point(297, 83);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 21);
+            this.label4.TabIndex = 113;
+            this.label4.Text = "Filtro sipas klasës";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
+            this.panel2.Controls.Add(this.klasaCombo);
+            this.panel2.Location = new System.Drawing.Point(438, 75);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(158, 33);
+            this.panel2.TabIndex = 114;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_print_64;
+            this.pictureBox2.Location = new System.Drawing.Point(833, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 115;
+            this.pictureBox2.TabStop = false;
             // 
             // NxenesitEditoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bunifuTextbox1);
             this.Controls.Add(this.panel1);
@@ -209,6 +261,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +281,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox klasaCombo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
