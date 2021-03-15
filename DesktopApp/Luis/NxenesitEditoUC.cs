@@ -19,9 +19,10 @@ namespace DesktopApp.Luis
         MySqlCommandBuilder cmb;
         MySqlDataAdapter da;
         DataSet ds;
+        DataTable dt;
         MySqlConnection conn;
-        string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-        int index;
+        string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME", emri, username, pass;
+        int klasaid;
 
         DataTable table = new DataTable();
         public NxenesitEditoUC()
@@ -31,60 +32,54 @@ namespace DesktopApp.Luis
 
         private void NxenesitEditoUC_Load(object sender, EventArgs e)
         {
+            dataGridRefresher();
+
+        }
+        void dataGridRefresher()
+        {
             conn = new MySqlConnection(connstring);
             conn.Open();
-            string query = "select * from Nxenes";
+            string query = "select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes";
             da = new MySqlDataAdapter(query, conn);
             ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             conn.Close();
-
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(73, 160, 174);
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dataGridView1.BackgroundColor = Color.White;
-
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 0, 64);
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            da = new MySqlDataAdapter("select * from Nxenes ", conn);
-            ds = new System.Data.DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            conn.Close();
+            klasaCombo.Text = null;
+            textBox1.Text = null;
+            dataGridRefresher();
         }
 
         private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
         {
-            conn.Open();
-            da = new MySqlDataAdapter("select * from Nxenes WHERE Emri like '%" + bunifuTextbox1.Text + "%' ", conn);
-            ds = new System.Data.DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            conn.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            cmb = new MySqlCommandBuilder(da);
-            da.Update(ds);
-            conn.Close();
+            try
+            {
+                conn.Open();
+                cmb = new MySqlCommandBuilder(da);
+                da.Update(ds);
+                MessageBox.Show("Tabela e nxënësve u përditsua me sukses.");
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             conn.Open();
-            da = new MySqlDataAdapter("select * from Nxenes WHERE Emri like '%" + textBox1.Text + "%' ", conn);
+            da = new MySqlDataAdapter("select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes WHERE Emri like '%" + textBox1.Text + "%' ", conn);
             ds = new System.Data.DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -93,39 +88,29 @@ namespace DesktopApp.Luis
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            exportgridtopdf(dataGridView1, "PDF test");
+            if (klasaCombo.SelectedItem != null)
+            {
+                
+                var names = klasaCombo.Text.Split(' ');
+                exportgridtopdf("Kredincialet e prindërve për klasën " + names[1]);
+            }
+            else if (klasaCombo.SelectedItem == null)
+            {
+                MessageBox.Show("Zgjidhni një klasë");
+            }
+
         }
 
-        public void exportgridtopdf(DataGridView dgw, string filename)
+        public void exportgridtopdf(string filename)
         {
+            conn.Open();
+            da = new MySqlDataAdapter("SELECT Login.User_Name, Login.Pasword, Nxenes.Emri, Nxenes.Mbiemri FROM Nxenes JOIN Login ON Login.LoginID = Nxenes.LoginID WHERE Nxenes.KlasaID = '"+klasaid+"'", conn);
+            dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
-            PdfPTable pdftable = new PdfPTable(dgw.Columns.Count);
-            pdftable.DefaultCell.PaddingLeft = 5;
-            pdftable.DefaultCell.PaddingRight = 5;
-            pdftable.WidthPercentage = 90;
-            pdftable.HorizontalAlignment = Element.ALIGN_CENTER;
-            pdftable.DefaultCell.BorderWidth = 1;
-
-
+            
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-
-            //add header
-            foreach (DataGridViewColumn column in dgw.Columns)
-            {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
-                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //potential error
-                pdftable.AddCell(cell);
-            }
-
-            // add datarow
-            foreach (DataGridViewRow row in dgw.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    pdftable.AddCell(new Phrase(cell.Value?.ToString(), text));
-                }
-            }
-
 
             var savefiledialoge = new SaveFileDialog();
             savefiledialoge.FileName = filename;
@@ -138,37 +123,100 @@ namespace DesktopApp.Luis
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
-                    Paragraph paragraph = new Paragraph("KREDINCIALET E IDENTIFIKIMIT TË PRINDËRVE NË SISTEM");
-                    Paragraph paragraph2 = new Paragraph(" ");
+                    Paragraph paragraph0 = new Paragraph(" ");
+                    int i=0;
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        i++;
+                        if(i%5==0)
+                        {
+                            pdfdoc.NewPage();
+                        }
+                        emri = row["Emri"].ToString() +" "+ row["Mbiemri"].ToString();
+                        username = row["User_Name"].ToString();
+                        pass = row["Pasword"].ToString();
+                        iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 10, new iTextSharp.text.BaseColor(0, 0, 255));
+                        Paragraph paragraph = new Paragraph("KREDINCIALET E IDENTIFIKIMIT TË PRINDËRVE NË SISTEM");
+                        Paragraph paragraph2 = new Paragraph(" ");
+                        Paragraph paragraph3 = new Paragraph(" Emri i Shkollës: Shkolla për TIK “Hermann Gmeiner”                            Viti shkollor: 2020-2021  ");
+                        Paragraph paragraph31 = new Paragraph(" ");
+                        Paragraph paragraph4 = new Paragraph(" Kredincialet identifikuese në sistem për prindin e nxënësit " + emri + " janë si vijojnë: ");
+                        Paragraph paragraph5 = new Paragraph(" Username: " + username + "         Fjalëkalimi: " + pass, myFont);
+                        Paragraph paragraph6 = new Paragraph(" ");
+                        Paragraph paragraph7 = new Paragraph(" Cdo paqartësi apo problem teknik mund ta drejtoni në adresën tonë të emailit suportIT@hg.edu.al ");
+                        Paragraph paragraph8 = new Paragraph(" ");
+                        Paragraph paragraph9 = new Paragraph(" ------------------------------------------------------------------------------------------------------------------------------------------");
 
-                    Paragraph paragraph3 = new Paragraph(" Emri i Shkollës: Shkolla për TIK “Hermann Gmeiner”                            Viti shkollor: 2020-2021  ");
-                    Paragraph paragraph31 = new Paragraph(" ");
-                    Paragraph paragraph4 = new Paragraph(" Kredincialet identifikuese në sistem për prindin e nxënësit Luis Kateshi janë si vijojnë: ");
-                    Paragraph paragraph5 = new Paragraph(" Username: 89dad83         Fjalëkalimi: 435jjjfsdfsi4");
-                    Paragraph paragraph6 = new Paragraph(" ");
+                        pdfdoc.Add(paragraph0);
+                        pdfdoc.Add(paragraph);
+                        pdfdoc.Add(paragraph2);
+                        pdfdoc.Add(paragraph3);
+                        pdfdoc.Add(paragraph31);
+                        pdfdoc.Add(paragraph4);
+                        pdfdoc.Add(paragraph5);
+                        pdfdoc.Add(paragraph6);
+                        pdfdoc.Add(paragraph7);
+                        pdfdoc.Add(paragraph8);
+                        pdfdoc.Add(paragraph9);
+                    }
 
-                    Paragraph paragraph7 = new Paragraph(" Cdo paqartësi apo problem teknik mund ta drejtoni në adresën tonë të emailit suportIT@hg.edu.al ");
-                    Paragraph paragraph8 = new Paragraph(" ");
-                    Paragraph paragraph9 = new Paragraph(" ");
-
-
-                    pdfdoc.Add(paragraph);
-                    pdfdoc.Add(paragraph2);
-                    pdfdoc.Add(paragraph3);
-                    pdfdoc.Add(paragraph31);
-                    pdfdoc.Add(paragraph4);
-                    pdfdoc.Add(paragraph5);
-                    pdfdoc.Add(paragraph6);
-                    pdfdoc.Add(paragraph7);
-                    pdfdoc.Add(paragraph8);
-                    pdfdoc.Add(paragraph9);
-                    pdfdoc.Add(pdftable);
-
+                    pdfdoc.Add(paragraph0);
                     pdfdoc.Close();
                     stream.Close();
                 }
             }
 
+        }
+
+        private void klasaCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string connstr = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+
+                MySqlConnection conn = new MySqlConnection(connstr);
+                conn.Open();
+                string query2 = "SELECT KlasaID FROM Klasa WHERE Emri = '" + klasaCombo.Text + "'";
+                MySqlCommand cmnd = new MySqlCommand(query2, conn);
+                MySqlDataReader MyReader;
+                MyReader = cmnd.ExecuteReader();
+                while (MyReader.Read())
+                {
+                    klasaid = Convert.ToInt32(MyReader["KlasaID"]);
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+            }
+            conn.Open();
+            da = new MySqlDataAdapter("select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes Where KlasaID = '" + klasaid+"' ", conn);
+            ds = new System.Data.DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            conn.Close();
+        }
+
+        private void klasaCombo_Click(object sender, EventArgs e)
+        {
+            klasaCombo.Items.Clear();
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Emri FROM Klasa";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            klasaCombo.Items.Add(reader.GetString("Emri"));
+                        }
+                    }
+                }
+            }
         }
     }
 }
