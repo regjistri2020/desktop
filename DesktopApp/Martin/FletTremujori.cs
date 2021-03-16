@@ -21,11 +21,9 @@ namespace DesktopApp.Martin
         
         MySqlDataAdapter sda;
         DataTable dt;
-        DataSet ds;
         MySqlConnection conn;
         string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
-        DataTable table = new DataTable();
         public FletTremujori()
         {
             InitializeComponent();
@@ -42,14 +40,24 @@ namespace DesktopApp.Martin
             //dataGridView1.Columns.Clear();
             //dataGridView1.DataSource = null;
 
+            
             conn = new MySqlConnection(connstring);
             conn.Open();
             string query1 = "select NotaTremujorID, Periudha, MesuesID, LendaID, KlasaID, NxenesID, NotaGoje, NotaShkrim, NotaPortofol from NotaTremujor";
             sda = new MySqlDataAdapter(query1, conn);
 
             dt = new DataTable();
+            dt.Columns.Add(new DataColumn("Nxënësi", typeof(string)));
             sda.Fill(dt);
             dataGridView2.DataSource = dt;
+            dataGridView2.Columns["NotaTremujorID"].Visible = false;
+            dataGridView2.Columns["Periudha"].Visible = false;
+            dataGridView2.Columns["MesuesID"].Visible = false;
+            dataGridView2.Columns["LendaID"].Visible = false;
+            dataGridView2.Columns["KlasaID"].Visible = false;
+
+            
+            
             conn.Close();
 
 
