@@ -18,7 +18,9 @@ namespace DesktopApp.Luis
         long lastTemaId;
         string firstName, lastName;
         bool temaUvendos;
-        
+        string jepMesimID;
+
+
 
 
 
@@ -41,7 +43,7 @@ namespace DesktopApp.Luis
                 {
                     MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (NxenesID, TemaMesimoreID, Nota, Shenime, Kategoria) VALUES ('" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "', '" + textBox4.Text + "', '" + comboBox4.Text + "')", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria) VALUES ('" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','"+jepMesimID+"', '" + textBox4.Text + "', '" + comboBox4.Text + "')", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Nota e nxenesit u vendos!");
                     conn.Close();
@@ -78,6 +80,24 @@ namespace DesktopApp.Luis
             catch (Exception ex)
             {
                 Console.WriteLine("Ka nje gabim teknik:" + ex.Message + "\t" + ex.GetType());
+            }
+
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Jep_MesimID FROM Jep_Mesim WHERE MesuesID = '"+ CookieClass.MesuesID + "' AND LendaID = '"+ CookieClass.LendaID + "' AND KlasaID = '"+ CookieClass.KlasaID + "'";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            jepMesimID = reader.GetString("Jep_MesimID");
+                        }
+                    }
+                }
             }
 
         }
