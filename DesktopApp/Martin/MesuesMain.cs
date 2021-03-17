@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DesktopApp.Martin
 {
@@ -65,13 +66,61 @@ namespace DesktopApp.Martin
 
                             mesuesDashboardUC1.MesuestextBox.Text= reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
                             mID = reader.GetString("MesuesID");
-
                         }
                     }
                 }
                 connection.Close();
             }
-           CookieClass.MesuesID = mID;
+
+            
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select Emri from Klasa where  MesuesID = '" + mID + "' ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            mesuesDashboardUC1.KlasatextBox.Text = reader.GetString("Emri") ;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select count(*) from Nxenes where Gjinia = 'femer' and KlasaID in (select KlasaID from Klasa where Emri = '" + mesuesDashboardUC1.KlasatextBox.Text + "') ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) mesuesDashboardUC1.NxenesetextBox.Text = count.ToString();
+                }
+                connection.Close();
+            }
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select count(*) from Nxenes where Gjinia = 'mashkull' and KlasaID in (select KlasaID from Klasa where Emri = '" + mesuesDashboardUC1.KlasatextBox.Text + "') ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) mesuesDashboardUC1.NxenestextBox.Text = count.ToString();
+                    else mesuesDashboardUC1.NxenestextBox.Text = "  ---  ";
+                }
+                connection.Close();
+            }
+
+            int nr_nxe = Convert.ToInt32(mesuesDashboardUC1.NxenesetextBox.Text + mesuesDashboardUC1.NxenestextBox.Text); 
+
+
+
+            CookieClass.MesuesID = mID;
 
             hideSubMenu();
             MungesaUC.Hide();

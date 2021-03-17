@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesktopApp.Luis;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DesktopApp.Martin
 {
@@ -74,7 +75,7 @@ namespace DesktopApp.Martin
             string MesLog_query = "Select count(*) from Login where User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 1 ";
             MySqlCommand cmd = new MySqlCommand(MesLog_query, conn);
             cmd.ExecuteReader();
-            
+
             conn.Close();
 
             MySqlDataAdapter sda = new MySqlDataAdapter(cmd);

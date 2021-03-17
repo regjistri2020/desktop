@@ -295,9 +295,9 @@
             this.KlasatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KlasatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KlasatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.KlasatextBox.Location = new System.Drawing.Point(713, 181);
+            this.KlasatextBox.Location = new System.Drawing.Point(675, 181);
             this.KlasatextBox.Name = "KlasatextBox";
-            this.KlasatextBox.Size = new System.Drawing.Size(83, 24);
+            this.KlasatextBox.Size = new System.Drawing.Size(134, 24);
             this.KlasatextBox.TabIndex = 15;
             this.KlasatextBox.Text = "13-A";
             this.KlasatextBox.TextChanged += new System.EventHandler(this.KlasatextBox_TextChanged);
@@ -318,11 +318,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(708, 142);
+            this.label3.Location = new System.Drawing.Point(670, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 29);
+            this.label3.Size = new System.Drawing.Size(145, 29);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Klasa";
+            this.label3.Text = "Kujdestaria";
             // 
             // label1
             // 
@@ -337,7 +337,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.class_40px;
-            this.pictureBox4.Location = new System.Drawing.Point(602, 132);
+            this.pictureBox4.Location = new System.Drawing.Point(564, 132);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(92, 91);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -425,14 +425,11 @@
         private System.Windows.Forms.TextBox KalueshmeriaMtextBox;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox NxenestextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox NxenesetextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label Datalabel;
-        private System.Windows.Forms.TextBox KlasatextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -446,5 +443,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         public System.Windows.Forms.TextBox MesuestextBox;
         public System.Windows.Forms.TextBox DatatextBox;
+        public System.Windows.Forms.TextBox KlasatextBox;
+        public System.Windows.Forms.TextBox NxenesetextBox;
+        public System.Windows.Forms.TextBox NxenestextBox;
     }
 }
