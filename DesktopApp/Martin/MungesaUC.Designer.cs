@@ -32,10 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Kerkobutton = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Infolabel1 = new System.Windows.Forms.Label();
-            this.KerkonxTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,14 +44,13 @@
             this.EmriColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LendaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MungesColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.KerkonxComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,12 +88,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.KerkonxComboBox);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.Kerkobutton);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.Infolabel1);
-            this.panel2.Controls.Add(this.KerkonxTextBox);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button1);
@@ -103,6 +103,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.warn;
+            this.pictureBox2.Location = new System.Drawing.Point(74, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 86;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(114, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(679, 40);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "Për të vazhduar më tej, në procesin e vendosjes se mungesave zgjidhni më parë kla" +
+    "sën, datën, lëndën \r\nsi edhe temën mësimore në tabin \" Vlerëso nxënësit\" të menu" +
+    "së.";
             // 
             // Kerkobutton
             // 
@@ -139,15 +162,6 @@
             this.Infolabel1.Text = "  Në klikim të butonit \" ruaj të \r\n  dhënat \" nxënësi merr  mungesë\r\n  në lëndën " +
     "me temë përkatëse !";
             // 
-            // KerkonxTextBox
-            // 
-            this.KerkonxTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KerkonxTextBox.Location = new System.Drawing.Point(188, 147);
-            this.KerkonxTextBox.Multiline = true;
-            this.KerkonxTextBox.Name = "KerkonxTextBox";
-            this.KerkonxTextBox.Size = new System.Drawing.Size(192, 32);
-            this.KerkonxTextBox.TabIndex = 80;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -173,7 +187,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(209, 210);
+            this.button1.Location = new System.Drawing.Point(204, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 54);
             this.button1.TabIndex = 77;
@@ -210,28 +224,14 @@
             this.MungesColumn.HeaderText = "Mungesë";
             this.MungesColumn.Name = "MungesColumn";
             // 
-            // pictureBox2
+            // KerkonxComboBox
             // 
-            this.pictureBox2.Image = global::DesktopApp.Properties.Resources.warn;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 86;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(114, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(679, 40);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Për të vazhduar më tej, në procesin e vendosjes se mungesave zgjidhni më parë kla" +
-    "sën, datën, lëndën \r\nsi edhe temën mësimore në tabin \" Vlerëso nxënësit\" të menu" +
-    "së.";
+            this.KerkonxComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KerkonxComboBox.FormattingEnabled = true;
+            this.KerkonxComboBox.Location = new System.Drawing.Point(193, 148);
+            this.KerkonxComboBox.Name = "KerkonxComboBox";
+            this.KerkonxComboBox.Size = new System.Drawing.Size(191, 28);
+            this.KerkonxComboBox.TabIndex = 87;
             // 
             // MungesaUC
             // 
@@ -247,9 +247,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,7 +263,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox KerkonxTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label Infolabel1;
@@ -273,5 +272,6 @@
         private System.Windows.Forms.Button Kerkobutton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox KerkonxComboBox;
     }
 }

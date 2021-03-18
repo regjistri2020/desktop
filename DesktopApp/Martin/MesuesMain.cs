@@ -116,7 +116,11 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
-            int nr_nxe = Convert.ToInt32(mesuesDashboardUC1.NxenesetextBox.Text + mesuesDashboardUC1.NxenestextBox.Text); 
+            int nr_nxe = Convert.ToInt32(mesuesDashboardUC1.NxenesetextBox.Text + mesuesDashboardUC1.NxenestextBox.Text);
+
+           
+
+
 
 
 

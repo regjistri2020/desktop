@@ -37,7 +37,8 @@ namespace DesktopApp.Martin
 
         private void FletTremujori_Load(object sender, EventArgs e)
         {
-
+            
+            
 
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
            
