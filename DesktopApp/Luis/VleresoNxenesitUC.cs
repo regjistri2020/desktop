@@ -43,7 +43,7 @@ namespace DesktopApp.Luis
                 {
                     MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria) VALUES ('" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','"+jepMesimID+"', '" + textBox4.Text + "', '" + comboBox4.Text + "')", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria, Data, Ora) VALUES ('" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','"+jepMesimID+"', '" + textBox4.Text + "', '" + comboBox4.Text + "',current_date(), current_time())", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Nota e nxenesit u vendos!");
                     conn.Close();
