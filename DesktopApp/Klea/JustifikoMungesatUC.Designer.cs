@@ -92,6 +92,7 @@
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(131, 73);
             this.textBox4.Multiline = true;
@@ -299,7 +300,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;

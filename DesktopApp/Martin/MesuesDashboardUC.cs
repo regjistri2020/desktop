@@ -39,5 +39,10 @@ namespace DesktopApp.Martin
         {
 
         }
+
+        private void Datapanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

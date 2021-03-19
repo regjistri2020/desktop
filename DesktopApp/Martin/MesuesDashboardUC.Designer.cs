@@ -131,6 +131,7 @@
             this.Datapanel.Name = "Datapanel";
             this.Datapanel.Size = new System.Drawing.Size(931, 609);
             this.Datapanel.TabIndex = 2;
+            this.Datapanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Datapanel_Paint);
             // 
             // textBox1
             // 
