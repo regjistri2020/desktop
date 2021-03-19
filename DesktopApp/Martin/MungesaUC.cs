@@ -37,26 +37,7 @@ namespace DesktopApp.Martin
         private void MungesaUC_Load(object sender, EventArgs e)
         {
             
-            //SHFAQJA E NXENESVE NE DATAGRIDVIEW
-            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "Select Emri, Mbiemri from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + textBox1.Text + "') ";
-                using (var da = new MySqlDataAdapter(query, connection))
-                {
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                    dt.Columns.Add(new DataColumn("Mungesa", typeof(bool)));
-                    //KODI LUISIT
-                    //var ds = new DataSet();
-                    //da.Fill(ds);
-                    //dataGridView1.DataSource = ds.Tables[0];
-                }
-                connection.Close();
-            }
+            
 
 
 
@@ -65,28 +46,36 @@ namespace DesktopApp.Martin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //foreach (DataGridViewRow Row in dataGridView1.Rows)
-            //{
-            //    if (Row.Cells[0].Value != null)
-            //    {
-            //        if ((bool)(Row.Cells[2].Value) == true)
-            //        {
-            //            int tradeID = Convert.ToInt32(dataGridView1.Rows[Row.Index].Cells["ID"].Value.ToString());
-            //            // Write Update Query for the ID received here
-            //        }
-            //    }
-            //}
+            foreach (DataGridViewRow Row in dataGridView1.Rows)
+            {
+                if (Row.Cells[0].Value != null)
+                {
+                    if ((bool)(Row.Cells["Mungesa"].Value) == true)
+                    {
+                        int tradeID = Convert.ToInt32(dataGridView1.Rows[Row.Index].Cells["NxenesID"].Value.ToString());
+                        // Write Update Query for the ID received here 
+                        var src = DateTime.Now;
+                        var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, 0);
+                        
+                        var query = " Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT, KlasaID) VALUES ('"+ tradeID +"', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "', '" + CookieClass.KlasaID.ToString() + "')";
+
+                        MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Mungesat u vendosen me sukses!" );
+
+                    }
+                }
+            }
+
+          
 
 
-            //var src = DateTime.Now;
-            //var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, 0);
-            //query = " Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT) VALUES ('"+ EMRI MBIEMRI +"', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "')";
 
 
 
 
-            
-            
 
 
 
@@ -133,6 +122,29 @@ namespace DesktopApp.Martin
                     }
                 }
             }
+
+
+            //SHFAQJA E NXENESVE NE DATAGRIDVIEW
+            
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select NxenesID, Emri, Mbiemri from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + label4.Text + "') ";
+                using (var da = new MySqlDataAdapter(query, connection))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    dt.Columns.Add(new DataColumn("Mungesa", typeof(bool)));
+                    //KODI LUISIT
+                    //var ds = new DataSet();
+                    //da.Fill(ds);
+                    //dataGridView1.DataSource = ds.Tables[0];
+                }
+                connection.Close();
+            }
+
         }
     }
 }
