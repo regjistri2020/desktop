@@ -279,6 +279,12 @@ namespace DesktopApp.Luis
         {
            
         }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         void dataGridRefresher()
         {
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";

@@ -176,6 +176,7 @@
             this.comboBox2.Size = new System.Drawing.Size(192, 29);
             this.comboBox2.TabIndex = 46;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // label5
             // 

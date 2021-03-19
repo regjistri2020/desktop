@@ -32,6 +32,7 @@ namespace DesktopApp.Luis
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotaTremujoriUC));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,29 +46,25 @@ namespace DesktopApp.Luis
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -77,7 +74,6 @@ namespace DesktopApp.Luis
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +99,16 @@ namespace DesktopApp.Luis
             this.label1.Text = "Klasat ku jep mësim > Notat e tremujorit\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Orange;
@@ -120,6 +126,8 @@ namespace DesktopApp.Luis
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(159, 29);
             this.comboBox1.TabIndex = 45;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // label2
             // 
@@ -137,7 +145,7 @@ namespace DesktopApp.Luis
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 12.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label6.Location = new System.Drawing.Point(605, 73);
+            this.label6.Location = new System.Drawing.Point(29, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 20);
             this.label6.TabIndex = 95;
@@ -152,10 +160,12 @@ namespace DesktopApp.Luis
             "Tremujori 2",
             "Tremujori 3",
             "Vjetore"});
-            this.comboBox2.Location = new System.Drawing.Point(704, 67);
+            this.comboBox2.Location = new System.Drawing.Point(128, 141);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(145, 29);
             this.comboBox2.TabIndex = 94;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // comboBox3
             // 
@@ -165,6 +175,7 @@ namespace DesktopApp.Luis
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(159, 29);
             this.comboBox3.TabIndex = 97;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -193,7 +204,7 @@ namespace DesktopApp.Luis
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(445, 281);
+            this.label4.Location = new System.Drawing.Point(498, 292);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(304, 25);
             this.label4.TabIndex = 101;
@@ -202,7 +213,7 @@ namespace DesktopApp.Luis
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(450, 318);
+            this.textBox2.Location = new System.Drawing.Point(503, 320);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(165, 27);
@@ -212,55 +223,32 @@ namespace DesktopApp.Luis
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(450, 354);
+            this.dataGridView1.Location = new System.Drawing.Point(503, 354);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(453, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(400, 259);
             this.dataGridView1.TabIndex = 98;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.dataGridView2.Location = new System.Drawing.Point(33, 177);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(389, 436);
+            this.dataGridView2.Size = new System.Drawing.Size(442, 436);
             this.dataGridView2.TabIndex = 104;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_RowHeaderMouseClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Firebrick;
-            this.label7.Location = new System.Drawing.Point(321, 141);
+            this.label7.Location = new System.Drawing.Point(369, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 23);
             this.label7.TabIndex = 109;
             this.label7.Text = "Mbyll";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Emri Mbiemri";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "NG";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NT";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "NP";
-            this.Column4.Name = "Column4";
             // 
             // panel3
             // 
@@ -276,77 +264,31 @@ namespace DesktopApp.Luis
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(450, 138);
+            this.panel3.Location = new System.Drawing.Point(503, 138);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(453, 129);
+            this.panel3.Size = new System.Drawing.Size(400, 129);
             this.panel3.TabIndex = 111;
             // 
-            // textBox1
+            // label11
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(101, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(165, 27);
-            this.textBox1.TabIndex = 112;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label11.Location = new System.Drawing.Point(312, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 25);
+            this.label11.TabIndex = 118;
+            this.label11.Text = "Ruaj";
             // 
-            // label5
+            // pictureBox7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label5.Location = new System.Drawing.Point(37, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 23);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "NG";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label8.Location = new System.Drawing.Point(126, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 23);
-            this.label8.TabIndex = 113;
-            this.label8.Text = "NT";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label9.Location = new System.Drawing.Point(212, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 23);
-            this.label9.TabIndex = 114;
-            this.label9.Text = "NP";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(33, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(42, 29);
-            this.textBox3.TabIndex = 115;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(121, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(42, 29);
-            this.textBox4.TabIndex = 116;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(208, 84);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(42, 29);
-            this.textBox5.TabIndex = 117;
+            this.pictureBox7.Image = global::DesktopApp.Properties.Resources.icons8_tick_box_64;
+            this.pictureBox7.Location = new System.Drawing.Point(302, 25);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(71, 56);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 112;
+            this.pictureBox7.TabStop = false;
             // 
             // label10
             // 
@@ -359,20 +301,78 @@ namespace DesktopApp.Luis
             this.label10.TabIndex = 112;
             this.label10.Text = "Nxënësi:";
             // 
-            // pictureBox7
+            // textBox5
             // 
-            this.pictureBox7.Image = global::DesktopApp.Properties.Resources.icons8_tick_box_64;
-            this.pictureBox7.Location = new System.Drawing.Point(338, 25);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(71, 56);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 112;
-            this.pictureBox7.TabStop = false;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.textBox5.Location = new System.Drawing.Point(208, 84);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(42, 29);
+            this.textBox5.TabIndex = 117;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.textBox4.Location = new System.Drawing.Point(121, 84);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(42, 29);
+            this.textBox4.TabIndex = 116;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.textBox3.Location = new System.Drawing.Point(33, 84);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(42, 29);
+            this.textBox3.TabIndex = 115;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label9.Location = new System.Drawing.Point(212, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 23);
+            this.label9.TabIndex = 114;
+            this.label9.Text = "NP";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label8.Location = new System.Drawing.Point(126, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 23);
+            this.label8.TabIndex = 113;
+            this.label8.Text = "NT";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label5.Location = new System.Drawing.Point(37, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 23);
+            this.label5.TabIndex = 112;
+            this.label5.Text = "NG";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(101, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(165, 27);
+            this.textBox1.TabIndex = 112;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.save_64;
-            this.pictureBox2.Location = new System.Drawing.Point(370, 132);
+            this.pictureBox2.Location = new System.Drawing.Point(418, 132);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -386,7 +386,7 @@ namespace DesktopApp.Luis
             this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuTextbox1.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(114, 138);
+            this.bunifuTextbox1.Location = new System.Drawing.Point(709, 62);
             this.bunifuTextbox1.Name = "bunifuTextbox1";
             this.bunifuTextbox1.Size = new System.Drawing.Size(165, 30);
             this.bunifuTextbox1.TabIndex = 107;
@@ -395,7 +395,7 @@ namespace DesktopApp.Luis
             // pictureBox5
             // 
             this.pictureBox5.Image = global::DesktopApp.Properties.Resources.icons8_next_page_48;
-            this.pictureBox5.Location = new System.Drawing.Point(74, 138);
+            this.pictureBox5.Location = new System.Drawing.Point(669, 62);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 30);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -405,7 +405,7 @@ namespace DesktopApp.Luis
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.icons8_back_to_48;
-            this.pictureBox4.Location = new System.Drawing.Point(34, 138);
+            this.pictureBox4.Location = new System.Drawing.Point(629, 62);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -425,33 +425,12 @@ namespace DesktopApp.Luis
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DesktopApp.Properties.Resources.search_96px;
-            this.pictureBox3.Location = new System.Drawing.Point(621, 318);
+            this.pictureBox3.Location = new System.Drawing.Point(674, 320);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 100;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesktopApp.Properties.Resources.icons8_back_arrow_64;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label11.Location = new System.Drawing.Point(348, 88);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 25);
-            this.label11.TabIndex = 118;
-            this.label11.Text = "Ruaj";
             // 
             // NotaTremujoriUC
             // 
@@ -483,6 +462,7 @@ namespace DesktopApp.Luis
             this.Load += new System.EventHandler(this.NotaTremujoriUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -493,7 +473,6 @@ namespace DesktopApp.Luis
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,10 +502,6 @@ namespace DesktopApp.Luis
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
