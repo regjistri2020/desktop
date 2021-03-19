@@ -51,7 +51,35 @@ namespace DesktopApp.Martin
 
                 }
             }
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select count(*) from Nxenes where Gjinia = 'femer' ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) textBox1.Text = count.ToString();
+                }
+                connection.Close();
+            }
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select count(*) from Nxenes where Gjinia = 'mashkull' ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) textBox2.Text = count.ToString();
+                    else textBox2.Text = "  ---  ";
+                }
+                connection.Close();
+            }
+
+
         }
+
 
     }
 }

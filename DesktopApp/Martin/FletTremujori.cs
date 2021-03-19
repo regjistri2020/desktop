@@ -13,6 +13,7 @@ using iTextSharp.text.pdf;
 using System.IO;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
+using DesktopApp.Luis;
 
 namespace DesktopApp.Martin
 {
@@ -24,30 +25,48 @@ namespace DesktopApp.Martin
         MySqlConnection conn;
         string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
+        string loginID = CookieClass.LoginID;
+        String mID;
+
         public FletTremujori()
         {
             InitializeComponent();
         }
 
 
-        private void KerkoButton_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void FletTremujori_Load(object sender, EventArgs e)
         {
-            //dataGridView1.Columns.Clear();
-            //dataGridView1.DataSource = null;
-
             
+            
+
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+           
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select Emri from Klasa where  MesuesID = '" + mID + "' ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            textBox4.Text = reader.GetString("Emri");
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            CookieClass.MesuesID = mID;
+
             conn = new MySqlConnection(connstring);
             conn.Open();
-            string query1 = "select NotaTremujorID, Periudha, MesuesID, LendaID, KlasaID, NxenesID, NotaGoje, NotaShkrim, NotaPortofol from NotaTremujor";
-            sda = new MySqlDataAdapter(query1, conn);
+            string query2 = "select NotaTremujorID, Periudha, MesuesID, LendaID, KlasaID, NxenesID, NotaGoje, NotaShkrim, NotaPortofol from NotaTremujor";
+            sda = new MySqlDataAdapter(query2, conn);
 
             dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Nxënësi", typeof(string)));
             sda.Fill(dt);
             dataGridView2.DataSource = dt;
             dataGridView2.Columns["NotaTremujorID"].Visible = false;
@@ -56,9 +75,26 @@ namespace DesktopApp.Martin
             dataGridView2.Columns["LendaID"].Visible = false;
             dataGridView2.Columns["KlasaID"].Visible = false;
 
-            
-            
             conn.Close();
+
+
+
+            conn = new MySqlConnection(connstring);
+            conn.Open();
+            string query1 = "select NotaTremujorID, Periudha, MesuesID, LendaID, KlasaID, NxenesID, NotaGoje, NotaShkrim, NotaPortofol from NotaTremujor";
+            sda = new MySqlDataAdapter(query1, conn);
+
+            dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns["NotaTremujorID"].Visible = false;
+            dataGridView1.Columns["Periudha"].Visible = false;
+            dataGridView1.Columns["MesuesID"].Visible = false;
+            dataGridView1.Columns["LendaID"].Visible = false;
+            dataGridView1.Columns["KlasaID"].Visible = false;
+
+            conn.Close();
+
 
 
 
@@ -150,6 +186,11 @@ namespace DesktopApp.Martin
         private void button2_Click(object sender, EventArgs e)
         {
             exportgridtopdf(dataGridView1, "Notat PDF test");
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
