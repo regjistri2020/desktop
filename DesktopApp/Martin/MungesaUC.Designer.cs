@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.KerkonxComboBox = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Kerkobutton = new System.Windows.Forms.Button();
@@ -41,10 +42,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.EmriColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LendaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MungesColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.KerkonxComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,6 +86,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.KerkonxComboBox);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
@@ -103,6 +102,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 3;
+            // 
+            // KerkonxComboBox
+            // 
+            this.KerkonxComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KerkonxComboBox.FormattingEnabled = true;
+            this.KerkonxComboBox.Location = new System.Drawing.Point(193, 148);
+            this.KerkonxComboBox.Name = "KerkonxComboBox";
+            this.KerkonxComboBox.Size = new System.Drawing.Size(191, 28);
+            this.KerkonxComboBox.TabIndex = 87;
+            this.KerkonxComboBox.SelectedIndexChanged += new System.EventHandler(this.KerkonxComboBox_SelectedIndexChanged);
+            this.KerkonxComboBox.Click += new System.EventHandler(this.KerkonxComboBox_Click);
             // 
             // pictureBox2
             // 
@@ -200,38 +210,19 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EmriColumn,
-            this.LendaColumn,
-            this.MungesColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(466, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(470, 103);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 417);
             this.dataGridView1.TabIndex = 76;
             // 
-            // EmriColumn
+            // label4
             // 
-            this.EmriColumn.HeaderText = "Emri ";
-            this.EmriColumn.Name = "EmriColumn";
-            // 
-            // LendaColumn
-            // 
-            this.LendaColumn.HeaderText = "Mbiemri";
-            this.LendaColumn.Name = "LendaColumn";
-            // 
-            // MungesColumn
-            // 
-            this.MungesColumn.HeaderText = "Mungesë";
-            this.MungesColumn.Name = "MungesColumn";
-            // 
-            // KerkonxComboBox
-            // 
-            this.KerkonxComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KerkonxComboBox.FormattingEnabled = true;
-            this.KerkonxComboBox.Location = new System.Drawing.Point(193, 148);
-            this.KerkonxComboBox.Name = "KerkonxComboBox";
-            this.KerkonxComboBox.Size = new System.Drawing.Size(191, 28);
-            this.KerkonxComboBox.TabIndex = 87;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(212, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 89;
+            this.label4.Text = "label4";
             // 
             // MungesaUC
             // 
@@ -266,12 +257,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label Infolabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmriColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LendaColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn MungesColumn;
         private System.Windows.Forms.Button Kerkobutton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox KerkonxComboBox;
+        public System.Windows.Forms.Label label4;
     }
 }

@@ -12,13 +12,14 @@ using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 using MySql.Data.MySqlClient;
+using DesktopApp.Luis;
 
 namespace DesktopApp.Martin
 {
     public partial class MungesaUC : UserControl
     {
 
-        long lastTemaId;
+        
 
         DataTable table = new DataTable();
 
@@ -35,21 +36,57 @@ namespace DesktopApp.Martin
 
         private void MungesaUC_Load(object sender, EventArgs e)
         {
-            //MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
-            //conn.Open();
-            //MySqlCommand cmd = new MySqlCommand("INSERT INTO TematMesimore (DataTemes, MesuesID, LendaID, KlasaID, TemaMesimore) VALUES ('" + theDate + "', '" + CookieClass.MesuesID + "', '" + CookieClass.LendaID + "', '" + CookieClass.KlasaID + "', '" + textBox1.Text + "');", conn);
-            //cmd.ExecuteNonQuery();
-            //lastTemaId = cmd.LastInsertedId;
-            //MessageBox.Show("Tema u shtua me sukses!" + lastTemaId);
-            //conn.Close();
-
-
             
+            //SHFAQJA E NXENESVE NE DATAGRIDVIEW
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select Emri, Mbiemri from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + textBox1.Text + "') ";
+                using (var da = new MySqlDataAdapter(query, connection))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    dt.Columns.Add(new DataColumn("Mungesa", typeof(bool)));
+                    //KODI LUISIT
+                    //var ds = new DataSet();
+                    //da.Fill(ds);
+                    //dataGridView1.DataSource = ds.Tables[0];
+                }
+                connection.Close();
+            }
+
+
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //foreach (DataGridViewRow Row in dataGridView1.Rows)
+            //{
+            //    if (Row.Cells[0].Value != null)
+            //    {
+            //        if ((bool)(Row.Cells[2].Value) == true)
+            //        {
+            //            int tradeID = Convert.ToInt32(dataGridView1.Rows[Row.Index].Cells["ID"].Value.ToString());
+            //            // Write Update Query for the ID received here
+            //        }
+            //    }
+            //}
+
+
+            //var src = DateTime.Now;
+            //var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, 0);
+            //query = " Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT) VALUES ('"+ EMRI MBIEMRI +"', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "')";
+
+
+
+
+            
+            
 
 
 
@@ -66,6 +103,36 @@ namespace DesktopApp.Martin
 
             //var message = MessageResource.Create(messageOptions);
             //Console.WriteLine(message.Body);
+        }
+
+        private void KerkonxComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KerkonxComboBox_Click(object sender, EventArgs e)
+        {
+            //MBUSHJA E COMBOBOX ME EMRAT DHE MBIEMRAT E NXENESVE
+            label4.Text = CookieClass.Klasa;
+            
+            KerkonxComboBox.Items.Clear();
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select * from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + label4.Text + "' )";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            KerkonxComboBox.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
+                        }
+                    }
+                }
+            }
         }
     }
 }
