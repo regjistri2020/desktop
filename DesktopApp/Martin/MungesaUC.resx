@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Për të vazhduar më tej, në procesin e vendosjes se mungesave duhet të keni zgjedhur më parë klasën, 
+datën, lëndën si edhe temën mësimore në tabin " Vlerëso nxënësit" të menusë. Më pas rifreskoni të dhënat.</value>
+  </data>
 </root>

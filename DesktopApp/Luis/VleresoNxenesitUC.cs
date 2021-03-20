@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using DesktopApp.Martin;
 
 namespace DesktopApp.Luis
 {
@@ -78,6 +79,8 @@ namespace DesktopApp.Luis
                 MessageBox.Show("Tema u shtua me sukses!" + lastTemaId);
                 temaUvendos = true;
                 conn.Close();
+
+
             }
             catch (Exception ex)
             {
@@ -103,6 +106,8 @@ namespace DesktopApp.Luis
             }
 
         }
+        
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

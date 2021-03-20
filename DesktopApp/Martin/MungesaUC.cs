@@ -19,7 +19,7 @@ namespace DesktopApp.Martin
     public partial class MungesaUC : UserControl
     {
 
-        
+        string nxenesID;
 
         DataTable table = new DataTable();
 
@@ -30,55 +30,38 @@ namespace DesktopApp.Martin
 
         private void Kerkobutton_Click(object sender, EventArgs e)
         {
-            
-            
+             
         }
 
-        private void MungesaUC_Load(object sender, EventArgs e)
-        {
-            
-            
-
-
-
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow Row in dataGridView1.Rows)
             {
-                if (Row.Cells[0].Value != null)
+                try
                 {
-                    if ((bool)(Row.Cells["Mungesa"].Value) == true)
+                    if (Row.Cells["Mungesa"].Value.ToString() == "True")
                     {
                         int tradeID = Convert.ToInt32(dataGridView1.Rows[Row.Index].Cells["NxenesID"].Value.ToString());
                         // Write Update Query for the ID received here 
                         var src = DateTime.Now;
                         var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, 0);
-                        
-                        var query = " Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT, KlasaID) VALUES ('"+ tradeID +"', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "', '" + CookieClass.KlasaID.ToString() + "')";
+
+                        var query = " Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT, KlasaID) VALUES ('" + tradeID + "', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "', '" + CookieClass.KlasaID.ToString() + "')";
 
                         MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
                         conn.Open();
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Mungesat u vendosen me sukses!" );
-
+                        MessageBox.Show("Mungesat u vendosen me sukses!");
                     }
                 }
+
+                catch(Exception ex)
+                {
+
+                }
             }
-
-          
-
-
-
-
-
-
-
-
-
 
 
             var accountSid = "AC3648693fb0ccb73d81ffbf42186b6248";
@@ -96,14 +79,54 @@ namespace DesktopApp.Martin
 
         private void KerkonxComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string fullName = KerkonxComboBox.Text;
+            var names = fullName.Split(' ');
+            var firstName = names[0];
+            var lastName = names[1];
 
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select * from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + label4.Text + "') ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            nxenesID = reader.GetString("NxenesID");
+                        }
+                    }
+                }
+            }
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select NxenesID, Emri, Mbiemri from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + label4.Text + "') and Emri = '"+ firstName + "' and Mbiemri = '" + lastName + "'  ";
+                using (var da = new MySqlDataAdapter(query, connection))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    dt.Columns.Add(new DataColumn("Mungesa", typeof(bool)));
+                }
+                connection.Close();
+            }
         }
 
         private void KerkonxComboBox_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             //MBUSHJA E COMBOBOX ME EMRAT DHE MBIEMRAT E NXENESVE
             label4.Text = CookieClass.Klasa;
-            
+
             KerkonxComboBox.Items.Clear();
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString))
@@ -123,10 +146,8 @@ namespace DesktopApp.Martin
                 }
             }
 
-
-            //SHFAQJA E NXENESVE NE DATAGRIDVIEW
+            //MBUSHJA E DATAGRIDVIEW
             
-
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -137,14 +158,10 @@ namespace DesktopApp.Martin
                     da.Fill(dt);
                     dataGridView1.DataSource = dt;
                     dt.Columns.Add(new DataColumn("Mungesa", typeof(bool)));
-                    //KODI LUISIT
-                    //var ds = new DataSet();
-                    //da.Fill(ds);
-                    //dataGridView1.DataSource = ds.Tables[0];
+                    dt.Column[0].OfType<bool>;
                 }
                 connection.Close();
             }
-
         }
     }
 }
