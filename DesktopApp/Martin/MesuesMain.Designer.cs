@@ -388,6 +388,7 @@
             this.notaTremujoriUC1.Name = "notaTremujoriUC1";
             this.notaTremujoriUC1.Size = new System.Drawing.Size(931, 641);
             this.notaTremujoriUC1.TabIndex = 16;
+            this.notaTremujoriUC1.Load += new System.EventHandler(this.notaTremujoriUC1_Load);
             // 
             // MesuesMain
             // 
