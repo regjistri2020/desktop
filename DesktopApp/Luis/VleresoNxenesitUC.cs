@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using DesktopApp.Martin;
 
 namespace DesktopApp.Luis
 {
@@ -68,14 +69,18 @@ namespace DesktopApp.Luis
             try
             {
                 string theDate = dateTimePicker1.Value.ToShortDateString();
+                CookieClass.Data = theDate;
                 MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO TematMesimore (DataTemes, MesuesID, LendaID, KlasaID, TemaMesimore) VALUES ('"+theDate+ "', '" + CookieClass.MesuesID+ "', '" + CookieClass.LendaID + "', '" + CookieClass.KlasaID + "', '" + textBox1.Text + "');", conn);
                 cmd.ExecuteNonQuery();
                 lastTemaId = cmd.LastInsertedId;
+                CookieClass.TemaID = lastTemaId;
                 MessageBox.Show("Tema u shtua me sukses!" + lastTemaId);
                 temaUvendos = true;
                 conn.Close();
+
+
             }
             catch (Exception ex)
             {
@@ -101,6 +106,8 @@ namespace DesktopApp.Luis
             }
 
         }
+        
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -132,6 +139,7 @@ namespace DesktopApp.Luis
             
         }
 
+        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             CookieClass.Klasa = comboBox1.Text;
