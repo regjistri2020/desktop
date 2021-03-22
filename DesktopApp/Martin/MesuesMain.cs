@@ -279,5 +279,10 @@ namespace DesktopApp.Martin
             vleresoNxenesitUC1.Hide();
             fletTremujori1.Hide();
         }
+
+        private void notaTremujoriUC1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
