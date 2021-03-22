@@ -26,7 +26,6 @@ namespace DesktopApp.Martin
         string connstring = @"server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
         string loginID = CookieClass.LoginID;
-        String mID;
 
         public FletTremujori()
         {
@@ -37,30 +36,8 @@ namespace DesktopApp.Martin
 
         private void FletTremujori_Load(object sender, EventArgs e)
         {
-            
-            
 
-            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-           
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "Select Emri from Klasa where  MesuesID = '" + mID + "' ";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        //Iterate through the rows and add it to the combobox's items
-                        while (reader.Read())
-                        {
-                            textBox4.Text = reader.GetString("Emri");
-                        }
-                    }
-                }
-                connection.Close();
-            }
-            CookieClass.MesuesID = mID;
-
+            
             conn = new MySqlConnection(connstring);
             conn.Open();
             string query2 = "select NotaTremujorID, Periudha, MesuesID, LendaID, KlasaID, NxenesID, NotaGoje, NotaShkrim, NotaPortofol from NotaTremujor";
@@ -95,16 +72,8 @@ namespace DesktopApp.Martin
 
             conn.Close();
 
-
-
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // used to hide specific columns
-            //this.dataGridView1.Columns["CustomerID"].Visible = false;
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -188,9 +157,53 @@ namespace DesktopApp.Martin
             exportgridtopdf(dataGridView1, "Notat PDF test");
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+
+            //MBUSHJA E COMBOBOX ME EMRAT E LENDEVE QE ZHVILLON KLASA
+            comboBox2.Items.Clear();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT EmerLende FROM Lendet WHERE LendaID IN (SELECT LendaID FROM Jep_Mesim WHERE KlasaID IN (SELECT KlasaID FROM Klasa WHERE Emri = '"+ label6.Text +"'))";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox2.Items.Add(reader.GetString("EmerLende"));
+                        }
+                    }
+                }
+            }
+
+            //MBUSHJA E COMBOBOX ME EMRAT E NXENESVE TE KLASES PERKATESE
+            NxenescomboBox.Items.Clear();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select * from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + label6.Text + "' )";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            NxenescomboBox.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
+                        }
+                    }
+                }
+            }
         }
     }
 }

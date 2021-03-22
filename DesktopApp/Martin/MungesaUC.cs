@@ -158,10 +158,10 @@ namespace DesktopApp.Martin
                     da.Fill(dt);
                     dataGridView1.DataSource = dt;
                     dt.Columns.Add(new DataColumn("Mungesa", typeof(bool)));
-                    dt.Column[0].OfType<bool>;
                 }
                 connection.Close();
             }
         }
+
     }
 }

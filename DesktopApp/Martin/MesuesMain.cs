@@ -72,7 +72,17 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
-            
+            //SHAQFJA E NJOFTIMEVE PER MESUESIT
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            string query2 = "SELECT Emri, DataEvent, Pershkrim FROM Njoftime WHERE Kategori = 'te dyve' OR Kategori = 'mesues' ";
+            MySqlDataAdapter sda = new MySqlDataAdapter(query2, conn);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            mesuesDashboardUC1.dataGridView1.DataSource = dt;
+            conn.Close();
+
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -87,12 +97,28 @@ namespace DesktopApp.Martin
                             mesuesDashboardUC1.KlasatextBox.Text = reader.GetString("Emri") ;
                             justifikoMungesatUC1.textBox4.Text = reader.GetString("Emri");
                             MungesaUC.label4.Text = reader.GetString("Emri");
+                            fletTremujori1.label6.Text = reader.GetString("Emri");
                         }
                     }
                 }
                 connection.Close();
             }
 
+            // NR I mungesave te klases kujdestare
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select count(*) from Mungesat where KlasaID IN (SELECT KlasaID FROM Klasa WHERE EMRI = '" + mesuesDashboardUC1.KlasatextBox.Text + "') ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) mesuesDashboardUC1.Mungesa_textBox.Text = count.ToString();
+                    else mesuesDashboardUC1.Mungesa_textBox.Text = "0";
+                }
+                connection.Close();
+            }
+
+            // NR I NXENSEVE QE KA NE KLASEN KUJDESTARE TE MESUESES/IT
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -101,10 +127,12 @@ namespace DesktopApp.Martin
                 {
                     object count = command.ExecuteScalar();
                     if (count != null) mesuesDashboardUC1.NxenesetextBox.Text = count.ToString();
+                    else mesuesDashboardUC1.NxenesetextBox.Text = "  ---  ";
                 }
                 connection.Close();
             }
 
+            // NR I NXENESVE QE KA NE KLASEN KUJDESTARE TE MESUESES/IT
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -119,10 +147,7 @@ namespace DesktopApp.Martin
             }
 
             int nr_nxe = Convert.ToInt32(mesuesDashboardUC1.NxenesetextBox.Text + mesuesDashboardUC1.NxenestextBox.Text);
-
-           
-
-
+       
 
 
 

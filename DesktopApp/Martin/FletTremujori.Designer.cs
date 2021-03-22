@@ -32,28 +32,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.NxenescomboBox = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.NxenescomboBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,18 +92,18 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.NxenescomboBox);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -112,6 +113,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 4;
+            // 
+            // NxenescomboBox
+            // 
+            this.NxenescomboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.NxenescomboBox.FormattingEnabled = true;
+            this.NxenescomboBox.Location = new System.Drawing.Point(537, 125);
+            this.NxenescomboBox.Name = "NxenescomboBox";
+            this.NxenescomboBox.Size = new System.Drawing.Size(188, 29);
+            this.NxenescomboBox.TabIndex = 96;
             // 
             // dataGridView2
             // 
@@ -134,17 +144,6 @@
             this.panel4.Size = new System.Drawing.Size(2, 490);
             this.panel4.TabIndex = 94;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label6.Location = new System.Drawing.Point(307, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 23);
-            this.label6.TabIndex = 93;
-            this.label6.Text = "Periudha:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -164,6 +163,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(188, 29);
             this.comboBox2.TabIndex = 91;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -176,27 +176,13 @@
             this.label4.TabIndex = 90;
             this.label4.Text = "Lënda";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tremujori 1",
-            "Tremujori 2",
-            "Tremujori 3",
-            "Vjetore"});
-            this.comboBox1.Location = new System.Drawing.Point(413, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 29);
-            this.comboBox1.TabIndex = 89;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(683, 26);
+            this.button3.Location = new System.Drawing.Point(683, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(206, 35);
             this.button3.TabIndex = 87;
@@ -228,18 +214,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(155, 32);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 26);
-            this.textBox4.TabIndex = 82;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -254,9 +228,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
-            this.panel3.Location = new System.Drawing.Point(34, 72);
+            this.panel3.Location = new System.Drawing.Point(34, 75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(855, 5);
+            this.panel3.Size = new System.Drawing.Size(660, 5);
             this.panel3.TabIndex = 78;
             // 
             // dataGridView1
@@ -271,7 +245,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(453, 419);
             this.dataGridView1.TabIndex = 76;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
@@ -284,14 +257,38 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Kujdestaria:";
             // 
-            // NxenescomboBox
+            // label6
             // 
-            this.NxenescomboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.NxenescomboBox.FormattingEnabled = true;
-            this.NxenescomboBox.Location = new System.Drawing.Point(537, 125);
-            this.NxenescomboBox.Name = "NxenescomboBox";
-            this.NxenescomboBox.Size = new System.Drawing.Size(188, 29);
-            this.NxenescomboBox.TabIndex = 96;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(163, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 23);
+            this.label6.TabIndex = 97;
+            this.label6.Text = "Klasa";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(37)))), ((int)(((byte)(122)))));
+            this.label7.Location = new System.Drawing.Point(700, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 21);
+            this.label7.TabIndex = 98;
+            this.label7.Text = "Rifresko të dhënat";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DesktopApp.Properties.Resources.restart_48px;
+            this.pictureBox3.Location = new System.Drawing.Point(849, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 99;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // FletTremujori
             // 
@@ -310,6 +307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,14 +325,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox NxenescomboBox;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.ComboBox NxenescomboBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
