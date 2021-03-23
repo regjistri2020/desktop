@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -115,6 +115,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 609);
             this.panel2.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label8.Location = new System.Drawing.Point(758, 128);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 34);
+            this.label8.TabIndex = 100;
+            this.label8.Text = "Ruaj fleten \r\ne tremujorit ";
             // 
             // label7
             // 
@@ -222,7 +233,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(209, 55);
             this.button3.TabIndex = 87;
-            this.button3.Text = "Printo fletat e tremujorit të të gjithë nxënësit";
+            this.button3.Text = "Ruaj fletat e tremujorit për të gjithë nxënësit";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
@@ -242,7 +253,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(853, 123);
+            this.button2.Location = new System.Drawing.Point(850, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(36, 33);
             this.button2.TabIndex = 83;
@@ -291,17 +302,6 @@
             this.label2.Size = new System.Drawing.Size(127, 23);
             this.label2.TabIndex = 67;
             this.label2.Text = "Kujdestaria:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label8.Location = new System.Drawing.Point(768, 122);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 34);
-            this.label8.TabIndex = 100;
-            this.label8.Text = "Printo fleten \r\ne tremujorit ";
             // 
             // FletTremujori
             // 

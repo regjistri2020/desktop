@@ -96,6 +96,7 @@ namespace DesktopApp.Martin
                             mesuesDashboardUC1.KlasatextBox.Text = reader.GetString("Emri") ;
                             justifikoMungesatUC1.textBox4.Text = reader.GetString("Emri");
                             MungesaUC.label4.Text = reader.GetString("Emri");
+                            fletTremujori1.label6.Text = reader.GetString("Emri");
                             chatUC1.label5.Text = reader.GetString("Emri");
                         }
                     }
@@ -159,6 +160,7 @@ namespace DesktopApp.Martin
             justifikoMungesatUC1.Hide();
             mesuesDashboardUC1.Show();
             notaTremujoriUC1.Hide();
+            chatUC1.Hide();
         }
 
         private void hideSubMenu()
