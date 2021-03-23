@@ -50,12 +50,13 @@
             this.VleresonxenesButton = new System.Windows.Forms.Button();
             this.MesimdhenieButton = new System.Windows.Forms.Button();
             this.jDragControl1 = new JDragControl.JDragControl(this.components);
+            this.chatUC1 = new DesktopApp.ChatUC();
+            this.notaTremujoriUC1 = new DesktopApp.Luis.NotaTremujoriUC();
             this.justifikoMungesatUC1 = new DesktopApp.Klea.JustifikoMungesatUC();
             this.fletTremujori1 = new DesktopApp.Martin.FletTremujori();
             this.MungesaUC = new DesktopApp.Martin.MungesaUC();
             this.vleresoNxenesitUC1 = new DesktopApp.Luis.VleresoNxenesitUC();
             this.mesuesDashboardUC1 = new DesktopApp.Martin.MesuesDashboardUC();
-            this.notaTremujoriUC1 = new DesktopApp.Luis.NotaTremujoriUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
@@ -347,6 +348,23 @@
             this.jDragControl1.GetForm = this;
             this.jDragControl1.TargetControl = this.panel1;
             // 
+            // chatUC1
+            // 
+            this.chatUC1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chatUC1.Location = new System.Drawing.Point(270, 80);
+            this.chatUC1.Name = "chatUC1";
+            this.chatUC1.Size = new System.Drawing.Size(931, 641);
+            this.chatUC1.TabIndex = 17;
+            this.chatUC1.Load += new System.EventHandler(this.chatUC1_Load);
+            // 
+            // notaTremujoriUC1
+            // 
+            this.notaTremujoriUC1.Location = new System.Drawing.Point(270, 80);
+            this.notaTremujoriUC1.Name = "notaTremujoriUC1";
+            this.notaTremujoriUC1.Size = new System.Drawing.Size(931, 641);
+            this.notaTremujoriUC1.TabIndex = 16;
+            this.notaTremujoriUC1.Load += new System.EventHandler(this.notaTremujoriUC1_Load);
+            // 
             // justifikoMungesatUC1
             // 
             this.justifikoMungesatUC1.Location = new System.Drawing.Point(270, 80);
@@ -382,19 +400,12 @@
             this.mesuesDashboardUC1.Size = new System.Drawing.Size(931, 647);
             this.mesuesDashboardUC1.TabIndex = 12;
             // 
-            // notaTremujoriUC1
-            // 
-            this.notaTremujoriUC1.Location = new System.Drawing.Point(270, 80);
-            this.notaTremujoriUC1.Name = "notaTremujoriUC1";
-            this.notaTremujoriUC1.Size = new System.Drawing.Size(931, 641);
-            this.notaTremujoriUC1.TabIndex = 16;
-            this.notaTremujoriUC1.Load += new System.EventHandler(this.notaTremujoriUC1_Load);
-            // 
             // MesuesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 727);
+            this.Controls.Add(this.chatUC1);
             this.Controls.Add(this.notaTremujoriUC1);
             this.Controls.Add(this.justifikoMungesatUC1);
             this.Controls.Add(this.fletTremujori1);
@@ -449,5 +460,6 @@
         private Klea.JustifikoMungesatUC justifikoMungesatUC1;
         private System.Windows.Forms.Button button1;
         private Luis.NotaTremujoriUC notaTremujoriUC1;
+        private ChatUC chatUC1;
     }
 }

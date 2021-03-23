@@ -253,6 +253,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_paper_plane_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_paper_plane_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_print_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_print_64", resourceCulture);
@@ -266,6 +276,16 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap icons8_save_close_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_save_close_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_send_letter_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_send_letter_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
