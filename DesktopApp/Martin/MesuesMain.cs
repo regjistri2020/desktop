@@ -97,7 +97,7 @@ namespace DesktopApp.Martin
                             mesuesDashboardUC1.KlasatextBox.Text = reader.GetString("Emri") ;
                             justifikoMungesatUC1.textBox4.Text = reader.GetString("Emri");
                             MungesaUC.label4.Text = reader.GetString("Emri");
-                            fletTremujori1.label6.Text = reader.GetString("Emri");
+                            chatUC1.label5.Text = reader.GetString("Emri");
                         }
                     }
                 }
@@ -255,7 +255,8 @@ namespace DesktopApp.Martin
 
         private void ChatButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.webpage.com");
+            chatUC1.Show();
+            chatUC1.BringToFront();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -281,6 +282,11 @@ namespace DesktopApp.Martin
         }
 
         private void notaTremujoriUC1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chatUC1_Load(object sender, EventArgs e)
         {
 
         }

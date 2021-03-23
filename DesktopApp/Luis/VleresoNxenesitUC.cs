@@ -19,7 +19,7 @@ namespace DesktopApp.Luis
         long lastTemaId;
         string firstName, lastName;
         bool temaUvendos;
-        string jepMesimID;
+        string jepMesimID, periudhaID;
 
 
 
@@ -42,9 +42,10 @@ namespace DesktopApp.Luis
             {
                 try
                 {
+                    MessageBox.Show("fsdf");
                     MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria, Data, Ora) VALUES ('" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','"+jepMesimID+"', '" + textBox4.Text + "', '" + comboBox4.Text + "',current_date(), current_time())", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (PeriudhaID, NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria, Data, Ora) VALUES ('" + periudhaID + "','" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','"+jepMesimID+"', '" + textBox4.Text + "', '" + comboBox4.Text + "',current_date(), current_time())", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Nota e nxenesit u vendos!");
                     conn.Close();
@@ -116,8 +117,25 @@ namespace DesktopApp.Luis
 
         private void VleresoNxenesitUC_Load(object sender, EventArgs e)
         {
-            
-         
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM Periudha WHERE Statusi='Aktiv'";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            periudhaID = reader.GetString("PeriudhaID");
+                            textBox5.Text = reader.GetString("Emri");
+                        }
+                    }
+                }
+            }
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -161,6 +179,7 @@ namespace DesktopApp.Luis
                         }
                     }
                 }
+                connection.Close();
             }
 
 
@@ -300,7 +319,7 @@ namespace DesktopApp.Luis
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT Notat.Nota, TematMesimore.TemaMesimore, Notat.Shenime, Notat.Kategoria FROM Notat JOIN Nxenes ON Nxenes.NxenesID=Notat.NxenesID JOIN TematMesimore ON TematMesimore.TemaMesimoreID=Notat.TemaMesimoreID WHERE Nxenes.NxenesID in (SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "') AND TematMesimore.LendaID = '" + CookieClass.LendaID + "'";
+                var query = "SELECT Notat.Nota, TematMesimore.TemaMesimore, Notat.Shenime, Notat.Kategoria FROM Notat JOIN Nxenes ON Nxenes.NxenesID=Notat.NxenesID JOIN TematMesimore ON TematMesimore.TemaMesimoreID=Notat.TemaMesimoreID WHERE Nxenes.NxenesID in (SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "') AND TematMesimore.LendaID = '" + CookieClass.LendaID + "' and Notat.PeriudhaID = '"+periudhaID+"'";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     var ds = new DataSet();
