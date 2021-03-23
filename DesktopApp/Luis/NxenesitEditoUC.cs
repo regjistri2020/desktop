@@ -37,14 +37,21 @@ namespace DesktopApp.Luis
         }
         void dataGridRefresher()
         {
-            conn = new MySqlConnection(connstring);
-            conn.Open();
-            string query = "select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes";
-            da = new MySqlDataAdapter(query, conn);
-            ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            conn.Close();
+            try
+            {
+                conn = new MySqlConnection(connstring);
+                conn.Open();
+                string query = "select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes";
+                da = new MySqlDataAdapter(query, conn);
+                ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -78,12 +85,20 @@ namespace DesktopApp.Luis
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
+            try
+            {
+                conn.Open();
             da = new MySqlDataAdapter("select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes WHERE Emri like '%" + textBox1.Text + "%' ", conn);
             ds = new System.Data.DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -103,11 +118,20 @@ namespace DesktopApp.Luis
 
         public void exportgridtopdf(string filename)
         {
-            conn.Open();
+            try
+            {
+                conn.Open();
             da = new MySqlDataAdapter("SELECT Login.User_Name, Login.Pasword, Nxenes.Emri, Nxenes.Mbiemri FROM Nxenes JOIN Login ON Login.LoginID = Nxenes.LoginID WHERE Nxenes.KlasaID = '"+klasaid+"'", conn);
             dt = new DataTable();
             da.Fill(dt);
             conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
@@ -188,6 +212,7 @@ namespace DesktopApp.Luis
             }
             catch (Exception ex)
             {
+                
             }
             conn.Open();
             da = new MySqlDataAdapter("select NxenesID as 'Nr. Amze', Emri, Mbiemri, EmriBabait as 'Atesia', EmriMamase as 'Emri i nenes', NrTelPrind as 'Nr. Tel Prindi', Ditelindja from Nxenes Where KlasaID = '" + klasaid+"' ", conn);

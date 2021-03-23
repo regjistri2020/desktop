@@ -29,34 +29,41 @@ namespace DesktopApp
         }
         void datarefresher()
         {
-            listBox1.Items.Clear(); 
-            
-            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-            using (var connection = new MySqlConnection(connectionString))
+            listBox1.Items.Clear();
+            try
             {
-                connection.Open();
-                var query = "SELECT * FROM Mesazhe WHERE (Sender = '"+CookieClass.LoginID + "' AND Reciever = '"+nxenesID+ "') OR (Sender = '" + nxenesID + "' AND Reciever = '" + CookieClass.LoginID + "') ";
-                using (var command = new MySqlCommand(query, connection))
+                var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+                using (var connection = new MySqlConnection(connectionString))
                 {
-                    using (var reader = command.ExecuteReader())
+                    connection.Open();
+                    var query = "SELECT * FROM Mesazhe WHERE (Sender = '" + CookieClass.LoginID + "' AND Reciever = '" + nxenesID + "') OR (Sender = '" + nxenesID + "' AND Reciever = '" + CookieClass.LoginID + "') ";
+                    using (var command = new MySqlCommand(query, connection))
                     {
-                        //Iterate through the rows and add it to the combobox's items
-                        while (reader.Read())
+                        using (var reader = command.ExecuteReader())
                         {
-                            
-                            if(reader.GetString("Sender") == CookieClass.LoginID)
+                            //Iterate through the rows and add it to the combobox's items
+                            while (reader.Read())
                             {
-                                listBox1.Items.Add("Une: "+ reader.GetString("Mesazhi"));
-                            }
-                            else
-                            {
-                                listBox1.Items.Add("Prindi i nxenesit: " + reader.GetString("Mesazhi"));
+
+                                if (reader.GetString("Sender") == CookieClass.LoginID)
+                                {
+                                    listBox1.Items.Add("Une: " + reader.GetString("Mesazhi"));
+                                }
+                                else
+                                {
+                                    listBox1.Items.Add("Prindi i nxenesit: " + reader.GetString("Mesazhi"));
+                                }
                             }
                         }
                     }
+                    connection.Close();
                 }
-                connection.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -82,28 +89,35 @@ namespace DesktopApp
         private void comboBox1_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-            using (var connection = new MySqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                var query = "SELECT KlasaID FROM Klasa where Emri = '"+label5.Text+"'";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        //Iterate through the rows and add it to the combobox's items
-                        while (reader.Read())
-                        {
-                            klasaID = reader.GetString("KlasaID");
-                        }
-                    }
-                }
-                connection.Close();
+                            using (var connection = new MySqlConnection(connectionString))
+                            {
+                                connection.Open();
+                                var query = "SELECT KlasaID FROM Klasa where Emri = '"+label5.Text+"'";
+                                using (var command = new MySqlCommand(query, connection))
+                                {
+                                    using (var reader = command.ExecuteReader())
+                                    {
+                                        //Iterate through the rows and add it to the combobox's items
+                                        while (reader.Read())
+                                        {
+                                            klasaID = reader.GetString("KlasaID");
+                                        }
+                                    }
+                                }
+                                connection.Close();
+                            }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-
-            using (var connection = new MySqlConnection(connectionString))
+            try
+            {
+                using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
                 var query = "SELECT * FROM Nxenes WHERE KlasaID = '" + klasaID + "'";
@@ -120,6 +134,15 @@ namespace DesktopApp
                 }
                 connection.Close();
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

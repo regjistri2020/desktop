@@ -14,7 +14,7 @@ namespace DesktopApp.Luis
     public partial class NotaTremujoriUC : UserControl
     {
         DataTable dt;
-        string lendaID, klasaID;
+        string lendaID, klasaID, periudhaID;
         public NotaTremujoriUC()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace DesktopApp.Luis
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),2) as Mesatarja, a.kategoria from Notat a, Nxenes b, Jep_Mesim c where (a.NxenesID=b.NxenesID and  b.KlasaID=c.KlasaID) and a.PeriudhaID = 9 and b.KlasaID =  2 and c.LendaID = 7 group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a ) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
+                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),2) as Mesatarja, a.kategoria from Notat a, Nxenes b, Jep_Mesim c where (a.NxenesID=b.NxenesID and  b.KlasaID=c.KlasaID) and a.PeriudhaID = '"+periudhaID+"' and b.KlasaID =  '"+klasaID+"' and c.LendaID = '"+lendaID+"' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a ) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     var ds = new DataSet();
@@ -155,10 +155,12 @@ namespace DesktopApp.Luis
             {
                 if (row["Emri"].ToString() == comboBox2.Text)
                 {
+                    periudhaID = row["PeriudhaID"].ToString();
                     if (row["Statusi"].ToString() == "Mbyllur")
                     {
                         label7.Text = "Mbyllur";
                         pictureBox2.Hide();
+                        dataGridView2.Enabled = false;
 
                         //notat e tremujorit do te merren nga tabela NotaTremujori
                         //datagridView nuk do mund te editohet
@@ -190,7 +192,7 @@ namespace DesktopApp.Luis
                         var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
                         MySqlConnection conn = new MySqlConnection(connectionString);
                         conn.Open();
-                        string AdmLog_query = "SELECT Count(*) FROM NotaTremujor WHERE Periudha = '"+row["PeriudhaID"]+"'";
+                        string AdmLog_query = "SELECT Count(*) FROM NotaTremujor WHERE Periudha = '"+row["PeriudhaID"]+"' and LendaID='"+lendaID+"'";
                         MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
                         cmd.ExecuteReader();
                         conn.Close();
@@ -201,6 +203,7 @@ namespace DesktopApp.Luis
                         {
                             label7.Text = "Mbyllur";
                             pictureBox2.Hide();
+                            dataGridView2.Enabled = false;
 
                             //notat e tremujorit do te merren nga tabela NotaTremujori
                             //datagridView nuk do mund te editohet
@@ -223,12 +226,13 @@ namespace DesktopApp.Luis
                         {
                             label7.Text = "Mbyll";
                             pictureBox2.Show();
+                            dataGridView2.Enabled = true;
 
 
                             using (var connection = new MySqlConnection(connectionString))
                             {
                                 connection.Open();
-                                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),2) as Mesatarja, a.kategoria from Notat a, Nxenes b, Jep_Mesim c where (a.NxenesID=b.NxenesID and  b.KlasaID=c.KlasaID) and a.PeriudhaID = '" + row["PeriudhaID"].ToString() + "' and b.KlasaID =  '" + klasaID + "' and c.LendaID = '" + lendaID + "' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a ) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
+                                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),0) as Mesatarja, a.kategoria from Notat a, Nxenes b, Jep_Mesim c where (a.NxenesID=b.NxenesID and  b.KlasaID=c.KlasaID) and a.PeriudhaID = '" + row["PeriudhaID"].ToString() + "' and b.KlasaID =  '" + klasaID + "' and c.LendaID = '" + lendaID + "' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a ) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
                                 using (var da = new MySqlDataAdapter(query, connection))
                                 {
                                     var ds = new DataSet();
@@ -281,6 +285,32 @@ namespace DesktopApp.Luis
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                try
+                {
+                    string StrQuery = "INSERT INTO NotaTremujor(Periudha, MesuesID, LendaID, KlasaID, NxenesID, NotaGoje, NotaShkrim, NotaPortofol) VALUES ('" + periudhaID + "','" + CookieClass.MesuesID + "','" + lendaID + "','" + klasaID + "','" + row.Cells[0].Value.ToString() + "','" + row.Cells[3].Value.ToString() + "','" + row.Cells[4].Value.ToString() + "','" + row.Cells[5].Value.ToString() + "')";
+
+                    using (MySqlConnection conn = new MySqlConnection(connectionString))
+                    {
+                        using (MySqlCommand comm = new MySqlCommand(StrQuery, conn))
+                        {
+                            conn.Open();
+                            comm.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            MessageBox.Show("Tremujori per kete lende u mbyll me sukses. Ju nuk mund ti mbishkruani me notat e vendosura!");
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

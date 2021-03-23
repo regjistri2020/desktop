@@ -108,6 +108,7 @@ namespace DesktopApp.Klea
             }
             klasaTxb.Text = null;
             comboBox1.Text = null;
+            dataGridRefresher1();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -276,6 +277,7 @@ namespace DesktopApp.Klea
             }
             textBox1.Text = null;
             comboBox2.Text = null;
+            dataGridRefresher2();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

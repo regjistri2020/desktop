@@ -63,9 +63,8 @@ namespace DesktopApp.Martin
                         {
                             label2.Text = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
                             mID = reader.GetString("MesuesID");
-
+                            CookieClass.MesuesID = mID;
                             mesuesDashboardUC1.MesuestextBox.Text= reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
-                            mID = reader.GetString("MesuesID");
                         }
                     }
                 }

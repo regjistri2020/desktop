@@ -70,7 +70,8 @@ namespace DesktopApp.Luis
             klasaCombo.Text = "";
             nrtel.Text = "";
             emerBabai.Text = "";
-            emriNenes.Text = ""; 
+            emriNenes.Text = "";
+            vendlindja.Text = "";
         }
 
         private void NxenesitRregjistro_Load(object sender, EventArgs e)
@@ -111,6 +112,7 @@ namespace DesktopApp.Luis
 
         private void klasaCombo_Click(object sender, EventArgs e)
         {
+            klasaCombo.Items.Clear();
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString))
             {
