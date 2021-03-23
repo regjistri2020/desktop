@@ -32,7 +32,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tittlelabel = new System.Windows.Forms.Label();
             this.Datapanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Mungesa_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.KalueshmeriaMtextBox = new System.Windows.Forms.TextBox();
@@ -59,6 +61,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Datapanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -102,7 +105,9 @@
             // 
             // Datapanel
             // 
-            this.Datapanel.Controls.Add(this.textBox1);
+            this.Datapanel.Controls.Add(this.label7);
+            this.Datapanel.Controls.Add(this.dataGridView1);
+            this.Datapanel.Controls.Add(this.Mungesa_textBox);
             this.Datapanel.Controls.Add(this.label6);
             this.Datapanel.Controls.Add(this.pictureBox8);
             this.Datapanel.Controls.Add(this.KalueshmeriaMtextBox);
@@ -133,24 +138,48 @@
             this.Datapanel.TabIndex = 2;
             this.Datapanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Datapanel_Paint);
             // 
-            // textBox1
+            // label7
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(675, 506);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 31);
-            this.textBox1.TabIndex = 29;
-            this.textBox1.Text = "5";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(772, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 29);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Njoftime";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(506, 320);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(387, 241);
+            this.dataGridView1.TabIndex = 30;
+            // 
+            // Mungesa_textBox
+            // 
+            this.Mungesa_textBox.BackColor = System.Drawing.SystemColors.Control;
+            this.Mungesa_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Mungesa_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mungesa_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Mungesa_textBox.Location = new System.Drawing.Point(113, 503);
+            this.Mungesa_textBox.Name = "Mungesa_textBox";
+            this.Mungesa_textBox.Size = new System.Drawing.Size(100, 31);
+            this.Mungesa_textBox.TabIndex = 29;
+            this.Mungesa_textBox.Text = "---";
+            this.Mungesa_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(666, 467);
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(106, 467);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 29);
             this.label6.TabIndex = 28;
@@ -159,9 +188,9 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::DesktopApp.Properties.Resources.id_not_verified_40px;
-            this.pictureBox8.Location = new System.Drawing.Point(558, 468);
+            this.pictureBox8.Location = new System.Drawing.Point(35, 462);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(74, 75);
+            this.pictureBox8.Size = new System.Drawing.Size(71, 70);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 27;
             this.pictureBox8.TabStop = false;
@@ -172,7 +201,7 @@
             this.KalueshmeriaMtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KalueshmeriaMtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KalueshmeriaMtextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.KalueshmeriaMtextBox.Location = new System.Drawing.Point(675, 382);
+            this.KalueshmeriaMtextBox.Location = new System.Drawing.Point(355, 501);
             this.KalueshmeriaMtextBox.Name = "KalueshmeriaMtextBox";
             this.KalueshmeriaMtextBox.Size = new System.Drawing.Size(100, 31);
             this.KalueshmeriaMtextBox.TabIndex = 26;
@@ -183,7 +212,7 @@
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(666, 343);
+            this.label.Location = new System.Drawing.Point(323, 469);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(173, 29);
             this.label.TabIndex = 25;
@@ -192,9 +221,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
-            this.pictureBox7.Location = new System.Drawing.Point(544, 339);
+            this.pictureBox7.Location = new System.Drawing.Point(259, 467);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(92, 91);
+            this.pictureBox7.Size = new System.Drawing.Size(64, 72);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 24;
             this.pictureBox7.TabStop = false;
@@ -205,18 +234,18 @@
             this.NxenestextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NxenestextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NxenestextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.NxenestextBox.Location = new System.Drawing.Point(235, 521);
+            this.NxenestextBox.Location = new System.Drawing.Point(360, 361);
             this.NxenestextBox.Name = "NxenestextBox";
             this.NxenestextBox.Size = new System.Drawing.Size(100, 31);
             this.NxenestextBox.TabIndex = 23;
-            this.NxenestextBox.Text = "26";
+            this.NxenestextBox.Text = "---";
             this.NxenestextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(234, 479);
+            this.label5.Location = new System.Drawing.Point(359, 329);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 29);
             this.label5.TabIndex = 22;
@@ -225,9 +254,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DesktopApp.Properties.Resources.businessman_40px;
-            this.pictureBox6.Location = new System.Drawing.Point(121, 479);
+            this.pictureBox6.Location = new System.Drawing.Point(274, 329);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(86, 77);
+            this.pictureBox6.Size = new System.Drawing.Size(76, 64);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 21;
             this.pictureBox6.TabStop = false;
@@ -238,18 +267,18 @@
             this.NxenesetextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NxenesetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NxenesetextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.NxenesetextBox.Location = new System.Drawing.Point(235, 388);
+            this.NxenesetextBox.Location = new System.Drawing.Point(117, 362);
             this.NxenesetextBox.Name = "NxenesetextBox";
             this.NxenesetextBox.Size = new System.Drawing.Size(100, 31);
             this.NxenesetextBox.TabIndex = 20;
-            this.NxenesetextBox.Text = "5";
+            this.NxenesetextBox.Text = "---";
             this.NxenesetextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(234, 349);
+            this.label4.Location = new System.Drawing.Point(116, 329);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 29);
             this.label4.TabIndex = 19;
@@ -258,9 +287,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::DesktopApp.Properties.Resources.person_female_40px;
-            this.pictureBox5.Location = new System.Drawing.Point(121, 349);
+            this.pictureBox5.Location = new System.Drawing.Point(34, 329);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(86, 77);
+            this.pictureBox5.Size = new System.Drawing.Size(76, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -296,11 +325,11 @@
             this.KlasatextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KlasatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KlasatextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.KlasatextBox.Location = new System.Drawing.Point(675, 181);
+            this.KlasatextBox.Location = new System.Drawing.Point(679, 158);
             this.KlasatextBox.Name = "KlasatextBox";
             this.KlasatextBox.Size = new System.Drawing.Size(134, 24);
             this.KlasatextBox.TabIndex = 15;
-            this.KlasatextBox.Text = "13-A";
+            this.KlasatextBox.Text = "---";
             this.KlasatextBox.TextChanged += new System.EventHandler(this.KlasatextBox_TextChanged);
             // 
             // MesuestextBox
@@ -309,17 +338,17 @@
             this.MesuestextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MesuestextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MesuestextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MesuestextBox.Location = new System.Drawing.Point(210, 173);
+            this.MesuestextBox.Location = new System.Drawing.Point(225, 171);
             this.MesuestextBox.Name = "MesuestextBox";
             this.MesuestextBox.Size = new System.Drawing.Size(183, 22);
             this.MesuestextBox.TabIndex = 14;
-            this.MesuestextBox.Text = "Dallëndyshe Mata";
+            this.MesuestextBox.Text = "---";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(670, 142);
+            this.label3.Location = new System.Drawing.Point(674, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 29);
             this.label3.TabIndex = 13;
@@ -329,7 +358,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(203, 133);
+            this.label1.Location = new System.Drawing.Point(220, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 29);
             this.label1.TabIndex = 12;
@@ -338,9 +367,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DesktopApp.Properties.Resources.class_40px;
-            this.pictureBox4.Location = new System.Drawing.Point(564, 132);
+            this.pictureBox4.Location = new System.Drawing.Point(551, 110);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 91);
+            this.pictureBox4.Size = new System.Drawing.Size(110, 86);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
@@ -348,9 +377,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.teacher_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 120);
+            this.pictureBox2.Location = new System.Drawing.Point(101, 109);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 105);
+            this.pictureBox2.Size = new System.Drawing.Size(106, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -358,7 +387,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
-            this.panel3.Location = new System.Drawing.Point(34, 303);
+            this.panel3.Location = new System.Drawing.Point(34, 253);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 5);
             this.panel3.TabIndex = 9;
@@ -391,6 +420,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // MesuesDashboardUC
             // 
@@ -406,6 +436,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Datapanel.ResumeLayout(false);
             this.Datapanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -439,7 +470,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox8;
         public System.Windows.Forms.TextBox MesuestextBox;
@@ -447,5 +477,8 @@
         public System.Windows.Forms.TextBox KlasatextBox;
         public System.Windows.Forms.TextBox NxenesetextBox;
         public System.Windows.Forms.TextBox NxenestextBox;
+        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.TextBox Mungesa_textBox;
     }
 }
