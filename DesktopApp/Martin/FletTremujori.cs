@@ -19,7 +19,8 @@ namespace DesktopApp.Martin
 {
     public partial class FletTremujori : UserControl
     {
-
+        string NR_amze;
+        string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
         string firstName, lastName;
         string loginID = CookieClass.LoginID;
 
@@ -40,7 +41,7 @@ namespace DesktopApp.Martin
             PdfPTable pdftable = new PdfPTable(dgw.Columns.Count);
             pdftable.DefaultCell.PaddingLeft = 5;
             pdftable.DefaultCell.PaddingRight = 5;
-            pdftable.WidthPercentage = 90;
+            pdftable.WidthPercentage = 75;
             pdftable.HorizontalAlignment = Element.ALIGN_CENTER;
             pdftable.DefaultCell.BorderWidth = 1;
 
@@ -64,6 +65,30 @@ namespace DesktopApp.Martin
                 }
             }
 
+            //MARRJA E NR TE AMZES SE NXENESIT
+            string fullName = NxenescomboBox.Text;
+            var names = fullName.Split(' ');
+            firstName = names[0];
+            lastName = names[1];
+
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "'; ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            NR_amze = reader.GetString("NxenesID");
+                        }
+                    }
+                }
+            }
+            
 
             var savefiledialoge = new SaveFileDialog();
             savefiledialoge.FileName = filename;
@@ -76,20 +101,29 @@ namespace DesktopApp.Martin
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
-                    Paragraph paragraph = new Paragraph("                                                FLETË INFORMUESE TREMUJORI PËR PRINDIN");
+
+                    iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD, new iTextSharp.text.BaseColor(0, 0, 0));
+                    iTextSharp.text.Font myFont1 = FontFactory.GetFont("Arial", 12, iTextSharp.text.Font.BOLD, new iTextSharp.text.BaseColor(0, 0, 0));
+
+                    Paragraph paragraph10 = new Paragraph(" ");
+                    Paragraph paragraph11 = new Paragraph(" ");
+                    Paragraph paragraph = new Paragraph("                         FLETË INFORMUESE TREMUJORI PËR PRINDIN", myFont);
+                    Paragraph paragraph12 = new Paragraph(" ");
                     Paragraph paragraph2 = new Paragraph(" ");
 
                     Paragraph paragraph3 = new Paragraph("                Shkolla për TIK “Hermann Gmeiner”                                      Viti shkollor: 2020-2021  ");
-                    Paragraph paragraph4 = new Paragraph("                Nr i amzës: 213 ");
-                    Paragraph paragraph5 = new Paragraph("                Data: 10.12.2020");
+                    Paragraph paragraph4 = new Paragraph("                Nr i amzës: " + NR_amze + " "); 
+                    Paragraph paragraph5 = new Paragraph("                Data: "+ date +" ");
                     Paragraph paragraph6 = new Paragraph(" ");
 
-                    Paragraph paragraph7 = new Paragraph("                                                                           Progresi i nxënësit ");
-                    Paragraph paragraph8 = new Paragraph("                                                                                 Martin Koçi ");
+                    Paragraph paragraph7 = new Paragraph("                                                                         Progresi i nxënësit ", myFont1);
+                    Paragraph paragraph8 = new Paragraph("                                                                               "+ NxenescomboBox.Text + " ");
                     Paragraph paragraph9 = new Paragraph(" ");
 
-
+                    pdfdoc.Add(paragraph10);
+                    pdfdoc.Add(paragraph11);
                     pdfdoc.Add(paragraph);
+                    pdfdoc.Add(paragraph12);
                     pdfdoc.Add(paragraph2);
                     pdfdoc.Add(paragraph3);
                     pdfdoc.Add(paragraph4);
@@ -108,7 +142,7 @@ namespace DesktopApp.Martin
 
         private void button2_Click(object sender, EventArgs e)
         {
-            exportgridtopdf(dataGridView2, "Notat e tremujorit ");
+            exportgridtopdf(dataGridView2, "Notat e tremujorit të nxënësit " + NxenescomboBox.Text + " ");
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,7 +153,7 @@ namespace DesktopApp.Martin
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();  
-                 var query = "SELECT Nxenes.Emri, Nxenes.Mbiemri, NotaTremujor.NotaGoje, NotaTremujor.NotaShkrim, NotaTremujor.NotaPortofol FROM Nxenes JOIN NotaTremujor ON Nxenes.NxenesID = NotaTremujor.NxenesID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '"+ label6.Text + "') AND NotaTremujor.LendaID IN (SELECT LendaID FROM Lendet WHERE EmerLende = '"+ comboBox2.Text +"' ) ; ";
+                 var query = "SELECT Nxenes.Emri, Nxenes.Mbiemri, NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM Nxenes JOIN NotaTremujor ON Nxenes.NxenesID = NotaTremujor.NxenesID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "') AND NotaTremujor.LendaID IN (SELECT LendaID FROM Lendet WHERE EmerLende = '"+ comboBox2.Text +"' ) ; ";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();
@@ -139,7 +173,7 @@ namespace DesktopApp.Martin
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT Nxenes.Emri, Nxenes.Mbiemri, NotaTremujor.NotaGoje, NotaTremujor.NotaShkrim, NotaTremujor.NotaPortofol FROM Nxenes JOIN NotaTremujor ON Nxenes.NxenesID = NotaTremujor.NxenesID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "'); ";
+                var query = "SELECT Nxenes.Emri, Nxenes.Mbiemri, NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM Nxenes JOIN NotaTremujor ON Nxenes.NxenesID = NotaTremujor.NxenesID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "'); ";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();
@@ -153,7 +187,7 @@ namespace DesktopApp.Martin
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT Lendet.EmerLende, NotaTremujor.NotaGoje, NotaTremujor.NotaShkrim, NotaTremujor.NotaPortofol FROM NotaTremujor JOIN Lendet ON NotaTremujor.LendaID = Lendet.LendaID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "'); ";
+                var query = "SELECT Lendet.EmerLende AS 'Lënda', NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM NotaTremujor JOIN Lendet ON NotaTremujor.LendaID = Lendet.LendaID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "'); ";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();
@@ -216,7 +250,7 @@ namespace DesktopApp.Martin
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT Lendet.EmerLende, NotaTremujor.NotaGoje, NotaTremujor.NotaShkrim, NotaTremujor.NotaPortofol FROM NotaTremujor JOIN Lendet ON NotaTremujor.LendaID = Lendet.LendaID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '"+ label6.Text + "') AND NotaTremujor.NxenesID IN(SELECT NxenesID FROM Nxenes WHERE Emri = '"+ firstName + "' AND Mbiemri = '" + lastName + "'); ";
+                var query = "SELECT Lendet.EmerLende AS 'Lënda', NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM NotaTremujor JOIN Lendet ON NotaTremujor.LendaID = Lendet.LendaID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "') AND NotaTremujor.NxenesID IN(SELECT NxenesID FROM Nxenes WHERE Emri = '"+ firstName + "' AND Mbiemri = '" + lastName + "'); ";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();
