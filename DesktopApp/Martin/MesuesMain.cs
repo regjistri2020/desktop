@@ -97,6 +97,7 @@ namespace DesktopApp.Martin
                             mesuesDashboardUC1.KlasatextBox.Text = reader.GetString("Emri") ;
                             justifikoMungesatUC1.textBox4.Text = reader.GetString("Emri");
                             MungesaUC.label4.Text = reader.GetString("Emri");
+                            chatUC1.label5.Text = reader.GetString("Emri");
                         }
                     }
                 }

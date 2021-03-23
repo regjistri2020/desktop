@@ -146,7 +146,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox3.Location = new System.Drawing.Point(675, 455);
+            this.textBox3.Location = new System.Drawing.Point(675, 457);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 31);
             this.textBox3.TabIndex = 26;
@@ -157,7 +157,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(666, 416);
+            this.label6.Location = new System.Drawing.Point(666, 418);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 32);
             this.label6.TabIndex = 25;
@@ -166,7 +166,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DesktopApp.Properties.Resources.report_card_80px;
-            this.pictureBox7.Location = new System.Drawing.Point(544, 412);
+            this.pictureBox7.Location = new System.Drawing.Point(544, 414);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(92, 91);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -183,7 +183,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 31);
             this.textBox2.TabIndex = 23;
-            this.textBox2.Text = "240";
+            this.textBox2.Text = "---";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -216,7 +216,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 31);
             this.textBox1.TabIndex = 20;
-            this.textBox1.Text = "65";
+            this.textBox1.Text = "---";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -273,7 +273,7 @@
             this.NxenestextBox.Name = "NxenestextBox";
             this.NxenestextBox.Size = new System.Drawing.Size(100, 31);
             this.NxenestextBox.TabIndex = 15;
-            this.NxenestextBox.Text = "305";
+            this.NxenestextBox.Text = "---";
             this.NxenestextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MesuestextBox
@@ -286,7 +286,7 @@
             this.MesuestextBox.Name = "MesuestextBox";
             this.MesuestextBox.Size = new System.Drawing.Size(100, 31);
             this.MesuestextBox.TabIndex = 14;
-            this.MesuestextBox.Text = "21";
+            this.MesuestextBox.Text = "---";
             this.MesuestextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
