@@ -121,7 +121,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label8.Location = new System.Drawing.Point(768, 122);
+            this.label8.Location = new System.Drawing.Point(758, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 34);
             this.label8.TabIndex = 100;
@@ -253,7 +253,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(853, 123);
+            this.button2.Location = new System.Drawing.Point(850, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(36, 33);
             this.button2.TabIndex = 83;

@@ -41,9 +41,11 @@ namespace DesktopApp.Martin
             PdfPTable pdftable = new PdfPTable(dgw.Columns.Count);
             pdftable.DefaultCell.PaddingLeft = 5;
             pdftable.DefaultCell.PaddingRight = 5;
+            pdftable.DefaultCell.FixedHeight = 20;
             pdftable.WidthPercentage = 75;
             pdftable.HorizontalAlignment = Element.ALIGN_CENTER;
-            pdftable.DefaultCell.BorderWidth = 1;
+            //pdftable.DefaultCell.BorderWidth = 1;
+
 
 
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
@@ -51,6 +53,7 @@ namespace DesktopApp.Martin
             //add header
             foreach (DataGridViewColumn column in dgw.Columns)
             {
+                
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //potential error
                 pdftable.AddCell(cell);
@@ -74,6 +77,7 @@ namespace DesktopApp.Martin
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString))
             {
+                
                 connection.Open();
                 var query = "SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "'; ";
                 using (var command = new MySqlCommand(query, connection))
@@ -112,7 +116,7 @@ namespace DesktopApp.Martin
                     Paragraph paragraph2 = new Paragraph(" ");
 
                     Paragraph paragraph3 = new Paragraph("                Shkolla për TIK “Hermann Gmeiner”                                      Viti shkollor: 2020-2021  ");
-                    Paragraph paragraph4 = new Paragraph("                Nr i amzës: " + NR_amze + " "); 
+                    Paragraph paragraph4 = new Paragraph("                Nr i amzës: " + NR_amze ,myFont1); 
                     Paragraph paragraph5 = new Paragraph("                Data: "+ date +" ");
                     Paragraph paragraph6 = new Paragraph(" ");
 
@@ -167,6 +171,7 @@ namespace DesktopApp.Martin
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
             //SHFAQJA E TE DHENAVE NE DATAGRIDVIEW1 KUR KLIKOHET BUTONI RIFRESKONI
