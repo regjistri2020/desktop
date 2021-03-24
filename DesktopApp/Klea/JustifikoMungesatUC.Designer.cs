@@ -44,13 +44,19 @@
             this.Mbiemri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Te_arsyetuara = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Te_paarsyetuara = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,9 +117,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(190)))), ((int)(((byte)(212)))));
+            this.panel3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel3.Location = new System.Drawing.Point(50, 114);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(855, 5);
+            this.panel3.Size = new System.Drawing.Size(855, 3);
             this.panel3.TabIndex = 85;
             // 
             // label8
@@ -121,7 +128,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label8.Location = new System.Drawing.Point(45, 192);
+            this.label8.Location = new System.Drawing.Point(45, 184);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 25);
             this.label8.TabIndex = 88;
@@ -131,7 +138,7 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(192, 192);
+            this.comboBox3.Location = new System.Drawing.Point(192, 184);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(182, 29);
             this.comboBox3.TabIndex = 87;
@@ -143,7 +150,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(47, 144);
+            this.label7.Location = new System.Drawing.Point(47, 136);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 25);
             this.label7.TabIndex = 86;
@@ -154,7 +161,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(552, 144);
+            this.label3.Location = new System.Drawing.Point(552, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 25);
             this.label3.TabIndex = 89;
@@ -164,7 +171,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 254);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 231);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(453, 303);
@@ -181,7 +188,7 @@
             this.Mbiemri,
             this.Te_arsyetuara,
             this.Te_paarsyetuara});
-            this.dataGridView2.Location = new System.Drawing.Point(557, 254);
+            this.dataGridView2.Location = new System.Drawing.Point(557, 231);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.Size = new System.Drawing.Size(348, 303);
@@ -211,24 +218,14 @@
             this.Te_paarsyetuara.MinimumWidth = 8;
             this.Te_paarsyetuara.Name = "Te_paarsyetuara";
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(744, 192);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 26);
-            this.textBox1.TabIndex = 92;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
-            this.label4.Location = new System.Drawing.Point(553, 195);
+            this.label4.Location = new System.Drawing.Point(554, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 23);
+            this.label4.Size = new System.Drawing.Size(158, 18);
             this.label4.TabIndex = 93;
             this.label4.Text = "Mungesa Gjithsej:";
             // 
@@ -238,7 +235,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(389, 564);
+            this.button2.Location = new System.Drawing.Point(388, 556);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 45);
             this.button2.TabIndex = 94;
@@ -246,13 +243,88 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label5.Location = new System.Drawing.Point(743, 546);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 26);
+            this.label5.TabIndex = 95;
+            this.label5.Text = "Gjithsej të \r\narsyetuara";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label6.Location = new System.Drawing.Point(822, 546);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 26);
+            this.label6.TabIndex = 96;
+            this.label6.Text = "Gjithsej të \r\npaarsyetuara";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label9.Location = new System.Drawing.Point(762, 583);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 18);
+            this.label9.TabIndex = 97;
+            this.label9.Text = "70";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label10.Location = new System.Drawing.Point(845, 583);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(30, 18);
+            this.label10.TabIndex = 98;
+            this.label10.Text = "70";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label11.Location = new System.Drawing.Point(718, 189);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 18);
+            this.label11.TabIndex = 99;
+            this.label11.Text = "140";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DesktopApp.Properties.Resources.restart_48px;
+            this.pictureBox6.Location = new System.Drawing.Point(874, 133);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 104;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // JustifikoMungesatUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -271,6 +343,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,8 +367,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Mbiemri;
         private System.Windows.Forms.DataGridViewTextBoxColumn Te_arsyetuara;
         private System.Windows.Forms.DataGridViewTextBoxColumn Te_paarsyetuara;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

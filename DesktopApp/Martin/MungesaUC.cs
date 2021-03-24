@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
@@ -47,7 +46,7 @@ namespace DesktopApp.Martin
                         var src = DateTime.Now;
                         var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, 0);
 
-                        var query = " Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT, KlasaID) VALUES ('" + tradeID + "', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "', '" + CookieClass.KlasaID.ToString() + "')";
+                        var query = "Insert Into Mungesat ( NxenesID, LendaID, MesuesID, TemaID, DATAT, KlasaID) VALUES ('" + tradeID + "', '" + CookieClass.LendaID + "', '" + CookieClass.MesuesID.ToString() + "', '" + CookieClass.TemaID.ToString() + "', '" + hm.ToString() + "', '" + CookieClass.KlasaID.ToString() + "')";
 
                         MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
                         conn.Open();
@@ -57,8 +56,6 @@ namespace DesktopApp.Martin
 
                         try
                         {
-
-
                             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
                             using (var connection = new MySqlConnection(connectionString))
                             {
@@ -80,7 +77,7 @@ namespace DesktopApp.Martin
                             }
 
                             var accountSid = "AC3648693fb0ccb73d81ffbf42186b6248";
-                            var authToken = "3537cdd3f61f4ffcfb762ed1a0130659";
+                            var authToken = "d4eb7ec5e5f06ff64a1bdd129ed26c40";
                             TwilioClient.Init(accountSid, authToken);
 
                             var messageOptions = new CreateMessageOptions(

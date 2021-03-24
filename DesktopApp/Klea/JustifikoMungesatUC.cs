@@ -24,11 +24,66 @@ namespace DesktopApp.Klea
 
         private void JustifikoMungesatUC_Load(object sender, EventArgs e)
         {
-
+            Refresh();
         }
+
+        void Refresh()
+        {
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Count(*) FROM gBh6InugME.Mungesat where Justifikuar is null and KlasaID in (SELECT KlasaID FROM Klasa WHERE Emri = '"+textBox4.Text+"');";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            label10.Text = reader.GetString("Count(*)");
+                        }
+                    }
+                }
+            }
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Count(*) FROM gBh6InugME.Mungesat where KlasaID in (SELECT KlasaID FROM Klasa WHERE Emri = '" + textBox4.Text + "');";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            label11.Text = reader.GetString("Count(*)");
+                        }
+                    }
+                }
+            }
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Count(*) FROM gBh6InugME.Mungesat where Justifikuar = 'po' and KlasaID in (SELECT KlasaID FROM Klasa WHERE Emri = '" + textBox4.Text + "');";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            label9.Text = reader.GetString("Count(*)");
+                        }
+                    }
+                }
+            }
+        }
+
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             string fullName = comboBox3.Text;
             comboBox3.Text = fullName;
             var names = fullName.Split(' ');
@@ -75,6 +130,9 @@ namespace DesktopApp.Klea
 
         private void comboBox3_Click(object sender, EventArgs e)
         {
+
+
+            comboBox3.Items.Clear();
             try
             {
                 var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
@@ -125,6 +183,7 @@ namespace DesktopApp.Klea
                     MessageBox.Show(ex.Message);
                 }
                 DataGridRefresher();
+                Refresh();
 
             }
             else MessageBox.Show("Së pari ju duhet të zgjidhni një mungesë nga tabela dhe më pas ta justifikoni atë duke klikuar butoin 'Justifiko'");
@@ -141,6 +200,16 @@ namespace DesktopApp.Klea
         {
             i = 1;
             mID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }
