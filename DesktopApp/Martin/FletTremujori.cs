@@ -241,8 +241,11 @@ namespace DesktopApp.Martin
             }
         }
 
-        
-        
+        private void button3_Click(object sender, EventArgs e)//RUAN NOTAT E TREMUJORIT PER TE GJITHE NXENESIT
+        {
+            
+        }
+
         private void NxenescomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MBUSHJA E DATAGRIDVIEW ME NOTAT E NXENESIT TE PERCAKTUAR
@@ -265,5 +268,8 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
         }
+
+        
+
     }
 }
