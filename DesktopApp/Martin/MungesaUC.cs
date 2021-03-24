@@ -19,7 +19,7 @@ namespace DesktopApp.Martin
     public partial class MungesaUC : UserControl
     {
 
-        string nxenesID;
+        string nxenesID, nrTel, Emri;
 
         DataTable table = new DataTable();
 
@@ -54,6 +54,49 @@ namespace DesktopApp.Martin
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Mungesat u vendosen me sukses!");
+
+                        try
+                        {
+
+
+                            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+                            using (var connection = new MySqlConnection(connectionString))
+                            {
+                                connection.Open();
+                                var query2 = "SELECT * FROM Nxenes where NxenesID = '"+tradeID+"'";
+                                using (var command = new MySqlCommand(query, connection))
+                                {
+                                    using (var reader = command.ExecuteReader())
+                                    {
+                                        //Iterate through the rows and add it to the combobox's items
+                                        while (reader.Read())
+                                        {
+                                            nrTel = reader.GetString("NrTelPrind");
+                                            Emri = reader.GetString("Emri") +" "+ reader.GetString("Mbiemri");
+                                        }
+
+                                    }
+                                }
+                            }
+
+                            var accountSid = "AC3648693fb0ccb73d81ffbf42186b6248";
+                            var authToken = "3537cdd3f61f4ffcfb762ed1a0130659";
+                            TwilioClient.Init(accountSid, authToken);
+
+                            var messageOptions = new CreateMessageOptions(
+                                new PhoneNumber("+355686888201"));
+                            messageOptions.MessagingServiceSid = "MGc2b6f0ceb144dbb8149397ffe352017c";
+                            messageOptions.Body = "Pershendetje! Ky eshte nje mesazh i automatizuar nga platforma e nxenesit. Nxenesi "+Emri+" sot ka munguar ne lenden Matematike";
+
+                            var message = MessageResource.Create(messageOptions);
+                            Console.WriteLine(message.Body);
+                            MessageBox.Show("Prinderit u njoftuan me sms");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
 
@@ -64,17 +107,7 @@ namespace DesktopApp.Martin
             }
 
 
-            var accountSid = "AC3648693fb0ccb73d81ffbf42186b6248";
-            var authToken = "dd6ae58115bf55404da4e875ec0f66c8";
-            TwilioClient.Init(accountSid, authToken);
-
-            var messageOptions = new CreateMessageOptions(
-                new PhoneNumber("+355686888201"));
-            messageOptions.MessagingServiceSid = "MGc2b6f0ceb144dbb8149397ffe352017c";
-            messageOptions.Body = "Ky eshte nje mesazh i automatizuar nga platforma e nxenesit.al";
-
-            //var message = MessageResource.Create(messageOptions);
-            //Console.WriteLine(message.Body);
+           
         }
 
         private void KerkonxComboBox_SelectedIndexChanged(object sender, EventArgs e)

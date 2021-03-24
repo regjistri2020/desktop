@@ -44,7 +44,7 @@ namespace DesktopApp.Luis
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),2) as Mesatarja, a.kategoria from Notat a, Nxenes b, Jep_Mesim c where (a.NxenesID=b.NxenesID and  b.KlasaID=c.KlasaID) and a.PeriudhaID = '"+periudhaID+"' and b.KlasaID =  '"+klasaID+"' and c.LendaID = '"+lendaID+"' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a ) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
+                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimifrom ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),2) as Mesatarja, a.kategoria from Notat a, Nxenes b  , Jep_Mesim c where a.NxenesID=b.NxenesID and a.Jep_MesimID=c.Jep_MesimID and a.PeriudhaID = '"+periudhaID+"' and c.KlasaID = '"+klasaID+"' and c.LendaID = '"+lendaID+"' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     var ds = new DataSet();
@@ -311,6 +311,9 @@ namespace DesktopApp.Luis
                 }
             }
             MessageBox.Show("Tremujori per kete lende u mbyll me sukses. Ju nuk mund ti mbishkruani me notat e vendosura!");
+            label7.Text = "Mbyllur";
+            pictureBox2.Hide();
+            dataGridView2.Enabled = false;
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

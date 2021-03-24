@@ -15,6 +15,8 @@ namespace DesktopApp.Klea
     public partial class JustifikoMungesatUC : UserControl
     {
         string nxenesID;
+        string mID;
+        int i;
         public JustifikoMungesatUC()
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace DesktopApp.Klea
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "Select b.EmerLende, a.DATAT, a.Justifikuar from Mungesat a, Lendet b where a.LendaID = b.LendaID and a.NxenesID = '" + nxenesID + "'; ";
+                var query = "Select a.MungesaID, b.EmerLende, a.DATAT, a.Justifikuar from Mungesat a, Lendet b where a.LendaID = b.LendaID and a.NxenesID = '" + nxenesID + "'; ";
                    using (var da = new MySqlDataAdapter(query, connection))
                 {
                     var ds = new DataSet();
@@ -96,6 +98,49 @@ namespace DesktopApp.Klea
             catch (Exception ex)
             {
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (i == 1)
+            {
+                i = 0;
+                var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+                try
+                {
+                    string StrQuery = "UPDATE Mungesat SET Justifikuar = 'po' WHERE MungesaID = '"+mID+"'";
+
+                    using (MySqlConnection conn = new MySqlConnection(connectionString))
+                    {
+                        using (MySqlCommand comm = new MySqlCommand(StrQuery, conn))
+                        {
+                            conn.Open();
+                            comm.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                DataGridRefresher();
+
+            }
+            else MessageBox.Show("Së pari ju duhet të zgjidhni një mungesë nga tabela dhe më pas ta justifikoni atë duke klikuar butoin 'Justifiko'");
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            i = 1;
+            mID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            i = 1;
+            mID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }
