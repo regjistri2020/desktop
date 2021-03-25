@@ -33,6 +33,20 @@ namespace DesktopApp.Klea
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
+                var query = "select c.Emri, c.Mbiemri, sum(Te_arsyetuara) as 'Te arsyetuara', sum(Te_paarsyetuara) as 'Te paarsyetuara', sum(Gjithesej) as 'Gjithesej' from ( Select a.Emri, a.Mbiemri, Case when b.Justifikuar ='Po' then count(MungesaID) else 0 end as Te_arsyetuara, Case when b.Justifikuar is null then count(MungesaID) else 0 end as Te_paarsyetuara, count(MungesaID) as Gjithesej from Nxenes a, Mungesat b where a.NxenesID=b.NxenesID Group by a.Emri, a.Mbiemri, b.Justifikuar ) c Group by c.Emri, c.Mbiemri;";
+                using (var da = new MySqlDataAdapter(query, connection))
+                {
+                    var ds = new DataSet();
+                    da.Fill(ds);
+                    dataGridView2.DataSource = ds.Tables[0];
+                }
+                connection.Close();
+            }
+
+            
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
                 var query = "SELECT Count(*) FROM gBh6InugME.Mungesat where Justifikuar is null and KlasaID in (SELECT KlasaID FROM Klasa WHERE Emri = '"+textBox4.Text+"');";
                 using (var command = new MySqlCommand(query, connection))
                 {
