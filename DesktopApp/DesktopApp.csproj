@@ -423,6 +423,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>e-nxenesit.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
+    <None Include="Resources\output-onlinepngtools.png" />
+    <None Include="Resources\icons8_minus_321.png" />
+    <None Include="Resources\icons8_user_641.png" />
     <None Include="Resources\icons8_send_letter_64.png" />
     <None Include="Resources\icons8_paper_plane_64.png" />
     <None Include="Resources\icons8_print_64.png" />

@@ -243,6 +243,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_minus_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_minus_321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_next_page_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_next_page_48", resourceCulture);
@@ -353,6 +363,16 @@ namespace DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap id_not_verified_40px {
             get {
                 object obj = ResourceManager.GetObject("id_not_verified_40px", resourceCulture);
@@ -366,6 +386,26 @@ namespace DesktopApp.Properties {
         internal static System.Drawing.Bitmap minus {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__1_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

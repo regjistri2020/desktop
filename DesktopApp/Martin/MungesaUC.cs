@@ -18,7 +18,7 @@ namespace DesktopApp.Martin
     public partial class MungesaUC : UserControl
     {
 
-        string nxenesID, nrTel, Emri;
+        string nxenesID, nrTel, Emri, lenda;
 
         DataTable table = new DataTable();
 
@@ -52,6 +52,7 @@ namespace DesktopApp.Martin
                         conn.Open();
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.ExecuteNonQuery();
+                        conn.Close();
                         MessageBox.Show("Mungesat u vendosen me sukses!");
 
                         try
@@ -60,8 +61,25 @@ namespace DesktopApp.Martin
                             using (var connection = new MySqlConnection(connectionString))
                             {
                                 connection.Open();
-                                var query2 = "SELECT * FROM Nxenes where NxenesID = '"+tradeID+"'";
-                                using (var command = new MySqlCommand(query, connection))
+                                var query2 = "SELECT * FROM Lendet where LendaID = '" + CookieClass.LendaID + "'";
+                                using (var command = new MySqlCommand(query2, connection))
+                                {
+                                    using (var reader = command.ExecuteReader())
+                                    {
+                                        while (reader.Read())
+                                        {
+                                            lenda = reader.GetString("EmerLende");
+                                        }
+
+                                    }
+                                }
+                            }
+
+                            using (var connection = new MySqlConnection(connectionString))
+                            {
+                                connection.Open();
+                                var query2 = "SELECT * FROM Nxenes where NxenesID = '" + tradeID + "'";
+                                using (var command = new MySqlCommand(query2, connection))
                                 {
                                     using (var reader = command.ExecuteReader())
                                     {
@@ -69,7 +87,7 @@ namespace DesktopApp.Martin
                                         while (reader.Read())
                                         {
                                             nrTel = reader.GetString("NrTelPrind");
-                                            Emri = reader.GetString("Emri") +" "+ reader.GetString("Mbiemri");
+                                            Emri = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
                                         }
 
                                     }
@@ -79,11 +97,11 @@ namespace DesktopApp.Martin
                             var accountSid = "AC3648693fb0ccb73d81ffbf42186b6248";
                             var authToken = "d4eb7ec5e5f06ff64a1bdd129ed26c40";
                             TwilioClient.Init(accountSid, authToken);
-
+                            MessageBox.Show(nrTel);
                             var messageOptions = new CreateMessageOptions(
-                                new PhoneNumber("+355686888201"));
+                                new PhoneNumber("+355" + nrTel));
                             messageOptions.MessagingServiceSid = "MGc2b6f0ceb144dbb8149397ffe352017c";
-                            messageOptions.Body = "Pershendetje! Ky eshte nje mesazh i automatizuar nga platforma e nxenesit. Nxenesi "+Emri+" sot ka munguar ne lenden Matematike";
+                            messageOptions.Body = "Pershendetje! Ky eshte nje mesazh i automatizuar nga platforma e nxenesit. Nxenesi " + Emri + " sot ka munguar ne lenden '"+lenda+"'";
 
                             var message = MessageResource.Create(messageOptions);
                             Console.WriteLine(message.Body);
