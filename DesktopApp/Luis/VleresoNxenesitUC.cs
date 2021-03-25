@@ -40,25 +40,51 @@ namespace DesktopApp.Luis
 		{
             if (temaUvendos == true)
             {
-                try
+                if (textBox3.Text == "")
                 {
-                    MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (PeriudhaID, NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria, Data, Ora) VALUES ('" + periudhaID + "','" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','"+jepMesimID+"', '" + textBox4.Text + "', '" + comboBox4.Text + "',current_date(), current_time())", conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Nota e nxenesit u vendos!");
-                    conn.Close();
-                    comboBox3.Text = "";
-                    comboBox4.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
+                    try
+                    {
+                        MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (PeriudhaID, NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria, Data, Ora) VALUES ('" + periudhaID + "','" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', null,'" + jepMesimID + "', '" + textBox4.Text + "', '" + comboBox4.Text + "',current_date(), current_time())", conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Nota e nxenesit u vendos!");
+                        conn.Close();
+                        comboBox3.Text = "";
+                        comboBox4.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
 
-                    dataGridRefresher();
+                        dataGridRefresher();
 
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Ka nje gabim teknik:" + ex.Message + "\t" + ex.GetType());
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine("Ka nje gabim teknik:" + ex.Message + "\t" + ex.GetType());
+                    try
+                    {
+                        MySqlConnection conn = new MySqlConnection("server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME");
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand("INSERT INTO Notat (PeriudhaID, NxenesID, TemaMesimoreID, Nota, Jep_MesimID, Shenime, Kategoria, Data, Ora) VALUES ('" + periudhaID + "','" + int.Parse(nxenesID) + "', '" + Convert.ToInt32(lastTemaId) + "', '" + int.Parse(textBox3.Text) + "','" + jepMesimID + "', '" + textBox4.Text + "', '" + comboBox4.Text + "',current_date(), current_time())", conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Nota e nxenesit u vendos!");
+                        conn.Close();
+                        comboBox3.Text = "";
+                        comboBox4.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+
+                        dataGridRefresher();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Ka nje gabim teknik:" + ex.Message + "\t" + ex.GetType());
+                    }
                 }
             }
             else { MessageBox.Show("Për të vlerësuar një nxënës, së pari vendosni temën e mësimit dhe klikoni butonin ruaj"); }
@@ -76,7 +102,7 @@ namespace DesktopApp.Luis
                 cmd.ExecuteNonQuery();
                 lastTemaId = cmd.LastInsertedId;
                 CookieClass.TemaID = lastTemaId;
-                MessageBox.Show("Tema u shtua me sukses!" + lastTemaId);
+                MessageBox.Show("Tema u shtua me sukses!");
                 temaUvendos = true;
                 conn.Close();
 
