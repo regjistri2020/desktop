@@ -19,7 +19,7 @@ namespace DesktopApp.Martin
 {
     public partial class FletTremujori : UserControl
     {
-        string NR_amze;
+        string NR_amze,Mesuesi;
         string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
         string firstName, lastName;
         string loginID = CookieClass.LoginID;
@@ -96,6 +96,24 @@ namespace DesktopApp.Martin
                 }
 
 
+                using (var connection = new MySqlConnection(connectionString))
+                {
+
+                    connection.Open();
+                    var query = "SELECT Emri, Mbiemri FROM Mesues WHERE MesuesID IN (SELECT MesuesID FROM Klasa WHERE Emri = '" + label6.Text + "'); ";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            //Iterate through the rows and add it to the combobox's items
+                            while (reader.Read())
+                            {
+                                Mesuesi = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
+                            }
+                        }
+                    }
+                }
+
                 var savefiledialoge = new SaveFileDialog();
                 savefiledialoge.FileName = filename;
                 savefiledialoge.DefaultExt = ".pdf";
@@ -118,13 +136,20 @@ namespace DesktopApp.Martin
                         Paragraph paragraph2 = new Paragraph(" ");
 
                         Paragraph paragraph3 = new Paragraph("                Shkolla për TIK “Hermann Gmeiner”                                      Viti shkollor: 2020-2021  ");
-                        Paragraph paragraph4 = new Paragraph("                Nr i amzës: " + NR_amze, myFont1);
+                        Paragraph paragraph4 = new Paragraph("                Nr i amzës: " + NR_amze);
                         Paragraph paragraph5 = new Paragraph("                Data: " + date + " ");
                         Paragraph paragraph6 = new Paragraph(" ");
 
                         Paragraph paragraph7 = new Paragraph("                                                                         Progresi i nxënësit ", myFont1);
                         Paragraph paragraph8 = new Paragraph("                                                                               " + NxenescomboBox.Text + " ");
                         Paragraph paragraph9 = new Paragraph(" ");
+
+                        Paragraph paragraph13 = new Paragraph(" ");
+                        Paragraph paragraph14 = new Paragraph(" ");
+                        Paragraph paragraph15 = new Paragraph(" ");
+                        Paragraph paragraph16 = new Paragraph("                Mësuesi/ja : ", myFont1);
+                        Paragraph paragraph17 = new Paragraph("                " + Mesuesi + "");
+                        Paragraph paragraph18 = new Paragraph(" ");
 
                         pdfdoc.Add(paragraph10);
                         pdfdoc.Add(paragraph11);
@@ -139,6 +164,13 @@ namespace DesktopApp.Martin
                         pdfdoc.Add(paragraph8);
                         pdfdoc.Add(paragraph9);
                         pdfdoc.Add(pdftable);
+                        pdfdoc.Add(paragraph13);
+                        pdfdoc.Add(paragraph14);
+                        pdfdoc.Add(paragraph15);
+                        pdfdoc.Add(paragraph16); 
+                        pdfdoc.Add(paragraph17);
+                        pdfdoc.Add(paragraph18);
+                        
 
                         pdfdoc.Close();
                         stream.Close();
