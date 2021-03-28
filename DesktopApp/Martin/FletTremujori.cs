@@ -19,7 +19,8 @@ namespace DesktopApp.Martin
 {
     public partial class FletTremujori : UserControl
     {
-        string NR_amze,Mesuesi;
+         
+        string NR_amze, Mesuesi, m_arsyeshme, m_paarsyeshme;
         string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
         string firstName, lastName;
         string loginID = CookieClass.LoginID;
@@ -40,6 +41,14 @@ namespace DesktopApp.Martin
             try
             {
                 BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+                PdfPTable table = new PdfPTable(3);
+                table.DefaultCell.PaddingLeft = 5;
+                table.DefaultCell.PaddingRight = 5;
+                table.DefaultCell.FixedHeight = 20;
+                table.WidthPercentage = 45;
+                table.HorizontalAlignment = Element.ALIGN_CENTER;
+                
+
                 PdfPTable pdftable = new PdfPTable(dgw.Columns.Count);
                 pdftable.DefaultCell.PaddingLeft = 5;
                 pdftable.DefaultCell.PaddingRight = 5;
@@ -57,7 +66,7 @@ namespace DesktopApp.Martin
                 {
 
                     PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
-                    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //potential error
+                    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //HEADER COLOR
                     pdftable.AddCell(cell);
                 }
 
@@ -79,7 +88,6 @@ namespace DesktopApp.Martin
                 var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
                 using (var connection = new MySqlConnection(connectionString))
                 {
-
                     connection.Open();
                     var query = "SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "'; ";
                     using (var command = new MySqlCommand(query, connection))
@@ -98,7 +106,6 @@ namespace DesktopApp.Martin
 
                 using (var connection = new MySqlConnection(connectionString))
                 {
-
                     connection.Open();
                     var query = "SELECT Emri, Mbiemri FROM Mesues WHERE MesuesID IN (SELECT MesuesID FROM Klasa WHERE Emri = '" + label6.Text + "'); ";
                     using (var command = new MySqlCommand(query, connection))
@@ -113,6 +120,48 @@ namespace DesktopApp.Martin
                         }
                     }
                 }
+
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var query = "SELECT COUNT(*) FROM Mungesat WHERE NxenesID = '"+ NR_amze +"' AND Justifikuar = 'po' ";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                         m_arsyeshme = Convert.ToString(command.ExecuteScalar());
+                    }
+                    connection.Close();
+                }
+
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var query = "SELECT COUNT(*) FROM Mungesat WHERE NxenesID = '" + NR_amze + "' AND Justifikuar IS NULL ; ";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                         m_paarsyeshme = Convert.ToString(command.ExecuteScalar());
+                    }
+                    connection.Close();
+                }
+
+
+                PdfPCell cell0 = new PdfPCell();
+                cell0.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //HEADER COLOR
+                table.AddCell(cell0);
+
+                PdfPCell cell1 = new PdfPCell(new Phrase("Të arsyeshme", text));
+                cell1.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //HEADER COLOR
+                table.AddCell(cell1);
+
+                PdfPCell cell2 = new PdfPCell(new Phrase("Të paarsyeshme", text));
+                cell2.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //HEADER COLOR
+                table.AddCell(cell2);
+
+                PdfPCell cell3 = new PdfPCell(new Phrase("Mungesat", text));
+                cell3.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //HEADER COLOR
+                table.AddCell(cell3);
+
+                table.AddCell(m_arsyeshme);
+                table.AddCell(m_paarsyeshme);
 
                 var savefiledialoge = new SaveFileDialog();
                 savefiledialoge.FileName = filename;
@@ -129,32 +178,37 @@ namespace DesktopApp.Martin
                         iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD, new iTextSharp.text.BaseColor(0, 0, 0));
                         iTextSharp.text.Font myFont1 = FontFactory.GetFont("Arial", 12, iTextSharp.text.Font.BOLD, new iTextSharp.text.BaseColor(0, 0, 0));
 
-                        Paragraph paragraph10 = new Paragraph(" ");
-                        Paragraph paragraph11 = new Paragraph(" ");
-                        Paragraph paragraph = new Paragraph("                         FLETË INFORMUESE TREMUJORI PËR PRINDIN", myFont);
-                        Paragraph paragraph12 = new Paragraph(" ");
+                        Paragraph paragraph1 = new Paragraph(" ");
                         Paragraph paragraph2 = new Paragraph(" ");
+                        Paragraph paragraph3 = new Paragraph("                         FLETË INFORMUESE TREMUJORI PËR PRINDIN", myFont);
+                        Paragraph paragraph4 = new Paragraph(" ");
+                        Paragraph paragraph5 = new Paragraph(" ");
 
-                        Paragraph paragraph3 = new Paragraph("                Shkolla për TIK “Hermann Gmeiner”                                      Viti shkollor: 2020-2021  ");
-                        Paragraph paragraph4 = new Paragraph("                Nr i amzës: " + NR_amze);
-                        Paragraph paragraph5 = new Paragraph("                Data: " + date + " ");
-                        Paragraph paragraph6 = new Paragraph(" ");
-
-                        Paragraph paragraph7 = new Paragraph("                                                                         Progresi i nxënësit ", myFont1);
-                        Paragraph paragraph8 = new Paragraph("                                                                               " + NxenescomboBox.Text + " ");
+                        Paragraph paragraph6 = new Paragraph("                Shkolla për TIK “Hermann Gmeiner”                                      Viti shkollor: 2020-2021  ");
+                        Paragraph paragraph7 = new Paragraph("                Nr i amzës: " + NR_amze);
+                        Paragraph paragraph8 = new Paragraph("                Data: " + date + " ");
                         Paragraph paragraph9 = new Paragraph(" ");
 
-                        Paragraph paragraph13 = new Paragraph(" ");
-                        Paragraph paragraph14 = new Paragraph(" ");
-                        Paragraph paragraph15 = new Paragraph(" ");
-                        Paragraph paragraph16 = new Paragraph("                Mësuesi/ja : ", myFont1);
-                        Paragraph paragraph17 = new Paragraph("                " + Mesuesi + "");
-                        Paragraph paragraph18 = new Paragraph(" ");
+                        Paragraph paragraph10 = new Paragraph("                                                                         Progresi i nxënësit ", myFont1);
+                        Paragraph paragraph11 = new Paragraph("                                                                               " + NxenescomboBox.Text + " ");
+                        Paragraph paragraph12 = new Paragraph(" ");
+                        Paragraph paragraph13= new Paragraph(" ");
 
-                        pdfdoc.Add(paragraph10);
-                        pdfdoc.Add(paragraph11);
-                        pdfdoc.Add(paragraph);
-                        pdfdoc.Add(paragraph12);
+                        Paragraph paragraph14 = new Paragraph("                I. Progresi i nxënësit sipas lëndëve",myFont1);
+                        Paragraph paragraph15 = new Paragraph(" ");
+                        Paragraph paragraph16 = new Paragraph(" ");
+                        Paragraph paragraph17 = new Paragraph(" ");
+                        Paragraph paragraph18 = new Paragraph("                II. Frekuentimi i shkollës nga nxënësi",myFont1);
+                        Paragraph paragraph19 = new Paragraph(" ");
+                        Paragraph paragraph20 = new Paragraph(" ");
+                        Paragraph paragraph21 = new Paragraph(" ");
+                        Paragraph paragraph22 = new Paragraph(" "); 
+                        Paragraph paragraph23 = new Paragraph(" ");
+                        Paragraph paragraph24 = new Paragraph("                Mësuesi/ja                                                                                       Prindi/ Kujdestari ", myFont1);
+                        Paragraph paragraph25 = new Paragraph("                " + Mesuesi + "                                                                            __________________");
+                        Paragraph paragraph26 = new Paragraph(" ");
+
+                        pdfdoc.Add(paragraph1);
                         pdfdoc.Add(paragraph2);
                         pdfdoc.Add(paragraph3);
                         pdfdoc.Add(paragraph4);
@@ -163,14 +217,26 @@ namespace DesktopApp.Martin
                         pdfdoc.Add(paragraph7);
                         pdfdoc.Add(paragraph8);
                         pdfdoc.Add(paragraph9);
-                        pdfdoc.Add(pdftable);
+                        pdfdoc.Add(paragraph10);
+                        pdfdoc.Add(paragraph11);
+                        pdfdoc.Add(paragraph12);
                         pdfdoc.Add(paragraph13);
                         pdfdoc.Add(paragraph14);
                         pdfdoc.Add(paragraph15);
-                        pdfdoc.Add(paragraph16); 
+                        pdfdoc.Add(pdftable); //TABELA NOTAVE
+                        pdfdoc.Add(paragraph16);
                         pdfdoc.Add(paragraph17);
                         pdfdoc.Add(paragraph18);
-                        
+                        pdfdoc.Add(paragraph19);
+                        pdfdoc.Add(table);//TABELA MUNGESAVE
+                        pdfdoc.Add(paragraph20);
+                        pdfdoc.Add(paragraph21);
+                        pdfdoc.Add(paragraph22);
+                        pdfdoc.Add(paragraph23);
+                        pdfdoc.Add(paragraph24);
+                        pdfdoc.Add(paragraph25);
+                        pdfdoc.Add(paragraph26);
+
 
                         pdfdoc.Close();
                         stream.Close();
@@ -321,12 +387,10 @@ namespace DesktopApp.Martin
                 }
                 connection.Close();
             }
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
             //SHFAQJA E TE DHENAVE NE DATAGRIDVIEW1 KUR KLIKOHET BUTONI RIFRESKONI
@@ -414,12 +478,11 @@ namespace DesktopApp.Martin
             foreach (DataRow row in dt1.Rows)
             {
                 //pdfdoc.NewPage();
+                //PdfPage page = pdfdoc.Pages.Add();
 
-                        NxenescomboBox.Text = row["Emri"].ToString() + " " + row["Mbiemri"].ToString();
+                NxenescomboBox.Text = row["Emri"].ToString() + " " + row["Mbiemri"].ToString();
                         exportgridtopdf(dataGridView2, "Notat e tremujorit të nxënësit " + row["Emri"].ToString() + " " + row["Mbiemri"].ToString() + " ");
-                  
             }
-
         }
 
         private void NxenescomboBox_SelectedIndexChanged(object sender, EventArgs e)
