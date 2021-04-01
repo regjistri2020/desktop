@@ -15,6 +15,7 @@ namespace DesktopApp.Luis
     {
         DataTable dt;
         string lendaID, klasaID, periudhaID;
+        int index;
         public NotaTremujoriUC()
         {
             InitializeComponent();
@@ -232,7 +233,7 @@ namespace DesktopApp.Luis
                             using (var connection = new MySqlConnection(connectionString))
                             {
                                 connection.Open();
-                                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),0) as Mesatarja, a.kategoria from Notat a, Nxenes b, Jep_Mesim c where (a.NxenesID=b.NxenesID and  b.KlasaID=c.KlasaID) and a.PeriudhaID = '" + row["PeriudhaID"].ToString() + "' and b.KlasaID =  '" + klasaID + "' and c.LendaID = '" + lendaID + "' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a ) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
+                                var query = "Select b.NxenesID, b.Emri, b.Mbiemri, sum(b.Note_Me_Goje) as Note_Me_Goje,  sum(b.Note_Portofoli) as Note_Portofoli,  sum(b.Note_Provimi) as Note_Provimi from ( select a.NxenesID, a.Emri, a.Mbiemri, Case when a.kategoria='Note me Goje (NG)' then a.Mesatarja else 0 end as Note_Me_Goje, Case when a.kategoria='Note Portofoli (NP)' then a.Mesatarja  else 0 end as Note_Portofoli, Case when a.kategoria='Note Test (NT)' then a.Mesatarja else 0 end as Note_Provimi from ( select a.NxenesID, b.Emri, b.Mbiemri, round(AVG(Nota),2) as Mesatarja, a.kategoria from Notat a, Nxenes b  , Jep_Mesim c where a.NxenesID=b.NxenesID and a.Jep_MesimID=c.Jep_MesimID and a.PeriudhaID = '" + row["PeriudhaID"].ToString() + "' and c.KlasaID = '" + klasaID + "' and c.LendaID = '" + lendaID + "' group by a.NxenesID, b.Emri, b.Mbiemri, a.kategoria) a) b group by  b.NxenesID, b.Emri, b.Mbiemri;";
                                 using (var da = new MySqlDataAdapter(query, connection))
                                 {
                                     var ds = new DataSet();
@@ -264,7 +265,7 @@ namespace DesktopApp.Luis
             textBox5.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
 
             var nxenesID = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-
+            index = e.RowIndex;
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
 
             using (var connection = new MySqlConnection(connectionString))
@@ -285,6 +286,13 @@ namespace DesktopApp.Luis
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows[index].Cells[3].Value = textBox3.Text;
+            dataGridView2.Rows[index].Cells[4].Value = textBox4.Text;
+            dataGridView2.Rows[index].Cells[5].Value = textBox5.Text;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

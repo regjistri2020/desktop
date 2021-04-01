@@ -49,6 +49,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -93,6 +95,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -169,6 +173,7 @@
             this.NxenescomboBox.Size = new System.Drawing.Size(188, 29);
             this.NxenescomboBox.TabIndex = 96;
             this.NxenescomboBox.SelectedIndexChanged += new System.EventHandler(this.NxenescomboBox_SelectedIndexChanged);
+            this.NxenescomboBox.Click += new System.EventHandler(this.NxenescomboBox_Click);
             // 
             // dataGridView2
             // 
@@ -211,6 +216,7 @@
             this.comboBox2.Size = new System.Drawing.Size(188, 29);
             this.comboBox2.TabIndex = 91;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // label4
             // 
@@ -304,6 +310,34 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Kujdestaria:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 12.25F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(103)))));
+            this.label9.Location = new System.Drawing.Point(331, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 20);
+            this.label9.TabIndex = 102;
+            this.label9.Text = "Periudha :";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tremujori 1",
+            "Tremujori 2",
+            "Tremujori 3",
+            "Vjetore"});
+            this.comboBox1.Location = new System.Drawing.Point(430, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(145, 29);
+            this.comboBox1.TabIndex = 101;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
             // FletTremujori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,5 +383,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

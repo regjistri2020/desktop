@@ -280,7 +280,7 @@ namespace DesktopApp.Martin
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();  
-                 var query = "SELECT Nxenes.Emri, Nxenes.Mbiemri, NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM Nxenes JOIN NotaTremujor ON Nxenes.NxenesID = NotaTremujor.NxenesID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "') AND NotaTremujor.LendaID IN (SELECT LendaID FROM Lendet WHERE EmerLende = '"+ comboBox2.Text +"' ) ; ";
+                 var query = "SELECT Nxenes.Emri, Nxenes.Mbiemri, NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM Nxenes JOIN NotaTremujor ON Nxenes.NxenesID = NotaTremujor.NxenesID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "') AND NotaTremujor.LendaID IN (SELECT LendaID FROM Lendet WHERE EmerLende = '"+ comboBox2.Text + "' ) AND NotaTremujor.Periudha IN (SELECT PeriudhaID FROM Periudha WHERE Emri = '" + comboBox1.Text + "' ); ";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();
@@ -390,6 +390,85 @@ namespace DesktopApp.Martin
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            comboBox1.Items.Clear();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM Periudha";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox1.Items.Add(reader.GetString("Emri"));
+                        }
+                    }
+                }
+                connection.Close();
+            }
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            //MBUSHJA E COMBOBOX ME EMRAT E LENDEVE QE ZHVILLON KLASA
+            comboBox2.Items.Clear();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT EmerLende FROM Lendet WHERE LendaID IN (SELECT LendaID FROM Jep_Mesim WHERE KlasaID IN (SELECT KlasaID FROM Klasa WHERE Emri = '" + label6.Text + "'))";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            comboBox2.Items.Add(reader.GetString("EmerLende"));
+                        }
+                    }
+                }
+            }
+        }
+
+        private void NxenescomboBox_Click(object sender, EventArgs e)
+        {
+            var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            NxenescomboBox.Items.Clear();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select * from Nxenes where KlasaID in (Select KlasaID from Klasa where Emri = '" + label6.Text + "' )";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            NxenescomboBox.Items.Add(reader.GetString("Emri") + " " + reader.GetString("Mbiemri"));
+                        }
+                    }
+                }
+            }
+        }
+
         private void NxenescomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MBUSHJA E DATAGRIDVIEW ME NOTAT E NXENESIT TE PERCAKTUAR
@@ -402,7 +481,7 @@ namespace DesktopApp.Martin
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT Lendet.EmerLende AS 'Lënda', NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM NotaTremujor JOIN Lendet ON NotaTremujor.LendaID = Lendet.LendaID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "') AND NotaTremujor.NxenesID IN(SELECT NxenesID FROM Nxenes WHERE Emri = '"+ firstName + "' AND Mbiemri = '" + lastName + "'); ";
+                var query = "SELECT Lendet.EmerLende AS 'Lënda', NotaTremujor.NotaGoje AS 'Nota me Gojë', NotaTremujor.NotaShkrim AS 'Nota e Testit', NotaTremujor.NotaPortofol AS 'Nota e Portofolit' FROM NotaTremujor JOIN Lendet ON NotaTremujor.LendaID = Lendet.LendaID WHERE NotaTremujor.KlasaID IN(SELECT KlasaID From Klasa WHERE Emri = '" + label6.Text + "') AND NotaTremujor.NxenesID IN(SELECT NxenesID FROM Nxenes WHERE Emri = '"+ firstName + "' AND Mbiemri = '" + lastName + "') AND NotaTremujor.Periudha IN (SELECT PeriudhaID FROM Periudha WHERE Emri = '" + comboBox1.Text + "' ); ";
                 using (var da = new MySqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();
