@@ -38,6 +38,7 @@ namespace DesktopApp.Martin
             }
 
 
+
             var connectionString2 = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString2))
             {
@@ -75,6 +76,19 @@ namespace DesktopApp.Martin
                     else textBox2.Text = "  ---  ";
                 }
                 connection.Close();
+            }
+
+            using (var connection = new MySqlConnection(connectionString2))
+            {
+                connection.Open();
+                var query = "SELECT avg(Nota) From Notat;";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) textBox3.Text = count.ToString();
+                    else textBox3.Text = "  ---  ";
+
+                }
             }
 
 
