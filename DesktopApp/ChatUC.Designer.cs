@@ -134,16 +134,17 @@ namespace DesktopApp
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(133, 381);
+            this.textBox1.Location = new System.Drawing.Point(28, 381);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 29);
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox1.Size = new System.Drawing.Size(459, 29);
             this.textBox1.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::DesktopApp.Properties.Resources.icons8_send_letter_64;
-            this.pictureBox2.Location = new System.Drawing.Point(386, 375);
+            this.pictureBox2.Location = new System.Drawing.Point(493, 372);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

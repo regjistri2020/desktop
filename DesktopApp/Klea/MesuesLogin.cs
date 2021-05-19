@@ -83,7 +83,7 @@ namespace DesktopApp.Martin
 
                 }
                 else
-                    MessageBox.Show("Vendosni sakte kredencialet!", " Mësuesi nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    label1.Show();
             }
             catch (Exception ex)
             {
@@ -99,6 +99,19 @@ namespace DesktopApp.Martin
         private void PasstextBox_Click_1(object sender, EventArgs e)
         {
             PasstextBox.Text = "";
+        }
+
+        private void MesuesLogin_Load(object sender, EventArgs e)
+        {
+            label1.Hide();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            
+            var a = new Administrator();
+            a.Show();
+            this.Hide();
         }
     }
 }
