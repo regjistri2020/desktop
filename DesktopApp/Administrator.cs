@@ -53,6 +53,7 @@ namespace DesktopApp
 
         
 
+
         private void minimizepictureBox_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
