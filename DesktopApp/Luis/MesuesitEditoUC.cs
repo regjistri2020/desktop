@@ -113,6 +113,7 @@ namespace DesktopApp.Luis
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Lista e mësuesve u gjenerua me sukses.");
+            exportgridtopdf2(dataGridView1, "Lista e mësuesve të shkollës");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -184,6 +185,78 @@ namespace DesktopApp.Luis
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
                     Paragraph paragraph = new Paragraph("                                 KREDINCIALET E IDENTIFIKIMIT TË MËSUESVE NË SISTEM");
+                    Paragraph paragraph2 = new Paragraph(" ");
+
+                    Paragraph paragraph3 = new Paragraph("               Shkolla për TIK “Hermann Gmeiner”                            Viti shkollor: 2020-2021  ");
+                    Paragraph paragraph31 = new Paragraph(" ");
+                    Paragraph paragraph32 = new Paragraph(" ");
+                    Paragraph paragraph33 = new Paragraph(" ");
+
+                    Paragraph paragraph7 = new Paragraph("    Cdo paqartësi apo problem teknik mund ta drejtoni në adresën tonë të emailit suportIT@hg.edu.al ");
+                    Paragraph paragraph8 = new Paragraph(" ");
+                    Paragraph paragraph9 = new Paragraph(" ");
+
+
+                    pdfdoc.Add(paragraph);
+                    pdfdoc.Add(paragraph2);
+                    pdfdoc.Add(paragraph3);
+                    pdfdoc.Add(paragraph31);
+                    pdfdoc.Add(paragraph32);
+                    pdfdoc.Add(paragraph33);
+                    pdfdoc.Add(paragraph7);
+                    pdfdoc.Add(paragraph8);
+                    pdfdoc.Add(paragraph9);
+                    pdfdoc.Add(pdftable);
+
+                    pdfdoc.Close();
+                    stream.Close();
+                }
+            }
+
+        }
+        public void exportgridtopdf2(DataGridView dgw, string filename)
+        {
+            BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+            PdfPTable pdftable = new PdfPTable(dgw.Columns.Count);
+            pdftable.DefaultCell.PaddingLeft = 5;
+            pdftable.DefaultCell.PaddingRight = 5;
+            pdftable.WidthPercentage = 90;
+            pdftable.HorizontalAlignment = Element.ALIGN_CENTER;
+            pdftable.DefaultCell.BorderWidth = 1;
+
+
+            iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+
+            //add header
+            foreach (DataGridViewColumn column in dgw.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
+                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //potential error
+                pdftable.AddCell(cell);
+            }
+
+            // add datarow
+            foreach (DataGridViewRow row in dgw.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    pdftable.AddCell(new Phrase(cell.Value?.ToString(), text));
+                }
+            }
+
+
+            var savefiledialoge = new SaveFileDialog();
+            savefiledialoge.FileName = filename;
+            savefiledialoge.DefaultExt = ".pdf";
+
+            if (savefiledialoge.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(savefiledialoge.FileName, FileMode.Create))
+                {
+                    Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfdoc, stream);
+                    pdfdoc.Open();
+                    Paragraph paragraph = new Paragraph("                                            LISTA E MESUESVE TE SHKOLLES");
                     Paragraph paragraph2 = new Paragraph(" ");
 
                     Paragraph paragraph3 = new Paragraph("               Shkolla për TIK “Hermann Gmeiner”                            Viti shkollor: 2020-2021  ");

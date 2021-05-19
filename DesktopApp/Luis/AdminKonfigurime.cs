@@ -127,6 +127,8 @@ namespace DesktopApp.Luis
                                     label20.Text = "Pa filluar";
                                     label20.ForeColor = System.Drawing.Color.Gray;
                                     button4.Text = "Mbyll Tremujorin";
+                                    button5.Hide();
+                                    button6.Hide(); 
                                 }
                             }
                             connection.Close();

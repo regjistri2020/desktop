@@ -314,6 +314,7 @@ comboBox3.Items.Clear();
                                         }
                                     }
                                 }
+                                connection.Close();
                             }
             }
             catch (Exception ex)
