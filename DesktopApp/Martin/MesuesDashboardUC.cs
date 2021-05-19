@@ -58,6 +58,7 @@ namespace DesktopApp.Martin
                 {
                     using (var reader = command.ExecuteReader())
                     {
+                        //Iterate through the rows and add it to the combobox's items
                         while (reader.Read())
                         {
                             MesuestextBox.Text = reader.GetString("Emri") + " " + reader.GetString("Mbiemri");
@@ -69,6 +70,7 @@ namespace DesktopApp.Martin
             }
 
             // SHAFQJA E NJOFTIMEVE
+
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
             string query2 = "SELECT Emri, DataEvent, Pershkrim FROM Njoftime WHERE Kategori = 'te dyve' OR Kategori = 'mesues' ";
@@ -92,23 +94,6 @@ namespace DesktopApp.Martin
                 }
                 connection.Close();
             }
-
-
-
-            // NR I mungesave te klases
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "Select avg(NotaShkrim) from NotaTremujor where KlasaID IN (SELECT KlasaID FROM Klasa WHERE EMRI = '" + KlasatextBox.Text + "') ";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    object count = command.ExecuteScalar();
-                    if (count != null) KalueshmeriaMtextBox.Text = count.ToString();
-                    else KalueshmeriaMtextBox.Text = "0";
-                }
-                connection.Close();
-            }
-
 
             // NR I NXENSEVE QE KA NE KLASEN KUJDESTARE TE MESUESES/IT
             using (var connection = new MySqlConnection(connectionString))

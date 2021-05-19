@@ -83,7 +83,7 @@ namespace DesktopApp.Martin
                                 {
                                     using (var reader = command.ExecuteReader())
                                     {
-                                        
+                                        //Iterate through the rows and add it to the combobox's items
                                         while (reader.Read())
                                         {
                                             nrTel = reader.GetString("NrTelPrind");
@@ -101,8 +101,7 @@ namespace DesktopApp.Martin
                             var messageOptions = new CreateMessageOptions(
                                 new PhoneNumber("+355" + nrTel));
                             messageOptions.MessagingServiceSid = "MGc2b6f0ceb144dbb8149397ffe352017c";
-                            messageOptions.Body = "Pershendetje! Ky eshte nje mesazh i automatizuar nga platforma e nxenesit. Nxenesi " 
-                                + Emri + " sot ka munguar ne lenden '"+lenda+"'";
+                            messageOptions.Body = "Pershendetje! Ky eshte nje mesazh i automatizuar nga platforma e nxenesit. Nxenesi " + Emri + " sot ka munguar ne lenden '"+lenda+"'";
 
                             var message = MessageResource.Create(messageOptions);
                             Console.WriteLine(message.Body);

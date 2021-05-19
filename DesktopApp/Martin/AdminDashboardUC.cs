@@ -37,20 +37,10 @@ namespace DesktopApp.Martin
                 }
             }
 
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var query = "Select count(*) from Nxenes where Gjinia = 'femer' ";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    object count = command.ExecuteScalar();
-                    if (count != null) textBox1.Text = count.ToString();
-                }
-                connection.Close();
-            }
 
 
-            using (var connection = new MySqlConnection(connectionString))
+            var connectionString2 = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+            using (var connection = new MySqlConnection(connectionString2))
             {
                 connection.Open();
                 var query = "SELECT count(*) FROM Mesues ";
@@ -63,7 +53,18 @@ namespace DesktopApp.Martin
                 }
             }
 
-           
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select count(*) from Nxenes where Gjinia = 'femer' ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) textBox1.Text = count.ToString();
+                }
+                connection.Close();
+            }
+
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -77,7 +78,7 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(connectionString2))
             {
                 connection.Open();
                 var query = "SELECT avg(Nota) From Notat;";

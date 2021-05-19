@@ -260,7 +260,9 @@ namespace DesktopApp.Martin
                 pdftable.DefaultCell.FixedHeight = 20;
                 pdftable.WidthPercentage = 75;
                 pdftable.HorizontalAlignment = Element.ALIGN_CENTER;
-                
+                //pdftable.DefaultCell.BorderWidth = 1;
+
+
 
                 iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
 
@@ -269,7 +271,7 @@ namespace DesktopApp.Martin
                 {
 
                     PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
-                    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); 
+                    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240); //potential error
                     pdftable.AddCell(cell);
                 }
 
@@ -291,12 +293,14 @@ namespace DesktopApp.Martin
                 var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
                 using (var connection = new MySqlConnection(connectionString))
                 {
+
                     connection.Open();
                     var query = "SELECT NxenesID FROM Nxenes WHERE Emri = '" + firstName + "' AND Mbiemri = '" + lastName + "'; ";
                     using (var command = new MySqlCommand(query, connection))
                     {
                         using (var reader = command.ExecuteReader())
                         {
+                            //Iterate through the rows and add it to the combobox's items
                             while (reader.Read())
                             {
                                 NR_amze = reader.GetString("NxenesID");
@@ -488,11 +492,6 @@ namespace DesktopApp.Martin
         }
 
         private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

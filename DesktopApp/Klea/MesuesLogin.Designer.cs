@@ -120,11 +120,11 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.White;
             this.bunifuCustomLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(340, 124);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(225, 25);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(232, 28);
             this.bunifuCustomLabel3.TabIndex = 12;
             this.bunifuCustomLabel3.Text = "Identifikohu si mësues";
             this.bunifuCustomLabel3.UseWaitCursor = true;
@@ -248,11 +248,11 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(45, 184);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(161, 90);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(171, 100);
             this.bunifuCustomLabel2.TabIndex = 2;
             this.bunifuCustomLabel2.Text = "Për probleme teknike\r\ntë aplikacionit\r\nmund ti drejtoheni \r\nshërbimit IT ne adres" +
     "ën\r\nEmail: suportIT@hg.al";
@@ -263,13 +263,13 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Open Sans Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(27, 126);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(207, 33);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(211, 39);
             this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "Përshëndetje!";
+            this.bunifuCustomLabel1.Text = "Pershendetje!";
             // 
             // pictureBox4
             // 
