@@ -146,8 +146,20 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
-            int nr_nxe = Convert.ToInt32(mesuesDashboardUC1.NxenesetextBox.Text + mesuesDashboardUC1.NxenestextBox.Text);
-       
+            // LLOGARITJA E NOTES MESATARE TE KLASES
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select avg(NotaShkrim) from NotaTremujor where KlasaID IN(SELECT KlasaID FROM Klasa WHERE EMRI = '" + mesuesDashboardUC1.KlasatextBox.Text + "') ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) mesuesDashboardUC1.KalueshmeriaMtextBox.Text = count.ToString();
+                    else mesuesDashboardUC1.KalueshmeriaMtextBox.Text = "  ---  ";
+                }
+                connection.Close();
+            }
+
 
 
 

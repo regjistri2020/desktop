@@ -28,12 +28,10 @@ namespace DesktopApp.Martin
 
         private void MesuesDashboardUC_Load(object sender, EventArgs e)
         {
+            //Marrja e dates se loginit
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             DatatextBox.Clear();
             DatatextBox.Text = Convert.ToString(date);
-
-
-
         }
 
         private void KlasatextBox_TextChanged(object sender, EventArgs e)
@@ -50,6 +48,8 @@ namespace DesktopApp.Martin
         {
 
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
+
+            //Marrja e emrit dhe mbiemrit te mesuesit te loguar
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -68,6 +68,26 @@ namespace DesktopApp.Martin
                 }
                 connection.Close();
             }
+
+            //Marrja e emrit te klases se mesuesit te loguar
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select Emri from Klasa where  MesuesID = '" + mID + "' ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        //Iterate through the rows and add it to the combobox's items
+                        while (reader.Read())
+                        {
+                            KlasatextBox.Text = reader.GetString("Emri");
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            
 
             // SHAFQJA E NJOFTIMEVE
 
@@ -123,7 +143,20 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
-            
+            // LLOGARITJA E NOTES MESATARE TE KLASES
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "Select avg(NotaShkrim) from NotaTremujor where KlasaID IN(SELECT KlasaID FROM Klasa WHERE EMRI = '" + KlasatextBox.Text + "') ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) KalueshmeriaMtextBox.Text = count.ToString();
+                    else KalueshmeriaMtextBox.Text = "  ---  ";
+                }
+                connection.Close();
+            }
+
         }
     }
 }

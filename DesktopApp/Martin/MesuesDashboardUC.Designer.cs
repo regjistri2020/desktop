@@ -205,7 +205,7 @@
             this.KalueshmeriaMtextBox.Name = "KalueshmeriaMtextBox";
             this.KalueshmeriaMtextBox.Size = new System.Drawing.Size(100, 31);
             this.KalueshmeriaMtextBox.TabIndex = 26;
-            this.KalueshmeriaMtextBox.Text = "9.7";
+            this.KalueshmeriaMtextBox.Text = "---";
             this.KalueshmeriaMtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label
@@ -454,7 +454,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label tittlelabel;
         private System.Windows.Forms.Panel Datapanel;
-        private System.Windows.Forms.TextBox KalueshmeriaMtextBox;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
@@ -480,5 +479,6 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.TextBox Mungesa_textBox;
+        public System.Windows.Forms.TextBox KalueshmeriaMtextBox;
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DesktopApp.Luis;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.InteropServices;
+using DesktopApp.Martin;
 
 namespace DesktopApp
 {
@@ -73,13 +74,16 @@ namespace DesktopApp
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            var a = new MesuesLogin();
+            a.Show();
+            this.Hide();
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(connstr);
             conn.Open();
-            //RoleID = '1' 
+
             string AdmLog_query = "Select count(*) from Login where User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 2 ";
             MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
             cmd.ExecuteReader();

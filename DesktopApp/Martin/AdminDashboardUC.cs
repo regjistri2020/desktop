@@ -86,7 +86,7 @@ namespace DesktopApp.Martin
                 {
                     object count = command.ExecuteScalar();
                     if (count != null) textBox3.Text = count.ToString();
-                    else textBox3.Text = "  ---  ";
+                    else textBox3.Text = "  ----  ";
 
                 }
             }
