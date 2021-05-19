@@ -150,7 +150,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 31);
             this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "100 %";
+            this.textBox3.Text = "9.6";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -159,9 +159,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(666, 418);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 32);
+            this.label6.Size = new System.Drawing.Size(182, 32);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Kalueshmëria";
+            this.label6.Text = "Nota mesatare";
             // 
             // pictureBox7
             // 

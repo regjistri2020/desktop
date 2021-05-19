@@ -205,7 +205,7 @@
             this.KalueshmeriaMtextBox.Name = "KalueshmeriaMtextBox";
             this.KalueshmeriaMtextBox.Size = new System.Drawing.Size(100, 31);
             this.KalueshmeriaMtextBox.TabIndex = 26;
-            this.KalueshmeriaMtextBox.Text = "100 %";
+            this.KalueshmeriaMtextBox.Text = "9.7";
             this.KalueshmeriaMtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label
@@ -214,9 +214,9 @@
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(323, 469);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(173, 29);
+            this.label.Size = new System.Drawing.Size(183, 29);
             this.label.TabIndex = 25;
-            this.label.Text = "Kalueshmëria";
+            this.label.Text = "Nota mesatare";
             // 
             // pictureBox7
             // 
