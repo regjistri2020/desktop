@@ -41,26 +41,34 @@ namespace DesktopApp
             panel3.BackColor = Color.FromArgb(100, 149, 237);
             panel3.ForeColor = Color.Black;
 
-            MySqlConnection conn = new MySqlConnection(connstr);
-            conn.Open();
-            //RoleID = '1' 
-            string AdmLog_query = "Select count(*) from Login where User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 2 ";
-            MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
-            cmd.ExecuteReader();
-            conn.Close();
-
-            MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
+            try 
             {
-                MessageBox.Show("Vendosja e kredencialeve u krye me sukses!","         " , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AdminMain m = new AdminMain();
-                m.Show();
-                this.Hide();
+                MySqlConnection conn = new MySqlConnection(connstr);
+                conn.Open();
+                string AdmLog_query = "Select count(*) from Login where User_Name = '" + UsertextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 2 ";
+                MySqlCommand cmd = new MySqlCommand(AdmLog_query, conn);
+                cmd.ExecuteReader();
+                conn.Close();
+
+                MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (Convert.ToInt32(dt.Rows[0][0]) == 1)
+                {
+                    MessageBox.Show("Vendosja e kredencialeve u krye me sukses!", "         ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AdminMain m = new AdminMain();
+                    m.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Vendosni sakte kredencialet!", " Administratori nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Vendosni sakte kredencialet!", " Administratori nuk ekziston ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void minimizepictureBox_Click(object sender, EventArgs e)

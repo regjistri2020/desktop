@@ -56,8 +56,7 @@ namespace DesktopApp.Martin
         }
 
         private void Hyni_button_Click_1(object sender, EventArgs e)
-        {
-            
+        {    
             try
             {
                 MySqlConnection conn = new MySqlConnection(connstr);
@@ -66,7 +65,6 @@ namespace DesktopApp.Martin
                 string MesLog_query = "Select count(*) from Login where User_Name = '" + UsernametextBox.Text + "' and Pasword = '" + PasstextBox.Text + "' AND RoleID = 1 ";
                 MySqlCommand cmd = new MySqlCommand(MesLog_query, conn);
                 cmd.ExecuteReader();
-
                 conn.Close();
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);

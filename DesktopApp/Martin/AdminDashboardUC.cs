@@ -37,22 +37,6 @@ namespace DesktopApp.Martin
                 }
             }
 
-
-
-            var connectionString2 = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
-            using (var connection = new MySqlConnection(connectionString2))
-            {
-                connection.Open();
-                var query = "SELECT count(*) FROM Mesues ";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    object count = command.ExecuteScalar();
-                    if (count != null) MesuestextBox.Text = count.ToString();
-                    else MesuestextBox.Text = "  ---  ";
-
-                }
-            }
-
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -65,6 +49,21 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT count(*) FROM Mesues ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    object count = command.ExecuteScalar();
+                    if (count != null) MesuestextBox.Text = count.ToString();
+                    else MesuestextBox.Text = "  ---  ";
+
+                }
+            }
+
+           
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -78,7 +77,7 @@ namespace DesktopApp.Martin
                 connection.Close();
             }
 
-            using (var connection = new MySqlConnection(connectionString2))
+            using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
                 var query = "SELECT avg(Nota) From Notat;";
