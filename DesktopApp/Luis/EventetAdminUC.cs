@@ -43,7 +43,7 @@ namespace DesktopApp.Luis
         }
         void DisplayElements()
         {
-            //comboBox3.Items.Clear();
+            checkedListBox1.Items.Clear();
             var connectionString = "server=remotemysql.com;userid=gBh6InugME;password=NSGsLG2ITM;database=gBh6InugME";
             using (var connection = new MySqlConnection(connectionString))
             {
