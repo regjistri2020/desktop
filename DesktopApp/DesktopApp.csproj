@@ -104,10 +104,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator.cs">
+    <Compile Include="Klea\Administrator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator.Designer.cs">
+    <Compile Include="Klea\Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
     <Compile Include="ChatUC.cs">
@@ -246,7 +246,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Administrator.resx">
+    <EmbeddedResource Include="Klea\Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChatUC.resx">
