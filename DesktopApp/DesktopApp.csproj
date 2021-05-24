@@ -220,10 +220,10 @@
     <Compile Include="Martin\MesuesDashboardUC.Designer.cs">
       <DependentUpon>MesuesDashboardUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Klea\MesuesLogin.cs">
+    <Compile Include="Martin\MesuesLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Klea\MesuesLogin.Designer.cs">
+    <Compile Include="Martin\MesuesLogin.Designer.cs">
       <DependentUpon>MesuesLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Martin\MesuesMain.cs">
@@ -303,7 +303,7 @@
     <EmbeddedResource Include="Martin\MesuesDashboardUC.resx">
       <DependentUpon>MesuesDashboardUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Klea\MesuesLogin.resx">
+    <EmbeddedResource Include="Martin\MesuesLogin.resx">
       <DependentUpon>MesuesLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Martin\MesuesMain.resx">
